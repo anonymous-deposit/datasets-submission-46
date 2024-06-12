@@ -1,0 +1,53 @@
+Received: from mx.poczta.onet.pl (unresolved [XX_ANONYMIZED_IP4_9c504999de5d17_XX]:45822)
+	by ps38.m5r2.onet (Ota) with LMTP id C6C4A14
+	for <anonymized_user@op.pl>; Mon, 25 Sep 2023 13:40:46 +0200 (CEST)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=XX_ANONYMIZED_IP_MAIN_A_XX; helo=mail.mail-server.example; envelope-from=goodrua@oppl.email-sender-3.example; receiver=<UNKNOWN> 
+Authentication-Results: mx.poczta.onet.pl;
+    bimi=skipped (DMARC Policy is not at enforcement);
+    dkim=invalid (public key: not available, 0-bit  key sha256) header.d=oppl.email-sender-3.example header.i=@oppl.email-sender-3.example header.b=f2O4dNi6 header.a=-sha256 header.s=dkimfalse;
+    dmarc=pass policy.published-domain-policy=none policy.applied-disposition=none policy.evaluated-disposition=none (p=none,d=none,d.eval=none) policy.policy-from=p header.from=oppl.email-sender-3.example;
+    iprev=pass smtp.remote-ip=XX_ANONYMIZED_IP_MAIN_A_XX (mail.mail-server.example);
+    spf=pass smtp.mailfrom=goodrua@oppl.email-sender-3.example smtp.helo=mail.mail-server.example;
+    x-ptr=pass smtp.helo=mail.mail-server.example policy.ptr=mail.mail-server.example;
+    x-tls=pass smtp.version=TLSv1.3 smtp.cipher=TLS_AES_256_GCM_SHA384 smtp.bits=256
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mx.poczta.onet.pl (Onet) with ESMTPS id 4RvLXs73W9z17xK
+	for <anonymized_user@op.pl>; Mon, 25 Sep 2023 13:40:45 +0200 (CEST)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 2CDA5388562
+	for <anonymized_user@op.pl>; Mon, 25 Sep 2023 13:40:45 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=oppl.email-sender-3.example;
+	s=dkimfalse; t=1695642045;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=wy+N82Z6vv+b5Hu+GvjddozvJhLOJljXu0kH0/yBH/Q=;
+	b=f2O4dNi633U705dNGUZqCg5fwuOaVYI4msWbrKOWkvHQswblghRO20wNA1S2KQreqdj00g
+	jraTotIBF3vZEu6TXBi7PzcWV/hULadpY5j5GREqAoGiSAZDpBnExznb2xmx1bimlxua3w
+	q63rZ79Ettly/2xiXi2aojaBKXgPOfvSsnL+7Y8goi+tklphLxEH5AkZsgX4e4oS7Tmabm
+	93gZ4fzsF6fSiaZJmnpdnub4CJcA5LNp+RRNlvtQ9u/b6y2/Lk38W61+zqM6wXSurJqpdw
+	uixH7X5YL8zMJk7LI0SBu0umWB1ZgirNVREEGV+fIg/FtvH04AWZDeCBCfAXmw==
+Content-Type: multipart/alternative; boundary="===============8031827271469995346=="
+MIME-Version: 1.0
+Subject: oppl Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:40:44.807850
+From: goodrua@oppl.email-sender-3.example
+To: anonymized_user@op.pl
+Date: Mon, 25 Sep 2023 13:40:44 +0200
+message-id: <169564204480.19703.11901171012705225748@oppl.email-sender-3.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-Authentication-Milter: Header added by Authentication Milter
+X-ONET_PL-MDA-Version: 1.0.25
+X-ONET_PL-MDA-Info: 038 05398 C6C4A14 0.000000
+X-ONET_PL-MDA-From: goodrua@oppl.email-sender-3.example
+X-ONET_PL-MDA-Spam: NO
+
+--===============8031827271469995346==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Neque numquam ut dolor ipsum neque. Consectetur adipisci neque eius dolorem quisquam labore non. Neque modi voluptatem quisquam. Quisquam neque sit etincidunt quaerat. Dolore velit aliquam amet voluptatem. Ut consectetur quiquia consectetur ut quaerat. Modi non magnam consectetur numquam aliquam non sed. Est non dolorem quiquia porro. Quiquia modi sit sit dolorem amet. Tempora tempora etincidunt eius quaerat quisquam modi.
+
+Ut dolore non aliquam sit. Labore velit voluptatem numquam dolorem dolorem. Magnam aliquam quaerat quaerat quiquia. Adipisci etincidunt non quiquia amet dolore numquam consectetur. Non ut sit labore dolore eius voluptatem. Tempora ut etincidunt neque quisquam etincidunt est ipsum. Ut velit etincidunt quiquia dolorem magnam quiquia. Porro dolore modi labore dolor magnam quisquam.
+
+Eius eius dolor dolorem etincidunt consectetur quaerat quisquam. Dolore porro neque sit sit. Amet modi est sit sit ipsum labore. Modi porro numquam porro dolore magnam adipisci. Dolorem modi porro quisquam sed eius etincidunt labore.
+--===============8031827271469995346==--

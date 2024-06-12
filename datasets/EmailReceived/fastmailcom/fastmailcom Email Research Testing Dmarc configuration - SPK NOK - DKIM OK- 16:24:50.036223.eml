@@ -1,0 +1,144 @@
+Return-Path: <badrua@fastmailcom.email-sender-4.example>
+Received: from compute5.internal (compute5.nyi.internal [XX_ANONYMIZED_IP4_b2fd81254bee7c_XX])
+	 by sloti53n29 (Cyrus 3.9.0-alpha0-761-gece9e40c48-fm-20230913.001-gece9e40c) with LMTPA;
+	 Mon, 25 Sep 2023 10:24:54 -0400
+X-Cyrus-Session-Id: sloti53n29-1695651894-358279-2-16236940390513333707
+X-Sieve: CMU Sieve 3.0
+X-Spam-known-sender: no
+X-Spam-sender-reputation: 500 (none)
+X-Spam-score: 0.9
+X-Spam-hits: ME_SENDERREP_NEUTRAL 0.001, SPF_FAIL 0.919, SPF_HELO_NONE 0.001,
+  LANGUAGES rocait, BAYES_USED none, SA_VERSION 3.4.6
+X-Spam-source: IP='XX_ANONYMIZED_IP_MAIN_A_XX', Host='mail.mail-server.example', Country='US',
+  FromHeader='store', MailFrom='store'
+X-Spam-charsets: plain='us-ascii'
+X-Resolved-to: anonymized_user@fastmail.com
+X-Delivered-to: anonymized_user@fastmail.com
+X-Mail-from: badrua@fastmailcom.email-sender-4.example
+Received: from mx2 ([XX_ANONYMIZED_IP4_9506de78222ded_XX])
+  by compute5.internal (LMTPProxy); Mon, 25 Sep 2023 10:24:54 -0400
+Received: from mx2.messagingengine.com (localhost [127.0.0.1])
+	by mailmx.nyi.internal (Postfix) with ESMTP id 13B9A6A00EF
+	for <anonymized_user@fastmail.com>; Mon, 25 Sep 2023 10:24:54 -0400 (EDT)
+Received: from mailmx.nyi.internal (localhost [127.0.0.1])
+    by mx2.messagingengine.com (Authentication Milter) with ESMTP
+    id 5A2C9DCC8BA.4C8726A007D;
+    Mon, 25 Sep 2023 10:24:54 -0400
+ARC-Seal: i=1; a=rsa-sha256; cv=none; d=messagingengine.com; s=fm2; t=
+    1695651894; b=f/tzA7za4ra3TZr++0x3pfroDUGqXRMeUeHUtG+vA7CACccshV
+    I+o6WyDlrGoYoXOdhMtPEpjcBy+rN5qwxXYImkpUEF+Mi54TARSE+T4xP4OMqO6H
+    Hd5qt0LTt/WBBbRNU3ZkAdUhTQFswOsNfErJ25J//PMeqfM5ODRMQbjMezbnO7MY
+    gERDZWawuyFy8nhldXMKeb49eLN3bN64CsYKilt0iUd7aqcikdKz+pusUApiuNAg
+    dTigdR4QiRaHTqLCaqAOOIKEUpPXqKIwHIMNhwnRZzzNkZuVBGB8PffwAWd6Igpu
+    DMmgM0hkTe8mMdcRGs9bTKeosbnkdfVpyYxg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=
+    messagingengine.com; h=content-type:mime-version:subject:from:to
+    :date:message-id; s=fm2; t=1695651894; bh=NaPeob65A5WCipVGzDSH3U
+    TSoK3V7bN+awhNfGIZcfg=; b=KkEoAFjQiLOoyC61XXT/YjKSlOpD9NSY6cSG7n
+    /1oRLyX12uJRCBtl22z3FqyVyvO/tWwFKfVtRYT/WVvSV/eBtfu/T+uxPVmJzJC0
+    sb9l54oBM/cPp10cy4lW35eHqfjkZGABgfBX6ZNT5CPx6c1dtoRd5K36MhTitAMC
+    /1M6IpY/jLFMHZ9KH+RsmIUicXRYcCnW17ppsfxFUlB6hS+JMxWd3mFkw3Tm1yrV
+    M2212pttSKsX/pN7GbcoQM9G1gH3qT66EhjmlEa7jbKs/1wPELcjo9v56SDcOe/i
+    DhNtQKfF1UPRD/HnW9DufS+deoy1lpC3rKLaKycbRJ1RexgA==
+ARC-Authentication-Results: i=1; mx2.messagingengine.com;
+    x-csa=none;
+    x-me-sender=none;
+    x-ptr=pass smtp.helo=mail.mail-server.example policy.ptr=mail.mail-server.example;
+    bimi=skipped (DMARC Policy is not at enforcement);
+    arc=none (no signatures found);
+    dkim=pass (1024-bit rsa key sha256) header.d=fastmailcom.email-sender-4.example
+    header.i=@fastmailcom.email-sender-4.example header.b=H8eMkUR4
+    header.a=rsa-sha256 header.s=dkim;
+    dmarc=pass policy.published-domain-policy=none
+    policy.applied-disposition=none policy.evaluated-disposition=none
+    (p=none,d=none,d.eval=none) policy.policy-from=p
+    header.from=fastmailcom.email-sender-4.example;
+    iprev=pass smtp.remote-ip=XX_ANONYMIZED_IP_MAIN_A_XX (mail.mail-server.example);
+    spf=fail smtp.mailfrom=badrua@fastmailcom.email-sender-4.example
+    smtp.helo=mail.mail-server.example
+X-ME-Authentication-Results: mx2.messagingengine.com;
+    x-aligned-from=pass (Address match);
+    x-return-mx=pass header.domain=fastmailcom.email-sender-4.example
+      policy.org_domain=email-sender-4.example policy.is_org=no
+      (MX Records found: mail.mail-server.example);
+    x-return-mx=pass smtp.domain=fastmailcom.email-sender-4.example
+      policy.org_domain=email-sender-4.example policy.is_org=no
+      (MX Records found: mail.mail-server.example);
+    x-tls=pass smtp.version=TLSv1.3 smtp.cipher=TLS_AES_256_GCM_SHA384
+      smtp.bits=256/256;
+    x-vs=clean score=51 state=0
+Authentication-Results: mx2.messagingengine.com;
+    x-csa=none;
+    x-me-sender=none;
+    x-ptr=pass smtp.helo=mail.mail-server.example policy.ptr=mail.mail-server.example
+Authentication-Results: mx2.messagingengine.com;
+    bimi=skipped (DMARC Policy is not at enforcement)
+Authentication-Results: mx2.messagingengine.com;
+    arc=none (no signatures found)
+Authentication-Results: mx2.messagingengine.com;
+    dkim=pass (1024-bit rsa key sha256) header.d=fastmailcom.email-sender-4.example
+      header.i=@fastmailcom.email-sender-4.example header.b=H8eMkUR4
+      header.a=rsa-sha256 header.s=dkim;
+    dmarc=pass policy.published-domain-policy=none
+      policy.applied-disposition=none policy.evaluated-disposition=none
+      (p=none,d=none,d.eval=none) policy.policy-from=p
+      header.from=fastmailcom.email-sender-4.example;
+    iprev=pass smtp.remote-ip=XX_ANONYMIZED_IP_MAIN_A_XX (mail.mail-server.example);
+    spf=fail smtp.mailfrom=badrua@fastmailcom.email-sender-4.example
+      smtp.helo=mail.mail-server.example
+X-ME-VSCause: gggruggvucftvghtrhhoucdtuddrgedviedrudelgedgjeeiucetufdoteggodetrfdotf
+    fvucfrrhhofhhilhgvmecuhfgrshhtofgrihhlpdggtfgfnhhsuhgsshgtrhhisggvpdfu
+    rfetoffkrfgpnffqhgenuceurghilhhouhhtmecufedttdenucfqnhhlhicuohhnvgcuph
+    grrhhtucdlhedumdenucfjughrpegtggfuhffvfffksegrtderredttddvnecuhfhrohhm
+    pegsrggurhhurgesfhgrshhtmhgrihhltghomhdrhhhurhgvrghurdhsthhorhgvnecugg
+    ftrfgrthhtvghrnhepueejjefgtddtveetudekueeigeelveeuvdffkeeutdfghfekudff
+    feetkeeviedtnecukfhppedukeehrddukeehrdekvddrvdeknecuvehluhhsthgvrhfuih
+    iivgeptdenucfrrghrrghmpehinhgvthepudekhedrudekhedrkedvrddvkedphhgvlhho
+    pehmrghilhdriihorhgvihhllhgvrdhrvgdpmhgrihhlfhhrohhmpeeosggrughruhgrse
+    hfrghsthhmrghilhgtohhmrdhhuhhrvggruhdrshhtohhrvgeq
+X-ME-VSScore: 51
+X-ME-VSCategory: clean
+X-ME-CSA: none
+Received-SPF: fail
+    (fastmailcom.email-sender-4.example: Sender is not authorized by default to use 'badrua@fastmailcom.email-sender-4.example' in 'mfrom' identity (mechanism '-all' matched))
+    receiver=mx2.messagingengine.com;
+    identity=mailfrom;
+    envelope-from="badrua@fastmailcom.email-sender-4.example";
+    helo=mail.mail-server.example;
+    client-ip=XX_ANONYMIZED_IP_MAIN_A_XX
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits))
+	(No client certificate requested)
+	by mx2.messagingengine.com (Postfix) with ESMTPS id 4C8726A007D
+	for <anonymized_user@fastmail.com>; Mon, 25 Sep 2023 10:24:52 -0400 (EDT)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 5BF923884C3
+	for <anonymized_user@fastmail.com>; Mon, 25 Sep 2023 16:24:50 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=fastmailcom.email-sender-4.example;
+	s=dkim; t=1695651890; h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=NaPeob65A5WCipVGzDSH3UTSoK3V7bN+awhNfGIZcfg=;
+	b=H8eMkUR4bKhP3TolaWZiqW8wPFNKlbdMI+RoJyJAIWBEhb6yg5SrFT0R1FU+H1+wdDo828
+	K62qZtVO3RBTQlUJhkRaIkwSUIbgzAWu36KSneXQ5QC//s0V8Ptr7z7cW/rzysUXwPLEt5
+	1iAqfhrydXCxJvHKYfW4sDtTYLqeuYA=
+Content-Type: multipart/alternative; boundary="===============4699252593127928471=="
+MIME-Version: 1.0
+Subject: fastmailcom Email Research Testing Dmarc configuration - SPK NOK - DKIM OK- 16:24:50.036223
+From: badrua@fastmailcom.email-sender-4.example
+To: anonymized_user@fastmail.com
+Date: Mon, 25 Sep 2023 16:24:50 +0200
+message-id: <169565189003.19703.13617065119580996888@fastmailcom.email-sender-4.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============4699252593127928471==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Sed aliquam dolor porro etincidunt. Tempora magnam quaerat eius tempora tempora ipsum. Quaerat adipisci velit magnam tempora sed quisquam amet. Labore numquam sit consectetur eius sit voluptatem tempora. Tempora eius adipisci est non modi porro dolor. Numquam dolorem quisquam aliquam etincidunt ut. Ipsum non quisquam dolorem sit adipisci numquam. Porro consectetur neque numquam velit amet est. Ut dolor quisquam quiquia neque tempora eius. Tempora magnam sed magnam.
+
+Velit numquam neque ut velit ut dolorem. Amet quaerat eius est sed. Quiquia consectetur dolor labore ut amet. Non labore consectetur velit dolor. Voluptatem etincidunt dolore dolore porro ut adipisci modi. Amet ipsum quiquia dolorem adipisci numquam. Porro quiquia sit dolore sit velit.
+
+Amet consectetur magnam ut consectetur sit quisquam. Velit dolorem non adipisci. Dolore porro aliquam dolore dolore. Velit modi non magnam. Est ut tempora aliquam adipisci neque. Eius sed adipisci velit aliquam. Consectetur modi magnam consectetur.
+
+Labore dolore dolorem dolor. Modi voluptatem non dolor. Labore dolore porro sit. Tempora dolorem etincidunt numquam dolorem dolorem dolore velit. Dolorem sit dolore aliquam dolorem consectetur tempora. Quaerat ut quaerat est eius. Est sed eius dolore porro.
+--===============4699252593127928471==--

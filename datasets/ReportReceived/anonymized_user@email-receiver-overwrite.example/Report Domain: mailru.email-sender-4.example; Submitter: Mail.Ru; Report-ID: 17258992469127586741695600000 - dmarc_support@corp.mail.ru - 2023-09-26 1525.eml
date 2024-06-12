@@ -1,0 +1,84 @@
+Return-Path: <noreply-dmarc-reporting@corp.mail.ru>
+Delivered-To: anonymized_user@email-receiver-overwrite.example
+Received: from mail.mail-server.example
+ ([XX_ANONYMIZED_IP6_f317321f451418_XX])	by b85eae80de63 with LMTP	id
+ MGnuLOnbEmU56wMAgXJbaQ	(envelope-from <noreply-dmarc-reporting@corp.mail.ru>)
+	for <anonymized_user@email-receiver-overwrite.example>; Tue, 26 Sep 2023
+ 15:26:01 +0200
+Received: from relay7.m.smailru.net (relay7.m.smailru.net
+ [XX_ANONYMIZED_IP4_b2d3d7ae15e536_XX])	(using TLSv1.2 with cipher
+ ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))	(No client certificate requested)
+	by mail.mail-server.example (Postcow) with ESMTPS id 4A8503884C1	for
+ <rua@email-receiver-overwrite.example>; Tue, 26 Sep 2023 15:25:59 +0200
+ (CEST)
+Authentication-Results: mail.mail-server.example;	dkim=pass
+ header.d=corp.mail.ru header.s=mail4 header.b=uPnH9qtB;	spf=pass
+ (mail.mail-server.example: domain of noreply-dmarc-reporting@corp.mail.ru
+ designates XX_ANONYMIZED_IP4_b2d3d7ae15e536_XX as permitted sender)
+ smtp.mailfrom=noreply-dmarc-reporting@corp.mail.ru;	dmarc=pass
+ (policy=reject) header.from=corp.mail.ru
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=corp.mail.ru; s=mail4;	=?utf-8?q?h=3DDate=3AMessage-ID=3ATo=3AFrom=3ASubj?=
+ =?utf-8?q?ect=3AMIME-Version=3AContent-Type=3AFrom=3ASubject=3AContent-Type?=
+ =?utf-8?q?=3AContent-Transfer-Encoding=3ATo=3ACc=3B?=
+ bh=uO7wxui3xjeZyV9BtsAlUrH5L1hDQFgGAFL/zJZ1P3k=;	t=1695734760;x=1695824760; 	
+ =?utf-8?q?b=3DuPnH9qtBuXJg/+QmLHH5WO2bhvJuio9bWOBCO9KagX+7PkEjbHvV0/WsIrLPk?=
+ =?utf-8?q?zHqqgC7awEORiUadev4EMRdXaxrAjC4BRU82wVeJ6ogx1W5bmX7E5gdoUOYMkMk18?=
+ =?utf-8?q?LhWUXTEVbL0LJBiMOTZTPepBlL1nmxeexJUvnW/RdCjW3xgMo9kpjtsuVJDYO+4OA?=
+ =?utf-8?q?8qKblCfPB2Nx++mN7bVNdYpGIv6+5UB3wSnBx9DszyV++1c6rwuEez/F3mQjBcYqk?=
+ =?utf-8?q?x7nVhwt8lcLaErdBQHWwbMEbZmn+h08y4n1A0n6imG9iEnh6Yd24ZSndAFcbtWq+y?=
+ =?utf-8?q?hzmmNJqCUechPWqJNa+nQ=3D=3D=3B?=
+Received: from [XX_ANONYMIZED_IP4_51813b22db2f3f_XX] (port=35064 helo=60)	by
+ relay7.m.smailru.net with esmtp (envelope-from
+ <noreply-dmarc-reporting@corp.mail.ru>)	id 1ql84X-0000cG-Tp	for
+ rua@email-receiver-overwrite.example; Tue, 26 Sep 2023 16:25:53 +0300
+Content-Type: multipart/mixed; boundary="===============1800192539321034416=="
+MIME-Version: 1.0
+From: dmarc_support@corp.mail.ru
+To: rua@email-receiver-overwrite.example
+Message-ID: <dmarc-1695734753@corp.mail.ru>
+Date: Tue, 26 Sep 2023 16:25:53 +0300
+Auto-Submitted: auto-generated
+X-Last-TLS-Session-Version: TLSv1.2
+X-Rspamd-Queue-Id: 4A8503884C1
+X-Spamd-Result: default: False [0.09 / 15.00];	MIME_BASE64_TEXT_BOGUS(1.00)[];
+	DMARC_POLICY_ALLOW(-0.50)[corp.mail.ru,reject];	=?utf-8?q?FORGED=5FSENDER?=
+ =?utf-8?q?=280=2E30=29=5Bdmarc=5Fsupport=40corp=2Email=2Eru=2Cnoreply-dmarc?=
+ =?utf-8?q?-reporting=40corp=2Email=2Eru=5D=3B?=
+	R_DKIM_ALLOW(-0.20)[corp.mail.ru:s=mail4];
+	R_SPF_ALLOW(-0.20)[+ip4:XX_ANONYMIZED_IP4_812f58811703ee_XX/20];
+	RWL_MAILSPIKE_VERYGOOD(-0.20)[XX_ANONYMIZED_IP4_b2d3d7ae15e536_XX:from];
+	RCVD_IN_DNSWL_LOW(-0.10)[XX_ANONYMIZED_IP4_b2d3d7ae15e536_XX:from];
+	MIME_BASE64_TEXT(0.10)[];	MIME_GOOD(-0.10)[multipart/mixed,text/plain];
+	MX_GOOD(-0.01)[];	RCPT_COUNT_ONE(0.00)[1];	MID_RHS_MATCH_FROM(0.00)[];
+	TO_MATCH_ENVRCPT_ALL(0.00)[];	FROM_NO_DN(0.00)[];	BCC(0.00)[];
+	ARC_NA(0.00)[];	ASN(0.00)[asn:47764,
+ ipnet:XX_ANONYMIZED_IP4_812f58811703ee_XX/20, country:RU];	=?utf-8?q?FROM?=
+ =?utf-8?b?X05FUV9FTlZGUk9NKDAuMDApW2RtYXJjX3N1cHBvcnRAY29ycC5tYWlsLnJ1LG5v?=
+ =?utf-8?q?reply-dmarc-reporting=40corp=2Email=2Eru=5D=3B?=
+	TO_DN_NONE(0.00)[];	HAS_ATTACHMENT(0.00)[];
+	DWL_DNSWL_NONE(0.00)[mail.ru:dkim];	DKIM_TRACE(0.00)[corp.mail.ru:+];
+	MIME_TRACE(0.00)[0:+,1:+,2:~];
+	RCPT_MAILCOW_DOMAIN(0.00)[email-receiver-overwrite.example];
+	RCVD_TLS_LAST(0.00)[];	RCVD_COUNT_TWO(0.00)[2]
+Subject: Report Domain: mailru.email-sender-4.example; Submitter: Mail.Ru;
+ Report-ID: 17258992469127586741695600000
+
+--===============1800192539321034416==
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+VGhpcyBpcyBhbiBhZ2dyZWdhdGUgcmVwb3J0IGZyb20gTWFpbC5SdS4=
+
+--===============1800192539321034416==
+Content-Type: application/gzip
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+ filename*0*=us-ascii''mail.ru%21mailru.email-sender-4.example%211695600000;
+ filename*1*=%211695686400.xml.gz
+
+H4sIAKGraWYC/+1VTY/TMBD9K3vrqfG26iea9VIJDj20IE5lL5brTFprE9uynaX8e8ZJm81SJLRCCAnooZ55mo/3ZkYK3J+q8uYJfdDW3A1G2e3gBo2yuTaHu0Edi+FicM+hQMz3Uj1y8Oisj6LCKHMZJQfrD8LICvlG6jL7VAPrEMCKMJ5X0isRapcy3yrrXZbwzFNsGwF4il4KZU2UKgptCsuPMbo3jB2x7MJZeocJocTrjAs3nfPRfDxdLJfjyWw5Gs+ni9l8Mpotp7Pb9AP2HAgkAoWX5kB093jQhvcDWwTQ5C28mE0SnHxg/VR2NRdnS62+ClfvSx2OmFpZ4m94EuHrrFE+DFQK/XCS4UlWrkSq2kaBzB91xT2w1gAZXNG46QXHjTUU7TiEi00GOBX5KFFMBv1fkfBIC0iv/UKptvYKhXZ8txOr7Yft58364f07sf4oNqv1VqzEbkd1uyhQtjbUAFhrXETikyxrmkYSqYOzQUc6pzOtPgKNloKUE97ISmqcDCHRL54Z9yqyhqrO0URdaLpUDkeUNDVReFv9bJz9UGAvqsg6HoXHUJcxnJm9ckcBS1TRep6SC1kGHJOOCwht7bPcs9PX/dpuyjrkVZJCXRrn0qKdYNeiHeVLfazb/P8L+J0X8G8cwPgXD6Dl+7cdwA92/91i/vTuWfcl/waYgtcY+gcAAA==
+
+--===============1800192539321034416==--

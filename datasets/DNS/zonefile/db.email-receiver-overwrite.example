@@ -1,0 +1,14 @@
+$TTL 86400
+@ IN SOA ns.control-domain.example.com root.control-domain.example (
+  20231610
+  3600
+  900
+  604800
+  86400
+)
+@ IN NS ns.control-domain.example.
+@ IN NS ns2.control-domain.example.
+@ IN A XX_ANONYMIZED_IP_MAIN_A_XX
+@ IN MX 0 mail.mail-server.example.
+@ IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+*._report._dmarc IN TXT "v=DMARC1; rua=mailto:redirectionRUA@email-receiver-overwrite.example; ruf=mailto:redirectionRUF@email-receiver-overwrite.example"

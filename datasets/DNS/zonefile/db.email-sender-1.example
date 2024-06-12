@@ -1,0 +1,205 @@
+*$TTL 86400
+@ IN SOA ns.control-domain.example.com root.control-domain.example (
+  20232609
+  3600
+  900
+  604800
+  86400
+)
+@ IN NS ns.control-domain.example.
+@ IN NS ns2.control-domain.example.
+@ IN A XX_ANONYMIZED_IP_MAIN_A_XX
+@ IN MX 0 mail.mail-server.example.
+@ IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+@ IN TXT "v=spf1 exists:%{l}._spf.%{d} ip4:XX_ANONYMIZED_IP_MAIN_A_XX -all"
+_dmarc IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:wrongRUA@control-domain.example; ruf=mailto:wrongRUF@control-domain.example;"
+dkim._domainkey IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+control-domainexample IN A XX_ANONYMIZED_IP_MAIN_A_XX
+control-domainexample IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+control-domainexample IN MX 0 mail.mail-server.example.
+dkim._domainkey.control-domainexample IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.control-domainexample IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@control-domainexample.email-sender-1.example; ruf=mailto:ruf@control-domainexample.email-sender-1.example"
+control-domainexample IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.control-domainexample IN A XX_ANONYMIZED_IP_MAIN_A_XX
+163com IN A XX_ANONYMIZED_IP_MAIN_A_XX
+163com IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+163com IN MX 0 mail.mail-server.example.
+dkim._domainkey.163com IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.163com IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@163com.email-sender-1.example; ruf=mailto:ruf@163com.email-sender-1.example"
+163com IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.163com IN A XX_ANONYMIZED_IP_MAIN_A_XX
+fastmailcom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+fastmailcom IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+fastmailcom IN MX 0 mail.mail-server.example.
+dkim._domainkey.fastmailcom IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.fastmailcom IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@fastmailcom.email-sender-1.example; ruf=mailto:ruf@fastmailcom.email-sender-1.example"
+fastmailcom IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.fastmailcom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+freemailhu IN A XX_ANONYMIZED_IP_MAIN_A_XX
+freemailhu IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+freemailhu IN MX 0 mail.mail-server.example.
+dkim._domainkey.freemailhu IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.freemailhu IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@freemailhu.email-sender-1.example; ruf=mailto:ruf@freemailhu.email-sender-1.example"
+freemailhu IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.freemailhu IN A XX_ANONYMIZED_IP_MAIN_A_XX
+gmailcom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+gmailcom IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+gmailcom IN MX 0 mail.mail-server.example.
+dkim._domainkey.gmailcom IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.gmailcom IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@gmailcom.email-sender-1.example; ruf=mailto:ruf@gmailcom.email-sender-1.example"
+gmailcom IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.gmailcom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+gmxnet IN A XX_ANONYMIZED_IP_MAIN_A_XX
+gmxnet IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+gmxnet IN MX 0 mail.mail-server.example.
+dkim._domainkey.gmxnet IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.gmxnet IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@gmxnet.email-sender-1.example; ruf=mailto:ruf@gmxnet.email-sender-1.example"
+gmxnet IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.gmxnet IN A XX_ANONYMIZED_IP_MAIN_A_XX
+heycom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+heycom IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+heycom IN MX 0 mail.mail-server.example.
+dkim._domainkey.heycom IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.heycom IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@heycom.email-sender-1.example; ruf=mailto:ruf@heycom.email-sender-1.example"
+heycom IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.heycom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+inboxlv IN A XX_ANONYMIZED_IP_MAIN_A_XX
+inboxlv IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+inboxlv IN MX 0 mail.mail-server.example.
+dkim._domainkey.inboxlv IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.inboxlv IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@inboxlv.email-sender-1.example; ruf=mailto:ruf@inboxlv.email-sender-1.example"
+inboxlv IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.inboxlv IN A XX_ANONYMIZED_IP_MAIN_A_XX
+interiapl IN A XX_ANONYMIZED_IP_MAIN_A_XX
+interiapl IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+interiapl IN MX 0 mail.mail-server.example.
+dkim._domainkey.interiapl IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.interiapl IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@interiapl.email-sender-1.example; ruf=mailto:ruf@interiapl.email-sender-1.example"
+interiapl IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.interiapl IN A XX_ANONYMIZED_IP_MAIN_A_XX
+kolabnowcom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+kolabnowcom IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+kolabnowcom IN MX 0 mail.mail-server.example.
+dkim._domainkey.kolabnowcom IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.kolabnowcom IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@kolabnowcom.email-sender-1.example; ruf=mailto:ruf@kolabnowcom.email-sender-1.example"
+kolabnowcom IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.kolabnowcom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+lapostenet IN A XX_ANONYMIZED_IP_MAIN_A_XX
+lapostenet IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+lapostenet IN MX 0 mail.mail-server.example.
+dkim._domainkey.lapostenet IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.lapostenet IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@lapostenet.email-sender-1.example; ruf=mailto:ruf@lapostenet.email-sender-1.example"
+lapostenet IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.lapostenet IN A XX_ANONYMIZED_IP_MAIN_A_XX
+mailcom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+mailcom IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+mailcom IN MX 0 mail.mail-server.example.
+dkim._domainkey.mailcom IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.mailcom IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@mailcom.email-sender-1.example; ruf=mailto:ruf@mailcom.email-sender-1.example"
+mailcom IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.mailcom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+mailru IN A XX_ANONYMIZED_IP_MAIN_A_XX
+mailru IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+mailru IN MX 0 mail.mail-server.example.
+dkim._domainkey.mailru IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.mailru IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@mailru.email-sender-1.example; ruf=mailto:ruf@mailru.email-sender-1.example"
+mailru IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.mailru IN A XX_ANONYMIZED_IP_MAIN_A_XX
+mailfencecom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+mailfencecom IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+mailfencecom IN MX 0 mail.mail-server.example.
+dkim._domainkey.mailfencecom IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.mailfencecom IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@mailfencecom.email-sender-1.example; ruf=mailto:ruf@mailfencecom.email-sender-1.example"
+mailfencecom IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.mailfencecom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+navercom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+navercom IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+navercom IN MX 0 mail.mail-server.example.
+dkim._domainkey.navercom IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.navercom IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@navercom.email-sender-1.example; ruf=mailto:ruf@navercom.email-sender-1.example"
+navercom IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.navercom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+oppl IN A XX_ANONYMIZED_IP_MAIN_A_XX
+oppl IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+oppl IN MX 0 mail.mail-server.example.
+dkim._domainkey.oppl IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.oppl IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@oppl.email-sender-1.example; ruf=mailto:ruf@oppl.email-sender-1.example"
+oppl IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.oppl IN A XX_ANONYMIZED_IP_MAIN_A_XX
+orangefr IN A XX_ANONYMIZED_IP_MAIN_A_XX
+orangefr IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+orangefr IN MX 0 mail.mail-server.example.
+dkim._domainkey.orangefr IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.orangefr IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@orangefr.email-sender-1.example; ruf=mailto:ruf@orangefr.email-sender-1.example"
+orangefr IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.orangefr IN A XX_ANONYMIZED_IP_MAIN_A_XX
+outlookcom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+outlookcom IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+outlookcom IN MX 0 mail.mail-server.example.
+dkim._domainkey.outlookcom IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.outlookcom IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@outlookcom.email-sender-1.example; ruf=mailto:ruf@outlookcom.email-sender-1.example"
+outlookcom IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.outlookcom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+protonmailcom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+protonmailcom IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+protonmailcom IN MX 0 mail.mail-server.example.
+dkim._domainkey.protonmailcom IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.protonmailcom IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@protonmailcom.email-sender-1.example; ruf=mailto:ruf@protonmailcom.email-sender-1.example"
+protonmailcom IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.protonmailcom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+rediffcom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+rediffcom IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+rediffcom IN MX 0 mail.mail-server.example.
+dkim._domainkey.rediffcom IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.rediffcom IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@rediffcom.email-sender-1.example; ruf=mailto:ruf@rediffcom.email-sender-1.example"
+rediffcom IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.rediffcom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+sapopt IN A XX_ANONYMIZED_IP_MAIN_A_XX
+sapopt IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+sapopt IN MX 0 mail.mail-server.example.
+dkim._domainkey.sapopt IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.sapopt IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@sapopt.email-sender-1.example; ruf=mailto:ruf@sapopt.email-sender-1.example"
+sapopt IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.sapopt IN A XX_ANONYMIZED_IP_MAIN_A_XX
+seznamcz IN A XX_ANONYMIZED_IP_MAIN_A_XX
+seznamcz IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+seznamcz IN MX 0 mail.mail-server.example.
+dkim._domainkey.seznamcz IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.seznamcz IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@seznamcz.email-sender-1.example; ruf=mailto:ruf@seznamcz.email-sender-1.example"
+seznamcz IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.seznamcz IN A XX_ANONYMIZED_IP_MAIN_A_XX
+tutanotacom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+tutanotacom IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+tutanotacom IN MX 0 mail.mail-server.example.
+dkim._domainkey.tutanotacom IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.tutanotacom IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@tutanotacom.email-sender-1.example; ruf=mailto:ruf@tutanotacom.email-sender-1.example"
+tutanotacom IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.tutanotacom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+yahoocom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+yahoocom IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+yahoocom IN MX 0 mail.mail-server.example.
+dkim._domainkey.yahoocom IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.yahoocom IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@yahoocom.email-sender-1.example; ruf=mailto:ruf@yahoocom.email-sender-1.example"
+yahoocom IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.yahoocom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+yandexcom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+yandexcom IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+yandexcom IN MX 0 mail.mail-server.example.
+dkim._domainkey.yandexcom IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.yandexcom IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@yandexcom.email-sender-1.example; ruf=mailto:ruf@yandexcom.email-sender-1.example"
+yandexcom IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.yandexcom IN A XX_ANONYMIZED_IP_MAIN_A_XX
+zohomaileu IN A XX_ANONYMIZED_IP_MAIN_A_XX
+zohomaileu IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+zohomaileu IN MX 0 mail.mail-server.example.
+dkim._domainkey.zohomaileu IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.zohomaileu IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@zohomaileu.email-sender-1.example; ruf=mailto:ruf@zohomaileu.email-sender-1.example"
+zohomaileu IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.zohomaileu IN A XX_ANONYMIZED_IP_MAIN_A_XX
+zohomaileu IN A XX_ANONYMIZED_IP_MAIN_A_XX
+zohomaileu IN AAAA XX_ANONYMIZED_IP_MAIN_AAAA_XX
+zohomaileu IN MX 0 mail.mail-server.example.
+dkim._domainkey.zohomaileu IN TXT "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxWHWdlX0Gq4kKSPiAGmdlAN0m727UReRfEqvRh+qSU5WXouIeEXcb5rWZyapBtbwSYdZUnv7Bkad5v3IjMWSXC1+/IB0sQ4XGTDcDaE+f44TIayY/Lca7lKhLPEEXOzT9ojIEMoETwNA6GRCNmMemopnOqyGmpcxQzLau3DjWFwIDAQAB"
+_dmarc.zohomaileu IN TXT "v=DMARC1; p=none; fo=1; rua=mailto:rua@zohomaileu.email-sender-1.example; ruf=mailto:ruf@zohomaileu.email-sender-1.example"
+zohomaileu IN TXT "v=spf1 exists:%{l}._spf.%{d} -all "
+goodrua._spf.zohomaileu IN A XX_ANONYMIZED_IP_MAIN_A_XX

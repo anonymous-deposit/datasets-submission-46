@@ -1,0 +1,71 @@
+Received: from XX_ANONYMIZED_IP4_02eb06579ec960_XX
+ by atlas311.free.mail.bf1.yahoo.com pod-id NONE with HTTPS; Mon, 25 Sep 2023 11:42:01 +0000
+Return-Path: <goodrua@yahoocom.email-sender-2.example>
+X-Originating-Ip: [XX_ANONYMIZED_IP_MAIN_A_XX]
+Received-SPF: pass (domain of yahoocom.email-sender-2.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender)
+Authentication-Results: atlas311.free.mail.bf1.yahoo.com;
+ dkim=perm_fail header.i=@yahoocom.email-sender-2.example header.s=dkimfalse;
+ spf=pass smtp.mailfrom=yahoocom.email-sender-2.example;
+ dmarc=pass(p=NONE) header.from=yahoocom.email-sender-2.example;
+X-Apparently-To: anonymized_user@yahoo.com; Mon, 25 Sep 2023 11:42:02 +0000
+X-YMailISG: 2rDzaT8WLDt8sBP5X06.NTiFupbpP6R5F7f9jglSg32gosts
+ d_Tuzr2AHPTMsgsvkLhdocbg5GDL1DxVlfa7DBm27n24Iau.vf5IJfBEcfKb
+ Er34g1FKQcej.z94X7UjSt1Czgcjcaz8SBextEItq_wjHw7AYqDnqBv.dCsY
+ pnxrwAbGTJwibMH9meTefqGzfM_Tp6lmNllloYO4_w6rfrUuzh2V7YRY52tg
+ xhEUCmmJh8WgYkWtRMCouieYtGL5X.T9H238knf2s.ECBGHSi9OJWL_X9kCd
+ cBVR7dA2tzUUizBrcXbpDXNZZcdYe2B2iK47ib05A8FaQ9hJpFVwRMb6TYOS
+ Cc08JQNBMucVXzigomD5vtrWbG9XSlWPPiN3Umvh2szVKZhRocyVGi5_KXku
+ bUqhDDB1fSAPTjMtJmXxi_fOYOkTiVgtrd_EXX3cVvsL4oU_c_RydIGw0e7Z
+ Vxh31j2u7RBzfA4T_2VZmyR8fwmtlOCTwr9_jnzKqibmgzigdpxz8QasQUF0
+ 5jkFDwvkxWwBIaJ95Cet329.tOR1kquiZGikiy708fXUiGz4FufHu0XXeOUt
+ Rm3AgEuOzlHKWyHCL5UqhjmCU_8w1pSdZ2lYZl2mZzkVbGsvOAlCCK8EBbtB
+ XiM4SkO6zpVqVj6q7mWXOLplKLM6Y18U0URLBXxTC11TRNmpLGVyfc7H7ioq
+ Hodhev26TBRrJsT9twmYvh8L3mYzshRTcvJRQu5a6BPEdSSZbhBeDkdlWq1o
+ dCoJe_P087tyLFZblSKqDxas2h1UjKxgBh0NBaN4JJHVGp3r0YFjK.2Vtjt8
+ scUhPDd9l973IK1Gi6oYJ7kctS8jjb7Jd2amIaLpw_TeBGZzmy8h12VxPSmf
+ ba7YRttlUFhti.Hq28TGk46itYzFIXQN5njGZeoQbS.PzzHH5jl1XIlgpn6R
+ PrdHNkRSF8ysXvty9Zlwc.ZVzECryrqYXC_P5NVRjjoBf2jDcYZGXXmAyLta
+ i9JAuokPY8zpXcoTtftlj6wYuKlvIru6o1FudR6QqkO.JU7ilJaZDkWOkgsD
+ 8a9lgQOs
+Received: from XX_ANONYMIZED_IP_MAIN_A_XX (EHLO mail.mail-server.example)
+ by XX_ANONYMIZED_IP4_02eb06579ec960_XX with SMTPs
+ (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256);
+ Mon, 25 Sep 2023 11:42:01 +0000
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 5E3E838856C
+	for <anonymized_user@yahoo.com>; Mon, 25 Sep 2023 13:42:00 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=yahoocom.email-sender-2.example; s=dkimfalse; t=1695642120;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=EBia5L8mFZib6BXgcYY5nmhLaLjhFYcMlw6xzxs8uVc=;
+	b=OmUm1BK05U35LQTd5JqGLPW+ymqJOjBHP1mNHIXG+SZVl8LmmqshcaAZFSCW3NPGni16vM
+	PAUcy+kUMdxp646XFVZljsmeLJOTZhyBxxHGdunA8PXtp1fKLKZx8WhJOxEELTvn0tPgbz
+	/GlDx3gZBl5uSrdibcvI87o4dSuUScCAFad0xRiX8DvJZvjqa+Yocrdx4IF5a3cqiYi+cz
+	lZptp+YdeUgscEHqQeP3zmljT4bIuRfVSD3n3yeFaPSoTRkVdRp7Ytta2qdw+YJ5uaVUDy
+	Jb8k9RAenzBzU02XQJgm+SjfG9d9eqyvgXQ2sn3qyW8D04RBDDm0/LFhc6ogug==
+Content-Type: multipart/alternative; boundary="===============5143258084142958962=="
+MIME-Version: 1.0
+Subject: yahoocom Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:41:59.857636
+From: goodrua@yahoocom.email-sender-2.example
+To: anonymized_user@yahoo.com
+Date: Mon, 25 Sep 2023 13:41:59 +0200
+message-id: <169564211985.19703.11040778991092097069@yahoocom.email-sender-2.example>
+X-Last-TLS-Session-Version: TLSv1.3
+Content-Length: 2622
+
+--===============5143258084142958962==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Velit sit quiquia neque. Non eius non tempora eius quisquam velit velit. Eius quaerat adipisci sed numquam tempora neque. Sit sed porro dolor quiquia sit. Eius sit porro modi est. Amet voluptatem eius sit est quaerat. Etincidunt etincidunt velit sit aliquam magnam. Modi etincidunt aliquam tempora neque tempora quiquia voluptatem. Etincidunt aliquam ipsum dolore non consectetur porro. Neque dolorem ipsum amet sed consectetur velit porro.
+
+Etincidunt est eius quiquia sed dolorem. Dolorem eius neque aliquam dolore eius sit. Non sed quisquam consectetur quisquam ut magnam neque. Velit ut voluptatem velit voluptatem magnam. Voluptatem tempora neque ut non consectetur. Porro magnam porro dolore amet. Magnam sed dolorem dolorem ipsum sit voluptatem consectetur. Dolor quisquam dolorem dolorem. Dolor labore voluptatem numquam aliquam quiquia sed tempora.
+
+Dolorem est tempora ut modi velit non voluptatem. Non dolorem eius adipisci sit sit non. Quaerat voluptatem magnam voluptatem porro. Sit labore tempora etincidunt consectetur. Est tempora quisquam neque quisquam aliquam quiquia dolor. Sed etincidunt velit neque neque ut. Magnam sit sit dolorem porro adipisci eius consectetur. Quisquam non numquam est labore. Magnam voluptatem dolor magnam magnam sit consectetur. Dolorem dolore sed modi velit dolor quaerat.
+
+Neque eius etincidunt sit dolorem voluptatem. Quisquam quisquam est tempora adipisci adipisci adipisci non. Velit consectetur neque adipisci. Non sed ut est tempora quiquia voluptatem. Eius ut eius eius velit non adipisci non. Dolorem magnam amet voluptatem. Voluptatem quisquam adipisci quisquam.
+
+Sit etincidunt sed dolore neque neque ut. Neque dolor sed sit est magnam dolore quaerat. Velit eius non sed est sed. Numquam quaerat sit velit labore eius. Ut dolorem ipsum sed dolorem amet. Aliquam ipsum consectetur dolor. Velit neque consectetur ipsum. Dolor neque velit ipsum dolore neque sit ipsum. Quiquia dolore sit quiquia velit consectetur dolor. Modi velit dolorem magnam magnam dolorem.
+
+Magnam aliquam tempora est. Sed ipsum eius adipisci sed porro quiquia quisquam. Quaerat velit magnam consectetur eius. Ipsum neque est ipsum sit ut quaerat sed. Amet est velit etincidunt labore numquam dolor. Voluptatem sit etincidunt neque. Velit neque labore etincidunt ut magnam. Modi dolorem eius modi etincidunt velit velit quiquia. Aliquam numquam consectetur etincidunt porro quaerat. Etincidunt adipisci porro adipisci.
+--===============5143258084142958962==--

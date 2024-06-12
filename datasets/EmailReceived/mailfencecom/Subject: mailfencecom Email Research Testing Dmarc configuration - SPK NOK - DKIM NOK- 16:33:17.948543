@@ -1,0 +1,40 @@
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+          by smtp1.mailfence.com (envelope-from <badrua@mailfencecom.email-sender-3.example>) with ESMTPS
+          for <anonymized_user@mailfence.com> ; Mon, 25 Sep 2023 16:33:19 +0200 (CEST)
+Return-Path: <badrua@mailfencecom.email-sender-3.example>
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 96616388437
+  for <anonymized_user@mailfence.com>; Mon, 25 Sep 2023 16:33:18 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+  d=mailfencecom.email-sender-3.example; s=dkimfalse2; t=1695652398;
+  h=from:subject:date:message-id:to:mime-version:content-type;
+  bh=wIdwT+Zxok3TPYOEePv6Gqvs6Ym5QjcMliVXgr4lVIQ=;
+  b=azhf2QlqfLyumnDWcR5uEV5vgScfkAh+xlVsDbgblnPrSfoAyGSwFjKCA7DBnmlJuE/UJu
+  FcDhISfZhLuOQlEjZ+IuH/MpPkzLT97aXaq2SqxUPYmUIW0ULmSQg2Qh0W1x3nrBAWLaT1
+  9LPqZzv2ZTE9ej9VCYexyZSwH2WxXWY=
+Content-Type: multipart/alternative; boundary="===============1607824190416376309=="
+MIME-Version: 1.0
+Subject: mailfencecom Email Research Testing Dmarc configuration - SPK NOK - DKIM NOK- 16:33:17.948543
+From: badrua@mailfencecom.email-sender-3.example
+To: anonymized_user@mailfence.com
+Date: Mon, 25 Sep 2023 16:33:17 +0200
+message-id: <169565239794.19703.531997647201445538@mailfencecom.email-sender-3.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-Spam-Flag: NO
+X-Spam-Status: No, hits=0.3 required=4.7 symbols=BAYES_00,DKIM_INVALID,DKIM_SIGNED,SPF_FAIL,SPF_HELO_NONE device=10.2.0.1
+Delivered-To: anonymized_user@mailfence.com
+
+--===============1607824190416376309==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Ipsum voluptatem tempora ipsum. Magnam consectetur ipsum tempora non quisquam dolorem. Neque tempora quaerat velit modi non modi modi. Ipsum ut etincidunt dolore dolorem. Dolor magnam ut eius velit. Numquam quiquia magnam ut dolor quiquia. Dolorem velit quisquam etincidunt etincidunt magnam. Amet non est dolor numquam neque. Etincidunt eius ipsum neque.
+
+Amet tempora quiquia tempora. Voluptatem labore magnam magnam quiquia ut. Consectetur amet eius magnam amet labore velit dolorem. Magnam porro sed numquam tempora. Aliquam tempora magnam est. Modi neque voluptatem sed dolor sit dolor. Dolor tempora non quiquia ut non est porro.
+
+Aliquam sed est voluptatem dolor. Consectetur sit quisquam neque voluptatem dolorem numquam dolore. Dolorem modi tempora ipsum non labore etincidunt dolor. Neque quaerat velit sit labore eius labore ut. Porro eius tempora magnam labore dolorem dolorem tempora. Magnam consectetur sit magnam tempora labore. Ipsum ipsum dolor amet labore. Dolor quisquam tempora quiquia.
+
+Etincidunt sit quiquia ipsum dolorem dolore quaerat modi. Consectetur consectetur quaerat dolore quisquam etincidunt. Dolore non modi est tempora magnam sed sit. Dolore adipisci amet tempora ut. Dolorem ipsum sit labore.
+
+Quiquia non modi velit. Quaerat neque voluptatem quaerat quisquam. Quiquia ipsum ipsum eius est numquam quiquia. Est dolore dolore eius dolore voluptatem tempora quiquia. Sed est quisquam ut dolorem dolorem.
+--===============1607824190416376309==--

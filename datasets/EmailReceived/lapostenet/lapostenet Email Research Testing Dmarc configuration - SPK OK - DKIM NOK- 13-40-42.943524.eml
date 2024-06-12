@@ -1,0 +1,80 @@
+Return-Path: <goodrua@lapostenet.email-sender-3.example>
+Received: from mlpnf0101.laposte.net (mlpnf0101.sys.meshcore.net [XX_ANONYMIZED_IP4_29a3cc83cfa18a_XX])
+	 by mlpnb0305 with LMTPA;
+	 Mon, 25 Sep 2023 13:40:43 +0200
+X-Cyrus-Session-Id: cyrus-151285-1695642043-1-887610682812302389
+X-Sieve: CMU Sieve 3.0
+ARC-Seal: i=1; a=rsa-sha256; d=laposte.net; s=lpn-wlmd; t=1695642043; cv=none;
+ b=nu3EMYWVPkk1McLnM5Kawk2BAq9E6JFrPEzgcTEW0VNdyhilSmDIsXA/JJ3SQc9vphmXRg1BnW2
+  QIfXmbtxpu8x0LmROrC97F/2O1rAAZG6wmH26aXkuhQU3Zb9/wV/Y9+YSUMId+8EmPQVh0L6jA7F
+  kM+fnikRKho0ek4v+qVosgbj7/hZuf+4/FmNYX+OiR09FLkpFVLz5yQuHi5pYqKr7aau9+YvWBLc
+  9HZIaFFiLPV44JcmzGC55n8E0kYeV4Jinbml3htQT8pg3U+7mSX9IKyBxWNefbLwpMLV846WKC0F
+  YCt8Mev5gJhOfZvDcdzEq5jgfPL47CMFwUOqNIw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=simple/simple; d=laposte.net;
+ s=lpn-wlmd; t=1695642043; h=DKIM-Signature:Subject:From:To:Date; bh=zconsl3qa
+  u29i8+/pLcnkLuDrxElFAKAyohhqC4yMwA=; b=hUCJklaw2YNdOxhRnYgRylLAR3V90gv3/BFgE
+  k9rEmYeXsSYpY+7xxwpOyAXPIqEuDNQKkT7Gd4kj+zfV78Tj/nFKRiA7krS91ezIzV9ck+fFjPBB
+  T3NPPht/MH0QevX0uNZcWoxrYTRKKyi1MSUDDhqglJKv1KV3B5W7fx6V6/bXB4atLXYkhKXqBcD+
+  Zk3Cb/FABAUbFdVeXqhnphaY3dN4zjDJ8qZTrHfQLPS7T2NEFBsOxtPv+bmqZAZg6+V+D268NZ4w
+  g6sXIYsal8aehdQr+tECb4HLp+qdcjZAYUWQd5VScIb4TjiHzElWAToFyLUKIw1ugKuZQ3GE1/az
+  w==
+ARC-Authentication-Results: i=1; laposte.net;
+	spf=pass smtp.helo=mail.mail-server.example smtp.mailfrom=goodrua@lapostenet.email-sender-3.example;
+	dkim=permerror reason="missing signature record" header.b=YK5uPZ header.d=lapostenet.email-sender-3.example header.s=dkimfalse;
+	dmarc=pass reason="SPF is aligned, DKIM is not aligned";
+	arc=none smtp.remote-ip=XX_ANONYMIZED_IP_MAIN_A_XX;
+	bimi=skipped reason="non-compliant DMARC"
+X-mail-filterd: {"version":"1.7.1","queueID":"4RvLXq6KpQz1BFLp","contextId":
+ "fe936a8d-c0e1-40f3-98b9-6c08c0e2ad2d"}
+X-ppbforward: {"queueID":"4RvLXq6KpQz1BFLp","server":"mlpnf0101"}
+Received: from outgoing-mail.laposte.net (localhost.localdomain [127.0.0.1])
+	by mlpnf0101.laposte.net (SMTP Server) with ESMTP id 4RvLXq6KpQz1BFLp
+	for <lpn000000000000001901904210@back03-mail01-03.lpn.svc.meshcore.net>; Mon, 25 Sep 2023 13:40:43 +0200 (CEST)
+X-mail-filterd: {"version":"1.7.1","queueID":"4RvLXq57z1z1BFLr","contextId":
+ "4050caed-65ac-487b-a201-5df1a8230324"}
+X-lpn-mailing: LEGIT
+X-lpn-spamrating: 65
+X-lpn-spamlevel: low
+Authentication-Results: laposte.net;
+	spf=pass smtp.mailfrom=goodrua@lapostenet.email-sender-3.example smtp.helo=mail.mail-server.example;
+	dkim=permerror reason="missing signature record" header.d=lapostenet.email-sender-3.example header.s=dkimfalse header.b=YK5uPZ;
+	dmarc=pass reason="SPF is aligned, DKIM is not aligned";
+	arc=none smtp.remote-ip=XX_ANONYMIZED_IP_MAIN_A_XX;
+	bimi=skipped reason="non-compliant DMARC"
+X-lpn-spamcause: OK, (51)(0000)gggruggvucftvghtrhhoucdtuddrgedviedrudelgedggedvucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecunfetrffquffvgfdpggftfghnshhusghstghrihgsvgenuceurghilhhouhhtmecufedtudenucfqnhhlhicuohhnvgcuphgrrhhtucdlhedumdenucfjughrpegtggfuhffvfffksegrtderredttddvnecuhfhrohhmpehgohhoughruhgrsehlrghpohhsthgvnhgvthdrvhhivghnshihsghoihhrvghunhgtrghnohhnrdhfrhenucggtffrrghtthgvrhhnpeelteevjefgiedufeeghfdtfeeutdegheettedvjefgvdehkeegudeiffeugeetveenucfkphepudekhedrudekhedrkedvrddvkeenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhepihhnvghtpedukeehrddukeehrdekvddrvdekpdhhvghlohepmhgrihhlrdiiohhrvghilhhlvgdrrhgvpdhmrghilhhfrhhomhepghhoohgurhhurgeslhgrphhoshhtvghnvghtrdhvihgvnhhshigsohhirhgvuhhntggrnhhonhdrfhhrpdhnsggprhgtphhtthhopedupdhrtghpthhtohephhhurhgvrghurdholhhivhhivghrsehlrghpohhsthgvrdhnvghtpdhsphhfpehprghsshdpughmrghrtgepphgrshhspdhrvghvkffrpehmrghilhdriihorhgvihhllhgvrdhrvgdpghgvohfkrfepfgfu
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mlpnf0101.laposte.net (SMTP Server) with ESMTPS id 4RvLXq57z1z1BFLr
+	for <anonymized_user@laposte.net>; Mon, 25 Sep 2023 13:40:43 +0200 (CEST)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 57EBB388567
+	for <anonymized_user@laposte.net>; Mon, 25 Sep 2023 13:40:43 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=lapostenet.email-sender-3.example; s=dkimfalse; t=1695642043;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=zconsl3qau29i8+/pLcnkLuDrxElFAKAyohhqC4yMwA=;
+	b=YK5uPZUGepyZsiW2NKciH07L2To4aNSK84CMjbhSBWR8Dk2cdZSmxeUGzzXUuUSf2T7qOe
+	TZ8gNIynyoHeIxmkWcTNBI2u8wlmWAc40A6GoAVYKlbpfWgi0GJaxvTV0BXRbVMCgMTkw4
+	g6uiB7OkScJgX61s2Qk2yOlcJupBb/dHGKFG1CvqR0K0ySj7iYmkws62VKHi3u9Eq9VoXJ
+	CiH2TzB+fBh7t56pp14KmpEsiGRsjM/uy/02av5g7h5/5MFg3uLzgy3SchkNPpDw7ksTlI
+	VBg3iApolePaRgsRRyb9CN4bGXO9eYH8PKc7RoirWw9Du6mocHYFZ00jDAcmrw==
+Content-Type: multipart/alternative; boundary="===============6768619079963589124=="
+MIME-Version: 1.0
+Subject: lapostenet Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:40:42.943524
+From: goodrua@lapostenet.email-sender-3.example
+To: anonymized_user@laposte.net
+Date: Mon, 25 Sep 2023 13:40:42 +0200
+message-id: <169564204294.19703.15493547018220118262@lapostenet.email-sender-3.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============6768619079963589124==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Aliquam non neque est velit modi dolor aliquam. Sit neque dolorem aliquam consectetur. Non sit modi adipisci magnam porro consectetur est. Dolorem magnam aliquam numquam dolorem. Eius labore neque eius. Velit quaerat quisquam adipisci labore est ut. Numquam consectetur consectetur neque tempora. Eius tempora aliquam adipisci eius dolor ut quiquia. Neque quisquam adipisci dolorem magnam amet numquam.
+
+Magnam numquam tempora dolorem quisquam velit quisquam est. Est velit tempora neque amet sed numquam. Velit dolorem dolorem ipsum. Porro sit quisquam voluptatem consectetur. Amet quaerat sed labore. Adipisci eius velit neque quiquia labore. Porro amet numquam dolore voluptatem est aliquam. Porro quisquam eius labore dolor sit eius dolore. Ipsum modi quiquia adipisci velit quiquia. Velit quisquam dolorem non sit.
+
+Aliquam consectetur quisquam consectetur neque ipsum. Consectetur ut sed sit dolore quaerat adipisci. Amet dolore dolorem est. Sit aliquam labore sed tempora. Eius neque numquam numquam numquam. Voluptatem sit non tempora labore velit quisquam tempora. Sit ut voluptatem porro. Eius etincidunt neque magnam. Dolor consectetur labore ipsum labore.
+--===============6768619079963589124==--

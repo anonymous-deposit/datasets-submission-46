@@ -1,0 +1,176 @@
+Return-Path: <abuse@seznam.cz>
+Received: from zm-mta16e8680dcd3018e.anon (LHLO zm-mta16e8680dcd3018e.anon)
+ (XX_ANONYMIZED_IP4_44eec3a0a6964b_XX) by zm-mbx026e8680dcd3018e.anon with
+ LMTP; Tue, 26 Sep 2023 12:42:53 +0200 (CEST)
+Received: from localhost (localhost [127.0.0.1])	by zm-mta16e8680dcd3018e.anon
+ (Postfix) with ESMTP id CD25EC019A	for
+ <anonymized_user@email-recevier-invalid-edv.example>; Tue, 26 Sep 2023
+ 12:42:53 +0200 (CEST)
+X-Spam-Flag: NO
+X-Spam-Score: 1.593
+X-Spam-Level: *
+X-Spam-Status: No, score=1.593 required=7 tests=[KHOP_HELO_FCRDNS=0.399,
+ SCC_BODY_URI_ONLY=1.204, T_SCC_BODY_TEXT_LINE=-0.01]
+ autolearn=no autolearn_force=no
+Authentication-Results: zm-mta16e8680dcd3018e.anon (amavis); dkim=pass
+ (2048-bit key) header.d=seznam.cz
+Received: from zm-mta16e8680dcd3018e.anon ([127.0.0.1]) by localhost
+ (zm-mta16e8680dcd3018e.anon [127.0.0.1]) (amavis, port 10024) with ESMTP id
+ 1pNUm6w9ouEV for <anonymized_user@email-recevier-invalid-edv.example>; Tue,
+ 26 Sep 2023 12:42:53 +0200 (CEST)
+Received: from mailhub6e8680dcd3018e.anon (mailhub-16e8680dcd3018e.anon
+ [XX_ANONYMIZED_IP4_c35311ca0a9c0e_XX])	by zm-mta16e8680dcd3018e.anon
+ (Postfix) with ESMTP id A39AEC00F0	for
+ <anonymized_user@email-recevier-invalid-edv.example>; Tue, 26 Sep 2023
+ 12:42:53 +0200 (CEST)
+Received: from smtp-in36e8680dcd3018e.anon (smtp-in36e8680dcd3018e.anon
+ [XX_ANONYMIZED_IP4_d3bc9911a5dd05_XX])	by mailhub6e8680dcd3018e.anon
+ (Postfix) with ESMTP id A039410005A	for
+ <anonymized_user@email-recevier-invalid-edv.example>; Tue, 26 Sep 2023
+ 12:42:53 +0200 (CEST)
+Received: from mxb1-2.relay.a5e1b3345a2f5a.anon
+ (mxb1-2.relay.a5e1b3345a2f5a.anon [XX_ANONYMIZED_IP4_fd38dfe9b824a3_XX])	by
+ smtp-in36e8680dcd3018e.anon (Postfix) with ESMTP id 9A33040079	for
+ <anonymized_user@email-recevier-invalid-edv.example>; Tue, 26 Sep 2023
+ 12:42:53 +0200 (CEST)
+Received: from mxl-1-640.seznam.cz (mxl-1-640.seznam.cz
+ [IPv6:XX_ANONYMIZED_IP6_6ecee9898d3b25_XX])	(using TLSv1.2 with cipher
+ ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))	(No client certificate requested)
+	by mxb1-2.relay.a5e1b3345a2f5a.anon (asm) with ESMTPS id 65EE220772	for
+ <anonymized_user@email-recevier-invalid-edv.example>; Tue, 26 Sep 2023
+ 12:42:53 +0200 (CEST)
+Received: from email.seznam.cz
+	by smtpc-mxl-66944869bc-h6pvc
+	(smtpc-mxl-66944869bc-h6pvc [XX_ANONYMIZED_IP6_6ecee9898d3b25_XX]);
+	Tue, 26 Sep 2023 12:42:52 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=seznam.cz;
+	s=szn20221014; t=1695724972;
+	bh=agwTn0VOw+n+bjzFGP4uXlzNeYsF06nS144PYletqgY=;
+	h=From:To:Subject:Date:Mime-Version:Message-Id:Content-Type;
+	b=vZlHVCNIBJhnIPEuTPlSi+dBG5IkOcEAgB7B+o/OS9/FoFfI7eeHWk2WZ9aUn3ugP
+	 dyQf8rUBAOdabXDbCh9Y94WgH83ZrxX+w9jEEqOsQmOt9SSNMgxQjQmFzAZ8HA1jQF
+	 pJwdcrQmasI912MdyRNUJLtAI1v7ynu7dzxvi/0vpYM5CFua0+YlLuRV5Yzvfh4ut0
+	 1bRqiB/YTsA4LlBWvnweKtvzyD9d+GJOzYnlo8QJzXcPv/DwJ37L3Nc8Y48p8RDYmO
+	 tcEVaJs19aB/oBYswUyZ5uSuBt4PxC9OgWnxZ/J6o4qAI+uyaSCtf2lj1YdglHisS2
+	 kHWUxSF6AEMlQ==
+From: "Seznam.cz" <abuse@seznam.cz>
+To: <anonymized_user@email-recevier-invalid-edv.example>
+Date: Tue, 26 Sep 2023 12:42:50 +0200 (CEST)
+Mime-Version: 1.0 (szn-mime-2.1.32)
+Message-Id: <P5.1b4jDj.7MklneJMNJa.1b4hMg@seznam.cz>
+Content-Type: multipart/mixed;
+	boundary="=_1c088a5a0868de8e7f509c90=25b2d66d-f625-5e2f-bdd9-4067c697eb73_="
+X-Original-Source-IP: XX_ANONYMIZED_IP6_6ecee9898d3b25_XX
+X-Renater-SpamState: 0
+X-Renater-SpamScore: 0
+X-Renater-SpamCause: =?utf-8?q?gggruggvucftvghtrhhoucdtuddrgedvjedrtddtgddtf?=
+ =?utf-8?q?ecutefuodetggdotefrodftvfcurfhrohhfihhlvgemucftgffptefvgfftpdggtf?=
+ =?utf-8?q?gfnhhsuhgsshgtrhhisggvnecuuegrihhlohhuthemuceftddtnecunecujfgurhe?=
+ =?utf-8?q?phffvufffggfktgesmhdtreertddtjeenucfhrhhomhepfdfuvgiinhgrmhdrtgii?=
+ =?utf-8?q?fdcuoegrsghushgvsehsvgiinhgrmhdrtgiiqeenucggtffrrghtthgvrhhnpefff?=
+ =?utf-8?q?fegteevveeiffffvefggfffiedtueevvddugfeffeehueeujeeljeeuffduhfenuc?=
+ =?utf-8?q?ffohhmrghinhepvhhivghnshihsghoihhrvghunhgtrghnohhnrdhfrhenucfkphe?=
+ =?utf-8?q?pvdgrtddvmeehleekmeduvdekmeekrgdttdemmedutddttdemieegtdenucevlhhu?=
+ =?utf-8?q?shhtvghrufhiiigvpedtnecurfgrrhgrmhepmhhouggvpehsmhhtphdphhgvlhhop?=
+ =?utf-8?q?ehmgihlqdduqdeigedtrdhsvgiinhgrmhdrtgiipdhinhgvthepvdgrtddvmeehle?=
+ =?utf-8?q?ekmeduvdekmeekrgdttdemmedutddttdemieegtddpmhgrihhlfhhrohhmpegrsgh?=
+ =?utf-8?q?ushgvsehsvgiinhgrmhdrtgiipdhnsggprhgtphhtthhopedupdhrtghpthhtohep?=
+ =?utf-8?q?ohhlihhvihgvrhdrhhhurhgvrghusehunhhivhdqghhrvghnohgslhgvqdgrlhhpv?=
+ =?utf-8?q?ghsrdhfrh?= 
+X-Renater-ServerName: mxb1-2.relay.a5e1b3345a2f5a.anon
+X-Bizanga: IMP - mxb1-2.relay.a5e1b3345a2f5a.anon
+Subject: Report Domain: seznamcz.email-sender-3.example Submitter: seznam.cz
+ Report-ID: szn_seznamcz.email-sender-3.example-2023-09-25
+
+--=_1c088a5a0868de8e7f509c90=25b2d66d-f625-5e2f-bdd9-4067c697eb73_=
+Content-Type: text/plain
+Content-Transfer-Encoding: 7bit
+
+This is a DMARC aggregate report for seznamcz.email-sender-3.example generated 
+at Tue Sep 26 12:42:50 2023
+--=_1c088a5a0868de8e7f509c90=25b2d66d-f625-5e2f-bdd9-4067c697eb73_=
+Content-Type: application/zip;
+ name*0*=us-ascii''seznam.cz%21seznamcz.email-sender-3.example%211695600000;
+ name*1*=%211695686400.xml.zip
+Content-Id: <cid_752>
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; size="4209";
+ filename*0*=us-ascii''seznam.cz%21seznamcz.email-sender-3.example%2116956000;
+ filename*1*=00%211695686400.xml.zip
+
+UEsDBBQAAAAAAFllOldF2WVhiw8AAIsPAABCAAAAc2V6bmFtLmN6IXNlem5hbWN6LnZpZW5zeWJv
+aXJldW5jYW5vbi5mciExNjk1NjAwMDAwITE2OTU2ODY0MDAueG1sPD94bWwgdmVyc2lvbj0iMS4w
+IiBlbmNvZGluZz0iVVRGLTgiID8+CjxmZWVkYmFjaz4KICAgIDx2ZXJzaW9uPjEuMDwvdmVyc2lv
+bj4KICAgIDxyZXBvcnRfbWV0YWRhdGE+CiAgICAgICAgPG9yZ19uYW1lPnNlem5hbS5jeiBhLnMu
+PC9vcmdfbmFtZT4KICAgICAgICA8ZW1haWw+YWJ1c2VAc2V6bmFtLmN6PC9lbWFpbD4KICAgICAg
+ICA8cmVwb3J0X2lkPnN6bl9zZXpuYW1jei52aWVuc3lib2lyZXVuY2Fub24uZnItMjAyMy0wOS0y
+NTwvcmVwb3J0X2lkPgogICAgICAgIDxkYXRlX3JhbmdlPgogICAgICAgICAgICA8YmVnaW4+MTY5
+NTYwMDAwMDwvYmVnaW4+CiAgICAgICAgICAgIDxlbmQ+MTY5NTY4NjQwMDwvZW5kPgogICAgICAg
+IDwvZGF0ZV9yYW5nZT4KICAgIDwvcmVwb3J0X21ldGFkYXRhPgogICAgPHBvbGljeV9wdWJsaXNo
+ZWQ+CiAgICAgICAgPGRvbWFpbj5zZXpuYW1jei52aWVuc3lib2lyZXVuY2Fub24uZnI8L2RvbWFp
+bj4KICAgICAgICA8YWRraW0+cjwvYWRraW0+CiAgICAgICAgPGFzcGY+cjwvYXNwZj4KICAgICAg
+ICA8cD5ub25lPC9wPgogICAgICAgIDxwY3Q+MTAwPC9wY3Q+CiAgICAgICAgPGZvPjE8L2ZvPgog
+ICAgPC9wb2xpY3lfcHVibGlzaGVkPgogICAgPHJlY29yZD4KICAgICAgICA8cm93PgogICAgICAg
+ICAgICA8c291cmNlX2lwPjJhMDI6YzIwNjoyMDgwOjM4MzQ6OjI8L3NvdXJjZV9pcD4KICAgICAg
+ICAgICAgPGNvdW50PjE8L2NvdW50PgogICAgICAgICAgICA8cG9saWN5X2V2YWx1YXRlZD4KICAg
+ICAgICAgICAgICAgIDxkaXNwb3NpdGlvbj5ub25lPC9kaXNwb3NpdGlvbj4KICAgICAgICAgICAg
+ICAgIDxka2ltPnBhc3M8L2RraW0+CiAgICAgICAgICAgICAgICA8c3BmPmZhaWw8L3NwZj4KICAg
+ICAgICAgICAgPC9wb2xpY3lfZXZhbHVhdGVkPgogICAgICAgIDwvcm93PgogICAgICAgIDxpZGVu
+dGlmaWVycz4KICAgICAgICAgICAgPGhlYWRlcl9mcm9tPnNlem5hbWN6LnZpZW5zeWJvaXJldW5j
+YW5vbi5mcjwvaGVhZGVyX2Zyb20+CiAgICAgICAgPC9pZGVudGlmaWVycz4KICAgICAgICA8YXV0
+aF9yZXN1bHRzPgogICAgICAgICAgICAgPGRraW0+CiAgICAgICAgICAgICAgICA8ZG9tYWluPnNl
+em5hbWN6LnZpZW5zeWJvaXJldW5jYW5vbi5mcjwvZG9tYWluPgogICAgICAgICAgICAgICAgPHJl
+c3VsdD5wYXNzPC9yZXN1bHQ+CiAgICAgICAgICAgICAgICA8c2VsZWN0b3I+ZGtpbTwvc2VsZWN0
+b3I+CiAgICAgICAgICAgIDwvZGtpbT4KICAgICAgICAgICAgIDxzcGY+CiAgICAgICAgICAgICAg
+ICA8ZG9tYWluPnNlem5hbWN6LnZpZW5zeWJvaXJldW5jYW5vbi5mcjwvZG9tYWluPgogICAgICAg
+ICAgICAgICAgPHNjb3BlPm1mcm9tPC9zY29wZT4KICAgICAgICAgICAgICAgIDxyZXN1bHQ+ZmFp
+bDwvcmVzdWx0PgogICAgICAgICAgICA8L3NwZj4KICAgICAgICA8L2F1dGhfcmVzdWx0cz4KICAg
+IDwvcmVjb3JkPjxyZWNvcmQ+CiAgICAgICAgPHJvdz4KICAgICAgICAgICAgPHNvdXJjZV9pcD4y
+YTAyOmMyMDY6MjA4MDozODM0OjoyPC9zb3VyY2VfaXA+CiAgICAgICAgICAgIDxjb3VudD4xPC9j
+b3VudD4KICAgICAgICAgICAgPHBvbGljeV9ldmFsdWF0ZWQ+CiAgICAgICAgICAgICAgICA8ZGlz
+cG9zaXRpb24+bm9uZTwvZGlzcG9zaXRpb24+CiAgICAgICAgICAgICAgICA8ZGtpbT5mYWlsPC9k
+a2ltPgogICAgICAgICAgICAgICAgPHNwZj5wYXNzPC9zcGY+CiAgICAgICAgICAgIDwvcG9saWN5
+X2V2YWx1YXRlZD4KICAgICAgICA8L3Jvdz4KICAgICAgICA8aWRlbnRpZmllcnM+CiAgICAgICAg
+ICAgIDxoZWFkZXJfZnJvbT5zZXpuYW1jei52aWVuc3lib2lyZXVuY2Fub24uZnI8L2hlYWRlcl9m
+cm9tPgogICAgICAgIDwvaWRlbnRpZmllcnM+CiAgICAgICAgPGF1dGhfcmVzdWx0cz4KICAgICAg
+ICAgICAgIDxka2ltPgogICAgICAgICAgICAgICAgPGRvbWFpbj5zZXpuYW1jei52aWVuc3lib2ly
+ZXVuY2Fub24uZnI8L2RvbWFpbj4KICAgICAgICAgICAgICAgIDxyZXN1bHQ+a2V5ZmFpbDwvcmVz
+dWx0PgogICAgICAgICAgICAgICAgPHNlbGVjdG9yPmRraW1mYWxzZTwvc2VsZWN0b3I+CiAgICAg
+ICAgICAgIDwvZGtpbT4KICAgICAgICAgICAgIDxzcGY+CiAgICAgICAgICAgICAgICA8ZG9tYWlu
+PnNlem5hbWN6LnZpZW5zeWJvaXJldW5jYW5vbi5mcjwvZG9tYWluPgogICAgICAgICAgICAgICAg
+PHNjb3BlPm1mcm9tPC9zY29wZT4KICAgICAgICAgICAgICAgIDxyZXN1bHQ+cGFzczwvcmVzdWx0
+PgogICAgICAgICAgICA8L3NwZj4KICAgICAgICA8L2F1dGhfcmVzdWx0cz4KICAgIDwvcmVjb3Jk
+PjxyZWNvcmQ+CiAgICAgICAgPHJvdz4KICAgICAgICAgICAgPHNvdXJjZV9pcD4xODUuMTg1Ljgy
+LjI4PC9zb3VyY2VfaXA+CiAgICAgICAgICAgIDxjb3VudD4xPC9jb3VudD4KICAgICAgICAgICAg
+PHBvbGljeV9ldmFsdWF0ZWQ+CiAgICAgICAgICAgICAgICA8ZGlzcG9zaXRpb24+bm9uZTwvZGlz
+cG9zaXRpb24+CiAgICAgICAgICAgICAgICA8ZGtpbT5wYXNzPC9ka2ltPgogICAgICAgICAgICAg
+ICAgPHNwZj5wYXNzPC9zcGY+CiAgICAgICAgICAgIDwvcG9saWN5X2V2YWx1YXRlZD4KICAgICAg
+ICA8L3Jvdz4KICAgICAgICA8aWRlbnRpZmllcnM+CiAgICAgICAgICAgIDxoZWFkZXJfZnJvbT5z
+ZXpuYW1jei52aWVuc3lib2lyZXVuY2Fub24uZnI8L2hlYWRlcl9mcm9tPgogICAgICAgIDwvaWRl
+bnRpZmllcnM+CiAgICAgICAgPGF1dGhfcmVzdWx0cz4KICAgICAgICAgICAgIDxka2ltPgogICAg
+ICAgICAgICAgICAgPGRvbWFpbj5zZXpuYW1jei52aWVuc3lib2lyZXVuY2Fub24uZnI8L2RvbWFp
+bj4KICAgICAgICAgICAgICAgIDxyZXN1bHQ+cGFzczwvcmVzdWx0PgogICAgICAgICAgICAgICAg
+PHNlbGVjdG9yPmRraW08L3NlbGVjdG9yPgogICAgICAgICAgICA8L2RraW0+CiAgICAgICAgICAg
+ICA8c3BmPgogICAgICAgICAgICAgICAgPGRvbWFpbj5zZXpuYW1jei52aWVuc3lib2lyZXVuY2Fu
+b24uZnI8L2RvbWFpbj4KICAgICAgICAgICAgICAgIDxzY29wZT5tZnJvbTwvc2NvcGU+CiAgICAg
+ICAgICAgICAgICA8cmVzdWx0PnBhc3M8L3Jlc3VsdD4KICAgICAgICAgICAgPC9zcGY+CiAgICAg
+ICAgPC9hdXRoX3Jlc3VsdHM+CiAgICA8L3JlY29yZD48cmVjb3JkPgogICAgICAgIDxyb3c+CiAg
+ICAgICAgICAgIDxzb3VyY2VfaXA+MTg1LjE4NS44Mi4yODwvc291cmNlX2lwPgogICAgICAgICAg
+ICA8Y291bnQ+MTwvY291bnQ+CiAgICAgICAgICAgIDxwb2xpY3lfZXZhbHVhdGVkPgogICAgICAg
+ICAgICAgICAgPGRpc3Bvc2l0aW9uPm5vbmU8L2Rpc3Bvc2l0aW9uPgogICAgICAgICAgICAgICAg
+PGRraW0+ZmFpbDwvZGtpbT4KICAgICAgICAgICAgICAgIDxzcGY+cGFzczwvc3BmPgogICAgICAg
+ICAgICA8L3BvbGljeV9ldmFsdWF0ZWQ+CiAgICAgICAgPC9yb3c+CiAgICAgICAgPGlkZW50aWZp
+ZXJzPgogICAgICAgICAgICA8aGVhZGVyX2Zyb20+c2V6bmFtY3oudmllbnN5Ym9pcmV1bmNhbm9u
+LmZyPC9oZWFkZXJfZnJvbT4KICAgICAgICA8L2lkZW50aWZpZXJzPgogICAgICAgIDxhdXRoX3Jl
+c3VsdHM+CiAgICAgICAgICAgICA8ZGtpbT4KICAgICAgICAgICAgICAgIDxkb21haW4+c2V6bmFt
+Y3oudmllbnN5Ym9pcmV1bmNhbm9uLmZyPC9kb21haW4+CiAgICAgICAgICAgICAgICA8cmVzdWx0
+PmtleWZhaWw8L3Jlc3VsdD4KICAgICAgICAgICAgICAgIDxzZWxlY3Rvcj5ka2ltZmFsc2UyPC9z
+ZWxlY3Rvcj4KICAgICAgICAgICAgPC9ka2ltPgogICAgICAgICAgICAgPHNwZj4KICAgICAgICAg
+ICAgICAgIDxkb21haW4+c2V6bmFtY3oudmllbnN5Ym9pcmV1bmNhbm9uLmZyPC9kb21haW4+CiAg
+ICAgICAgICAgICAgICA8c2NvcGU+bWZyb208L3Njb3BlPgogICAgICAgICAgICAgICAgPHJlc3Vs
+dD5wYXNzPC9yZXN1bHQ+CiAgICAgICAgICAgIDwvc3BmPgogICAgICAgIDwvYXV0aF9yZXN1bHRz
+PgogICAgPC9yZWNvcmQ+CjwvZmVlZGJhY2s+ClBLAQIUAxQAAAAAAFllOldF2WVhiw8AAIsPAABC
+AAAAAAAAAAAAAACAAQAAAABzZXpuYW0uY3ohc2V6bmFtY3oudmllbnN5Ym9pcmV1bmNhbm9uLmZy
+ITE2OTU2MDAwMDAhMTY5NTY4NjQwMC54bWxQSwUGAAAAAAEAAQBwAAAA6w8AAAAA
+--=_1c088a5a0868de8e7f509c90=25b2d66d-f625-5e2f-bdd9-4067c697eb73_=--
+

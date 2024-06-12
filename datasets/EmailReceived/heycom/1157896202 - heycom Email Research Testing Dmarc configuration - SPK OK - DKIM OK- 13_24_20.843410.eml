@@ -1,0 +1,64 @@
+Return-Path: <goodrua@heycom.email-sender-4.example>
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+	by home-mx.app.hey.com (Postfix) with ESMTP id 414B682DE3
+	for <anonymized_user@hey.com>; Mon, 25 Sep 2023 11:24:22 +0000 (UTC)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 3328C388568
+	for <anonymized_user@hey.com>; Mon, 25 Sep 2023 13:24:21 +0200 (CEST)
+Date: Mon, 25 Sep 2023 13:24:20 +0200
+From: goodrua@heycom.email-sender-4.example
+To: anonymized_user@hey.com
+Message-ID: <169564106084.19703.5936532239822642660@heycom.email-sender-4.example>
+Subject: heycom Email Research Testing Dmarc configuration - SPK OK - DKIM OK- 13:24:20.843410
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary="===============5779337530114480429=="
+Content-Transfer-Encoding: 7bit
+X-Original-To: anonymized_user@hey.com
+Delivered-To: anonymized_user@hey.com
+Authentication-Results: home-mx.app.hey.com;
+	dkim=pass header.d=heycom.email-sender-4.example header.s=dkim header.b=SfiD1p9e;
+	dmarc=pass (policy=none) header.from=heycom.email-sender-4.example;
+	spf=pass (home-mx.app.hey.com: domain of goodrua@heycom.email-sender-4.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) smtp.mailfrom=goodrua@heycom.email-sender-4.example
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=hey.com;
+	s=heymail; t=1695641062;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type;
+	bh=auPincvnp56rk0Fpqw3kyisbGnJf7Ok4s+F+FDJZX/s=;
+	b=Xnh1oSTnll1zDjMoAzVVIgomZBlw8gH3EzwLuyDWOrflmeu90td0KBPup4UWzVBh5yxYt5
+	KMPA10fV0lW9nqGrFnmQp9O4QlHRsZ8hNj1c8bKE28g+/eFIZoj36PcUhVlA9uTvu6PuXe
+	qXSxyHW7cAQ+SccbEtYprFe5SyDssximshGhpbrvssAbquxGnqP3I3gCHLb6+g0r28q+I3
+	qVWR8kbTR/atJDj0Ff6g/v9+D0ScZbTNdpHKNkNR/COihM1ThLbdJ4rpkaqGrJsZhnnerD
+	5lwc0k3qGsFfibMhl7fGsmiUQkkJ6V8RTUt5bRxPi8TRj17NAVkLx6CyiEvZAA==
+ARC-Authentication-Results: i=1;
+	home-mx.app.hey.com;
+	dkim=pass header.d=heycom.email-sender-4.example header.s=dkim header.b=SfiD1p9e;
+	dmarc=pass (policy=none) header.from=heycom.email-sender-4.example;
+	spf=pass (home-mx.app.hey.com: domain of goodrua@heycom.email-sender-4.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) smtp.mailfrom=goodrua@heycom.email-sender-4.example
+ARC-Seal: i=1; s=heymail; d=hey.com; t=1695641062; a=rsa-sha256; cv=none;
+	b=uPFr2Hj/TY/SKn0ccrbmI4e0sNa5rjL1MuBQKV+4ZZn4nlGvQfmz0FBsZGYm5siPTuQF+2
+	S2McsiknyELMH3iHPy3C/ahDdul/TZmgotelIutHRP0XV40i4sTUCpuEVdEUpo8fFXm7IP
+	myE5e6bW9w0nwNWcuiv3zqkdPNZwsgruBMz13aAWATphpKGQN2TN43QYQcxGnCmM70h+UK
+	YNL0UCtS/GV4bVhr9etaMe9xeApMJ/0t/MuyDp0wZsO9fi3EPwQnDibdPlrHXCBnUWHsJc
+	o1AxA41yWLxlbUQ+AE0C8xupIYZSDRV2IEww7mWCYIrctRlkz3wr1/V8PnBY/Q==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=heycom.email-sender-4.example;
+	s=dkim; t=1695641061; h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=auPincvnp56rk0Fpqw3kyisbGnJf7Ok4s+F+FDJZX/s=;
+	b=SfiD1p9eMbf44QbnQmczS3DhWOoZbIygnFQ09nkvpxdSsmhAYTAXCt5MRV3yQNEmBtwGJ7
+	xOb9nRsOMig7mqe1Bk0c6LHEiboPN/BfwnnjV/0+O7YRbggMyFZjInokZN27VA/Pnl7FET
+	9S7BcCPQ0DKcP6AvNPQwWrUPD9Sd/9E=
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============5779337530114480429==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Velit ut numquam est neque. Quiquia sed tempora voluptatem. Sed neque quiquia labore sed consectetur etincidunt amet. Eius ut neque sit adipisci numquam porro velit. Sed voluptatem sed quisquam dolore ipsum modi quisquam. Tempora porro porro porro. Etincidunt dolorem labore dolor sit ipsum tempora porro. Modi voluptatem tempora tempora eius velit dolor. Ut velit amet dolorem numquam neque. Dolore consectetur consectetur ipsum.
+
+Neque non etincidunt sed voluptatem. Est eius tempora est sed. Sit amet ipsum labore labore. Etincidunt numquam sit ut dolor labore dolorem magnam. Tempora ipsum sed dolore tempora sit porro. Ut quaerat dolore sed magnam est dolorem dolor.
+
+Consectetur amet numquam modi amet neque. Dolore labore sed consectetur numquam sit. Ipsum dolore numquam sed quaerat velit ut. Dolore quisquam sit quaerat labore amet quiquia. Neque dolore tempora etincidunt modi. Dolorem numquam etincidunt non. Labore voluptatem aliquam eius quaerat aliquam non.
+
+Dolor ipsum eius est ipsum quiquia sed dolorem. Tempora tempora ipsum amet. Modi labore magnam modi aliquam magnam quaerat porro. Etincidunt consectetur amet sed. Porro neque etincidunt labore quaerat dolore modi dolor. Velit velit aliquam labore.
+
+Dolorem quisquam sed consectetur adipisci. Sed dolore etincidunt amet numquam quiquia neque. Numquam amet neque adipisci adipisci dolor aliquam. Neque ut etincidunt eius. Quaerat tempora non porro quiquia est eius. Ut est dolore quiquia numquam dolore. Neque non quisquam ut modi adipisci magnam. Etincidunt neque est non etincidunt sit. Numquam non ut non ut non. Magnam voluptatem porro modi dolor adipisci eius.
+--===============5779337530114480429==--

@@ -1,0 +1,63 @@
+Received: from XX_ANONYMIZED_IP4_5be569c5885c02_XX
+ by atlas203.free.mail.ne1.yahoo.com pod-id NONE with HTTPS; Mon, 25 Sep 2023 14:28:52 +0000
+Return-Path: <badrua@yahoocom.email-sender-1.example>
+X-Originating-Ip: [XX_ANONYMIZED_IP_MAIN_A_XX]
+Received-SPF: fail (domain of yahoocom.email-sender-1.example does not designate XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender)
+Authentication-Results: atlas203.free.mail.ne1.yahoo.com;
+ dkim=perm_fail header.i=@yahoocom.email-sender-1.example header.s=dkimfalse2;
+ spf=fail smtp.mailfrom=yahoocom.email-sender-1.example;
+ dmarc=fail(p=NONE) header.from=yahoocom.email-sender-1.example;
+X-Apparently-To: anonymized_user@yahoo.com; Mon, 25 Sep 2023 14:28:52 +0000
+X-YMailISG: vUNs8awWLDsnyLL9SgGops0wdkk3J6Z8RMHQBoQNIRk3kBsO
+ IiLfrCXHnCSikcXRIYKq73dqG08lEWa2Mz7SjsS2jDzwWsxr1beRu0uSI5cS
+ NGLNiAX_A_7nu9EOIx43MrXiD8du38V59_Xph7YcopnlW1nrPv2h8IbOCLFl
+ JpqoQEbBeMq3k2bpMKS1OxxvE0E5mXEhzpOlJ.yIZdI4xNsUeNFYHzaafT9l
+ dMfAO6KcabDTLrB8_Ggr0vq2PVZPF9LuC9VYz.Vy6TSgEkm8DGC9ZTjEYBpG
+ 8vA_gTDMXKY0blLlDoxjE4qvGOCBzgyFDqTEmf8GvEJqqjZY5juR9W8S4_bd
+ mFoRPTom31b9UeoTdNw7JZoj3bjnT9J4Pvll2AuagA2Y6quuLETiHea3Ybxj
+ 5PsXK4T4I6.Yw2mQFDr3ctz8A2YQbG0GOmEGKVNAFRCUL_XvmuwUMsjNO_p8
+ TlWpJmJg2WCAt6fpSvCzB8d0FG3agXfE4tRRPFhFCuAveUax2i6UeqVO425J
+ 7B2Sz75.YSZsuTiBhMYcmeJFx9Pk.Hh9TuKPU3qYc5tsmDgEm_YY_q8ulDHA
+ oL8ktht1zYfZHTX8b0YnHbyIRlF3rIPAcnOayerfuwbq7bgRusvuAwuj4uWn
+ FlCopB1lm8ldvwRk8uQjN4oMuTuLK3XejAqc9x.kXeZr4c8HCtmDvP4gDMul
+ FOyHS9KDVj18oRfV3zc.v25aP7OdeJaZyiYBpv5JZZY3LEaro1q8ap9A80.W
+ A_OzfS6f684k5oNy4kEagqt3RQiGL7vAqIDnxnRAxZdChH2uEU75bGk7q00Q
+ n9QECkk7HYeGXU94PxIIpXl3My_tHl2W5vflOYnCe3yFd_KEo73MRdlpblCT
+ 5Zs4vaKqKI5I2yL57AHyoG5AGln.9RqbLs_N8nXuZ6ZQ7.gts5JALMdsGfPC
+ QUEDdRq1g8JjRMMxhx6UstDgMGBUe6uQRDIlWMo_bD9x8I3Kr2vXNEzh3OR.
+ g2FGZ.dHcOM10OK2LOc7XvFoMusl7LFOFrVE31pJcXsJQFpUnHTxbDG0MMaw
+ VCpVwvXF4krVSMj8aJ0-
+Received: from XX_ANONYMIZED_IP_MAIN_A_XX (EHLO mail.mail-server.example)
+ by XX_ANONYMIZED_IP4_5be569c5885c02_XX with SMTPs
+ (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256);
+ Mon, 25 Sep 2023 14:28:52 +0000
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id A95D53884CC
+	for <anonymized_user@yahoo.com>; Mon, 25 Sep 2023 16:28:50 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoocom.email-sender-1.example;
+	s=dkimfalse2; t=1695652130;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=mbSAN6gosZ1kKA8VJXw34NBy5OY01zcZxb5DmzIUGN8=;
+	b=G2VWtpclyrRWjpcDUeDTRgrE3BAAtIAdeYk4GhRbiA8bKnrNkIxn015bhToO1aItFRJDEC
+	BldBE67yH8J7lXMqXn85r0Eyo92bPNYS+407j9wFSaWaLfC7fGN74vCgFt3+Uu7U3qATrE
+	ld9o+CD874h/Sq9HsJvHwJgBNvlUQ9g=
+Content-Type: multipart/alternative; boundary="===============4018833740896703425=="
+MIME-Version: 1.0
+Subject: yahoocom Email Research Testing Dmarc configuration - SPK NOK - DKIM NOK- 16:28:50.272782
+From: badrua@yahoocom.email-sender-1.example
+To: anonymized_user@yahoo.com
+Date: Mon, 25 Sep 2023 16:28:50 +0200
+message-id: <169565213027.19703.11834734304747011535@yahoocom.email-sender-1.example>
+X-Last-TLS-Session-Version: TLSv1.3
+Content-Length: 1002
+
+--===============4018833740896703425==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Quisquam consectetur quiquia quiquia numquam. Ipsum velit consectetur voluptatem aliquam aliquam. Amet voluptatem labore velit quiquia. Dolor numquam non numquam dolore. Porro aliquam ipsum sit modi voluptatem. Amet sit quiquia dolor non. Tempora neque quiquia dolor dolorem sed.
+
+Quisquam porro non ipsum. Velit sed quaerat est quisquam quaerat quisquam non. Est porro numquam ut amet dolorem adipisci neque. Numquam dolor quaerat sit labore neque voluptatem ipsum. Non dolore ut aliquam consectetur sed ut.
+
+Labore neque numquam neque. Non dolor sed numquam. Velit dolorem magnam neque dolor. Quaerat est adipisci est ipsum sit non ipsum. Consectetur ipsum voluptatem sed aliquam neque voluptatem. Non sed dolor labore. Porro etincidunt dolor aliquam quaerat quisquam dolore. Dolor quaerat labore adipisci quisquam quiquia.
+--===============4018833740896703425==--

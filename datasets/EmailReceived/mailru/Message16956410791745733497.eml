@@ -1,0 +1,55 @@
+Delivered-To: anonymized_user@mail.ru
+Return-path: <goodrua@mailru.email-sender-3.example>
+Received-SPF: pass (mx228.i.mail.ru: domain of mailru.email-sender-3.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) client-ip=XX_ANONYMIZED_IP_MAIN_A_XX; envelope-from=goodrua@mailru.email-sender-3.example; helo=mail.mail-server.example;
+Received: from mail.mail-server.example ([XX_ANONYMIZED_IP_MAIN_A_XX]:51842)
+	by mx228.i.mail.ru with esmtp (envelope-from <goodrua@mailru.email-sender-3.example>)
+	id 1qkjhe-00CW1o-0f
+	for anonymized_user@mail.ru; Mon, 25 Sep 2023 14:24:38 +0300
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 374C6388548
+	for <anonymized_user@mail.ru>; Mon, 25 Sep 2023 13:24:37 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=mailru.email-sender-3.example; s=dkim; t=1695641077;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=feQDchEfMsFUaeZN1WzUI90mKFFb3hJHjoLWTdvFnGE=;
+	b=BtnouAjadzBHCEucjpEe0E3EkuyWDl2Xu3NubwYFgNWcMM0aX0kiFq6nslFEHLSZR8OcYO
+	0t8vtQJjsWrRTJrPyOQ+4Rz5ve2ajP6wfrLhbe/cro+tEFoLsgXy+FZLjlu+DQ5qPsc+AO
+	k9ep7Sw4GsaNJnSybJqdEwsDG6XjJY4=
+Content-Type: multipart/alternative; boundary="===============5575748490894438335=="
+MIME-Version: 1.0
+Subject: mailru Email Research Testing Dmarc configuration - SPK OK - DKIM OK- 13:24:36.861430
+From: goodrua@mailru.email-sender-3.example
+To: anonymized_user@mail.ru
+Date: Mon, 25 Sep 2023 13:24:36 +0200
+message-id: <169564107686.19703.8553587499901322228@mailru.email-sender-3.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-Mailru-Src: mx
+X-7564579A: EEAE043A70213CC8
+X-77F55803: E822A06ED42C499A865CEF40DA58E1885302F675427C1F014A96F85AF0911F890BBDAAE39103F3638701F0628C4B95CBC02C2D31A83CB410380954262B69779DEB07762EDA0BBF144B72E82432766FBE
+X-7FA49CB5: FF5795518A3D127A4AD6D5ED66289B5278DA827A17800CE7EED5D2FAB4CEB1EDEA1F7E6F0F101C67BD4B6F7A4D31EC0BCC500DACC3FED6E28638F802B75D45FF8AA50765F7900637AC83A81C8FD4AD23D82A6BABE6F325AC2E85FA5F3EDFCBAAE760C03E9B25649BD5E8D9A59859A8B670BB35E4398E0C2FB5C8C57E37DE458BEF691B2534746083E5CCB53A13BC8DBA58FE05234237D3CC96B797A1AB7FBDE520879F7C8C5043D14489FFFB0AA5F4BFA417C69337E82CC2CC7F00164DA146DAFE8445B8C89999728AA50765F7900637DCE3DBD6F8E38AFD389733CBF5DBD5E9C8A9BA7A39EFB766F5D81C698A659EA7CC7F00164DA146DA9985D098DBDEAEC8A9FF340AA05FB58CF6B57BC7E6449061A352F6E88A58FB863E42E0143DD8CD13
+X-87b9d050: 1
+X-C1DE0DAB: 0D63561A33F958A5CBC635F66762094B28EA307B81FAC2E0F53627F27C6F9E9FF87CCE6106E1FC07E67D4AC08A07B9B065B78C30F681404D9C5DF10A05D560A950611B66E3DA6D700B0A020F03D25A09D2DCF9CF1F528DBC9C5DF10A05D560A9E9DBE8BB5FBB5B28E84698DA5A7895A6F035437B6AEB70F4BDAD6C7F3747799A
+X-C8649E89: 1C3962B70DF3F0AD26C0D434D75DEB2777DD89D51EBB77422CCB5A6D6581D03D0776B5B2C279835F17BCBE6708A5A68D02015372BE9702A24844ECAA2BD2A93DE7C4D5C8BCB97BCA1C1B1E29CCBFA61D7F85876E3505847676D925730772B5459B815B7972F6FBBE2B0AE96152B9F69D83F8DB4E4907A50852EE4E5D9E54FDA44C41F94D744909CE31650AEE405483B64B0D80653D0A85985B5D5688848740F03E564E19A02337DD4D88EA353A125F6A8E32951ABB0CE2D1
+X-D57D3AED: 3ZO7eAau8CL7WIMRKs4sN3D3tLDjz0dLbV79QFUyzQ2Ujvy7cMT6pYYqY16iZVKkSc3dCLJ7zSJH7+u4VD18S7Vl4ZUrpaVfd2+vE6kuoey4m4VkSEu530nj6fImhcD4MUrOEAnl0W826KZ9Q+tr59cQFxbtK52nlS5dXYHM/vGJPPyhnCcOsWxjvstlFwfLDmG3SyZat9J5NbkWIjxq932/b2BQGyWkRn3AgzCpU/iMtBVD51WbvH0GkMdp0FX1bT1+l3DnZJ5vSJ1q3MAIfRIWctJlfEwT
+X-F696D7D5: 4FTf9+9Qz6og1Z8XMMnF196OX3V6FJh+BQyKyDZhP01SUNtn9gprfg5TpqiRyDm1
+X-Mailru-Dmarc-Auth: dmarc=pass header.from=goodrua@mailru.email-sender-3.example
+X-Mras: Ok
+X-Spam: undefined
+Authentication-Results: mxs.mail.ru; spf=pass (mx228.i.mail.ru: domain of mailru.email-sender-3.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) smtp.mailfrom=goodrua@mailru.email-sender-3.example smtp.helo=mail.mail-server.example;
+	 dkim=pass header.d=mailru.email-sender-3.example; dmarc=pass header.from=goodrua@mailru.email-sender-3.example
+X-Mailru-Intl-Transport: d,5bf591a
+
+--===============5575748490894438335==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Tempora labore est est. Labore ut neque quiquia modi dolorem labore. Magnam quaerat neque eius. Adipisci porro eius dolor sit amet. Est sed consectetur labore sit quisquam amet. Eius dolor etincidunt sit. Ipsum tempora sed quiquia. Velit tempora non amet neque non modi. Quisquam quisquam sed consectetur sit quisquam. Quaerat ut neque voluptatem dolor numquam.
+
+Non quaerat ut sit porro sed etincidunt. Ipsum tempora quisquam tempora ipsum. Sed non velit voluptatem adipisci quisquam numquam amet. Ut est numquam etincidunt consectetur. Modi neque modi modi quisquam ipsum.
+
+Tempora dolorem porro porro. Numquam magnam consectetur labore tempora etincidunt numquam. Eius quisquam velit consectetur. Quiquia adipisci ipsum consectetur ut est. Tempora ut velit etincidunt. Dolorem quaerat etincidunt neque magnam numquam. Porro amet quaerat adipisci porro. Sed numquam neque aliquam. Dolorem sit etincidunt labore sed. Eius numquam sed voluptatem amet quisquam.
+
+Adipisci ipsum adipisci est modi quisquam amet dolorem. Numquam tempora amet velit quaerat. Velit dolore adipisci modi. Adipisci dolorem dolore quaerat quaerat. Adipisci dolor porro dolorem ut tempora tempora. Dolore adipisci ut etincidunt labore. Dolorem eius eius velit dolor labore eius.
+
+Dolor numquam adipisci ipsum sed dolor dolor eius. Consectetur dolore porro neque porro dolorem dolorem aliquam. Ut labore etincidunt velit dolorem sed velit. Sit amet etincidunt sit. Aliquam amet eius velit adipisci ipsum. Est ipsum adipisci quiquia sed ipsum. Amet numquam amet sit quaerat modi. Quaerat dolor adipisci est velit. Etincidunt adipisci dolore dolore est ipsum sed.
+--===============5575748490894438335==--

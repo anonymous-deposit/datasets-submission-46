@@ -1,0 +1,76 @@
+Delivered-To: anonymized_user@gmail.com
+Received: by 2002:a17:906:6082:b0:9a5:f62d:de9c with SMTP id t2csp1188303ejj;
+        Mon, 25 Sep 2023 04:42:08 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IF8Pv7UykSEul2LNZP3E8QC6JlJ7lGVqnadqv08fYSjmZR7TehfrylN4I1IBdrFU2AhMfue
+X-Received: by 2002:a17:906:73da:b0:9ae:7611:99bb with SMTP id n26-20020a17090673da00b009ae761199bbmr5163420ejl.59.1695642127945;
+        Mon, 25 Sep 2023 04:42:07 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1695642127; cv=none;
+        d=google.com; s=arc-20160816;
+        b=iMYXhCNd/NrLz8asUmzMB4+kdzDNBbbgiDorMllcFx8XCQj9NnAY54TVYGIsKrkdeq
+         6kQPsGKvOLMmL9Oel7+SMR8ne4rNeh0qMUYEIxjVDET/xhoJlsKeGXB9jARRwd8+NOdV
+         BoydbC4NY2/IwTzalKhlP/lFl7UwPdTcNy233HUq+dKRWYCrAl8fd+qQa2ySRVeIRSAZ
+         JQ/AZumlrTkh2B15STCdHp/Sccq2V75wxwtktLDdCsFocUQVck2UqtgNHlF3ix/6xs70
+         ceGYoWkm9/rETlC0aFUGrhMAVRFYLtaJjYouAjxmLtrGsdxSSqzNasIuT9V5d2hnJKwz
+         1c4Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:date:to:from:subject:mime-version:dkim-signature;
+        bh=jMDb0NIl1VMaeHdfSCoR8dfvkIOlO/ksGjmBYye/pis=;
+        fh=shHmlGoQyS9S8e8DXCCaPFJCB+pqWwQde72z2f/TzIU=;
+        b=oiKQiCYuAfAlREQy6ZHQ2zy06/49Z24YmvQr/kBSzokNP03hjvaoLKXp7f05mcUPBx
+         Di4fTmbABxihOkw66xKQ5jaXbgRisZd5K56jZ71ClQf0ZvtY9teI/Oiw0b9s8jjpISnw
+         kmpzBqh3Z84SKCmn5nbsKKO5Shs7mh7+g15ClETj0NZScMkk7ArDd/xGk6ydlIeePh9z
+         nb/ITft/6S5eQNb3cP8m+GTxihAsxQH4J7xIoXPMLZh5cuAsUB/xbqbMfvSdbgQzAR5x
+         4x1yeWLxv4YLBPCh22NCjRLCU0opJaZkoT5aRCqfxZou/2RiByNWtk7OyVXGTNP+/SmN
+         MOtw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=temperror (no key for signature) header.i=@gmailcom.email-sender-1.example header.s=dkimfalse header.b=uigCt6mC;
+       spf=pass (google.com: domain of goodrua@gmailcom.email-sender-1.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) smtp.mailfrom=goodrua@gmailcom.email-sender-1.example;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmailcom.email-sender-1.example
+Return-Path: <goodrua@gmailcom.email-sender-1.example>
+Received: from mail.mail-server.example (mail.mail-server.example. [XX_ANONYMIZED_IP_MAIN_A_XX])
+        by mx.google.com with ESMTPS id os13-20020a170906af6d00b00988c64dd2e7si8046268ejb.850.2023.09.25.04.42.07
+        for <anonymized_user@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 25 Sep 2023 04:42:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of goodrua@gmailcom.email-sender-1.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) client-ip=XX_ANONYMIZED_IP_MAIN_A_XX;
+Authentication-Results: mx.google.com;
+       dkim=temperror (no key for signature) header.i=@gmailcom.email-sender-1.example header.s=dkimfalse header.b=uigCt6mC;
+       spf=pass (google.com: domain of goodrua@gmailcom.email-sender-1.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) smtp.mailfrom=goodrua@gmailcom.email-sender-1.example;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmailcom.email-sender-1.example
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 8B5A7388568
+	for <anonymized_user@gmail.com>; Mon, 25 Sep 2023 13:42:07 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmailcom.email-sender-1.example;
+	s=dkimfalse; t=1695642127;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=jMDb0NIl1VMaeHdfSCoR8dfvkIOlO/ksGjmBYye/pis=;
+	b=uigCt6mCY3m6MACMToCMmiv5U5ps7GOGBoN1nYGhanINY3Bbrvs16VvmjfM2fjyIgLAzJd
+	RnqvwtMO8d/njqntGuyWcGXv2hMIUL33hXC1ajFfUQex+8c2qZCS1rEJMLSv9i13FLdXJN
+	Ffa0cdZRPihikg4mSD6qhL+z2AizPLNmj5S3JHSNEINb3+CZfrmlNvYcxtVGiW5rGRr8zQ
+	4e6+AuFO96gnmU9VhOQiCkmwj7sZYxTZhqjPPPbGRfSkKsMTVG0TNDL7UbVj/wzG07JZaR
+	IfOWa6b7Pw3LO/CB+oVgyUeBadK7jflaQ7yLLSGAz6MCPm9rDgvHj05Lw5HDvg==
+Content-Type: multipart/alternative; boundary="===============5793889712258760465=="
+MIME-Version: 1.0
+Subject: gmailcom Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:42:07.232148
+From: goodrua@gmailcom.email-sender-1.example
+To: anonymized_user@gmail.com
+Date: Mon, 25 Sep 2023 13:42:07 +0200
+message-id: <169564212723.19703.9968520869684261987@gmailcom.email-sender-1.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============5793889712258760465==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Eius modi neque neque eius ipsum aliquam. Voluptatem modi consectetur quisquam amet tempora adipisci. Est ipsum tempora eius. Voluptatem non velit dolore consectetur. Magnam quisquam neque consectetur. Ut aliquam velit voluptatem labore numquam porro. Dolor tempora dolore modi adipisci quaerat quiquia etincidunt.
+
+Dolorem etincidunt quaerat labore voluptatem dolorem eius ut. Velit etincidunt amet voluptatem quaerat porro tempora dolorem. Quiquia amet adipisci quisquam amet quiquia eius quisquam. Dolore etincidunt dolorem labore. Dolor adipisci est sed dolor aliquam magnam ut.
+
+Labore eius quisquam tempora neque sit dolorem numquam. Numquam sed eius dolore velit tempora. Non dolor quisquam quisquam amet. Ipsum amet est dolorem numquam neque ipsum. Ut tempora voluptatem quaerat consectetur ut sit quaerat. Quiquia porro non aliquam. Adipisci sit dolore porro dolore dolore. Quiquia tempora quiquia tempora ipsum. Est numquam sit ipsum.
+
+Porro quiquia sed dolore. Sed ipsum dolorem adipisci amet consectetur dolor quisquam. Labore sit porro dolor magnam modi non ut. Voluptatem ut consectetur adipisci consectetur. Magnam non labore quiquia ipsum sed eius ut. Porro ut quiquia quaerat labore.
+
+Voluptatem non numquam magnam modi ipsum amet. Est est eius ipsum dolore voluptatem. Amet eius amet adipisci non. Amet magnam quisquam tempora. Ipsum magnam quaerat aliquam porro. Modi magnam sit ipsum eius modi tempora ipsum. Voluptatem modi sit sed ipsum quaerat. Quaerat eius velit aliquam numquam.
+
+Quiquia magnam modi tempora magnam eius etincidunt. Numquam amet dolore neque porro etincidunt porro voluptatem. Labore magnam modi sit ut. Eius modi velit etincidunt non quisquam modi. Modi modi amet etincidunt labore.
+--===============5793889712258760465==--

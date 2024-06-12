@@ -1,0 +1,44 @@
+Received: (qmail 16465 invoked from network); 25 Sep 2023 11:23:34 -0000
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+          (envelope-sender <goodrua@sapopt.email-sender-2.example>)
+          by ptmail-mta02 (qmail-ptmail-1.0.0) with ESMTPS
+          for <anonymized_user@sapo.pt>; 25 Sep 2023 11:23:34 -0000
+Received-SPF: pass (ptmail-mta02: SPF record at sapopt.email-sender-2.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender)
+X-PTMail-RemoteIP: XX_ANONYMIZED_IP_MAIN_A_XX
+X-PTMail-AllowedSender-Action: 
+X-PTMail-Service: default
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id B8B67388548
+	for <anonymized_user@sapo.pt>; Mon, 25 Sep 2023 13:23:32 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=sapopt.email-sender-2.example; s=dkim; t=1695641012;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=LLCoTSPliRzhOujWgcIkKSJPNcCX0hSfBxZqUPXJtS0=;
+	b=VYbzCg6MsrwQiDHLyQf/6xyodPDkSBK42CPviBE6tGS2iLLclkQD15vh2LnKWZX3PJEyWU
+	XVURBHJlC6NDKLack49uWONIngAc3gxCqz2AKwf1lqJL0uYMToHpBGDnvswIhQ7CLCe2et
+	naEdlLFVyB9WR9scjIAU0gL5Va0AngM=
+Content-Type: multipart/alternative; boundary="===============1001888310256900855=="
+MIME-Version: 1.0
+Subject: sapopt Email Research Testing Dmarc configuration - SPK OK - DKIM OK- 13:23:32.147413
+From: goodrua@sapopt.email-sender-2.example
+To: anonymized_user@sapo.pt
+Date: Mon, 25 Sep 2023 13:23:32 +0200
+message-id: <169564101214.19703.490114127305829662@sapopt.email-sender-2.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============1001888310256900855==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Dolore sed quisquam non labore quaerat velit aliquam. Amet consectetur quaerat tempora numquam consectetur. Etincidunt consectetur est sed quiquia sit tempora. Sed velit ut ut dolore non quisquam voluptatem. Eius dolore sed labore. Quaerat neque sit quaerat dolore magnam. Etincidunt porro magnam amet. Adipisci dolor dolor neque. Tempora dolore ut tempora.
+
+Est eius ipsum sed voluptatem dolorem. Sed etincidunt voluptatem sed. Adipisci sit quaerat est. Neque voluptatem numquam labore dolor neque modi sit. Sit tempora ipsum labore porro magnam amet dolorem. Dolore quiquia dolore ipsum etincidunt non dolorem non. Voluptatem modi porro neque non sed. Dolorem quaerat est aliquam ut. Magnam quaerat ut modi. Non sit neque modi quaerat consectetur amet.
+
+Quiquia eius dolorem est non tempora. Dolor quiquia quiquia amet non amet velit magnam. Tempora amet velit voluptatem. Labore aliquam est tempora ut. Sit porro velit non.
+
+Porro ut quiquia est non dolorem. Quaerat etincidunt aliquam modi dolore est modi quiquia. Velit sit dolorem dolorem quisquam ut quiquia quisquam. Magnam etincidunt aliquam magnam dolor amet. Consectetur est eius dolore. Non labore labore sit.
+
+Numquam ipsum sed ipsum neque. Velit amet etincidunt consectetur quaerat dolor non tempora. Quiquia labore dolor quisquam sed sit modi. Ipsum neque eius quiquia etincidunt magnam. Quaerat dolorem dolorem sit etincidunt. Voluptatem magnam dolore aliquam aliquam modi labore. Dolor porro dolorem modi modi.
+
+Dolor velit velit sed ipsum. Dolore dolor dolore eius sit aliquam amet. Numquam dolorem voluptatem est est adipisci aliquam. Quisquam consectetur voluptatem quisquam velit sit non. Consectetur magnam ipsum velit amet. Amet dolorem dolore neque. Neque quiquia quiquia dolore neque aliquam aliquam adipisci.
+--===============1001888310256900855==--

@@ -1,0 +1,71 @@
+Delivered-To: anonymized_user@gmail.com
+Received: by 2002:a17:906:6082:b0:9a5:f62d:de9c with SMTP id t2csp1292442ejj;
+        Mon, 25 Sep 2023 07:24:26 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEB0JReQaMqtX+fPiIzWSqTFFz+wQmkNTzVOk0eCqoQ/Zx6p89smXlBEMlISyzdtNcB31Fo
+X-Received: by 2002:ac2:58ec:0:b0:500:75e5:a2f0 with SMTP id v12-20020ac258ec000000b0050075e5a2f0mr5092316lfo.51.1695651866241;
+        Mon, 25 Sep 2023 07:24:26 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1695651866; cv=none;
+        d=google.com; s=arc-20160816;
+        b=s+QbfuVZ3vj9sA6FP2B+YKfRFs5q3+WOFpBv6IE7EAgzkDDyrwBAr0xsqF7gBegJU+
+         V3W3vGjN5gIANJcQJoHX19IrODSz9W+lADMCP+T/kQyrI9FosIOAKcS4ag+a8PmpPBkA
+         nGq+MzLiKbsVydGfxmoKlfUU+yiuJG4JmUS4Ti9XKA6Sy+VPj3NdtlEFTvSS5XlnLQHK
+         y3rVj5KP9Z79gIEQ82So4qhnqxORQ0l8ygIBXMWmqFeGD1dopc2AQ4B23GJyg0EqhbNN
+         plvgv5m/k622aFFZw6/bZTpJBv9NRRWbhtrAJqqKEyahRn3H9x+bbsvNt/ld0L8e9u6I
+         s2Yw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:date:to:from:subject:mime-version:dkim-signature;
+        bh=z5SJ9XjXNnX0G8jCaza7ZLMlIO/Xfy4/H8M1iDJSQ5M=;
+        fh=shHmlGoQyS9S8e8DXCCaPFJCB+pqWwQde72z2f/TzIU=;
+        b=zlNdEfGAFyBOaJT2l9vSLk129Qx4V+x3N7VhaPCqR42VZWY0RhhrRGxx6BQDbMDoqx
+         HLYtqtTZT7gtYuKk2PW/pNQnl8AwZ1iMYFE85Wvycq4e7pY5U3e67undFOHy2pTdc5pf
+         pqIf1bE22HdHdpCpZnkgMOQIktzl+Jty/kBfd/EGeisszdznGoLFIyEqsamss5agt9mU
+         G3OQvALQX4Zq14mPMHUUtNljoXmPwhnefyoSbZWpgUtPjkNcxJ7qCD4nHkLKPLH/kl/Y
+         oNYYeNTlLziuettl7vHM2dlp6JQZh5l5k5zRcuwnbdXTZTNEKbRLHGcOk+K3ecqO7y46
+         AotA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmailcom.email-sender-1.example header.s=dkim header.b=lYm5amKs;
+       spf=fail (google.com: domain of badrua@gmailcom.email-sender-1.example does not designate XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) smtp.mailfrom=badrua@gmailcom.email-sender-1.example;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmailcom.email-sender-1.example
+Return-Path: <badrua@gmailcom.email-sender-1.example>
+Received: from mail.mail-server.example (mail.mail-server.example. [XX_ANONYMIZED_IP_MAIN_A_XX])
+        by mx.google.com with ESMTPS id w4-20020aa7da44000000b0053429523d1bsi1375509eds.282.2023.09.25.07.24.26
+        for <anonymized_user@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 25 Sep 2023 07:24:26 -0700 (PDT)
+Received-SPF: fail (google.com: domain of badrua@gmailcom.email-sender-1.example does not designate XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) client-ip=XX_ANONYMIZED_IP_MAIN_A_XX;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmailcom.email-sender-1.example header.s=dkim header.b=lYm5amKs;
+       spf=fail (google.com: domain of badrua@gmailcom.email-sender-1.example does not designate XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) smtp.mailfrom=badrua@gmailcom.email-sender-1.example;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmailcom.email-sender-1.example
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 7AA1B3884C3
+	for <anonymized_user@gmail.com>; Mon, 25 Sep 2023 16:24:25 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmailcom.email-sender-1.example;
+	s=dkim; t=1695651865; h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=z5SJ9XjXNnX0G8jCaza7ZLMlIO/Xfy4/H8M1iDJSQ5M=;
+	b=lYm5amKs4lDQxtYuzuUcK4moto0C9H8DZEjtGnxyUdsO01BLkyWEg6PReb4A6ObH/jcUYQ
+	p+StrbIsRqCo/34jBio0LVEMEkjvGiO83P/y09x0FxbGCmoxtnh+8LkQ58Y33kfAaA6G1E
+	EUCX/ZTjLX2MER41eot84zIGqrKdpg4=
+Content-Type: multipart/alternative; boundary="===============7359099716734447401=="
+MIME-Version: 1.0
+Subject: gmailcom Email Research Testing Dmarc configuration - SPK NOK - DKIM OK- 16:24:25.150674
+From: badrua@gmailcom.email-sender-1.example
+To: anonymized_user@gmail.com
+Date: Mon, 25 Sep 2023 16:24:25 +0200
+message-id: <169565186515.19703.4765463712697915518@gmailcom.email-sender-1.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============7359099716734447401==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Sit etincidunt sed dolorem aliquam voluptatem quisquam. Porro quiquia magnam est aliquam. Numquam dolorem tempora dolore amet amet ut. Labore dolor ut consectetur quaerat voluptatem. Numquam velit magnam consectetur dolore non voluptatem velit. Sed eius ut neque dolorem quaerat voluptatem.
+
+Neque sed tempora etincidunt ipsum tempora neque consectetur. Consectetur dolorem labore numquam. Ipsum porro aliquam etincidunt amet. Neque dolor porro aliquam neque quaerat consectetur aliquam. Sit quisquam sed etincidunt sed sed. Modi quiquia tempora labore velit consectetur sed. Consectetur amet dolorem aliquam. Ut ut quaerat porro ipsum etincidunt modi.
+
+Dolorem quiquia tempora consectetur tempora. Dolor etincidunt ut magnam adipisci labore amet. Dolor tempora velit amet aliquam est modi. Neque quiquia tempora eius neque adipisci etincidunt. Dolor tempora velit eius amet est. Non eius sit quisquam neque labore amet dolore. Etincidunt velit consectetur dolor ut labore. Dolore quisquam labore porro eius. Porro dolor aliquam dolor est non.
+
+Tempora etincidunt aliquam quiquia. Numquam adipisci ipsum dolore eius dolore adipisci amet. Sit labore modi tempora. Dolorem etincidunt labore non adipisci tempora numquam numquam. Magnam quiquia ipsum amet velit. Dolore consectetur labore modi quaerat porro numquam. Ipsum porro numquam quaerat etincidunt velit. Ipsum dolore ipsum etincidunt magnam. Sit numquam quiquia dolorem etincidunt eius. Dolor labore ut est labore eius labore quisquam.
+
+Quisquam neque quaerat neque neque amet non magnam. Labore voluptatem ipsum voluptatem dolor modi. Ipsum aliquam adipisci consectetur. Neque dolor etincidunt voluptatem velit. Est tempora aliquam sit quaerat velit porro ipsum. Est quaerat sed est. Porro etincidunt ipsum quisquam. Eius ipsum porro dolorem etincidunt quisquam. Amet sed quisquam non etincidunt etincidunt ut. Quaerat aliquam aliquam dolor adipisci numquam modi adipisci.
+--===============7359099716734447401==--

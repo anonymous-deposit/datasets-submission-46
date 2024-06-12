@@ -1,0 +1,47 @@
+Received: from mail.mail-server.example (unknown [XX_ANONYMIZED_IP_MAIN_A_XX])
+	by zwqz-mx-mta-g9-5 (Coremail) with SMTP id _____wDnVi+4cRFl24gRCw--.61357S3;
+	Mon, 25 Sep 2023 19:40:43 +0800 (CST)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 0C606388564
+	for <anonymized_user@163.com>; Mon, 25 Sep 2023 13:40:37 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=163com.email-sender-3.example; s=dkimfalse; t=1695642040;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=H7AjYHMUMoxkfP3D/nE0Pd8ysUly/Zng93azxYPASTM=;
+	b=MblXyTvOczHEN7sb18rld7AoWuWoaVsL77i2uNb4QFWFmOnhJUG7fgLgZDYgX2JjwHhc7W
+	ZN6zXAi3nlrX/cy7UuDMysUn1A39IOKYfH/BCXwf3TKZNF0aJhTJASzadJlytIxD/L46G6
+	bNpyld8pEEcYgkzum2s7eHalBem7hHNgSH9+HUwdYLzXQucjBbs/Bv3HP/VJ55iEFUKlWi
+	U1sJyC+sE+4TrGkrmpSIWV8MZRyvc77vCu19AskMFxQTj7dxL8fOWnMaT7yPjwaewopPZY
+	1KEF09iF5MFrf4DDPsB6PfC14RExQTIA87/tEu10DHzw5j+rG0TbCitVVdI9Cg==
+Content-Type: multipart/alternative; boundary="===============9079760374672660829=="
+MIME-Version: 1.0
+Subject: 163com Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:40:37.217521
+From: goodrua@163com.email-sender-3.example
+To: anonymized_user@163.com
+Date: Mon, 25 Sep 2023 13:40:37 +0200
+message-id: <169564203721.19703.8948624583219200750@163com.email-sender-3.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-CM-TRANSID:_____wDnVi+4cRFl24gRCw--.61357S3
+Authentication-Results: zwqz-mx-mta-g9-5; spf=pass smtp.mail=goodrua@1
+	63com.email-sender-3.example; dkim=permerror header.i=@163com.email-sender-3.example
+X-Coremail-Antispam: 1Uf129KBjvJXoW7Cw48JFyxXF1UGw48Cr1rWFg_yoW8CF18pF
+	n7G34fKw1rWr1DGa4UuayfWw1rCry3AwnrX3yrXw1vgFWkt3ZYkryFyw15Xr48WrZ8Jrn7
+	XFyjyr4UCFyj9FJanT9S1TB71UUUUUUqnTZGkaVYY2UrUUUUjbIjqfuFe4nvWSU5nxnvy2
+	9KBjDUYxBIdaVFxhVjvjDU0xZFpf9x07j0OJ5UUUUU=
+
+--===============9079760374672660829==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Adipisci amet dolorem sit sit tempora dolor dolor. Sit dolorem dolore magnam aliquam quaerat. Non porro non est labore tempora. Labore velit dolore ut dolor consectetur etincidunt. Quiquia tempora dolore sed.
+
+Neque dolor consectetur aliquam dolorem dolorem labore neque. Dolore eius voluptatem ut modi consectetur tempora numquam. Dolor magnam ipsum consectetur velit. Dolore amet aliquam amet numquam non est non. Consectetur magnam non ut dolorem non labore. Neque dolor aliquam labore eius.
+
+Dolor quaerat consectetur quisquam dolor etincidunt labore est. Eius est velit sed quaerat dolore quisquam. Tempora ipsum quaerat velit sed aliquam. Dolorem ut voluptatem aliquam. Sit sed non dolor porro. Quisquam adipisci modi tempora adipisci dolor sit labore. Dolore dolore neque eius.
+
+Quisquam labore sit sit. Magnam dolor eius quiquia ut. Adipisci neque modi ut. Sit ut dolorem non magnam dolor consectetur. Est dolor neque etincidunt modi. Aliquam est quaerat ut quaerat voluptatem neque. Labore porro adipisci adipisci. Labore non quisquam dolor sit labore. Numquam amet voluptatem voluptatem ipsum aliquam consectetur. Voluptatem etincidunt ipsum non.
+
+Quiquia voluptatem quisquam eius quaerat dolorem. Quisquam magnam est ipsum. Magnam labore sit voluptatem. Porro numquam voluptatem modi non. Voluptatem tempora sit labore adipisci ut est adipisci. Quisquam numquam consectetur labore dolore etincidunt. Dolore etincidunt voluptatem magnam adipisci. Ut modi etincidunt tempora etincidunt aliquam dolore etincidunt. Dolore amet dolorem dolorem voluptatem.
+
+Quiquia numquam quaerat non dolor labore sit. Velit est consectetur velit modi eius ipsum. Quaerat non dolor non etincidunt. Voluptatem ipsum tempora amet non aliquam numquam. Aliquam eius labore velit adipisci ipsum voluptatem dolor.
+--===============9079760374672660829==--

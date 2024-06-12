@@ -1,0 +1,45 @@
+Return-Path: <badrua@freemailhu.email-sender-4.example>
+Received: from mail.mail-server.example ([XX_ANONYMIZED_IP_MAIN_A_XX])
+    (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256 bits))
+    by fmx.freemail.hu with ESMTPS id 4RvQM11ks0zlCh;
+    Mon, 25 Sep 2023 16:32:29 +0200
+X-fm-smtp-source: true
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 993223884C0
+	for <anonymized_user@freemail.hu>; Mon, 25 Sep 2023 16:32:28 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=freemailhu.email-sender-4.example;
+	s=dkimfalse2; t=1695652348;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=Pe2pu8Rqeh6McZV9/QnS3sRdzq9iMztq21ZCmm75ucM=;
+	b=ewpp7dxoxRNche080/YWC+uxSoamx7Td8G8CdYinC1+i9stYNus/r4AfnEVrh9/YXBaixo
+	n1h2E2ozF1ZH98ZUr12J4crP0CG4001hndbpRtERuAdDCuTWxtBqx5BsVxoWOYL3H3TGNu
+	zXJvP5jBUCdePIgHgh8eq7ytdFBhjGA=
+Content-Type: multipart/alternative; boundary="===============4937966766675868292=="
+MIME-Version: 1.0
+Subject: freemailhu Email Research Testing Dmarc configuration - SPK NOK - DKIM NOK- 16:32:28.273952
+From: badrua@freemailhu.email-sender-4.example
+To: anonymized_user@freemail.hu
+Date: Mon, 25 Sep 2023 16:32:28 +0200
+message-id: <169565234827.19703.3963094672403739085@freemailhu.email-sender-4.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-VR-SPAMSTATE: OK
+X-VR-SPAMSCORE: 51
+X-VR-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgedviedrudelgedgjeejucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuggftfghnshhusghstghrihgsvgdpucfhtffggffotefknfenuceurghilhhouhhtmecufedttdenucfqnhhlhicuohhnvgcuphgrrhhtucdlhedumdenucfjughrpegtggfuhffvfffksegrtderredttddvnecuhfhrohhmpegsrggurhhurgesfhhrvggvmhgrihhlhhhurdhhuhhrvggruhdrshhtohhrvgenucggtffrrghtthgvrhhnpeelveevfefffeefheejledvkeejvdeljeffuedvvdefffevueefleeihfdugeevveenucfkphepudekhedrudekhedrkedvrddvkeenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhephhgvlhhopehmrghilhdriihorhgvihhllhgvrdhrvgdpihhnvghtpedukeehrddukeehrdekvddrvdekpdhmrghilhhfrhhomhepsggrughruhgrsehfrhgvvghmrghilhhhuhdrhhhurhgvrghurdhsthhorhgvpdhnsggprhgtphhtthhopedupdhrtghpthhtohephhhurhgvrghuohesfhhrvggvmhgrihhlrdhhuh
+Delivered-To: anonymized_user@freemail.hu
+
+--===============4937966766675868292==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Consectetur sit sit etincidunt eius magnam non. Consectetur ut dolore velit non. Quisquam consectetur tempora sed etincidunt quisquam velit tempora. Etincidunt amet consectetur adipisci velit est sit. Velit non dolorem sit sed eius. Labore amet consectetur sit aliquam quisquam dolore adipisci. Neque quisquam neque sed porro amet amet voluptatem. Modi labore sed magnam consectetur dolore eius.
+
+Tempora tempora tempora etincidunt. Etincidunt velit porro eius quaerat eius aliquam dolorem. Quisquam ipsum dolor sit tempora quaerat ipsum. Consectetur dolore numquam voluptatem dolore consectetur sit. Porro adipisci consectetur dolorem dolore labore quaerat quaerat. Quisquam modi quiquia labore. Modi etincidunt quiquia quaerat eius. Quiquia labore voluptatem dolore modi ipsum consectetur.
+
+Est sit voluptatem adipisci velit adipisci quiquia. Neque quiquia porro labore ut adipisci numquam adipisci. Tempora dolore porro sed neque velit. Dolore velit quiquia porro quisquam. Voluptatem aliquam sed sed eius voluptatem aliquam.
+
+Velit aliquam non aliquam eius magnam est non. Dolore tempora etincidunt tempora. Dolore voluptatem non dolore. Ut dolor adipisci sit dolore sed. Labore eius quisquam labore aliquam etincidunt adipisci. Labore voluptatem dolore dolor adipisci ipsum. Tempora dolor adipisci adipisci. Labore non quiquia dolor quisquam. Porro adipisci aliquam tempora magnam sit sed eius.
+
+Sed tempora tempora adipisci non dolorem. Consectetur modi velit porro. Amet voluptatem quiquia sit sed. Consectetur numquam sit modi. Dolore magnam dolorem aliquam modi eius magnam amet. Aliquam aliquam modi numquam.
+
+Quiquia tempora sed velit sed. Quaerat non sit ut modi eius quiquia. Ut quiquia dolore modi. Consectetur labore dolore sed. Est ipsum quisquam adipisci. Porro sed tempora porro consectetur aliquam. Ipsum ipsum etincidunt dolorem tempora voluptatem ipsum eius. Labore porro labore adipisci dolor etincidunt amet. Neque sed adipisci dolor modi non. Eius adipisci dolorem ut sit consectetur dolore consectetur.
+--===============4937966766675868292==--

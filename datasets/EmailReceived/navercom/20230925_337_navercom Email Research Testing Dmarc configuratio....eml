@@ -1,0 +1,63 @@
+ARC-Seal: i=1; a=rsa-sha256; d=naver.com; s=arc-20180730; t=1695651936;
+	cv=none; b=pHU7haOhXVauPC42rPwxe45S6hRk1QdqOaYsDx/vWlRKbwV+JhxzDqKTcFbc
+	 k7eXWITYnv5DTv+Aq3jeN2DhErnvtpNAb8lmGd36QnotBv8VnsN8DOfqiYF29R8DT95CAX
+	 L1aKl/E5gdzsaWxzoEly9SXPz/Mt+9nI7ITZ6MFFIlzbDsq1R7R6yLCDmsgoJ7o8PFN4WL
+	 3YwwYkJRvWabuwV13xrfUbh0UN8QlL4zJuuoD9pcMkGa9WCoY2sUYxEIlWvUMMyqX6cRAt
+	 cp8n1wY2A6iyz34YSyvyBsWkPtIsIJ9uQQZ60V4OP5FP1fh5gNIuWPsE2MiefYquyo/1+C
+	 rA==
+ARC-Message-Signature: i=1; a=rsa-sha256; d=naver.com; s=arc-20180730;
+	t=1695651936; c=relaxed/relaxed;
+	bh=mgvunKsrT1a0RYwDRogM+2bYvX6KHDUogBU/CBXqZ3I=;
+	h=dkim-signature:subject:from:to:date:message-id; b=clR9aqmXF1NmDHkJHZI
+	 n9ISgMdRuix9d79CD3b+QM+snxGs5kTGM3gy1LN9u6xYQkuczwVzkCQR7+u7SX8b2n1i1X
+	 mN6O8sXPZLbbhloV9+kPpHqmLwfqOjtPPYtwBQEg+3UqmXwX/jDF4TYkwLdPpr+yYJwi9N
+	 0L+ZuvyF1V4/hi85qGIau2QyqvsWSPqibGBogxcMZo86E3c46CrxTvxPLnyQ+J0+CMSImt
+	 7OeWZT2c90pIeEYWWBWF0uxTljupJkBUMar8J6JFXhGgoMuTnIBOOfW8/MkQF01jyR7fjQ
+	 RXmr0q4WIoVFvP8qPYUnqgfDY9bx/pEHwu4Uc2NetlQ==
+ARC-Authentication-Results: i=1; mx.naver.com; 
+  spf=fail (mx.naver.com: domain of badrua@navercom.email-sender-2.example does not designate XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) smtp.mailfrom=badrua@navercom.email-sender-2.example;
+  dkim=pass header.i=@navercom.email-sender-2.example;
+  dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=navercom.email-sender-2.example
+Return-Path: <badrua@navercom.email-sender-2.example>
+Received-SPF: fail (mx.naver.com: domain of badrua@navercom.email-sender-2.example does not designate XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender)
+  client-ip=XX_ANONYMIZED_IP_MAIN_A_XX; x-iptype=default;
+Authentication-Results: mx.naver.com;
+  spf=fail (mx.naver.com: domain of badrua@navercom.email-sender-2.example does not designate XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) smtp.mailfrom=badrua@navercom.email-sender-2.example;
+  dkim=pass header.i=@navercom.email-sender-2.example;
+  dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=navercom.email-sender-2.example
+X-Naver-ESV: wf+n+6J4p63GM6pYFXwdWHmwFAU9Kq3YkXm=
+X-Session-IP: XX_ANONYMIZED_IP_MAIN_A_XX
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+  by crcvmail204.nm.naver.com with ESMTP id FzTQO+HTSgmPgGlABSWY7w
+  for <anonymized_user@naver.com>
+  (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384);
+  Mon, 25 Sep 2023 14:25:34 -0000
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 107B838845D
+	for <anonymized_user@naver.com>; Mon, 25 Sep 2023 16:25:31 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=navercom.email-sender-2.example; s=dkim; t=1695651932;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=mgvunKsrT1a0RYwDRogM+2bYvX6KHDUogBU/CBXqZ3I=;
+	b=yYcQ/2swr3HHSCAZrbX0vVVjVqLcX/m1ejRQCggh1JGVlUHQ8SSrQDFWyQHbQdW5DAKDM4
+	6FC+g52bIjcHj2TNhL3FezwMy2V4phNTzRTcJPIlb9gTloj3I3DQ45iPSzb5QtouRLT32x
+	4/tzy8OtSX5Vv6iqsDuWn1VfsB6QyJc=
+Content-Type: multipart/alternative; boundary="===============3262329103568987038=="
+MIME-Version: 1.0
+Subject: navercom Email Research Testing Dmarc configuration - SPK NOK - DKIM OK- 16:25:31.693635
+From: badrua@navercom.email-sender-2.example
+To: anonymized_user@naver.com
+Date: Mon, 25 Sep 2023 16:25:31 +0200
+message-id: <169565193169.19703.3019704006369016637@navercom.email-sender-2.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============3262329103568987038==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Aliquam adipisci quiquia tempora. Amet quisquam sit aliquam dolore. Sed neque quiquia dolore. Aliquam quiquia dolore quaerat voluptatem. Neque porro voluptatem adipisci ipsum magnam est voluptatem.
+
+Velit voluptatem quisquam eius modi dolor ut. Quiquia magnam porro ipsum tempora non quisquam labore. Non aliquam sit quaerat velit tempora tempora. Adipisci ipsum sit amet adipisci. Dolor porro magnam eius velit dolorem etincidunt. Numquam modi dolore aliquam adipisci est. Neque modi dolor aliquam labore. Sit aliquam modi dolor. Magnam dolore dolorem velit labore porro.
+
+Dolor adipisci adipisci adipisci numquam tempora magnam est. Dolore aliquam quisquam dolore ipsum quiquia adipisci. Numquam ut ipsum dolorem dolore. Voluptatem adipisci dolorem modi sed eius dolorem. Tempora velit etincidunt neque. Neque consectetur neque consectetur est dolor voluptatem ut.
+--===============3262329103568987038==--

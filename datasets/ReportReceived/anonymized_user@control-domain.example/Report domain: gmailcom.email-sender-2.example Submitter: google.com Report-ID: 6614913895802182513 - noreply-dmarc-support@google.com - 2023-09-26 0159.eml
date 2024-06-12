@@ -1,0 +1,116 @@
+Return-Path: <noreply-dmarc-support@google.com>
+Delivered-To: anonymized_user@control-domain.example
+Received: from mail.control-domain.example
+ ([XX_ANONYMIZED_IP4_de18e617ae5936_XX])	by 2f2ac2470a58 with LMTP	id
+ sJZVBHuoEmU2RxQA1oC5Bg	(envelope-from <noreply-dmarc-support@google.com>)	for
+ <anonymized_user@control-domain.example>; Tue, 26 Sep 2023 11:46:35 +0200
+Received: from mail-oi1-x24a.google.com (mail-oi1-x24a.google.com
+ [IPvXX_ANONYMIZED_IP6_862f35be9f8df6_XX])	(using TLSv1.3 with cipher
+ TLS_AES_256_GCM_SHA384 (256/256 bits)	 key-exchange X25519 server-signature
+ RSA-PSS (4096 bits) server-digest SHA256)	(No client certificate requested)
+	by mail.control-domain.example (Postcow) with ESMTPS id 3F47C520198	for
+ <rua@control-domain.example>; Tue, 26 Sep 2023 11:46:33 +0200 (CEST)
+Received: by mail-oi1-x24a.google.com with SMTP id
+ 5614622812f47-3a9e0f4e17fso18992534b6e.2        for
+ <rua@control-domain.example>; Tue, 26 Sep 2023 02:46:33 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=google.com;
+ s=20230601; t=1695721590; x=1696326390; darn=control-domain.example;       
+ h=content-transfer-encoding:content-disposition:to:from:subject        
+ :message-id:date:mime-version:from:to:cc:subject:date:message-id        
+ :reply-to;        bh=va2bojcyolR84klObbv8vY0zTA4zBQXNwYXqqywr0jI=;       
+ b=V8sYoBK6W3MWmnhq5o79F2bP8Mhv4MIZTw/Kvw1O5vvV3Pxf5W/JR3DzcgMqsz/uuv        
+ L4ut5jZTjmFuYJr7FV3LYHp2D/JNHc5SN8wBLDpkqGeQOwxWLzIZ6YRm1w2HI/lTRddU        
+ i7LDdqNMORmCg75b6JaD+I8nF5G4NrXQYmKCCUrrM11dseRU3RSMuVBlN9fuzvkVOrY4        
+ y3LreNIjjqWbdY3Mgk95FcpYbIsf/C+dvOISEUcErny1mhWCuojJgVQQALgecWdIRk2h        
+ 7v8PYTAeydwsvccMVZjhsrarLjP6JwZDJPTtDt0+0F1z/2Ox9qKh0h4XLnp1eKrAMuz4        
+ wmDA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1695721590; x=1696326390;
+        h=content-transfer-encoding:content-disposition:to:from:subject
+         :message-id:date:mime-version:x-gm-message-state:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=va2bojcyolR84klObbv8vY0zTA4zBQXNwYXqqywr0jI=;
+        b=hco9gUmUzxAZoI809AZF/uk+D/gBt8SSWZU/wr8Nd+3yonAYFnFvOMA1DOHCosGC44
+         6DAiemEJoA1X++/VAKa//+C7MjThvTsB3dK+kNnpOGfpopIDMyoKD1K9xq2XhDS0Zu/F
+         1heJeUwc8j60nSQfW0tt7jT1wlnXydDkQlp17R5PVSG38dOWNkLygJgHXsb9Ficy+x3u
+         EDoEtkEd28Pdl6zSbnHbXKCxziDwsbwR6T7pKTpl/Z/SFDPorAaCBoLZvtxDFH98S4IY
+         tsjDWj7VWscINDZ+oVMt1/HmJRVf894IiVHILkj3J0PclgINiGwc/QvjJxVO/PKRXdPB
+         ytjw==
+X-Gm-Message-State: AOJu0YykEr2/Ex7vswoE0RespF4fFgPfpf+lJKNPSbRC4dWvB0rkJsvz
+	FesWMa+dB8GrntW9HVOYKQ==
+X-Google-Smtp-Source: =?utf-8?q?AGHT+IHX+wgW1/GMNlFkqJoQJusLyORORy7viGAN5X/q?=
+ =?utf-8?q?cG4D9tWn8HXl1+w6FdkhTGSUk0NNApqUy0Q38k4bGg=3D=3D?=
+MIME-Version: 1.0
+X-Received: by 2002:a05:6808:2110:b0:3ad:adea:3f05 with SMTP id
+ r16-20020a056808211000b003adadea3f05mr5331835oiw.10.1695721590730; Tue, 26
+ Sep 2023 02:46:30 -0700 (PDT)
+Date: Mon, 25 Sep 2023 16:59:59 -0700
+Message-ID: <6614913895802182513@google.com>
+From: noreply-dmarc-support@google.com
+To: rua@control-domain.example
+Content-Type: application/zip; 
+	name="google.com!gmailcom.email-sender-2.example!1695600000!1695686399.zip"
+Content-Disposition: attachment;
+ filename*0*=us-ascii''google.com%21gmailcom.email-sender-2.example%211695600;
+ filename*1*=000%211695686399.zip
+Content-Transfer-Encoding: base64
+ARC-Authentication-Results: i=1;	mail.control-domain.example;	dmarc=pass
+ (policy=reject) header.from=google.com;	spf=pass
+ (mail.control-domain.example: domain of noreply-dmarc-support@google.com
+ designates XX_ANONYMIZED_IP6_dd1e3ed49dd2d1_XX as permitted sender)
+ smtp.mailfrom=noreply-dmarc-support@google.com
+ARC-Seal: i=1; s=dkim; d=control-domain.example; t=1695721593; a=rsa-sha256;
+ cv=none;
+	b=OZwDmOWrh+kFYRktNI13bS1CQvd9+rJAC4lhcdnB/gvWl4AKsi6gXBhMDWbRXuzGIpZzpz
+	sW4DlIP71CZ6aqixuGaGY9Kjg11eUO6WOJ6H2/nuu6zmpAS4XLMubL+O0xzEb0vLhexRfe
+	JxXj4VekILxW4SxtVeEtbpipfluJH3tO28tKNn1vCAOB4b5tMgETFoY7VDxm8szkkvMFfQ
+	0z8TA6V+oCh6BsphGPtpgxElVJWb8KfymkF+4qbyaqzFoleIEeePBAm7fbQztuLjATVgEe
+	tc7+z5fcjPuZmkCfoHvmQZZB3W5w4Id7cC5RbX8p+7kLxFNvCCf49B+TNicvyg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=control-domain.example;	s=dkim; t=1695721593;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:	
+ to:to:cc:mime-version:mime-version:content-type:content-type:	
+ content-transfer-encoding:content-transfer-encoding:dkim-signature;
+	bh=va2bojcyolR84klObbv8vY0zTA4zBQXNwYXqqywr0jI=;
+	b=DKFzyY0kLBOfpslohjeCgmtZw57zq16u+yDP/L80wY9RIv9BZV5acCOD2nwykjgi5Y9X1C
+	qMfrcraZjF5BMNqKeO9j35FqUtg5Yw/+W9ih5MFIevezsX0Fu/+rc0/VqfRjVlkDt7P/pe
+	gaafmqbaQAwJ6eyVUmzYiQnXtxxyiUOA4DIwHgIlv24qqzZEuoRie+2rn1gJWRlznmUquV
+	aSp/canmlOMZJMPS/T/ZUVbKR6TsPv7FRicCyH5iMDEBmK0OtmaNNkUpB9/UX6uSJ0CK7b
+	+wnOiwL1A4JwpnsJrvloawQRmJBdcmZke4U7gJb1HmHhn6hxC7/pSN/Uk9VCCw==
+X-Last-TLS-Session-Version: TLSv1.3
+X-Rspamd-Queue-Id: 3F47C520198
+Authentication-Results: mail.control-domain.example;	dmarc=pass
+ (policy=reject) header.from=google.com;	spf=pass
+ (mail.control-domain.example: domain of noreply-dmarc-support@google.com
+ designates XX_ANONYMIZED_IP6_dd1e3ed49dd2d1_XX as permitted sender)
+ smtp.mailfrom=noreply-dmarc-support@google.com
+X-Spamd-Result: default: False [-1.46 / 15.00];	IP_REPUTATION_HAM(-0.75)[asn:
+ 15169(-0.19), country: US(0.01), ip: 2607:f8b0:4864:20::(-0.57)];
+	DMARC_POLICY_ALLOW(-0.50)[google.com,reject];
+	R_SPF_ALLOW(-0.20)[+ip6:2607:f8b0:4000::/36];	MX_GOOD(-0.01)[];
+	FROM_NO_DN(0.00)[];	ASN(0.00)[asn:15169, ipnet:2607:f8b0::/32, country:US];
+	FROM_EQ_ENVFROM(0.00)[];	RCVD_COUNT_TWO(0.00)[2];	MIME_TRACE(0.00)[0:~];
+	RCVD_TLS_LAST(0.00)[];	ARC_NA(0.00)[];
+	ARC_SIGNED(0.00)[control-domain.example:s=dkim:i=1];
+	RCVD_IN_DNSWL_FAIL(0.00)[XX_ANONYMIZED_IP6_dd1e3ed49dd2d1_XX:server fail];
+	BCC(0.00)[];	MID_RHS_MATCH_FROM(0.00)[];	TO_MATCH_ENVRCPT_ALL(0.00)[];
+	TO_DN_NONE(0.00)[];	PREVIOUSLY_DELIVERED(0.00)[rua@control-domain.example];
+	RCPT_COUNT_ONE(0.00)[1];	RCPT_MAILCOW_DOMAIN(0.00)[control-domain.example]
+Subject: Report domain: gmailcom.email-sender-2.example Submitter: google.com
+ Report-ID: 6614913895802182513
+
+UEsDBAoAAAAIAJZKOlcxlrrUOgIAAOYMAABGAAAAZ29vZ2xlLmNvbSFnbWFpbGNvbS40MGFuc2Rl
+bGFjaGVtaW5vdGVyaWUuZnIhMTY5NTYwMDAwMCExNjk1Njg2Mzk5LnhtbO1X3W7bIBi971NEuY+x
+ncRyIkp3tSfYri2CPzuoNiDA/Xn7wQDHa6upqjSpnRIpCj58f+dwjBR89zQOqwfQhktxuy6yfL0C
+wWTLRX+7/vnj+6Zer+7IDe4A2hNl9+RmtcIalNS2GcHSllrqMYdK3TeCjkB6KfsBMiZHjGYwxMBI
++UCEdBWG5007Us02ZlK+3LdlWoiLOU9W04ZJYSmzDRedJGdrlTkiFFOzSyqiiArzCBqVu6ra17mr
+9To/FI40eEuqqtgdim19cAllUZf7YovRZTuEO6rQaCr6SMZBJ+i5IEV12Fe5/2AUkLQPog27dbU9
+HNwoIhVDf1abuy01xUoOnD03ajoN3JxhHkQ6dQTpvUaOcrbLHeUWBsrOMHIhLWgOWaddkxAZ0mh7
+z0fi0LCIoFHdb8z/Bki58xGAkYrPJgEmIYpZUni2fhEgkYKECnzemt0pzqRONLR8nIUyctIMGq5I
+SfPyyMq8OpZ5nR+39XZ3PJau+RyRcpichJsDo7BIcGwMD3SYnMZt2vDCcaOk4dZ5PU67RBZxXh9F
+jXEBs1RRiy5uzHotyL7o6Q41UcS8BWF5x92bNqedgbagm07L8T2HuQyP9V9VxXSy50aDmQZ7afSC
+xMf8E18ZXzlKEB8W6sAAzEpNfEMnUXqcdVoOghcK/rOhFufkPP5CGx+c/PilrNk5ja7WfNsFQZu/
+W7Ojg4H/z59Fvc/8ty6zsr7emJ/Kltcb83pjflJrvvvGLL+SQTG6/GX5BVBLAQIKAAoAAAAIAJZK
+OlcxlrrUOgIAAOYMAABGAAAAAAAAAAAAAAAAAAAAAABnb29nbGUuY29tIWdtYWlsY29tLjQwYW5z
+ZGVsYWNoZW1pbm90ZXJpZS5mciExNjk1NjAwMDAwITE2OTU2ODYzOTkueG1sUEsFBgAAAAABAAEA
+dAAAAJ4CAAAAAA==

@@ -1,0 +1,70 @@
+Delivered-To: anonymized_user@gmail.com
+Received: by 2002:a17:906:6082:b0:9a5:f62d:de9c with SMTP id t2csp1187979ejj;
+        Mon, 25 Sep 2023 04:41:25 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEZQcaAadOfKN/sUh+UyfTQIfZ6nFfPICivvuGk+8Wj6YcbKxu3+hXx+Tn8MmMTs2HKctvq
+X-Received: by 2002:a05:6512:33d4:b0:4ff:7e1e:b4b4 with SMTP id d20-20020a05651233d400b004ff7e1eb4b4mr6149071lfg.39.1695642084789;
+        Mon, 25 Sep 2023 04:41:24 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1695642084; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Jb0vU+QzTQ7h5f31W8Eb3S2YDIy725419gy6zJIaPoPsPIWAA3h21yX/8YAgHUiWl7
+         Ysyma6nv79btrgfcFWIWYakcVSdMEUuw3TZvOqF8NVt6h48YjayrDrxsMcS1eLCdW5TT
+         HeurxnE/RwRyQAtNrUdJCp6AdKPCpJ4YK8JXe43an6fQCetNQ5s5v5QbpTJwqfAbOwqr
+         q/abQalE3zXDeyPJP8BqYauBhvWIbC57dmIEtQbq1YDvmD3ZVCJouQTr24LjYtlVvAr2
+         53BczOX0MD15hnTvRu4SxcA4Z9jSqLYhQNbIl5xsA+RXvxDkcV/OdwhvDZDTnEjZfwVn
+         2Lvg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:date:to:from:subject:mime-version:dkim-signature;
+        bh=MQbHGTOqb64GhH3bR6rbCg5+uvFyldVDJcuR+W3FEBU=;
+        fh=shHmlGoQyS9S8e8DXCCaPFJCB+pqWwQde72z2f/TzIU=;
+        b=h7oCHMGM6HLx9cOCeIAwMeOC/JhuR3gnHVxGZyEXUAecOTQHnnSInkIJ7j8aFgNfke
+         qh33bWnlGqe2tcKout7UuM7N1h/rkyAc3iiPWE305Y++4IaDaUTLWsLefag4L8oAhqf1
+         lalxEwRzfSoPOShqRu+FZ0O+LkCgVBgWngilSieQ86LIs+einku2Abo+p0go5gC4mLs/
+         wjM7esFHo+bCE6MwIrfqFN+fC01346df1jqAxDfR1Z0j9EPWuBVJ6+wQm4a1mSMjowzd
+         5RbjXA6MeSvypRjoJn82erfqfN3pLZvPUoDgUjCoHmaEMQf+DWiioNpYAIPJUInjyXiq
+         xJcQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=temperror (no key for signature) header.i=@gmailcom.email-sender-4.example header.s=dkimfalse header.b=BE61smXh;
+       spf=pass (google.com: domain of goodrua@gmailcom.email-sender-4.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) smtp.mailfrom=goodrua@gmailcom.email-sender-4.example;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmailcom.email-sender-4.example
+Return-Path: <goodrua@gmailcom.email-sender-4.example>
+Received: from mail.mail-server.example (mail.mail-server.example. [XX_ANONYMIZED_IP_MAIN_A_XX])
+        by mx.google.com with ESMTPS id ck25-20020a170906c45900b0099cbd8ab716si8301826ejb.820.2023.09.25.04.41.24
+        for <anonymized_user@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 25 Sep 2023 04:41:24 -0700 (PDT)
+Received-SPF: pass (google.com: domain of goodrua@gmailcom.email-sender-4.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) client-ip=XX_ANONYMIZED_IP_MAIN_A_XX;
+Authentication-Results: mx.google.com;
+       dkim=temperror (no key for signature) header.i=@gmailcom.email-sender-4.example header.s=dkimfalse header.b=BE61smXh;
+       spf=pass (google.com: domain of goodrua@gmailcom.email-sender-4.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) smtp.mailfrom=goodrua@gmailcom.email-sender-4.example;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmailcom.email-sender-4.example
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 67BB2388568
+	for <anonymized_user@gmail.com>; Mon, 25 Sep 2023 13:41:24 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmailcom.email-sender-4.example;
+	s=dkimfalse; t=1695642084;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=MQbHGTOqb64GhH3bR6rbCg5+uvFyldVDJcuR+W3FEBU=;
+	b=BE61smXhjZ3FEn9ndQkSHA3ssHm6/d4YdOPQOO409w4QWfJ1GbMHsdEeljYhs/OvxOTkl8
+	GxYWeUWID5c3DlEElxv6ZiPLOrD4W3qQvwh204DqYS1KNBl8DJp2vjXPvM6VtILw8TNDBz
+	kWJNbuA4tZAkEvgiTD+OcxwFzVNLTQdclcggx0TpQT2d/f1EAeC/vZLduvSjC7SPVJweT2
+	PG668Mo4z0hNA7/lzfXLyeilWKnLw2dfxaCzqAX7EXwVHQdzQD7Ecdlm6/IbVqslhmhecG
+	nVoI+jqbITjzqdSgmTAmp8m9idPnXI2N6q/Jp4lvl3EDvpAf8xUVWlrCFLslxQ==
+Content-Type: multipart/alternative; boundary="===============6501512582862505865=="
+MIME-Version: 1.0
+Subject: gmailcom Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:41:24.064620
+From: goodrua@gmailcom.email-sender-4.example
+To: anonymized_user@gmail.com
+Date: Mon, 25 Sep 2023 13:41:24 +0200
+message-id: <169564208406.19703.3443544103451566034@gmailcom.email-sender-4.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============6501512582862505865==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Adipisci non dolor est modi magnam aliquam velit. Tempora voluptatem voluptatem numquam adipisci quaerat tempora. Non labore dolor velit quaerat sit quisquam. Consectetur consectetur ut est non. Sit sed quaerat quaerat. Ipsum tempora porro dolorem velit ipsum. Neque ut ipsum porro non numquam.
+
+Dolorem numquam ipsum dolore velit. Aliquam dolor amet aliquam. Modi adipisci dolorem non. Adipisci aliquam ipsum dolor porro modi. Voluptatem quaerat velit porro labore quaerat porro quisquam. Tempora neque sed quiquia sed magnam. Dolor quisquam quisquam numquam. Porro numquam velit quisquam dolor adipisci dolore. Sed numquam magnam porro labore etincidunt sit aliquam.
+
+Sit dolore voluptatem etincidunt ipsum non. Aliquam dolore etincidunt ipsum. Quiquia voluptatem magnam dolor. Consectetur modi adipisci quaerat. Tempora dolor est neque neque consectetur magnam. Non modi velit ut aliquam.
+--===============6501512582862505865==--

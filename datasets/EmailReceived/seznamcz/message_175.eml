@@ -1,0 +1,37 @@
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+	by smtpd-mx-6b85658944-mrr96 (smtpd/2.0.12) with ESMTP
+	id e911b6d4-c336-406f-9fd9-727bbe5b1b86;
+	Mon, 25 Sep 2023 13:42:20 +0200
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id DE683388567
+	for <anonymized_user@seznam.cz>; Mon, 25 Sep 2023 13:42:18 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=seznamcz.email-sender-1.example;
+	s=dkimfalse; t=1695642138;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=MviKlJgd/3IMqhe0zTW6UuNMQo6hIuYS9e22Bpak4Rw=;
+	b=BZhftYxw8YyoSyqBgrP+V2oxYazWiYk3ziLk6VwDxSvQhS3W8InZhubWOrDA5AQ0QcBank
+	E5JtopA0wuqMwCVpbV+EynGyJQJ5hyxER0BQxKl2sMK1/iAs5uVqPUxBcD2WKwggygW3vb
+	Q6y01zjnq6+Lx3AnnBs0XaC3zZh1S87YReJWkWsyFvCMQMpfJFvxia7icLACRANUttBwTy
+	W598K3drYwngloSbdUipnrtKe6cnJRU3wJSpw4HQRvP/LF8MzaejWEui5uwE3zt12nxRFj
+	EmG2P8N+E+9DQtug7CDUbQNIM9h7s7oktyUBBA5t6Mr4uT0h95adWvYb+R3bZQ==
+Content-Type: multipart/alternative; boundary="===============4558590062244909506=="
+MIME-Version: 1.0
+Subject: seznamcz Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:42:18.577505
+From: goodrua@seznamcz.email-sender-1.example
+To: anonymized_user@seznam.cz
+Date: Mon, 25 Sep 2023 13:42:18 +0200
+message-id: <169564213857.19703.12884145868601456955@seznamcz.email-sender-1.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============4558590062244909506==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Voluptatem sit adipisci porro aliquam est quisquam. Magnam est tempora non. Ipsum quaerat quiquia est etincidunt dolore. Neque voluptatem quaerat labore dolor. Est neque porro ut neque aliquam quaerat quiquia. Ut voluptatem modi labore. Dolorem dolor etincidunt voluptatem est. Amet magnam etincidunt ut quisquam numquam. Magnam modi porro eius. Consectetur ipsum eius dolorem amet non.
+
+Velit magnam sed neque sed eius. Tempora neque dolor etincidunt. Voluptatem velit amet neque tempora consectetur modi. Neque consectetur modi dolorem magnam. Quiquia numquam sit etincidunt consectetur. Velit quaerat dolore consectetur sed etincidunt amet est. Etincidunt dolorem labore porro neque eius amet. Amet sit modi quaerat quiquia non. Quiquia magnam quaerat velit dolorem aliquam dolore. Amet porro quiquia amet ut sed sed etincidunt.
+
+Sed quiquia est quisquam dolorem non. Non ipsum etincidunt tempora dolorem neque neque non. Magnam consectetur ipsum dolore voluptatem sed. Magnam dolor sit dolor. Porro velit est eius non. Voluptatem amet neque magnam est porro quisquam est. Ipsum ipsum tempora tempora ut porro. Voluptatem porro amet labore quisquam. Non sit quisquam ut dolore ipsum.
+
+Ut etincidunt tempora voluptatem quiquia adipisci etincidunt adipisci. Velit modi dolore etincidunt amet dolor quaerat dolorem. Adipisci etincidunt quaerat etincidunt eius ipsum. Neque voluptatem quisquam amet adipisci aliquam aliquam porro. Modi quiquia consectetur amet. Ipsum labore est porro neque modi non.
+--===============4558590062244909506==--

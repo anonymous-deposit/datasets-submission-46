@@ -1,0 +1,73 @@
+Delivered-To: anonymized_user@gmail.com
+Received: by 2002:a17:906:6082:b0:9a5:f62d:de9c with SMTP id t2csp1165301ejj;
+        Mon, 25 Sep 2023 03:59:57 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGcxn1celtX0aSyFRtawQTl/04SXCIcHeprt0SdzL8hkghVM9fb1+cmFZEUhbP+KXSjK9WX
+X-Received: by 2002:a17:907:7784:b0:9ad:e298:a50 with SMTP id ky4-20020a170907778400b009ade2980a50mr5427116ejc.8.1695639597702;
+        Mon, 25 Sep 2023 03:59:57 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1695639597; cv=none;
+        d=google.com; s=arc-20160816;
+        b=DPUQv//cnfsEgVXxHMeO2ueiMbvibMQ24KlQIztiPdBwF2pPINQgsw2zJZ6GF9tmIG
+         kpeirvBArhBIOhgFQ3hD5peDcmLfsfyKTQwtoFXAnsa4hMD80oCwjozDRRKQY6tSo+h+
+         WqLJKPLXvghUj5LW+oTYTRi1E4HMoeLSYOrLvE9RiluP/ZhDIBr2AueyBtsfsG1DnmHq
+         W33SCOuwtaaf8ZD1jUqw9PWaHQ2ZFYl+OSbU6yTBmvYbHeaEpbfWx7Fmw4HaP688IvU0
+         X5L3Do8rFcHtY/P7qyYIazyRkyzp13+ut6x2Vp+2QL0+HCPZvpxVmsOj6Rfyv2tVTiUR
+         ezVg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:date:to:from:subject:mime-version:dkim-signature;
+        bh=ky08/4zy8nkdjbyCONr4iiXNXyThSTr0uvq0QLmuP30=;
+        fh=shHmlGoQyS9S8e8DXCCaPFJCB+pqWwQde72z2f/TzIU=;
+        b=emUA+riHybqRUD43069MhZTHY7J9CM5AuLrWV3AInMr0o/crqRxLYqSYco6BG06FCf
+         rttXlbWWzsxc1DHW57ibz70QQZA9iIIamDiaKzqti0m89mUX6+Zjgf5i8dKw2a1rj2Jv
+         EfKoi9Dh9boxOtcTHbCdmrdhAqBqDBGEXHZBw/dTIdnIh3gjCQ4gp8wYXxs7DuTL3vNX
+         GvA8BM99JqUIUvgM9HI9Aw8jrNJeqDThlJamgbqZpsKXvf7a8gyDybjysdyJucY3Z04b
+         R4I8alJeF4op8xWic4brOpSPX1BAHxIFz94nju2idYJsZjHlfKMlQeYvRI4yybRNEwvd
+         My3A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmailcom.email-sender-1.example header.s=dkim header.b=bRZkNwD1;
+       spf=pass (google.com: domain of goodrua@gmailcom.email-sender-1.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) smtp.mailfrom=goodrua@gmailcom.email-sender-1.example;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmailcom.email-sender-1.example
+Return-Path: <goodrua@gmailcom.email-sender-1.example>
+Received: from mail.mail-server.example (mail.mail-server.example. [XX_ANONYMIZED_IP_MAIN_A_XX])
+        by mx.google.com with ESMTPS id sa42-20020a1709076d2a00b009ae619ed0edsi10599354ejc.1023.2023.09.25.03.59.57
+        for <anonymized_user@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 25 Sep 2023 03:59:57 -0700 (PDT)
+Received-SPF: pass (google.com: domain of goodrua@gmailcom.email-sender-1.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) client-ip=XX_ANONYMIZED_IP_MAIN_A_XX;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmailcom.email-sender-1.example header.s=dkim header.b=bRZkNwD1;
+       spf=pass (google.com: domain of goodrua@gmailcom.email-sender-1.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) smtp.mailfrom=goodrua@gmailcom.email-sender-1.example;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmailcom.email-sender-1.example
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 1F2B2388565
+	for <anonymized_user@gmail.com>; Mon, 25 Sep 2023 12:59:56 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmailcom.email-sender-1.example;
+	s=dkim; t=1695639597; h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=ky08/4zy8nkdjbyCONr4iiXNXyThSTr0uvq0QLmuP30=;
+	b=bRZkNwD1kHvGT1lyIOzUbgR7F29AaF6FPaxK/GZP6En1efHmTAG79c3wcSNPrz7VDEM4Fk
+	GjfYz72hKKntVSK0opzh56uORDrh+BqrCJaR5eC+N5kOd/tbzcJTNsIAlKpvHfKeGpMMIi
+	FehfxSbUxa2EF8LSC5/HuOXt0+QYwJ0=
+Content-Type: multipart/alternative; boundary="===============0791196067023581549=="
+MIME-Version: 1.0
+Subject: Email Research Testing Dmarc configuration - SPK OK - DKIM OK- 12:59:56.544770
+From: goodrua@gmailcom.email-sender-1.example
+To: anonymized_user@gmail.com
+Date: Mon, 25 Sep 2023 12:59:56 +0200
+message-id: <169563959654.19703.2127734156812644176@gmailcom.email-sender-1.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============0791196067023581549==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Labore tempora quisquam numquam. Numquam magnam ipsum non tempora numquam. Ut etincidunt modi sed porro voluptatem adipisci. Eius modi numquam sit ut eius. Ut magnam neque modi quaerat. Sed voluptatem modi sit etincidunt dolorem. Eius est amet eius. Quaerat amet quisquam velit sit dolor amet. Numquam amet est sed. Dolore amet dolore sed modi dolor quaerat non.
+
+Voluptatem magnam ut ipsum labore non. Quiquia velit quisquam dolore. Velit quaerat sit amet quaerat dolor. Voluptatem porro eius velit modi eius ut dolorem. Velit amet quaerat dolore non adipisci dolorem.
+
+Numquam quaerat ut consectetur aliquam dolor labore. Voluptatem eius numquam est neque consectetur consectetur. Tempora aliquam consectetur etincidunt. Dolorem velit dolorem quisquam est quiquia neque. Dolor aliquam etincidunt labore velit. Magnam etincidunt numquam etincidunt non.
+
+Labore quisquam ipsum eius. Ut adipisci modi dolor. Magnam modi eius eius etincidunt aliquam. Sed dolor magnam amet magnam numquam amet porro. Modi eius est ut tempora sit. Sed dolore sit dolor voluptatem. Consectetur quisquam est magnam dolore. Modi quiquia neque velit etincidunt quaerat. Ipsum consectetur tempora amet adipisci. Dolore adipisci ipsum labore labore consectetur.
+
+Dolor voluptatem voluptatem neque quiquia adipisci. Porro etincidunt ipsum voluptatem velit eius etincidunt quisquam. Neque velit aliquam eius dolor voluptatem consectetur. Modi quaerat modi ut neque neque. Numquam sed velit quisquam dolorem. Sit quisquam dolorem porro magnam velit quiquia dolor. Ipsum velit numquam sit velit numquam. Consectetur est est tempora voluptatem amet consectetur neque. Numquam quiquia amet consectetur velit.
+
+Quiquia numquam est quiquia non voluptatem ipsum. Magnam consectetur ipsum dolore quisquam. Ipsum consectetur adipisci labore sit. Modi dolor sed aliquam quaerat dolorem aliquam consectetur. Voluptatem magnam dolorem velit porro labore numquam dolorem. Consectetur tempora etincidunt eius ipsum porro. Velit labore amet non etincidunt.
+--===============0791196067023581549==--

@@ -1,0 +1,76 @@
+Delivered-To: anonymized_user@gmail.com
+Received: by 2002:a17:906:6082:b0:9a5:f62d:de9c with SMTP id t2csp1188118ejj;
+        Mon, 25 Sep 2023 04:41:44 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IF5Ky/Egvx6s9q2lIbOTIyztIm7RjurFWI/GS9ISA3uN1CiW7hrEHfTL/hzkVmusA24QBNF
+X-Received: by 2002:a05:6402:385:b0:523:38eb:395d with SMTP id o5-20020a056402038500b0052338eb395dmr4643286edv.9.1695642104592;
+        Mon, 25 Sep 2023 04:41:44 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1695642104; cv=none;
+        d=google.com; s=arc-20160816;
+        b=GpdOuxcdLao3Ncu2kBEkeS9y2r2DFCY3tC2RY3BTFSMExm83u5cqd/c10x/aTMYeru
+         SQ/bQ2Ts15NXkdc38P3IGToeC4v/cD6/BepEprYQ7vqaW6KinCLx/rtjl9x4gXuTtouY
+         g/5kKPuCwHyQgdOmiw1HhQG0b50GwRcaQainEgNHa7ADeMGzq7mk2oqh6NCwxQmIEr9c
+         oM2n+Ar76gBdrbJ8G0ppUSgyANBGl4McW6s2hdWbC/zuKxeuoNdDUJCWPlGMbSPk8jtA
+         HNLGjfnXUHvw4Pc3F5W55VDIvd1aThAuEQHBw5dw5C5CSIJSEU3gut/zJOoVvFjjMW9d
+         Xx5w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:date:to:from:subject:mime-version:dkim-signature;
+        bh=tDuQJn4v1QuZP2BTL75c/AIDyIvMbOVofctf+JbRB/U=;
+        fh=shHmlGoQyS9S8e8DXCCaPFJCB+pqWwQde72z2f/TzIU=;
+        b=0cDIoxiDUFH0o+E7tP5XT++jtAeQ/2cc+0Xr4HBm5oOl4G63ryrIxkqrRsD9HT7w1T
+         bWK7wWPy7x0qtwWZGRD168ivceR245muHEC8zFSLkA6/LjjZGC5eSKqvzZ/Re/22U3D6
+         q3HUpDCLpif7ryVsgSxvgIt9JNaZNkRvmUnjjsUbJ4qwWBIkoK7NHwo4hDMqkXQj1T1P
+         D3EwTsGoxVsGxl90PYCARuGT9uz/do9BClPAnbq/PQG0/agqUKkSp3Nc7gzgmfhsv/qF
+         K4KLCMPz/cK/nt8NlNhJmf1xXmxOoK6PTWO2ksbYygeSGXMpYlSAdq+7BzvXyAR+S18F
+         5I1g==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=temperror (no key for signature) header.i=@gmailcom.email-sender-2.example header.s=dkimfalse header.b=hOHiQJaZ;
+       spf=pass (google.com: domain of goodrua@gmailcom.email-sender-2.example designates XX_ANONYMIZED_IP6_195e9c9291e59b_XX as permitted sender) smtp.mailfrom=goodrua@gmailcom.email-sender-2.example;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmailcom.email-sender-2.example
+Return-Path: <goodrua@gmailcom.email-sender-2.example>
+Received: from mail.mail-server.example (mail.mail-server.example. [XX_ANONYMIZED_IP6_195e9c9291e59b_XX])
+        by mx.google.com with ESMTPS id s2-20020aa7c542000000b005307ccabbe3si8420955edr.646.2023.09.25.04.41.44
+        for <anonymized_user@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 25 Sep 2023 04:41:44 -0700 (PDT)
+Received-SPF: pass (google.com: domain of goodrua@gmailcom.email-sender-2.example designates XX_ANONYMIZED_IP6_195e9c9291e59b_XX as permitted sender) client-ip=XX_ANONYMIZED_IP6_195e9c9291e59b_XX;
+Authentication-Results: mx.google.com;
+       dkim=temperror (no key for signature) header.i=@gmailcom.email-sender-2.example header.s=dkimfalse header.b=hOHiQJaZ;
+       spf=pass (google.com: domain of goodrua@gmailcom.email-sender-2.example designates XX_ANONYMIZED_IP6_195e9c9291e59b_XX as permitted sender) smtp.mailfrom=goodrua@gmailcom.email-sender-2.example;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmailcom.email-sender-2.example
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 2C596388568
+	for <anonymized_user@gmail.com>; Mon, 25 Sep 2023 13:41:44 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=gmailcom.email-sender-2.example; s=dkimfalse; t=1695642104;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=tDuQJn4v1QuZP2BTL75c/AIDyIvMbOVofctf+JbRB/U=;
+	b=hOHiQJaZsW7FRS3D83bs34vx+9T2FqHfmtjSCMRENxXiytOYCpbndXKnWwL+gXYA3EZMIT
+	jHU9x1ukOYm6yUuJ9oFwfljWNKWL7liiZ0VUrOGiVxeJ8Bp5IivNMKpfHA6P+Fn3bgbYXO
+	n14cPQCr9jEvNYPVOrvPtkwU+un+nOl8LZQO+iCCZLixCWVPOASgjG3btd3/al7CWRtQ9f
+	Xr3ndR4cW0nDgkA7o5f09OHKZ39/0E5CnoS8vB5Y/2efAEQfO6uzSy1ttI0rNhDbTrbTZx
+	Jf6XIpT0F3qTTzZ+A2LeqWrz/ZGteTbOzYiwtGz0u70XK+lCCx0knCqbfn86Qg==
+Content-Type: multipart/alternative; boundary="===============7835489596553095237=="
+MIME-Version: 1.0
+Subject: gmailcom Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:41:43.735108
+From: goodrua@gmailcom.email-sender-2.example
+To: anonymized_user@gmail.com
+Date: Mon, 25 Sep 2023 13:41:43 +0200
+message-id: <169564210373.19703.2573182259966236204@gmailcom.email-sender-2.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============7835489596553095237==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Magnam amet sit dolorem labore non. Dolorem labore est dolore tempora adipisci tempora. Sed sit velit labore dolore aliquam etincidunt numquam. Quaerat magnam ipsum modi aliquam magnam quaerat. Voluptatem ut modi amet. Porro est eius modi. Porro velit modi numquam porro sit quiquia neque. Voluptatem tempora quaerat quiquia voluptatem non aliquam consectetur. Quiquia ipsum etincidunt sit velit est. Dolorem adipisci voluptatem quiquia sit.
+
+Tempora amet ipsum dolore velit ut numquam consectetur. Tempora porro etincidunt dolorem. Amet non amet magnam amet est. Etincidunt dolor tempora aliquam non sed adipisci est. Porro dolor numquam magnam quisquam quiquia eius quaerat.
+
+Labore neque eius dolorem porro amet. Dolorem voluptatem labore quaerat modi voluptatem. Consectetur est amet sed non dolore. Sed eius ut est adipisci magnam numquam sed. Amet amet tempora dolore magnam dolor dolor non. Modi numquam dolorem dolore voluptatem. Consectetur neque velit magnam consectetur.
+
+Labore dolore tempora non sed. Dolor velit velit amet sit. Est sit eius voluptatem. Dolorem est aliquam tempora dolore quisquam consectetur. Ut sed voluptatem amet modi aliquam amet. Adipisci dolor labore numquam dolore sit. Consectetur amet tempora modi labore velit adipisci. Aliquam quisquam est labore quaerat neque adipisci modi. Est sit quiquia neque sed. Magnam neque velit velit ut adipisci.
+
+Non aliquam dolore labore neque neque dolore modi. Amet quisquam quaerat dolore. Aliquam sit dolorem magnam quiquia. Sit modi quaerat quisquam quaerat. Ut quisquam dolore neque tempora quaerat.
+
+Etincidunt sit quisquam sed non. Tempora eius dolor eius dolor dolor labore. Aliquam non adipisci velit sed velit. Amet dolor est adipisci adipisci. Ut voluptatem quaerat voluptatem quaerat voluptatem aliquam modi. Quaerat dolor quisquam modi neque non dolorem velit. Est modi porro velit.
+--===============7835489596553095237==--

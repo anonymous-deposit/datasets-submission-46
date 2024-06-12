@@ -1,0 +1,117 @@
+Return-Path: <noreply@dmarc.yahoo.com>
+Delivered-To: anonymized_user@email-sender-1.example
+Received: from mail.mail-server.example
+ ([XX_ANONYMIZED_IP6_f317321f451418_XX])	by b85eae80de63 with LMTP	id
+ iaNUNBvhEmXN7wMAgXJbaQ	(envelope-from <noreply@dmarc.yahoo.com>)	for
+ <anonymized_user@email-sender-1.example>; Tue, 26 Sep 2023 15:48:11 +0200
+Received: from sonic324-10.consmr.mail.ne1.yahoo.com
+ (sonic324-10.consmr.mail.ne1.yahoo.com [XX_ANONYMIZED_IP4_ff680b57f9f83c_XX])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)	
+ key-exchange X25519 server-signature RSA-PSS (4096 bits) server-digest
+ SHA256)	(No client certificate requested)	by mail.mail-server.example
+ (Postcow) with ESMTPS id 326333884C2	for
+ <rua@yahoocom.email-sender-1.example>; Tue, 26 Sep 2023 15:48:06 +0200 (CEST)
+Authentication-Results: mail.mail-server.example;	dkim=pass header.d=yahoo.com
+ header.s=s2048 header.b=YmhDnHP7;	spf=none (mail.mail-server.example: domain
+ of noreply@dmarc.yahoo.com has no SPF policy when checking
+ XX_ANONYMIZED_IP4_ff680b57f9f83c_XX) smtp.mailfrom=noreply@dmarc.yahoo.com;
+	dmarc=pass (policy=none) header.from=dmarc.yahoo.com
+ARC-Seal: i=1; s=dkimfalse2; d=yahoocom.email-sender-1.example; t=1695736088;
+	a=rsa-sha256; cv=none;
+	b=nbhaJ1oVSdbsOrx641SjlTOeZ9z+xxDSANhrfVh7ROpf7xsv76Eg3IOI+QDNFNmKPz1kM2
+	m5qBHnFnWM3IgHCU7fidPsZNvinrjGKV+ZkXiiOKvvm1+AolMcSjaXtqvEmmngIxsh0mTb
+	d5BihK5j+l8i/GbfHMo51ZKTEMnb6us=
+ARC-Authentication-Results: i=1;	mail.mail-server.example;	dkim=pass
+ header.d=yahoo.com header.s=s2048 header.b=YmhDnHP7;	spf=none
+ (mail.mail-server.example: domain of noreply@dmarc.yahoo.com has no SPF
+ policy when checking XX_ANONYMIZED_IP4_ff680b57f9f83c_XX)
+ smtp.mailfrom=noreply@dmarc.yahoo.com;	dmarc=pass (policy=none)
+ header.from=dmarc.yahoo.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=yahoocom.email-sender-1.example; s=dkimfalse2; t=1695736088;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:dkim-signature;
+	bh=ngg1KJ3ZR9BnqLZNbtJuZoLYvO03wKv7WCtB/ye28Eg=;
+	b=c4sMHJw6PXQTCLDIl00R6E0ZcwyiSVgaJaIMBUs0N/kUSORpgsHkX8m2Fk0oalXCILQ4bl
+	W++/fR3jvTTD8u4itOl68bLtu63gXMyjdc2u+uN7yLWq3gK0WhOrB5pWSmeQfmRspoJsVR
+	92kynJFx8lf6GsmQlawZVhuyRQiDhC0=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048;
+ t=1695736083; bh=ngg1KJ3ZR9BnqLZNbtJuZoLYvO03wKv7WCtB/ye28Eg=;
+ h=Date:From:To:Subject:From:Subject:Reply-To; =?utf-8?q?b=3DYmhDnHP77RPV6bj?=
+ =?utf-8?q?BznotCyxdLoNUSV80z9WFb798mhADWqOQftS6Lc3vjUWZYrmncD8ITRDja0shwEIr?=
+ =?utf-8?q?5lAzlpaUSXRG1/04emuwtUz+omnXM7M2pn1xzVvd2WK1gduB4ja4RN1Y98hgywGdv?=
+ =?utf-8?q?b6gxUeM379hnCUFWeSopreNgo4+zpiYxakH+YKiAj/a3JM6Lgm7SieziSLdMVjdjr?=
+ =?utf-8?q?Hm8hyZLGNgP7PEdOvLh77UcymIsp/VhNAOKen8opN7hUeoeel8DzpkKsx5iMcykjY?=
+ =?utf-8?q?myJ8OtXLseTHyDtXu8jvrQRhKVxOOWi2gKqFeEZ03JLTVPLLxq45BdprMTqRAn2iO?=
+ =?utf-8?q?ow=3D=3D?=
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048;
+ t=1695736083; bh=QEqfg37Sr0iPNY0sm5tKsFSOkeT01lzkQgq5exc2L+J=;
+ h=X-Sonic-MF:Date:From:To:Subject:From:Subject; =?utf-8?q?b=3DJdoWSFIPISsVO?=
+ =?utf-8?q?JlwqcXzmN8mVMcKiJrxRMQ02UvpsozPHFeR466jJS6aYfzgl/qDO8HSnlNp7NtUlw?=
+ =?utf-8?q?2bSaVHSAd0jQB959Ym90RdPqMpYrrhKXxX/HlIfJsA2SLWGNt/goDYjdQwFtcbE6i?=
+ =?utf-8?q?qFwxwQIc/+nE+/0/mJaMFw4QmYVwM9jU24NrbVf/DqGRLPhMtNrOlifUb9fMmzCqx?=
+ =?utf-8?q?W8S+cGbulERLniu62YHXz1D4Vn1MzWNTI2n2yZwPkeb+wX/GLU1WYG/CsN03ARuF4?=
+ =?utf-8?q?I2Vcq6jItBNesPkqeRcnEg2I9smtKgurJhMoPILE2Lo3Gcs6ySyUe48W5+LEON6Oq?=
+ =?utf-8?q?+pFA=3D=3D?=
+X-Sonic-MF: noreply@dmarc.yahoo.com
+X-Sonic-ID: 692c6a49-ab13-434b-a86c-fa965418b579
+Received: from sonic.gate.mail.ne1.yahoo.com by
+ sonic324.consmr.mail.ne1.yahoo.com with HTTP; Tue, 26 Sep 2023 13:48:03 +0000
+Content-Transfer-Encoding: binary
+Content-Type: multipart/mixed; boundary="_----------=_16957360803203911857"
+MIME-Version: 1.0
+X-Mailer: MIME::Lite 3.030 (F2.84; T1.38; A2.12; B3.13; Q3.13)
+Date: Tue, 26 Sep 2023 06:48:00 -0700
+From: noreply@dmarc.yahoo.com
+To: rua@yahoocom.email-sender-1.example
+Message-Id: <1695736080.82150@dmarc.yahoo.com>
+X-Last-TLS-Session-Version: TLSv1.3
+X-Rspamd-Queue-Id: 326333884C2
+X-Rspamd-Fuzzy: =?utf-8?q?709b25a451032be27d311901e7645980f68749bb126b75382d?=
+ =?utf-8?q?a005ecafbf860d1d7b308f737e20dbeda458e1669da50b9b837c86ff7e310b45f?=
+ =?utf-8?q?3c34ceeeda17a?=
+X-Spamd-Result: default: False [3.86 / 15.00];	BAD_REP_POLICIES(2.00)[];
+	MAILCOW_FUZZY_DENIED(1.47)[11:709b25a451:0.62:txt];
+	R_MISSING_CHARSET(0.50)[];	MIME_GOOD(-0.10)[multipart/mixed,text/plain];
+	MX_GOOD(-0.01)[];	DWL_DNSWL_NONE(0.00)[yahoo.com:dkim];	BCC(0.00)[];
+	TO_MATCH_ENVRCPT_ALL(0.00)[];	RCPT_COUNT_ONE(0.00)[1];
+	BLOCKLISTDE_FAIL(0.00)[XX_ANONYMIZED_IP4_ff680b57f9f83c_XX:server fail];
+	R_SPF_NA(0.00)[no SPF record];	R_DKIM_ALLOW(0.00)[yahoo.com:s=s2048];
+	RCVD_IN_DNSWL_NONE(0.00)[XX_ANONYMIZED_IP4_ff680b57f9f83c_XX:from];
+	FROM_NO_DN(0.00)[];	ARC_NA(0.00)[];	ASN(0.00)[asn:36646,
+ ipnet:XX_ANONYMIZED_IP4_36fefb3ebb192a_XX/21, country:US];
+	MID_RHS_MATCH_FROM(0.00)[];
+	ARC_SIGNED(0.00)[yahoocom.email-sender-1.example:s=dkimfalse2:i=1];
+	DKIM_TRACE(0.00)[yahoo.com:+];	TO_DN_NONE(0.00)[];	HAS_ATTACHMENT(0.00)[];
+	RWL_MAILSPIKE_POSSIBLE(0.00)[XX_ANONYMIZED_IP4_ff680b57f9f83c_XX:from];
+	DMARC_POLICY_ALLOW(0.00)[dmarc.yahoo.com,none];	RCVD_TLS_LAST(0.00)[];
+	RCPT_MAILCOW_DOMAIN(0.00)[yahoocom.email-sender-1.example];
+	MIME_TRACE(0.00)[0:+,1:+,2:~];	FROM_EQ_ENVFROM(0.00)[];
+	RCVD_COUNT_TWO(0.00)[2]
+Subject: Report Domain: yahoocom.email-sender-1.example Submitter: yahoo.com
+ Report-ID: <1695690607.2868>
+
+This is a multi-part message in MIME format.
+
+--_----------=_16957360803203911857
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+Content-Type: text/plain
+
+This is an aggregate DMARC report from Yahoo. Your domain yahoocom.email-sender-1.example has a DMARC record set up. You are receiving this report because your email address is included in the 'rua' tag of that domain.  If you no longer wish to receive these reports, or if you would like them to be sent to a different location, kindly update or remove this record or collaborate with your hosting provider.
+
+Please note that this email address is not monitored, and you will not receive a response if you reply to this email. For any feedback or questions, please reach out to dmarchelp@yahooinc.com.
+--_----------=_16957360803203911857
+Content-Disposition: attachment;
+ filename*0*=us-ascii''yahoo.com%21yahoocom.email-sender-1.example%2116956000;
+ filename*1*=00%211695686399.xml.gz
+Content-Transfer-Encoding: base64
+Content-Type: application/gzip;
+ name*0*=us-ascii''yahoo.com%21yahoocom.email-sender-1.example%211695600000;
+ name*1*=%211695686399.xml.gz
+
+H4sIAJ2raWYC/+1Xy27bMBA8t19h5B7JTlHVBlimBtqDD3F7dHIhaGplEREfIKU0+fuuRJmS7aABGqAIWvtiejjL2R0OCJhcP6pq8gDOS6M/X8yS6cU1ffeeFAD5lot7XE8mxIE1rmYKap7zmncgwsbtmOYK6C0vjSFp/N3vg+KyorniTpRQ2S9PLU1qkQijSBp2e2qvIHM6yxYfs8U0m35KrubZnKTDVs/FFoA5rnd7IcS2sJM61E7bD0kDEgmg+6Pn2YfFAtV1PC89OjBKHsxLrKmkeGK22VbSlzC0Y3AQTbvhcLCkm+vSowC4y1kCj1zZClAl8Poqnt9LRR1Jw2KPelt0YPvdY5Zqo7HeRkDUdNaO2C5Cw8/2hqYK42Kfzvwc7PCmcQKYtHSzYcv19/Xtzeru21e2+sFulqs1W7LNhqQDKxYK02iUJ2lYRLzvAB541aCdedxpHZLeGi9rjFg/yxgZE1srCrQPGYMroWE0JOwM1owmP9bFO4zjEpmDrmUhMeVDZQkcL4gVzqiX725M3gucnkp4U5fMgW+qeqR0PMofBSaYABWI2jjaHlnwysMV+rEHR8TQA7XgFDhnXBvpDhmMO+iKjE19VYu9TriqE9FRrNMTs1p+DOw/F17LvT+H9yC8bzS74ab+v+yGuc8P70vZ/X1snw/P+bX9u4k9v7ZvO7GvfGNJOvxB+QXEmY9jwwwAAA==
+
+--_----------=_16957360803203911857--
+

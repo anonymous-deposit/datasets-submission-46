@@ -1,0 +1,52 @@
+Received: from fmx21.pf.interia.pl (localhost [127.0.0.1])
+	by fmx21.pf.interia.pl (Postfix) with ESMTP id 1417020059430
+	for <anonymized_user@interia.pl>; Mon, 25 Sep 2023 13:40:45 +0200 (CEST)
+X-Envelope-From: <goodrua@interiapl.email-sender-3.example>
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+	(using TLSv1.2 with cipher ECDHE-ECDSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by fmx21.pf.interia.pl (Postfix) with ESMTPS
+	for <anonymized_user@interia.pl>; Mon, 25 Sep 2023 13:40:42 +0200 (CEST)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 3F4DC388562
+	for <anonymized_user@interia.pl>; Mon, 25 Sep 2023 13:40:42 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=interiapl.email-sender-3.example; s=dkimfalse; t=1695642042;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=9V12AM+rBvzvQlRZuFnZESFlhQ9s5deUHiP1bd7Z4P4=;
+	b=SBLtUucQgkN/lCtPd7aQtbxpTl8iJfAdBQ6evD4DPXsa4dibZctJkrfCJc77Nf+8RDLamx
+	O7YujW11IbXyJDjjuVsOhJfdQvCGX1U8LM4scHrKeI5Z9XfNKpqsTF8IdLtQVgUNkvrb6m
+	L3EHADpdNU3ojLMbj5vsFLvMVL/XBLNBxDRdbPCTzYF+R+uSBkzRXZ2XSe/mh2L0zih4Mo
+	9m603DoRNnvXSPzZoABQsgMiY4i6W3dEoU5U9u2/b37Mmn7dabfs0xof9y8qAmYFWQmtHu
+	Z0hPaYyBVeZTLmbchC0zP8FzUXrZUVCO8ZYQEmMFaVYJZYY+AJdsre4munYW3Q==
+Content-Type: multipart/alternative; boundary="===============9110686338087150982=="
+MIME-Version: 1.0
+Subject: interiapl Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:40:41.903579
+From: goodrua@interiapl.email-sender-3.example
+To: anonymized_user@interia.pl
+Date: Mon, 25 Sep 2023 13:40:41 +0200
+message-id: <169564204190.19703.9636554560709848399@interiapl.email-sender-3.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-IPL-Priority-Group: 0-0
+X-IPL-VerifiedSender: goodrua@interiapl.email-sender-3.example
+X-IPL-SAS-SPAS2: 1.8942
+X-Interia-Antivirus: OK
+X-IPL-SAS-IP: XX_ANONYMIZED_IP_MAIN_A_XX
+X-IPL-SAS-ZERO: -0
+X-IPL-SAS-UREP: 0
+X-IPL-SAS-UREP-PRIV: 0
+X-IPL-SAS: -1.894
+X-IPL-Envelope-To: anonymized_user@interia.pl
+
+--===============9110686338087150982==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Etincidunt magnam tempora porro dolor ut. Ut dolore sit dolore dolorem dolorem adipisci. Ut etincidunt quiquia etincidunt non velit. Magnam porro dolorem porro est. Quisquam numquam ipsum est voluptatem modi voluptatem est. Aliquam ipsum dolor quaerat velit etincidunt eius dolorem.
+
+Magnam neque eius porro modi dolorem. Quiquia magnam ipsum quaerat labore velit aliquam dolorem. Dolorem quiquia non quaerat aliquam. Numquam etincidunt porro neque voluptatem quisquam. Voluptatem labore etincidunt est quiquia ipsum sed ut. Consectetur modi neque consectetur. Modi neque magnam magnam quiquia.
+
+Sed eius aliquam dolore quaerat. Non tempora labore velit tempora. Amet est sed velit ipsum modi amet. Aliquam voluptatem tempora velit dolor adipisci quaerat quisquam. Porro consectetur non numquam sed porro velit.
+
+Dolore sit quiquia velit est quisquam. Magnam ut aliquam aliquam non quisquam consectetur. Quiquia dolor labore amet. Quaerat dolor consectetur modi. Eius quisquam numquam tempora. Quiquia voluptatem velit porro adipisci sit amet. Labore est labore amet aliquam.
+--===============9110686338087150982==--

@@ -1,0 +1,57 @@
+Return-Path: <goodrua@inboxlv.email-sender-3.example>
+Received: from timmy5-clean.inbox.lv ([10.0.1.75])
+	 by brat9.inbox.lv (Cyrus 2.5-125) with LMTPA;
+	 Mon, 25 Sep 2023 14:24:48 +0300
+Received: from ham1.inbox.lv (ham1 [10.0.1.101])
+	by timmy5-clean.inbox.lv (Postfix) with ESMTP id B3D2030009A
+	for <anonymized_user@inbox.lv>; Mon, 25 Sep 2023 14:24:48 +0300 (EEST)
+Received: from kas7.inbox.lv (kas7 [10.0.1.97])
+	by ham1.inbox.lv (Postfix) with ESMTP id 3B6BA3700089
+	for <anonymized_user@inbox.lv>; Mon, 25 Sep 2023 14:24:48 +0300 (EEST)
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+	by timmy5-main.inbox.lv (Postfix) with ESMTPS id A9732880594
+	for <anonymized_user@inbox.lv>; Mon, 25 Sep 2023 14:24:47 +0300 (EEST)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 1A814388569
+	for <anonymized_user@inbox.lv>; Mon, 25 Sep 2023 13:24:46 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=inboxlv.email-sender-3.example; s=dkim; t=1695641087;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=zCakzt+eOcUHoy+VCiqTt1hs0yASmgpeIB0VGc2qFsE=;
+	b=4S+i05Cko9MneJC15YE2XYoAnygKf1RaZv1axrgqe9g+nn5pRC04saOmIqDmRfWWFdoecM
+	AjwUJZgkxtx1U8DGFg2Rvvbw423L07yvr+UjgUzIBpuP42GZnSSGC1YHJq+CL0tqcCSnw0
+	1PU0YOwse0304U10Pao/lyjEew8+YPs=
+Content-Type: multipart/alternative; boundary="===============5894832210754914209=="
+MIME-Version: 1.0
+Subject: inboxlv Email Research Testing Dmarc configuration - SPK OK - DKIM OK- 13:24:46.733173
+From: goodrua@inboxlv.email-sender-3.example
+To: anonymized_user@inbox.lv
+Date: Mon, 25 Sep 2023 13:24:46 +0200
+message-id: <169564108673.19703.2903032317957635214@inboxlv.email-sender-3.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-KLMS-Message-Action: clean
+X-KLMS-AntiSpam-Lua-Profiles: 180091 [Sep 25 2023]
+X-KLMS-AntiSpam-Version: XX_ANONYMIZED_IP4_323ede30296d7b_XX
+X-KLMS-AntiSpam-Rate: 15
+X-KLMS-AntiSpam-Status: not_detected
+X-KLMS-AntiSpam-Method: none
+X-KLMS-AntiSpam-Auth: dmarc=pass header.from=inboxlv.email-sender-3.example policy=none;spf=pass smtp.mailfrom=inboxlv.email-sender-3.example;dkim=pass header.d=inboxlv.email-sender-3.example
+X-KLMS-AntiSpam-Info: LuaCore: 534 534 808c2ea49f7195c68d40844e073217da4fa0d1e3, {rep_avail}, {Prob_phishing_engines}, {Tracking_from_domain_doesnt_match_to}, FromAlignment: s, ApMailHostAddress: XX_ANONYMIZED_IP_MAIN_A_XX
+X-MS-Exchange-Organization-SCL: -1
+X-KLMS-AntiVirus: Modern antivirus of Inbox, version 8.0.3.30, bases: 2023/09/25 09:29:00 #21977564
+X-KLMS-AntiVirus-Status: Clean, skipped
+
+--===============5894832210754914209==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Quisquam labore non aliquam etincidunt dolor. Quisquam voluptatem consectetur quaerat non dolore tempora. Porro sed ipsum voluptatem quiquia sed. Sit ut quaerat sit non labore. Sed dolor dolorem ut. Etincidunt modi consectetur amet. Porro quaerat magnam quisquam dolore quaerat numquam. Etincidunt quisquam dolor eius neque dolorem eius modi. Dolorem quisquam amet neque. Neque quiquia labore est modi voluptatem.
+
+Dolore ipsum etincidunt tempora. Etincidunt tempora est porro voluptatem ut. Quisquam ipsum sit magnam consectetur sit sed. Dolore tempora tempora magnam labore. Etincidunt quaerat tempora adipisci ipsum consectetur neque. Quisquam porro dolore dolor. Numquam quiquia etincidunt eius ipsum adipisci amet.
+
+Amet modi tempora quaerat quisquam dolore. Neque est non adipisci etincidunt sed quisquam. Quaerat ipsum ut sed dolore dolorem ut ipsum. Labore ut numquam dolor modi adipisci adipisci eius. Magnam ipsum velit tempora non quisquam. Labore dolor tempora magnam neque tempora non magnam. Dolorem magnam ipsum velit. Quaerat porro sed amet quisquam quiquia modi. Dolore adipisci numquam dolorem eius quaerat voluptatem voluptatem. Amet labore ut numquam aliquam etincidunt aliquam.
+
+Porro labore voluptatem ipsum. Sit voluptatem sit quaerat. Velit est dolore ipsum labore non. Quisquam quisquam quiquia est. Quisquam voluptatem dolor est etincidunt dolor. Amet consectetur numquam aliquam labore. Velit eius dolor quisquam voluptatem ipsum voluptatem. Adipisci dolore ut dolor adipisci velit. Velit quaerat sed sit labore sed. Non ut etincidunt quiquia ipsum.
+
+Ipsum labore tempora porro dolor. Velit adipisci eius modi sit porro consectetur. Consectetur quiquia consectetur etincidunt non dolor. Dolorem numquam sit ipsum voluptatem. Aliquam dolorem consectetur magnam. Tempora sit eius dolore sed sed dolore neque.
+--===============5894832210754914209==--

@@ -1,0 +1,74 @@
+Delivered-To: anonymized_user@gmail.com
+Received: by 2002:a17:906:6082:b0:9a5:f62d:de9c with SMTP id t2csp1298330ejj;
+        Mon, 25 Sep 2023 07:33:07 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGdz9E5MBPp2n9METIQQXTwdKiDKLeuULEZOLXLulvYJ3sE4jqCYLBS7XCSbxx1KOpEeEIW
+X-Received: by 2002:a05:651c:50a:b0:2c1:6c96:8fa9 with SMTP id o10-20020a05651c050a00b002c16c968fa9mr591996ljp.5.1695652387666;
+        Mon, 25 Sep 2023 07:33:07 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1695652387; cv=none;
+        d=google.com; s=arc-20160816;
+        b=v+vO/sD9GdsT6SqjUv/Akah0SNTU2Llhs15eGByY1fNyNx+A7Y/qnhJjIcXzqIZ63f
+         Fo3YQ3ZpafIwvVedB93UPBB34B1e3qKLjpzI0uVVNRL7e0UaAn6FzXfakFxl+pS4PB4W
+         6OYEoqhtjcpka0O3dxNpceIHehlAPPmJrxG8MffAYbAubA9wZJm0yRZk64IyL/E/JFdJ
+         Ac8+LEJduFLk7HO2xS6ZuabQR5yX5rQ1z7cP5v/AAuf6guOJv2LP3lgd9lLerkUeZA0M
+         ydDzHetHHmz9iR/bwou3rDzZ7H4qUFZpc+v7I9/BcuBk9th58c60nhXjGusQ0tySER8M
+         +XWw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:date:to:from:subject:mime-version:dkim-signature;
+        bh=R10IkLX2sOKcpdOa6eXrAFKWlfclq4CpjLbKozJGTZk=;
+        fh=shHmlGoQyS9S8e8DXCCaPFJCB+pqWwQde72z2f/TzIU=;
+        b=t6lZiWXMeJ2csEy4fsckdpsRbSvQHdcWtZjkm98DWNujFoQDVtpjMZOmreeRGi9630
+         LltHoaFK+mBkm6QByQvFU7+2WDZxPsU5nE+t2aRVixtbsQLgU1oB4kDduSLi4JE0Xgv1
+         HCkN8AC9KiP2DPjsiF+0aubrsQbAGLHpD8M4f4GJNgPIir9mJTiKNcLWAF9K7cmlA6gZ
+         TCB0324GOAvBvV2Rp1KqVlJChqdVTAE37E++bRDflPdspE0v3Nft9U8UvH3JnPdM5sIB
+         OsFSsJkM14FnwV109mMjR0WUHODtAnLBov1pTjYNrLawzaAzzfdN6ysEKF+atipkiTL8
+         7fzQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=temperror (no key for signature) header.i=@gmailcom.email-sender-3.example header.s=dkimfalse2 header.b=Sqhl9JGY;
+       spf=pass (google.com: domain of badrua@gmailcom.email-sender-3.example designates XX_ANONYMIZED_IP6_195e9c9291e59b_XX as permitted sender) smtp.mailfrom=badrua@gmailcom.email-sender-3.example;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmailcom.email-sender-3.example
+Return-Path: <badrua@gmailcom.email-sender-3.example>
+Received: from mail.mail-server.example (mail.mail-server.example. [XX_ANONYMIZED_IP6_195e9c9291e59b_XX])
+        by mx.google.com with ESMTPS id k9-20020a170906680900b00992c3b85acbsi8813690ejr.128.2023.09.25.07.33.07
+        for <anonymized_user@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 25 Sep 2023 07:33:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of badrua@gmailcom.email-sender-3.example designates XX_ANONYMIZED_IP6_195e9c9291e59b_XX as permitted sender) client-ip=XX_ANONYMIZED_IP6_195e9c9291e59b_XX;
+Authentication-Results: mx.google.com;
+       dkim=temperror (no key for signature) header.i=@gmailcom.email-sender-3.example header.s=dkimfalse2 header.b=Sqhl9JGY;
+       spf=pass (google.com: domain of badrua@gmailcom.email-sender-3.example designates XX_ANONYMIZED_IP6_195e9c9291e59b_XX as permitted sender) smtp.mailfrom=badrua@gmailcom.email-sender-3.example;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmailcom.email-sender-3.example
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 38312388437
+	for <anonymized_user@gmail.com>; Mon, 25 Sep 2023 16:33:07 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=gmailcom.email-sender-3.example; s=dkimfalse2; t=1695652387;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=R10IkLX2sOKcpdOa6eXrAFKWlfclq4CpjLbKozJGTZk=;
+	b=Sqhl9JGYof0evUBmqciiHDx+g6CYqi47lshr7cChF9vt3mT6fW9vvIA8uoo0Dti7AHfWU7
+	jhGtoZcvJNFpHiQ6SUK7Amnvqh0oFtx6U5ZWRZUElHBUzFyM9apCusqdGWXK1Cf5bAKX07
+	5tuB5b3UbG8ie+kC6e5s5q22XJplUZE=
+Content-Type: multipart/alternative; boundary="===============7218521311017077610=="
+MIME-Version: 1.0
+Subject: gmailcom Email Research Testing Dmarc configuration - SPK NOK - DKIM NOK- 16:33:06.906708
+From: badrua@gmailcom.email-sender-3.example
+To: anonymized_user@gmail.com
+Date: Mon, 25 Sep 2023 16:33:06 +0200
+message-id: <169565238690.19703.7110872064471882234@gmailcom.email-sender-3.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============7218521311017077610==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Numquam consectetur neque numquam. Modi velit eius quaerat. Quisquam neque ut velit etincidunt modi magnam. Porro eius amet quaerat etincidunt quaerat. Dolor consectetur etincidunt sit etincidunt ipsum. Labore numquam voluptatem non. Est sit modi velit eius amet est. Amet aliquam quiquia amet.
+
+Est aliquam ipsum ipsum modi sit voluptatem aliquam. Ut aliquam voluptatem amet. Eius sit dolorem quaerat ipsum. Sit est porro quaerat eius. Quisquam sit porro non ipsum aliquam. Ut dolorem voluptatem sit consectetur ut tempora eius. Labore magnam dolor consectetur eius. Neque amet modi etincidunt ipsum est. Numquam labore dolorem quaerat. Sed eius consectetur velit.
+
+Neque quiquia est quaerat. Dolore tempora etincidunt ipsum sit. Neque magnam velit aliquam aliquam. Aliquam porro modi sed quisquam. Adipisci velit sit sit dolor est. Voluptatem ipsum etincidunt dolore labore sit ipsum. Sit voluptatem magnam tempora quisquam quaerat velit modi.
+
+Dolor amet tempora tempora. Etincidunt aliquam magnam magnam ipsum. Velit quiquia quaerat dolor dolorem eius voluptatem. Modi neque sed porro quiquia adipisci etincidunt aliquam. Non est tempora velit aliquam. Etincidunt dolor neque consectetur tempora consectetur. Ut velit dolor amet.
+
+Quiquia labore amet dolorem sed sed. Consectetur eius quiquia consectetur ut voluptatem. Adipisci quiquia voluptatem velit eius ipsum quisquam sed. Modi quisquam numquam quaerat sed voluptatem etincidunt adipisci. Quisquam sit est etincidunt quiquia aliquam dolor. Quisquam numquam voluptatem porro porro. Ut velit quisquam ipsum. Neque tempora dolor consectetur. Quaerat adipisci eius sed porro etincidunt. Eius quaerat sed quisquam.
+
+Non aliquam ut est ut voluptatem numquam. Sed consectetur velit consectetur quisquam ipsum neque. Neque sit quaerat sed non neque non. Eius sit dolor quiquia porro quaerat dolor. Non dolorem voluptatem sed ut. Aliquam quisquam dolorem quaerat modi labore. Aliquam modi sit dolorem. Tempora quiquia tempora numquam consectetur labore. Numquam voluptatem dolorem ut sed ipsum consectetur etincidunt. Voluptatem voluptatem voluptatem quiquia velit consectetur quiquia.
+--===============7218521311017077610==--

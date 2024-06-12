@@ -1,0 +1,59 @@
+Return-Path: <goodrua@orangefr.email-sender-4.example>
+Received: from opme11d1d03aub.bagnolet.francetelecom.fr ([XX_ANONYMIZED_IP4_e7dbc25b2edf0a_XX])
+	by opme11d1b13aub.bagnolet.francetelecom.fr with LMTP
+	id wON4C05kEWUvDgAA9Qo1tQ:T2106:P1:P1
+	(envelope-from <goodrua@orangefr.email-sender-4.example>); Mon, 25 Sep 2023 13:24:28 +0200
+Received: from opme11ppr43aub.idf.fr.intraorange ([XX_ANONYMIZED_IP4_e7dbc25b2edf0a_XX])
+	by opme11d1d03aub.bagnolet.francetelecom.fr with LMTP
+	id wON4C05kEWUvDgAA9Qo1tQ:T2106:P1
+	(envelope-from <goodrua@orangefr.email-sender-4.example>)
+	for <MELOFR-200-LOV4XKeVvVM9K/J3YZfi7/RzYL7U1Wb1l4Ya6x86fl4=>; Mon, 25 Sep 2023 13:24:28 +0200
+Received: from opmta1mti19nd1 ([XX_ANONYMIZED_IP4_e7dbc25b2edf0a_XX])
+	by opme11ppr43aub.idf.fr.intraorange with LMTP
+	id wON4C05kEWUvDgAA9Qo1tQ:T2106
+	(envelope-from <goodrua@orangefr.email-sender-4.example>)
+	for <anonymized_user@orange.fr>; Mon, 25 Sep 2023 13:24:28 +0200
+Received: from mail.mail-server.example ([XX_ANONYMIZED_IP_MAIN_A_XX])
+	by smtp.orange.fr with ESMTPS
+	id kjhRqXq3yyyglkjhRqRA7j; Mon, 25 Sep 2023 13:24:28 +0200
+X-bcc: anonymized_user@orange.fr
+X-ME-bounce-domain: orange.fr
+X-ME-engine: default
+X-me-spamcause: (51)(0000)gggruggvucftvghtrhhoucdtuddrgedviedrudelgedgfeekucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuoffgpdggtffipffknecuuegrihhlohhuthemucehtddtnecuqfhnlhihuchonhgvuchprghrthculdehuddmnecujfgurheptggguffhvfffkfesrgdtreertddtvdenucfhrhhomhepghhoohgurhhurgesohhrrghnghgvfhhrrdhhuhhrvggruhdrshhtohhrvgenucggtffrrghtthgvrhhnpeeivedugeetveetfeekfedukeffkedtgfevgfelueehtdfgueekueeitdduhedvudenucfkphepudekhedrudekhedrkedvrddvkeenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhephhgvlhhopehmrghilhdriihorhgvihhllhgvrdhrvgdpihhnvghtpedukeehrddukeehrdekvddrvdekpdhmrghilhhfrhhomhepghhoohgurhhurgesohhrrghnghgvfhhrrdhhuhhrvggruhdrshhtohhrvgdpnhgspghrtghpthhtohepuddprhgtphhtthhopegtvggtihhlvgdrhhhurhgvrghusehorhgrnhhgvgdrfhhr
+X-me-spamlevel: not-spam
+X-ME-Helo: mail.mail-server.example
+X-ME-IP: XX_ANONYMIZED_IP_MAIN_A_XX
+Authentication-Results: opmta1mti19nd1;
+	arc=none;
+	dkim=pass header.d=orangefr.email-sender-4.example header.b=XPjhzvw4
+X-ME-Entity: ofr
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 9BC4938856E
+	for <anonymized_user@orange.fr>; Mon, 25 Sep 2023 13:24:25 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=orangefr.email-sender-4.example;
+	s=dkim; t=1695641065; h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=pmdPPQLfj7s1LXALwbzTPd1RqKLdFqQPCjmgeUZXRpw=;
+	b=XPjhzvw4C5Kbx9jwyptvj1l1yj6Tw3h23YyURQSlAeTR71Uy7NIPwzWPtElXRVotpazRmc
+	rYWcCEgvC5BCOGjxgHM8S9mFz0i+iBEr8p3hS9ff7duNlRC90ZDiC0FdkGsaQvDf1KDytx
+	oILqxiAerzknN9KFKtZAc1srzUxowIM=
+Content-Type: multipart/alternative; boundary="===============1891657498318208018=="
+MIME-Version: 1.0
+Subject: orangefr Email Research Testing Dmarc configuration - SPK OK - DKIM OK- 13:24:25.304503
+From: goodrua@orangefr.email-sender-4.example
+To: anonymized_user@orange.fr
+Date: Mon, 25 Sep 2023 13:24:25 +0200
+message-id: <169564106530.19703.8857624004086198235@orangefr.email-sender-4.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============1891657498318208018==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Dolor neque sed magnam velit non est. Etincidunt neque quiquia porro amet modi. Etincidunt aliquam ipsum magnam dolore velit quisquam. Est porro ut voluptatem tempora dolor dolore. Velit dolorem modi amet quisquam magnam. Neque quaerat numquam dolorem. Labore dolor est sit dolorem voluptatem.
+
+Tempora ipsum porro non quaerat quisquam porro. Ipsum modi porro adipisci. Ipsum tempora ipsum consectetur amet est. Dolore non numquam dolorem dolorem dolor ipsum. Etincidunt velit porro quaerat non non.
+
+Ut dolor labore neque quiquia labore modi quaerat. Quaerat voluptatem sed neque dolore. Numquam dolore etincidunt dolore ut. Tempora quaerat porro amet. Eius tempora tempora voluptatem labore dolore. Porro quaerat etincidunt quisquam magnam.
+
+Neque sed dolor adipisci adipisci. Dolorem consectetur adipisci magnam adipisci. Eius dolore aliquam quaerat sed consectetur. Adipisci sit non amet numquam. Voluptatem sit dolore non aliquam. Sit etincidunt porro numquam voluptatem quisquam velit velit. Dolorem ut non labore.
+--===============1891657498318208018==--

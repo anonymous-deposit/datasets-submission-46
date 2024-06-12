@@ -1,0 +1,56 @@
+Delivered-To: anonymized_user@zohomail.eu
+Received-SPF: fail (zohomail.eu: domain of zohomaileu.email-sender-4.example does not designate XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) client-ip=XX_ANONYMIZED_IP_MAIN_A_XX; envelope-from=badrua@zohomaileu.email-sender-4.example; helo=mail.mail-server.example;
+Authentication-Results: mx.zohomail.eu;
+	dkim=pass;
+	spf=fail (zohomail.eu: domain of zohomaileu.email-sender-4.example does not designate XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender)  smtp.mailfrom=badrua@zohomaileu.email-sender-4.example;
+	dmarc=pass(p=none dis=none)  header.from=zohomaileu.email-sender-4.example
+ARC-Seal: i=1; a=rsa-sha256; t=1695651904; cv=none; 
+	d=zohomail.eu; s=zohoarc; 
+	b=WNhAqtzwMCpX6nG0rhF+FoiY0BfcP27DKSuwGyBll/dxjvc3UEt8IepuMSNndHqbWEJxRrp8XJg0zPuhBFjC/T4YHA4lRJ59encA1oM6YT0kfIpS+JtjowkaV7aKRsdWjoWhwazjXiQamU7Qb/7jluA17phJLyAqq3zQznorslg=
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=zohomail.eu; s=zohoarc; 
+	t=1695651904; h=Content-Type:Date:From:MIME-Version:Message-ID:Subject:To; 
+	bh=I+voyF16Gdgpe7Hp6576cTcnJyFzppBEBA6k1Hz0w2o=; 
+	b=CSr3s0Xyl5RDJX005hX7eOxLlg55cecv2HNHKelz4iA/dacADY8qwOJHxkb4jquhK17Qjj26KaxM9pFp5tSstqy7bBVEBBP5DDgb8NtUa6Y5niDzDeK3A6y6kgAo3TufJ6YKJNy/+zpBZSfA56P4ocpt3ZBlVTL8abQvE/W5BRM=
+ARC-Authentication-Results: i=1; mx.zohomail.eu;
+	dkim=pass;
+	spf=fail (zohomail.eu: domain of zohomaileu.email-sender-4.example does not designate XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender)  smtp.mailfrom=badrua@zohomaileu.email-sender-4.example;
+	dmarc=pass header.from=<badrua@zohomaileu.email-sender-4.example> (p=none dis=none)
+Return-Path: <badrua@zohomaileu.email-sender-4.example>
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX]) by mx.zoho.eu
+	with SMTPS id 1695651904847113.61504140640147; Mon, 25 Sep 2023 16:25:04 +0200 (CEST)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 6010A38843B
+	for <anonymized_user@zohomail.eu>; Mon, 25 Sep 2023 16:25:04 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=zohomaileu.email-sender-4.example;
+	s=dkim; t=1695651904; h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=I+voyF16Gdgpe7Hp6576cTcnJyFzppBEBA6k1Hz0w2o=;
+	b=BmEUQbZ3uyB+VdRRy4lOHb7+VXLBF/PnMUkP0/5vIPxN35qEJ9KiehUP/iDZ3uzQXEuq3t
+	H3twTPRPTMNvmMFXW0zJ1vqD8Ucn4Rp6bmjZQAkCq01uF1j2HtKSOo2YPCP7k7ytRslNPY
+	r9i6fNE/YJWMhnBbCK3v1+4c6D1X31A=
+Content-Type: multipart/alternative; boundary="===============4464366951194913985=="
+MIME-Version: 1.0
+Subject: zohomaileu Email Research Testing Dmarc configuration - SPK NOK - DKIM OK- 16:25:03.928472
+From: badrua@zohomaileu.email-sender-4.example
+To: anonymized_user@zohomail.eu
+Date: Mon, 25 Sep 2023 16:25:03 +0200
+message-id: <169565190392.19703.3561095150463299391@zohomaileu.email-sender-4.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-ZohoMail-DKIM: pass (identity @zohomaileu.email-sender-4.example)
+X-ZohoMail-Owner: <169565190392.19703.3561095150463299391@zohomaileu.email-sender-4.example>+zmo_0_badrua@zohomaileu.email-sender-4.example
+
+--===============4464366951194913985==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Modi sed eius sit dolore ipsum consectetur eius. Ipsum tempora dolorem quaerat labore dolore dolorem neque. Ut dolorem magnam ut quaerat etincidunt adipisci. Aliquam modi etincidunt porro ut modi numquam. Ut labore etincidunt etincidunt.
+
+Sed porro non ut etincidunt quiquia velit eius. Tempora quiquia dolore ipsum quisquam quisquam est. Etincidunt velit adipisci tempora labore aliquam consectetur. Etincidunt labore numquam porro dolor. Dolore quisquam velit consectetur. Ipsum etincidunt non sit dolor porro labore. Voluptatem voluptatem eius sed sed.
+
+Adipisci labore tempora sit etincidunt etincidunt sed. Sed etincidunt sit ut adipisci dolore dolor. Amet dolor consectetur dolor modi modi. Magnam magnam quiquia non numquam sed sit. Tempora dolorem amet neque porro. Porro magnam dolorem dolor etincidunt quiquia quiquia. Est amet dolor non aliquam. Sed tempora neque amet ut numquam velit. Ut adipisci quaerat quiquia dolor tempora dolor.
+
+Labore amet tempora numquam dolorem. Quiquia tempora porro sed sit velit tempora quiquia. Aliquam amet consectetur dolore. Magnam numquam sed quaerat quaerat quaerat. Aliquam dolorem ipsum est.
+
+Ipsum tempora neque quiquia ut. Labore dolorem non labore dolor ipsum adipisci. Dolore aliquam dolorem porro dolorem non neque consectetur. Dolore quisquam numquam dolor ipsum. Amet dolore velit dolor. Quiquia voluptatem dolor adipisci aliquam modi. Magnam dolorem aliquam sed neque ut etincidunt. Consectetur tempora dolorem dolorem aliquam ipsum velit. Aliquam magnam voluptatem velit sed consectetur etincidunt.
+
+Quaerat etincidunt aliquam porro est aliquam consectetur. Labore etincidunt modi quiquia eius modi. Amet quiquia non labore voluptatem eius. Velit adipisci labore porro consectetur modi. Tempora aliquam ipsum labore porro dolorem labore. Voluptatem numquam consectetur velit voluptatem tempora amet est. Dolorem labore amet tempora.
+--===============4464366951194913985==--

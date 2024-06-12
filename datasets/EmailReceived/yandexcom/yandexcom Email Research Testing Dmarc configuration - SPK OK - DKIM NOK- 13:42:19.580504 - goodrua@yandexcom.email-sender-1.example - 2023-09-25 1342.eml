@@ -1,0 +1,52 @@
+Received: from postback18a.mail.yandex.net (postback18a.mail.yandex.net [2a02:6b8:c0e:500:1:45:d181:da18])
+	by qotz4oofeph4i5om.vla.yp-c.yandex.net (notsolitesrv/Yandex) with LMTP id u6Aw6MmSnF-5ztFuacw
+	for <anonymized_user@yandex.com>; Mon, 25 Sep 2023 14:42:22 +0300
+Received: from mail-nwsmtp-mxfront-production-main-36.vla.yp-c.yandex.net (mail-nwsmtp-mxfront-production-main-36.vla.yp-c.yandex.net [IPvXX_ANONYMIZED_IP6_be7d038366ad4c_XX])
+	by postback18a.mail.yandex.net (Yandex) with ESMTP id 09C775E520
+	for <anonymized_user@yandex.com>; Mon, 25 Sep 2023 14:42:22 +0300 (MSK)
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP6_195e9c9291e59b_XX])
+	by mail-nwsmtp-mxfront-production-main-36.vla.yp-c.yandex.net (mxfront/Yandex) with ESMTPS id KgMI9B1YHuQ0-miqOlIpk;
+	Mon, 25 Sep 2023 14:42:20 +0300
+X-Yandex-Fwd: 1
+Authentication-Results: mail-nwsmtp-mxfront-production-main-36.vla.yp-c.yandex.net; spf=pass (mail-nwsmtp-mxfront-production-main-36.vla.yp-c.yandex.net: domain of yandexcom.email-sender-1.example designates XX_ANONYMIZED_IP6_195e9c9291e59b_XX as permitted sender, rule=[ipXX_ANONYMIZED_IP6_0eb94a32bd6826_XX/64]) smtp.mail=goodrua@yandexcom.email-sender-1.example; dkim=neutral header.i=@yandexcom.email-sender-1.example
+X-Yandex-Spam: 1
+X-Yandex-Uid-Status: 1 1582606496
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id DFAA6388564
+	for <anonymized_user@yandex.com>; Mon, 25 Sep 2023 13:42:19 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yandexcom.email-sender-1.example;
+	s=dkimfalse; t=1695642140;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=g8fiVsnSrE86L6sX4CVyxN5w5VZIocAb1t7QFg8uA5E=;
+	b=RrSjWVz1lFsrQubZ0Q69+jZ7Yo69hdaY+YqqHlDFXEnH2dKOwCDiHg95XTvhaym9p9Cm/q
+	0hBX7RTR5uaxVbbF9TI4Nx1hnVbIU6lj9SmXvOa8TiDzRmXumuwQcvNytMD4b0k6RilSoq
+	Gh+pu/PmBq2zDYdYeML19rEBFiVTQ9fOoyY9kKrterC8RiU26qtZ5JPP1dKfMwvQvxXM79
+	/1RY9mX2QTGCO2RwJvyKkHPeU3WKJNlK46cikagB8fL1kuP5LMN8ImPr6uZa/7kCy87gas
+	I6hmpiCSMZjhfWdisWlUfXZPTISDIPM9X/rCOCuaUdG9yG6YAHtFnYQojNgviw==
+Content-Type: multipart/alternative; boundary="===============8770132207171221041=="
+MIME-Version: 1.0
+Subject: yandexcom Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:42:19.580504
+From: goodrua@yandexcom.email-sender-1.example
+To: anonymized_user@yandex.com
+Date: Mon, 25 Sep 2023 13:42:19 +0200
+message-id: <169564213958.19703.15632486357517807808@yandexcom.email-sender-1.example>
+X-Last-TLS-Session-Version: TLSv1.3
+Return-Path: goodrua@yandexcom.email-sender-1.example
+X-Yandex-Forward: 9a4466da8fa457927e1aa02ad5675333
+
+--===============8770132207171221041==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Sed modi magnam ipsum consectetur aliquam porro adipisci. Tempora amet velit dolore eius non dolore. Magnam voluptatem dolore sit modi. Neque quaerat sed velit tempora. Est etincidunt non dolore quisquam porro magnam quiquia. Dolore ut modi aliquam dolor sit neque etincidunt. Etincidunt voluptatem ut ut. Dolor neque dolore quaerat dolor sit etincidunt. Velit est sed sit est sit magnam dolor.
+
+Ut est quisquam labore dolorem velit. Velit numquam ut etincidunt modi non ipsum eius. Aliquam numquam velit non est tempora dolor neque. Numquam porro aliquam quisquam labore. Ipsum neque magnam porro.
+
+Sit porro ut amet ipsum ut. Quisquam tempora adipisci est labore. Sit amet quiquia sit. Porro velit ut aliquam. Quisquam magnam eius ipsum quaerat dolorem. Dolore adipisci quaerat non porro.
+
+Porro etincidunt velit porro. Eius dolorem magnam neque labore magnam non adipisci. Labore voluptatem sed etincidunt tempora. Dolorem porro dolor dolore labore. Eius labore quaerat dolorem quaerat.
+
+Amet modi neque adipisci. Adipisci sed amet sed amet quisquam. Consectetur amet quaerat etincidunt quisquam. Non eius consectetur neque. Quisquam quaerat est numquam magnam.
+
+Quaerat modi consectetur porro tempora ut quiquia. Quisquam quiquia etincidunt eius porro ut. Adipisci voluptatem magnam dolor. Amet amet sed ipsum dolore labore. Non non sed neque tempora tempora. Ipsum dolore etincidunt adipisci numquam ut modi modi. Est sit porro amet porro tempora. Amet non etincidunt amet quaerat dolor tempora. Aliquam tempora velit tempora numquam. Velit modi eius eius dolore modi.
+--===============8770132207171221041==--

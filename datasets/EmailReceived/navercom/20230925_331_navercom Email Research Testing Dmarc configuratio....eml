@@ -1,0 +1,65 @@
+ARC-Seal: i=1; a=rsa-sha256; d=naver.com; s=arc-20180730; t=1695642090;
+	cv=none; b=ZiVesLltGeLk5K4eg7ylPb9PesvMIzE9NGFhG/h05heis6DPnO4cYjdTHZaH
+	 kPkweHL/DF0Y09159dZLEiPFveGlnvXPyKMBOe9NOOLbprhJZZ9kSOKe7PBBeKpDayfDXZ
+	 0UEthQ1fdTE6NzYxhVY56cZR1vdV9iB4sGGKfRBFgDPnb1ITsxMNsqJWWiji+JOFN+Iw0y
+	 A/co0STjI0EKkVl2rdD1HFeG7Js5GKhT5wFJm5ChrpDjZCAe/GGhHBYMk+3nDHgxQncnT6
+	 yrpyefUYSRh1HN4QkInx9lurEc7MKggVN0Tr7JKEdqK+x5BVgKubghcodBjnqAfGPzO1NF
+	 Ww==
+ARC-Message-Signature: i=1; a=rsa-sha256; d=naver.com; s=arc-20180730;
+	t=1695642090; c=relaxed/relaxed;
+	bh=6l7ZrSS35dQTAzoahb3O9vYs2MYxdWElgWjq23x18JQ=;
+	h=dkim-signature:subject:from:to:date:message-id; b=S/ys9HJBay8AKBbGK2H
+	 iVmKhqtHuJc9/3XPTKTkI+3RvpvS/Qlrynbdr6bA/eAOSd/LNDPCJ6YEsUroa0hWBLW9a0
+	 QsDNkvaMFlfSi/YvgQbpb6cgKJbRysWDgegxnngmiLcfbwHijWAsN89pLTLUQXSBCyhoI0
+	 sP+vCIXhNCZrwpHjfiCYSE3ZhMTjTCSkjGuxfGau0zReL+Fnny9ZAajtH4sG/bkzKbolVE
+	 XIehFTsd7jtTyo4hY7ThhzCMXZrix4ZjKlm3p/ZKNTfzV7/R2RTqJMTto16acCv+gwhcZt
+	 DNe7eZ3L6DWVIAg/daLAoSW1x0hKkkEZd3BXfJ1bxLg==
+ARC-Authentication-Results: i=1; mx.naver.com; 
+  spf=pass (mx.naver.com: domain of goodrua@navercom.email-sender-4.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) smtp.mailfrom=goodrua@navercom.email-sender-4.example;
+  dkim=fail (no key for signature) header.i=@navercom.email-sender-4.example;
+  dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=navercom.email-sender-4.example
+Return-Path: <goodrua@navercom.email-sender-4.example>
+Received-SPF: pass (mx.naver.com: domain of goodrua@navercom.email-sender-4.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender)
+  client-ip=XX_ANONYMIZED_IP_MAIN_A_XX; x-iptype=default;
+Authentication-Results: mx.naver.com;
+  spf=pass (mx.naver.com: domain of goodrua@navercom.email-sender-4.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) smtp.mailfrom=goodrua@navercom.email-sender-4.example;
+  dkim=fail (no key for signature) header.i=@navercom.email-sender-4.example;
+  dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=navercom.email-sender-4.example
+X-Naver-ESV: wm+n+6J4p63CbHmwKBwdbXFYKxudKxU/jJ+Y
+X-Session-IP: XX_ANONYMIZED_IP_MAIN_A_XX
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+  by crcvmail202.nm.naver.com with ESMTP id t9D-O1bgQuSSl8NmmcB96Q
+  for <anonymized_user@naver.com>
+  (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384);
+  Mon, 25 Sep 2023 11:41:28 -0000
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id DA5DF388548
+	for <anonymized_user@naver.com>; Mon, 25 Sep 2023 13:41:24 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=navercom.email-sender-4.example;
+	s=dkimfalse; t=1695642084;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=6l7ZrSS35dQTAzoahb3O9vYs2MYxdWElgWjq23x18JQ=;
+	b=tdo4di70otvoVODEuzlVLzhYcF2ryTGbzWo5fxmZ7tGO4+0FGR/DKq9IL4k5NCnxc9kQxR
+	X/18Qh+cmBd1R1fBL1ktjQaL+NRr3PqeCNptChIdwVybDwKSRMbbssOu89xy+lc85RXCq8
+	gKFlm320ZXxhUHfW7Pl2cVk7D2G4G895RfOZjTPNaRjAF4/EruuVI2YJnkuAgo9NH74XEj
+	6Ac5CZLuGbo+YTvBvtfspl3d1oG8LDoQ5t7dIe4fPX/FWjgTj+NdrTOUpk0xdJAsGAntDM
+	Dlrpr21Y1ANsL7CxB7+H/Z5JQczSNDVRFgnKAoJExnH8ef6jDUhqa1XQq2hYog==
+Content-Type: multipart/alternative; boundary="===============6226303174960297547=="
+MIME-Version: 1.0
+Subject: navercom Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:41:24.561366
+From: goodrua@navercom.email-sender-4.example
+To: anonymized_user@naver.com
+Date: Mon, 25 Sep 2023 13:41:24 +0200
+message-id: <169564208456.19703.1863307646470736851@navercom.email-sender-4.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============6226303174960297547==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Voluptatem quisquam neque quaerat non amet. Tempora voluptatem amet adipisci ipsum quisquam quiquia voluptatem. Eius quaerat etincidunt velit est numquam modi amet. Modi dolorem modi consectetur. Adipisci ipsum magnam velit ipsum voluptatem quaerat. Quisquam quisquam ut velit dolorem ipsum. Tempora quiquia numquam ut sit porro adipisci est.
+
+Sit ipsum velit magnam amet dolore etincidunt adipisci. Aliquam quisquam modi adipisci modi modi dolorem ipsum. Sed labore quaerat amet neque dolore consectetur. Dolore numquam quisquam est eius. Sit sed sit quiquia magnam consectetur sit. Quisquam quisquam dolore aliquam. Est consectetur quisquam adipisci neque voluptatem. Etincidunt voluptatem dolore sed aliquam sed consectetur. Dolor amet dolor consectetur. Non ipsum quiquia eius labore est labore.
+
+Modi dolore aliquam quaerat ipsum. Non porro adipisci dolor eius aliquam sed. Voluptatem est sit labore labore adipisci dolore quisquam. Voluptatem amet dolore dolor est. Sed aliquam sed eius. Sit porro non quisquam adipisci.
+--===============6226303174960297547==--

@@ -1,0 +1,42 @@
+Delivered-To: anonymized_user@zohomail.eu
+Received-SPF: fail (zohomail.eu: domain of zohomaileu.email-sender-4.example does not designate XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) client-ip=XX_ANONYMIZED_IP_MAIN_A_XX; envelope-from=badrua@zohomaileu.email-sender-4.example; helo=mail.mail-server.example;
+Authentication-Results: mx.zohomail.eu;
+	spf=fail (zohomail.eu: domain of zohomaileu.email-sender-4.example does not designate XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender)  smtp.mailfrom=badrua@zohomaileu.email-sender-4.example;
+	dmarc=fail(p=none dis=none)  header.from=zohomaileu.email-sender-4.example
+Return-Path: <badrua@zohomaileu.email-sender-4.example>
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX]) by mx.zoho.eu
+	with SMTPS id 1695652359412210.05383818229916; Mon, 25 Sep 2023 16:32:39 +0200 (CEST)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id F076638842E
+	for <anonymized_user@zohomail.eu>; Mon, 25 Sep 2023 16:32:38 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=zohomaileu.email-sender-4.example;
+	s=dkimfalse2; t=1695652359;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=2oTjFFQ1+Ae0P5azNe1arShdVxTsWmSsdfD3wAhNelI=;
+	b=If2tR5Xn62iHxZ14HO45hIvkz5TRLMez4UgMkwWigAIB1q4d956JCI/lHdbHU/p8ufZ3n8
+	wDUr9Xj7NFHfz1titEEXFn9AkffcLuXFaqz2Gxq94Too3W90km8emuhZhtlTnCU1McppC8
+	gQwCGEwrimJXgrrIL0QZLsy1j3tRu/4=
+Content-Type: multipart/alternative; boundary="===============4197341537481303802=="
+MIME-Version: 1.0
+Subject: zohomaileu Email Research Testing Dmarc configuration - SPK NOK - DKIM NOK- 16:32:38.624870
+From: badrua@zohomaileu.email-sender-4.example
+To: anonymized_user@zohomail.eu
+Date: Mon, 25 Sep 2023 16:32:38 +0200
+message-id: <169565235862.19703.17203261391971093708@zohomaileu.email-sender-4.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-ZohoMail-Owner: <169565235862.19703.17203261391971093708@zohomaileu.email-sender-4.example>+zmo_0_badrua@zohomaileu.email-sender-4.example
+
+--===============4197341537481303802==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Eius dolor non labore dolorem est amet. Labore sed amet numquam est quaerat magnam. Etincidunt porro velit sit quiquia modi dolor sed. Quaerat non voluptatem non. Quaerat aliquam tempora etincidunt est non porro dolor. Aliquam porro amet labore neque sit adipisci.
+
+Dolore est numquam amet quiquia dolor. Magnam quiquia amet quiquia neque. Ipsum quaerat quisquam velit voluptatem dolorem labore. Porro quiquia labore sed sed modi neque dolore. Ut velit amet adipisci adipisci velit. Aliquam etincidunt est non sit numquam quiquia. Quiquia labore dolor adipisci quisquam adipisci. Dolorem ut aliquam dolore ut amet etincidunt aliquam. Magnam eius neque porro tempora. Tempora velit neque sit quaerat.
+
+Eius labore dolore dolor dolore dolore labore. Tempora adipisci est porro dolor. Amet adipisci consectetur neque magnam sit aliquam est. Labore magnam quaerat tempora. Non amet modi porro magnam neque ipsum. Labore neque dolor non aliquam aliquam. Labore non numquam quisquam. Consectetur dolore dolor etincidunt sit aliquam magnam non. Tempora ut etincidunt voluptatem amet ipsum. Velit velit porro labore neque.
+
+Quisquam tempora quiquia dolorem porro voluptatem. Etincidunt numquam dolorem amet consectetur dolorem voluptatem sed. Dolor dolor quaerat modi sit. Ut quisquam magnam labore voluptatem. Ut sed tempora dolorem. Tempora dolore consectetur etincidunt consectetur amet. Neque etincidunt modi voluptatem tempora ut. Labore numquam eius magnam dolore eius sit. Quaerat tempora etincidunt ipsum dolor velit.
+
+Magnam consectetur neque ipsum. Sed porro labore consectetur neque. Labore adipisci quaerat labore quaerat eius sit neque. Adipisci labore numquam magnam quaerat quisquam neque etincidunt. Sed eius dolorem adipisci tempora. Sed eius voluptatem neque etincidunt eius porro est. Quisquam consectetur dolore ut dolore.
+--===============4197341537481303802==--

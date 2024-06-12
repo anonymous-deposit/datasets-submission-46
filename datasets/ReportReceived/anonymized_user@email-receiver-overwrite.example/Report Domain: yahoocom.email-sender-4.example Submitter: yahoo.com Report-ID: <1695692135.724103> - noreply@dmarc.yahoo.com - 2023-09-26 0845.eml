@@ -1,0 +1,98 @@
+Return-Path: <noreply@dmarc.yahoo.com>
+Delivered-To: anonymized_user@email-receiver-overwrite.example
+Received: from mail.mail-server.example
+ ([XX_ANONYMIZED_IP4_de18e617ae5936_XX])	by b85eae80de63 with LMTP	id
+ QGkjBl+AEmXFpQMAgXJbaQ	(envelope-from <noreply@dmarc.yahoo.com>)	for
+ <anonymized_user@email-receiver-overwrite.example>; Tue, 26 Sep 2023 08:55:27
+ +0200
+Received: from sonic323-9.consmr.mail.ne1.yahoo.com
+ (sonic323-9.consmr.mail.ne1.yahoo.com [XX_ANONYMIZED_IP4_18333e63c8b68e_XX])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)	
+ key-exchange X25519 server-signature RSA-PSS (4096 bits) server-digest
+ SHA256)	(No client certificate requested)	by mail.mail-server.example
+ (Postcow) with ESMTPS id 6CFFF3884D3	for
+ <rua@email-receiver-overwrite.example>; Tue, 26 Sep 2023 08:55:21 +0200
+ (CEST)
+Authentication-Results: mail.mail-server.example;	dkim=pass header.d=yahoo.com
+ header.s=s2048 header.b=T6y+dl3W;	spf=none (mail.mail-server.example: domain
+ of noreply@dmarc.yahoo.com has no SPF policy when checking
+ XX_ANONYMIZED_IP4_18333e63c8b68e_XX) smtp.mailfrom=noreply@dmarc.yahoo.com;
+	dmarc=pass (policy=none) header.from=dmarc.yahoo.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048;
+ t=1695711319; bh=aFzh2mH/B+0J+z3ppUGsR3QqyNl9lB864mSprf6tEiE=;
+ h=Date:From:To:Subject:From:Subject:Reply-To; =?utf-8?q?b=3DT6y+dl3WP+XiN52?=
+ =?utf-8?q?KA4SLvRESFGXxE/xYW1E01Efg7h8sy3MsQ/eao7Q7W/U50R39HwdQ7eFi/+JErnGQ?=
+ =?utf-8?q?HeMMlDpjziAcbbzQwbXw/ETY3wNU3BzIh7kj+YU/1iT6BydYN4iNY6sDYF93Bbrv6?=
+ =?utf-8?q?CmkExAYAQx2dP1/L4yErD5fovlhEP1WaMlf7R5j///sHheztHwnDXtjCyGmG2iQtU?=
+ =?utf-8?q?qQlL666oXz8DcKtn63X2SV7oUufi2NGQtkFpJZnDb6+y+NynprW78q4zaD+8KroYW?=
+ =?utf-8?q?Aj4VfA06x7hrqtHxm7diJ1Di2YHXsQSN6wKIMIjG8CUrJXAVviO/e8yszmmRku4Nn?=
+ =?utf-8?q?Cw=3D=3D?=
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048;
+ t=1695711319; bh=mct0AdrKrwg4FpfcQ9xb+xXZcCVcqt3EGHh7ydmBCrJ=;
+ h=X-Sonic-MF:Date:From:To:Subject:From:Subject; =?utf-8?q?b=3DBRlogbeep9KEw?=
+ =?utf-8?q?EeOybYNPfIACpKa7ZwTId62lXkmAq+UMK4wQ4QW1Q42Rk7ga6nsvLGFTr4Lf8XS0U?=
+ =?utf-8?q?XCIqBjbTUfI/rQ8Fc7zhO7qw9Y6tFFqGfHm6jUNMfK3Ebx4xB3sn3NiWnkzaquPpR?=
+ =?utf-8?q?9q+zaW7uEbt7XkOlDjLetB7ILSkJjxOu0Jk6mB4GDx5L5SgshfKuJv5gKskuANFtT?=
+ =?utf-8?q?npK9bI4nP5iUM2Z0ebZZyFKM282m4HqYqqpaxQs1B1cS9eSWAE5CjLjhbTsK07ym4?=
+ =?utf-8?q?GpsgM682UirL2rFSgLcqw3iBgUuw1p6gFGqzjW8J+KmRTsGSS5UDHtTrnIJSIpTiJ?=
+ =?utf-8?q?U0dg=3D=3D?=
+X-Sonic-MF: noreply@dmarc.yahoo.com
+X-Sonic-ID: 2020f546-256b-4de4-ad2f-4670783c28b5
+Received: from sonic.gate.mail.ne1.yahoo.com by
+ sonic323.consmr.mail.ne1.yahoo.com with HTTP; Tue, 26 Sep 2023 06:55:19 +0000
+Content-Transfer-Encoding: binary
+Content-Type: multipart/mixed; boundary="_----------=_16957107131274515461"
+MIME-Version: 1.0
+X-Mailer: MIME::Lite 3.030 (F2.84; T1.38; A2.12; B3.13; Q3.13)
+Date: Mon, 25 Sep 2023 23:45:13 -0700
+From: noreply@dmarc.yahoo.com
+To: rua@email-receiver-overwrite.example
+Message-Id: <1695710712.577133@dmarc.yahoo.com>
+X-Last-TLS-Session-Version: TLSv1.3
+X-Rspamd-Queue-Id: 6CFFF3884D3
+X-Rspamd-Fuzzy: =?utf-8?q?709b25a451032be27d311901e7645980f68749bb126b75382d?=
+ =?utf-8?q?a005ecafbf860d1d7b308f737e20dbeda458e1669da50b9b837c86ff7e310b45f?=
+ =?utf-8?q?3c34ceeeda17a?=
+X-Spamd-Result: default: False [3.86 / 15.00];	BAD_REP_POLICIES(2.00)[];
+	MAILCOW_FUZZY_DENIED(1.47)[11:709b25a451:0.62:txt];
+	R_MISSING_CHARSET(0.50)[];	MIME_GOOD(-0.10)[multipart/mixed,text/plain];
+	MX_GOOD(-0.01)[];	FROM_NO_DN(0.00)[];	TO_MATCH_ENVRCPT_ALL(0.00)[];
+	DWL_DNSWL_NONE(0.00)[yahoo.com:dkim];
+	RCVD_IN_DNSWL_NONE(0.00)[XX_ANONYMIZED_IP4_18333e63c8b68e_XX:from];
+	R_SPF_NA(0.00)[no SPF record];	BCC(0.00)[];	RCPT_COUNT_ONE(0.00)[1];
+	BLOCKLISTDE_FAIL(0.00)[XX_ANONYMIZED_IP4_18333e63c8b68e_XX:server fail];
+	R_DKIM_ALLOW(0.00)[yahoo.com:s=s2048];	ARC_NA(0.00)[];	ASN(0.00)[asn:36646,
+ ipnet:XX_ANONYMIZED_IP4_36fefb3ebb192a_XX/21, country:US];
+	DKIM_TRACE(0.00)[yahoo.com:+];
+	DMARC_POLICY_ALLOW(0.00)[dmarc.yahoo.com,none];	TO_DN_NONE(0.00)[];
+	HAS_ATTACHMENT(0.00)[];
+	RWL_MAILSPIKE_POSSIBLE(0.00)[XX_ANONYMIZED_IP4_18333e63c8b68e_XX:from];
+	RCPT_MAILCOW_DOMAIN(0.00)[email-receiver-overwrite.example];
+	FROM_EQ_ENVFROM(0.00)[];	RCVD_TLS_LAST(0.00)[];	MID_RHS_MATCH_FROM(0.00)[];
+	MIME_TRACE(0.00)[0:+,1:+,2:~];	RCVD_COUNT_TWO(0.00)[2]
+Subject: Report Domain: yahoocom.email-sender-4.example Submitter: yahoo.com
+ Report-ID: <1695692135.724103>
+
+This is a multi-part message in MIME format.
+
+--_----------=_16957107131274515461
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+Content-Type: text/plain
+
+This is an aggregate DMARC report from Yahoo. Your domain yahoocom.email-sender-4.example has a DMARC record set up. You are receiving this report because your email address is included in the 'rua' tag of that domain.  If you no longer wish to receive these reports, or if you would like them to be sent to a different location, kindly update or remove this record or collaborate with your hosting provider.
+
+Please note that this email address is not monitored, and you will not receive a response if you reply to this email. For any feedback or questions, please reach out to dmarchelp@yahooinc.com.
+--_----------=_16957107131274515461
+Content-Disposition: attachment;
+ filename*0*=us-ascii''yahoo.com%21yahoocom.email-sender-4.example%2116956000;
+ filename*1*=00%211695686399.xml.gz
+Content-Transfer-Encoding: base64
+Content-Type: application/gzip;
+ name*0*=us-ascii''yahoo.com%21yahoocom.email-sender-4.example%211695600000;
+ name*1*=%211695686399.xml.gz
+
+H4sIAKGraWYC/+1X0W7aMBR93r4C9b0JgZYNyXOHtD3wULZHuhfLJDfEqmNbdtK1f79rHJwA1Sqt0lRt8II5Ptfn3uMjS5Cbx1qOHsA6odWniywZX9zQd+9JCVBseH6P69GIWDDaNqyGhhe84TsQYW23TPEa6B2vtCZp/N3tQ82FpEXNbV6BNJ+fPE2oPMl1TdKw21E7BVHQbDa/ns0n2fQ6+TC5ysZTkvabHRubAGa52u6lENvAVqhQPfYfkgYkEkB1h3+cTedz1FfxvPTowCh5MDExWor8iZl2I4WroG9H4yiK7sbD0ZLdZJcOBcBeXiXwyGsjAVUCr6vixb2oqSVpWOxRZ8od6L87zFClFdabCOQNzfyIfhEafrY3tDXXNvZp9c/eDqdbmwMThq7XbLH6trq7Xf74+oUtv7PbxXLFFmy9JmnPioW5bhXKkzQsIt51AA9ctmhnEXe8Q8IZ7USDIetmGSJDoreiRPuQ0bsSGkZDwk5vzWDyY128wzguEQWoRpQCc95XVsDxglhpdf3y3Q3Je4HTUwlvm4pZcK1sBkrHo/xRYIIJICFvtKX+yJJLBxP0Yw8OiKEHasDWYK22PtI7pDfuoCsyNPVVLXY64apORAexTk/M8vwY2H8uvIY7dw7vQXjfaHbDTf1/2Q1znx/el7L7+9g+H57za/t3E3t+bd92Yl/5xpK0/4vyCyOd3cnFDAAA
+
+--_----------=_16957107131274515461--
+

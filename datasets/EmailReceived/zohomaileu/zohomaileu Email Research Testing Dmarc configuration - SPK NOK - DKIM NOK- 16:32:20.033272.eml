@@ -1,0 +1,44 @@
+Delivered-To: anonymized_user@zohomail.eu
+Received-SPF: fail (zohomail.eu: domain of zohomaileu.email-sender-2.example does not designate XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) client-ip=XX_ANONYMIZED_IP_MAIN_A_XX; envelope-from=badrua@zohomaileu.email-sender-2.example; helo=mail.mail-server.example;
+Authentication-Results: mx.zohomail.eu;
+	spf=fail (zohomail.eu: domain of zohomaileu.email-sender-2.example does not designate XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender)  smtp.mailfrom=badrua@zohomaileu.email-sender-2.example;
+	dmarc=fail(p=none dis=none)  header.from=zohomaileu.email-sender-2.example
+Return-Path: <badrua@zohomaileu.email-sender-2.example>
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX]) by mx.zoho.eu
+	with SMTPS id 1695652340881243.19919226266086; Mon, 25 Sep 2023 16:32:20 +0200 (CEST)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 82F7238843B
+	for <anonymized_user@zohomail.eu>; Mon, 25 Sep 2023 16:32:20 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=zohomaileu.email-sender-2.example; s=dkimfalse2; t=1695652340;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=vOqeVx7tWXxpAHomR5PlAW3Fg4drXUSc0zJkPOqggEg=;
+	b=rQLFMAhNJwH/zUI2uRvmmqy6tsghQl4hZaN2slGcKojtP5KuphMXIvVQ1+HQjNxwyw/ohA
+	VLuF1mIwQJdn0M7p6BSrviBU9JjwpIw9Zo06kZvU60aLyZT+LXywnDGHhxvyCphNDu99rm
+	YagEsP9ube9owHrQU1UB/Y2MFAEGVDI=
+Content-Type: multipart/alternative; boundary="===============0859775376275697975=="
+MIME-Version: 1.0
+Subject: zohomaileu Email Research Testing Dmarc configuration - SPK NOK - DKIM NOK- 16:32:20.033272
+From: badrua@zohomaileu.email-sender-2.example
+To: anonymized_user@zohomail.eu
+Date: Mon, 25 Sep 2023 16:32:20 +0200
+message-id: <169565234003.19703.6283692118751021550@zohomaileu.email-sender-2.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-ZohoMail-Owner: <169565234003.19703.6283692118751021550@zohomaileu.email-sender-2.example>+zmo_0_badrua@zohomaileu.email-sender-2.example
+
+--===============0859775376275697975==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Ipsum etincidunt amet tempora etincidunt modi labore. Eius quisquam quaerat magnam. Quaerat labore labore tempora eius ipsum quisquam. Porro tempora consectetur amet numquam amet magnam. Est velit est etincidunt. Tempora quisquam eius magnam neque. Ipsum dolor etincidunt dolore etincidunt dolorem magnam velit.
+
+Sed numquam dolore sed adipisci dolor etincidunt. Ut eius tempora quaerat ut voluptatem quaerat dolor. Ipsum est etincidunt sit quisquam. Numquam quisquam modi eius non porro neque amet. Dolorem aliquam ipsum porro ipsum. Adipisci ipsum numquam est est.
+
+Eius adipisci est numquam. Dolor est dolor sed. Magnam tempora adipisci est quiquia sit adipisci quisquam. Sed eius dolorem labore. Voluptatem eius aliquam dolore est dolor consectetur modi. Numquam amet porro quisquam sit.
+
+Dolorem velit ut tempora dolor neque labore non. Quisquam est tempora labore magnam. Modi neque quiquia dolore labore. Voluptatem magnam dolor sit adipisci dolor. Sit quaerat etincidunt consectetur eius adipisci ut. Sed tempora magnam labore magnam quaerat quiquia ut. Magnam consectetur est dolore sed sit.
+
+Non adipisci non dolore magnam. Etincidunt dolor sed neque neque labore ut. Ipsum dolorem modi numquam. Sed quaerat porro magnam sed est. Quisquam modi velit dolor. Consectetur porro dolore sed. Dolor sed sed eius.
+
+Ut neque sit eius voluptatem ut dolor consectetur. Etincidunt est dolore modi dolore neque dolorem. Velit ipsum sit consectetur sed magnam eius eius. Sit dolore magnam dolore modi consectetur dolorem. Quisquam sit consectetur eius sed.
+--===============0859775376275697975==--

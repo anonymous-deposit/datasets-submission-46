@@ -1,0 +1,72 @@
+Delivered-To: anonymized_user@gmail.com
+Received: by 2002:a17:906:6082:b0:9a5:f62d:de9c with SMTP id t2csp1297846ejj;
+        Mon, 25 Sep 2023 07:32:25 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHAhLhtUDZYa9e2//UFmyDzbNDf6t6WYhR6yBoWlcAd44d4++CtGmX3S3Nv2HpFtiAnxC49
+X-Received: by 2002:a05:6512:31d4:b0:500:b8a3:1bf1 with SMTP id j20-20020a05651231d400b00500b8a31bf1mr6165873lfe.43.1695652345402;
+        Mon, 25 Sep 2023 07:32:25 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1695652345; cv=none;
+        d=google.com; s=arc-20160816;
+        b=UksDQ3t0RcozbcEtin/8fBMrEPpsXYscS5Z3v2dwDuDWtm1Yz4lEqKl+S5iqNgurSr
+         IH0sSMa6YPS4DK9vOdwIHAZNF+8Cf55ZecdEZ5KOqqMKHqf69ACRpEhW46WO9uNtEguq
+         XfFwdCCM3qIyYkHwn22KYUoSz8AE9EeS1idpyNir5PzQfloY+k+Bwf7LAKLX86NQf4sY
+         mNvvzpBt9bAYngn5/a+RmFyooy9FmEDGjMtF0Zi7ds56Yv9xnjttN/rsSvB0r/TpgYip
+         AQ+VOhU79WQyBs7kDmjlkIXQPZosOgNETMtjMnEAWGK5AmpMkHkgAuFxi97EfU/6SHj1
+         5lvw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:date:to:from:subject:mime-version:dkim-signature;
+        bh=oj4FAkY+ZXNY+ByN8gQ0XuIcalILkvJL6JYiYSzuUY4=;
+        fh=shHmlGoQyS9S8e8DXCCaPFJCB+pqWwQde72z2f/TzIU=;
+        b=bKBfcoe18Dli9proI/bgmoHvXbbjgU7SEW9DGMEFGMUUJ2z0vfAwtPpW6HoneAVsbf
+         IwSZtxVRiGQvBnggDQnbYdblOrJvQGgf7xzXNLC/yM+pRw/v4FkktO6qAEhgLYe1bZb7
+         K3rvhUy9w6ud8wUM2W1au35yfMvNxDTjOHL4HzhIJ0WKMranQbdZCUIAB05He160OFmR
+         d6hXHz3N+Oo9Dhvjd0opagM/U7tqCQ1dwB3sBbVN3L4haNa6WZKtOUZWhi6Rsi6bldC8
+         Xk8xgZo2rRTPEI/i6Y6hykUcuUiisCUUtdquhfEGcLOEsBEEF/swz5ie9M8Vam1NVWuN
+         K/Fg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=temperror (no key for signature) header.i=@gmailcom.email-sender-4.example header.s=dkimfalse2 header.b=hUfKTYRU;
+       spf=pass (google.com: domain of badrua@gmailcom.email-sender-4.example designates XX_ANONYMIZED_IP6_195e9c9291e59b_XX as permitted sender) smtp.mailfrom=badrua@gmailcom.email-sender-4.example;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmailcom.email-sender-4.example
+Return-Path: <badrua@gmailcom.email-sender-4.example>
+Received: from mail.mail-server.example (mail.mail-server.example. [XX_ANONYMIZED_IP6_195e9c9291e59b_XX])
+        by mx.google.com with ESMTPS id bc15-20020a056402204f00b005332721ff95si1205211edb.429.2023.09.25.07.32.25
+        for <anonymized_user@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 25 Sep 2023 07:32:25 -0700 (PDT)
+Received-SPF: pass (google.com: domain of badrua@gmailcom.email-sender-4.example designates XX_ANONYMIZED_IP6_195e9c9291e59b_XX as permitted sender) client-ip=XX_ANONYMIZED_IP6_195e9c9291e59b_XX;
+Authentication-Results: mx.google.com;
+       dkim=temperror (no key for signature) header.i=@gmailcom.email-sender-4.example header.s=dkimfalse2 header.b=hUfKTYRU;
+       spf=pass (google.com: domain of badrua@gmailcom.email-sender-4.example designates XX_ANONYMIZED_IP6_195e9c9291e59b_XX as permitted sender) smtp.mailfrom=badrua@gmailcom.email-sender-4.example;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmailcom.email-sender-4.example
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 9CE9F38842E
+	for <anonymized_user@gmail.com>; Mon, 25 Sep 2023 16:32:24 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmailcom.email-sender-4.example;
+	s=dkimfalse2; t=1695652344;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=oj4FAkY+ZXNY+ByN8gQ0XuIcalILkvJL6JYiYSzuUY4=;
+	b=hUfKTYRUkXZ0bq1Og6A/kXEUqFcTqyqDITlOLJjc07gSi0dTLbzjfpjIyPFilk+3X3J6xl
+	MGhfG16INM36CD8cTSOTEVx8VnrXIhT/Cu2ofzMULm9Yn47L4Bbkm/EJ2E6dk1w/V2C9u3
+	lAPoIWxF2C5Sm4SbH5kqiy48PWenv08=
+Content-Type: multipart/alternative; boundary="===============0685267570858192103=="
+MIME-Version: 1.0
+Subject: gmailcom Email Research Testing Dmarc configuration - SPK NOK - DKIM NOK- 16:32:24.230314
+From: badrua@gmailcom.email-sender-4.example
+To: anonymized_user@gmail.com
+Date: Mon, 25 Sep 2023 16:32:24 +0200
+message-id: <169565234423.19703.15292971716570667196@gmailcom.email-sender-4.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============0685267570858192103==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Non tempora consectetur tempora quisquam. Quaerat ipsum dolor dolore eius labore velit. Est consectetur ut sit consectetur quiquia. Quaerat dolor eius dolore. Sed sit aliquam aliquam velit magnam neque. Non sed modi dolore. Etincidunt dolorem dolorem sed quaerat modi sit. Quiquia quiquia etincidunt sit. Adipisci sit numquam quaerat ut quiquia est.
+
+Porro porro consectetur ut numquam sit non modi. Quisquam ut sed labore numquam velit sit velit. Est dolor velit velit. Dolorem non adipisci tempora. Neque numquam ut sit aliquam etincidunt quiquia. Magnam eius consectetur dolore adipisci.
+
+Magnam numquam voluptatem modi porro labore ipsum. Dolor etincidunt sed aliquam. Ipsum aliquam amet numquam quiquia voluptatem. Dolore quiquia ut porro neque. Adipisci quaerat ipsum sed quisquam quisquam non. Dolorem numquam aliquam etincidunt quisquam.
+
+Ut sed magnam sed non porro porro quisquam. Ut aliquam dolore dolorem est tempora. Magnam sit ipsum ipsum. Sed ut tempora magnam numquam ipsum quaerat. Labore voluptatem labore ipsum quisquam eius labore. Neque quisquam numquam sit quaerat. Porro consectetur eius eius eius.
+
+Ut dolor dolore magnam sit. Dolorem velit ipsum porro modi. Dolore porro dolore eius. Dolore quaerat consectetur numquam quiquia etincidunt. Aliquam tempora quisquam adipisci aliquam quaerat velit sed.
+--===============0685267570858192103==--

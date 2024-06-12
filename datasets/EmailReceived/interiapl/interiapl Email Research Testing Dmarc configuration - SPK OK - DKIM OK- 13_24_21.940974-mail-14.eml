@@ -1,0 +1,49 @@
+Received: from fmx65.pf.interia.pl (localhost [127.0.0.1])
+	by fmx65.pf.interia.pl (Postfix) with ESMTP id 3B2E1300BECDB
+	for <anonymized_user@interia.pl>; Mon, 25 Sep 2023 13:32:13 +0200 (CEST)
+X-Envelope-From: <goodrua@interiapl.email-sender-4.example>
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+	(using TLSv1.2 with cipher ECDHE-ECDSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by fmx65.pf.interia.pl (Postfix) with ESMTPS
+	for <anonymized_user@interia.pl>; Mon, 25 Sep 2023 13:32:11 +0200 (CEST)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 4639638856A
+	for <anonymized_user@interia.pl>; Mon, 25 Sep 2023 13:24:22 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=interiapl.email-sender-4.example;
+	s=dkim; t=1695641062; h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=azD3UDG8s9qos8BwnjPCPXA4ciX4+w0srAVNG4HntJk=;
+	b=P1QfMPzHpuWtqGMRLBx9DBVWJQDu02lXfMSVy75DeeHExlsDoxvXmwuH01LKDLuIU8S+El
+	F15EcoW89oOOU43KStNcnDJLhI1R7SgTx2NZxQAmmbPUVBzkkY5MoqDVbFrSmGWh74mMEX
+	IQZCJAFd5crelOxFirZ24CZix7ZdzTQ=
+Content-Type: multipart/alternative; boundary="===============3590397659165283896=="
+MIME-Version: 1.0
+Subject: interiapl Email Research Testing Dmarc configuration - SPK OK - DKIM OK- 13:24:21.940974
+From: goodrua@interiapl.email-sender-4.example
+To: anonymized_user@interia.pl
+Date: Mon, 25 Sep 2023 13:24:21 +0200
+message-id: <169564106194.19703.4542950077700075168@interiapl.email-sender-4.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-IPL-Priority-Group: 0-0
+X-IPL-VerifiedSender: goodrua@interiapl.email-sender-4.example
+X-IPL-SAS-SPAS2: 2.0000
+X-Interia-Antivirus: OK
+X-IPL-SAS-IP: XX_ANONYMIZED_IP_MAIN_A_XX
+X-IPL-SAS-ZERO: -0
+X-IPL-SAS-UREP: 0
+X-IPL-SAS-UREP-PRIV: 0
+X-IPL-SAS: -2
+X-IPL-Envelope-To: anonymized_user@interia.pl
+
+--===============3590397659165283896==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Tempora sit labore dolor. Consectetur non dolore aliquam neque aliquam non aliquam. Dolor numquam modi neque labore dolore. Consectetur adipisci dolor quiquia. Dolorem neque quisquam dolor. Dolore labore eius amet neque neque adipisci adipisci. Amet amet dolor amet sit. Etincidunt dolore ipsum labore quisquam neque voluptatem.
+
+Quaerat amet sit eius velit. Tempora adipisci quiquia voluptatem labore adipisci sed. Modi ut voluptatem adipisci dolor amet. Modi sit porro sed magnam porro. Magnam ut dolore ut dolore. Modi velit ut dolore numquam dolore voluptatem. Labore neque sit eius numquam. Porro sit labore quiquia adipisci labore dolor modi. Dolor magnam sed aliquam.
+
+Dolor sed quaerat ut sit. Etincidunt non quisquam eius dolore sit est. Labore quiquia neque labore sit. Dolore consectetur velit sit eius labore quiquia modi. Numquam tempora consectetur tempora est dolore labore dolore. Etincidunt voluptatem ut magnam aliquam ipsum. Est sit tempora dolore aliquam quiquia.
+
+Amet magnam labore amet. Etincidunt consectetur consectetur ipsum quiquia voluptatem ipsum. Amet sed amet amet. Velit adipisci quiquia modi magnam non consectetur dolore. Neque est voluptatem dolorem quaerat. Etincidunt adipisci est tempora neque est velit eius.
+--===============3590397659165283896==--

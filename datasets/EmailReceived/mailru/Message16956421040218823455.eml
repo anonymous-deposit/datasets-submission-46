@@ -1,0 +1,59 @@
+Delivered-To: anonymized_user@mail.ru
+Return-path: <goodrua@mailru.email-sender-2.example>
+Received-SPF: pass (mx246.i.mail.ru: domain of mailru.email-sender-2.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) client-ip=XX_ANONYMIZED_IP_MAIN_A_XX; envelope-from=goodrua@mailru.email-sender-2.example; helo=mail.mail-server.example;
+Received: from mail.mail-server.example ([XX_ANONYMIZED_IP_MAIN_A_XX]:40618)
+	by mx246.i.mail.ru with esmtp (envelope-from <goodrua@mailru.email-sender-2.example>)
+	id 1qkjyB-0022CU-1W
+	for anonymized_user@mail.ru; Mon, 25 Sep 2023 14:41:44 +0300
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id C2113388548
+	for <anonymized_user@mail.ru>; Mon, 25 Sep 2023 13:41:42 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=mailru.email-sender-2.example; s=dkimfalse; t=1695642102;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=lFCy8NAiG6QSnWjIgXCotz2F2eVZsMopQoYD5BuSiLY=;
+	b=oNZIAzfcLvIrJc5/xVVunvOnCVJ6V1L9tQ/5hSAd/+lS9KJMpXnOJ/QQhDgzVceWih9kBz
+	f8Xr1WFQymtXneQOI48fpvoDI2AKoQt8jfKdJeBOYcM7Gw9nsLIAtfmrq/riJIbMGpaM6L
+	pBwRHhtIeTxLYaN+GBp3MQcMKDlryLaFmSbMfn+aIMKxjoOaRFCTJfIIQB5y7vMuPrnGF6
+	XgsKS8GcPP3HJ4OG02SYLtuphlCfy9Vw7pSsTMWLKa5YlmZ4cBcMc//CNxdqdjdcvlQO1F
+	OWmSRWh08/omvwsSNXfvC6sgIwR2apASiG+Ig0yKrVmfXEf3ITpxJOrxtQ2ccQ==
+Content-Type: multipart/alternative; boundary="===============7648477781207438078=="
+MIME-Version: 1.0
+Subject: mailru Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:41:42.385990
+From: goodrua@mailru.email-sender-2.example
+To: anonymized_user@mail.ru
+Date: Mon, 25 Sep 2023 13:41:42 +0200
+message-id: <169564210238.19703.1894170363635919267@mailru.email-sender-2.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-DKIM-FAIL: DKIM test failed: invalid (address=goodrua@mailru.email-sender-2.example domain=mailru.email-sender-2.example reason=pubkey_unavailable).
+X-Mailru-Src: mx
+X-6b629377: 1
+X-7564579A: EEAE043A70213CC8
+X-77F55803: E822A06ED42C499A865CEF40DA58E1885302F675427C1F01B26A7E504B71B61A0BBDAAE39103F3638701F0628C4B95CBC4E42C4F4C29583092618701F054F3C9ED33F95719EA6FFEFF1B8FF185178A36
+X-7FA49CB5: A9FCD207E66530D8A18204E546F3947CF3C143438B695564E8660EE58D259860C8A9BA7A39EFB7663CFE1401686631C009758206774B3CD2DD651F4330C87D395F5917CA7CC391D482EE3A239E141A8D725E5C173C3A84C334DDD5EFB0A1CE3BD7494F64F9BEE8B4F004C90652538430874E2D673C5AF1DCA41EE2E6171AB04E3AEF95C17B5B0FB7F0A90F80086ADC7CE5BFE6E7EFDEDCD71268565BACE6FA02BFAA6A731AC295228AA50765F79006376AA82C99A7702AA44E1E7243831EC1F5206D88A64C426B1DB10A181A22533F51C2099A533E45F2D09E8FC8737B5C224990CCD2EB80CC9620BCF491FFA38154B6C8A9BA7A39EFB7666BA297DBC24807EAC2A783ECEC0211AD725E5C173C3A84C317B107DEF921CE79C2A783ECEC0211ADC4224003CC836476D5A39DEEDB18090910F078C66590146127C277FBC8AE2E8B974A882099E279BDD8AC5874FC5B34B36355398AEDF52F167C6FB206A91F05B2BFD6F67A70858E461857CB5E84BE68ACBB5A64B5EE0D2EE302ED4CEA229C1FA827C277FBC8AE2E8BAA867293B0326636D2E47CDBA5A96583C09775C1D3CA48CF4C82C86BFC697D19117882F4460429724CE54428C33FAD30A8DF7F3B2552694AC26CFBAC0749D213D2E47CDBA5A9658378DA827A17800CE77FFCE1C639F4728C9FA2833FD35BB23DF004C906525384308FB05168BE4CE3AF
+X-C1DE0DAB: 0D63561A33F958A56D82DA83BD65C6E475E55EB519E34D4EC21289126A9F8A8DF87CCE6106E1FC07E67D4AC08A07B9B065B78C30F681404D9C5DF10A05D560A950611B66E3DA6D700B0A020F03D25A09062BEEFFB5F8EA3E9C5DF10A05D560A9E9DBE8BB5FBB5B28E84698DA5A7895A6ED8273DE7764599ABDAD6C7F3747799A
+X-C8649E89: 1C3962B70DF3F0AD26C0D434D75DEB2777DD89D51EBB7742A40832CC440F25BA0776B5B2C279835F3F09EBC13398492C3324F0739CD452B5AC5A7CC6273AB963175CDDCFE59146044E2DB8694E5A42259EB82D4FE9B7DF2E5646EF46850964C285AEBEA4F658451DDC8C6B5EC3159DF162FFE01D591DB9EB4E2DB8694E5A42251C68F66DD3B8F74D34857A812FC2A485F3872CBE5127A2C5BD591F60067D5AE9DD12AE8A0BD30A03F397F410C30E3A3EE7989E546542431D3177D0587FD9B6D50806B3BE2C254715294F9438AC932B35ABA764EF60814B0D405D425BD8497E4BACBC64CD17DB3FB3ABE6CFBC290BDDE0D2E33CCEC1088DDAE685BFDCD10EAC3F99345A9C0F42EC78FB42D1EFD5394A2DCCCD6E56942C8645CDFCE0382C19DF32615150DBA5594683BCA7FE7074D573BD4EB43C5D9F8D68DAB6C6411D86935C89D23230DC1794FBB9A82D9998A58A6A3BA7B008D229D436DBFC214A439FD84CC695CB5CD5317F27983FCF178C6DD14203
+X-D57D3AED: 3ZO7eAau8CL7WIMRKs4sN3D3tLDjz0dLbV79QFUyzQ2Ujvy7cMT6pYYqY16iZVKkSc3dCLJ7zSJH7+u4VD18S7Vl4ZUrpaVfd2+vE6kuoey4m4VkSEu530nj6fImhcD4MUrOEAnl0W826KZ9Q+tr59cQFxbtK52nlS5dXYHM/vGJPPyhnCcOsWxjvstlFwfLDmG3SyZat9J5NbkWIjxq932/b2BQGyWkRn3AgzCpU/iMtBVD51WbvH0GkMdp0FX1YB//7MgRjFIFGOxeSzHzkQNNSWoAHDIH
+X-F696D7D5: 4FTf9+9Qz6og1Z8XMMnF196OX3V6FJh+BQyKyDZhP03TT3YR0Bxksm6LsMgdP3rw
+X-Magic: CAAF5B4300A39C8699B9C5424DEDCBE7E97583F86F3224B2E7046FFDF4164DCEB3936B84E552495B
+X-Mailru-Dmarc-Auth: dmarc=pass header.from=goodrua@mailru.email-sender-2.example
+X-Mras: PROBABLE_SPAM
+X-Spam: undefined
+Authentication-Results: mxs.mail.ru; spf=pass (mx246.i.mail.ru: domain of mailru.email-sender-2.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) smtp.mailfrom=goodrua@mailru.email-sender-2.example smtp.helo=mail.mail-server.example;
+	 dkim=invalid reason=pubkey_unavailable header.d=mailru.email-sender-2.example; dmarc=pass header.from=goodrua@mailru.email-sender-2.example
+X-Mailru-Intl-Transport: d,5bf591a
+
+--===============7648477781207438078==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Etincidunt magnam aliquam porro porro dolor eius etincidunt. Tempora porro velit porro quiquia dolor ut dolorem. Quiquia amet voluptatem etincidunt numquam eius sit. Numquam labore quiquia dolorem labore ut. Dolore dolore eius est neque porro. Modi consectetur magnam dolor porro labore ut. Dolorem est tempora neque ipsum dolorem neque. Dolore velit sit eius voluptatem porro sit non. Tempora quiquia labore porro.
+
+Adipisci consectetur quaerat aliquam adipisci numquam porro aliquam. Numquam consectetur quisquam non. Dolor sed sit adipisci. Magnam quiquia non eius est adipisci. Dolor amet ipsum dolore amet labore. Etincidunt eius adipisci ipsum velit. Consectetur sed etincidunt non.
+
+Ut adipisci velit non velit. Amet quiquia dolore velit etincidunt. Magnam quiquia eius consectetur dolor porro eius quiquia. Dolor adipisci non voluptatem eius. Sed est ut ipsum. Ut amet porro est. Quiquia etincidunt porro est sed dolore tempora. Sit modi quiquia ut aliquam ut neque modi. Eius dolor consectetur labore numquam sed dolor.
+
+Numquam magnam neque dolorem velit. Neque labore ipsum ipsum quisquam numquam. Etincidunt dolorem dolor dolore. Quaerat sit porro quisquam. Dolorem est sed adipisci velit. Eius magnam numquam adipisci neque. Velit aliquam non dolorem quaerat sit. Magnam ut ut quaerat quisquam adipisci dolorem. Porro dolore dolorem modi numquam.
+
+Etincidunt quiquia quiquia ut. Velit tempora adipisci adipisci velit sit. Tempora ut porro amet non non sit. Velit ipsum amet magnam est. Est eius labore tempora. Etincidunt ut non ut dolore adipisci neque. Eius dolor ut porro amet sed non ut. Adipisci ipsum magnam adipisci numquam est. Sed tempora amet tempora. Neque numquam modi quaerat sit eius quiquia.
+--===============7648477781207438078==--

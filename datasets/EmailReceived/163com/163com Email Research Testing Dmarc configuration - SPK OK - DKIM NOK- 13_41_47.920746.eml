@@ -1,0 +1,43 @@
+Received: from mail.mail-server.example (unknown [XX_ANONYMIZED_IP_MAIN_A_XX])
+	by zwqz-mx-mta-g4-1 (Coremail) with SMTP id _____wBHEFwAchFlZHjgCg--.1169S3;
+	Mon, 25 Sep 2023 19:41:54 +0800 (CST)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id E51A1388548
+	for <anonymized_user@163.com>; Mon, 25 Sep 2023 13:41:48 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=163com.email-sender-2.example; s=dkimfalse; t=1695642112;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=FrGf5apXbZTYQ0ALm05lHEDq/ykTfzBM8aJh9rgqc7c=;
+	b=XBA7EhFnp+tRAkVJSwtl+eGI+vot3jrRs7Zfmm+rxqu0C9VkDYOzmY9DTEkQvi8k8j8WYd
+	0AEAinlD2oAdmkF1dMwtOwiyyrvfjkSKzW3BjzhCbq3RihGLBvE7XuY2zHrKuTg86t1Er0
+	rKgdT2S6lJnbVK7M+rYRqyv2uME0oqOIxZMBAXDgKsFsLOb5lxEQmGMcaIxlmoV7TZ/lLD
+	cjPHm9wq/B4HhxySPPLwMNZvDC/eNO9Gsd+Wu+TT3sndPhvziHxBXNLO3VmmVFMAIrh3el
+	88w3nAP5fzXFKx3YoZB4K/UkF4T2nYS7/VxyHjZ+AvDEO3guyHKTTS7DXaTtCA==
+Content-Type: multipart/alternative; boundary="===============2681042346063302757=="
+MIME-Version: 1.0
+Subject: 163com Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:41:47.920746
+From: goodrua@163com.email-sender-2.example
+To: anonymized_user@163.com
+Date: Mon, 25 Sep 2023 13:41:47 +0200
+message-id: <169564210792.19703.857552366318432639@163com.email-sender-2.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-CM-TRANSID:_____wBHEFwAchFlZHjgCg--.1169S3
+Authentication-Results: zwqz-mx-mta-g4-1; spf=pass smtp.mail=goodrua@1
+	63com.email-sender-2.example; dkim=permerror header.i=@163com.email-sender-2.example
+X-Coremail-Antispam: 1Uf129KBjvJXoW7AFy5trWDKrWUtFWxJryxKrg_yoW8GrykpF
+	s3JwnxKr1rXr1DAa4Uuw4xGa4rArWUA3srXan3X3yvgFWkXF4Y9rySyay5Ar1xWFW5Xwnr
+	XF12yFWUCryUWF7anT9S1TB71UUUUUUqnTZGkaVYY2UrUUUUjbIjqfuFe4nvWSU5nxnvy2
+	9KBjDUYxBIdaVFxhVjvjDU0xZFpf9x07jbgArUUUUU=
+
+--===============2681042346063302757==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Labore modi quaerat non ut dolore. Amet quisquam porro quaerat etincidunt aliquam dolore. Est sit tempora non sed quisquam modi. Quiquia est porro ipsum quaerat magnam. Voluptatem eius non dolor. Neque quiquia etincidunt voluptatem. Ipsum quisquam porro labore. Velit sed ut labore. Porro ut quiquia quaerat.
+
+Magnam adipisci dolorem velit ut. Adipisci consectetur sit modi. Velit ipsum labore quisquam labore voluptatem voluptatem tempora. Labore dolore modi non etincidunt. Etincidunt eius modi numquam dolorem. Amet modi amet sed labore ut. Dolor velit etincidunt tempora. Neque consectetur quiquia sit. Sit tempora tempora quisquam.
+
+Velit porro tempora sit magnam etincidunt. Tempora eius quisquam sed. Aliquam magnam tempora aliquam ipsum. Etincidunt porro sed aliquam labore dolor modi. Velit neque etincidunt amet amet. Est modi dolorem eius. Neque voluptatem ut dolor quiquia aliquam ipsum. Tempora dolore quiquia magnam quiquia est labore.
+
+Dolorem porro etincidunt tempora. Ipsum dolore quaerat numquam modi. Ut dolorem ipsum quiquia quiquia velit. Porro labore est non dolorem est porro labore. Voluptatem labore ut tempora amet adipisci porro. Magnam ipsum modi eius velit. Etincidunt tempora neque consectetur. Dolore sed tempora adipisci dolorem quiquia aliquam. Ipsum dolorem labore numquam dolorem sit.
+--===============2681042346063302757==--

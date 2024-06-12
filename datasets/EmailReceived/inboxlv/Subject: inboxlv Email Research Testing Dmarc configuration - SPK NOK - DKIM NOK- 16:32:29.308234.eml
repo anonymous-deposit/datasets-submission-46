@@ -1,0 +1,55 @@
+Return-Path: <badrua@inboxlv.email-sender-4.example>
+Received: from timmy5-clean.inbox.lv ([10.0.1.75])
+	 by brat9.inbox.lv (Cyrus 2.5-125) with LMTPA;
+	 Mon, 25 Sep 2023 17:32:30 +0300
+Received: from ham1.inbox.lv (ham1 [10.0.1.101])
+	by timmy5-clean.inbox.lv (Postfix) with ESMTP id C139530014C
+	for <anonymized_user@inbox.lv>; Mon, 25 Sep 2023 17:32:30 +0300 (EEST)
+Received: from kas2.inbox.lv (kas2 [10.0.1.92])
+	by ham1.inbox.lv (Postfix) with ESMTP id 90978370034A
+	for <anonymized_user@inbox.lv>; Mon, 25 Sep 2023 17:32:30 +0300 (EEST)
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+	by timmy2-main.inbox.lv (Postfix) with ESMTPS id 2C3CE100056
+	for <anonymized_user@inbox.lv>; Mon, 25 Sep 2023 17:32:30 +0300 (EEST)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id A9D023884C4
+	for <anonymized_user@inbox.lv>; Mon, 25 Sep 2023 16:32:29 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=inboxlv.email-sender-4.example;
+	s=dkimfalse2; t=1695652349;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=0cMxKQvqNw3VvAthmaEhVgfoG1WLg01J6wz+uc2Klu8=;
+	b=B9Xbs7ENU75MFO3iYR1IqVTqRfOhWgqrAjzwDodnd0IvwU4O2l+UBdPXyu9OdNk3DYKiyp
+	LZiqhpJZioNIdHd1DAv8/2UqIsL9FcQuuRQb7sg2UtE4cCyK5dJ4lUpwlNIxDDwRL3Z+PN
+	1zZEVDm7mxF7vG9C/qhgD/yGEvMQogc=
+Content-Type: multipart/alternative; boundary="===============6957008246804177982=="
+MIME-Version: 1.0
+Subject: inboxlv Email Research Testing Dmarc configuration - SPK NOK - DKIM NOK- 16:32:29.308234
+From: badrua@inboxlv.email-sender-4.example
+To: anonymized_user@inbox.lv
+Date: Mon, 25 Sep 2023 16:32:29 +0200
+message-id: <169565234930.19703.4533728431785608002@inboxlv.email-sender-4.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-KLMS-Message-Action: skipped, MessageAuthentication
+X-KLMS-AntiSpam-Lua-Profiles: 180100 [Sep 25 2023]
+X-KLMS-AntiSpam-Version: XX_ANONYMIZED_IP4_323ede30296d7b_XX
+X-KLMS-AntiSpam-Rate: 25
+X-KLMS-AntiSpam-Status: not_detected
+X-KLMS-AntiSpam-Method: none
+X-KLMS-AntiSpam-Auth: dmarc=fail header.from=inboxlv.email-sender-4.example policy=none;spf=fail smtp.mailfrom=inboxlv.email-sender-4.example;dkim=permerror header.d=inboxlv.email-sender-4.example
+X-KLMS-AntiSpam-Info: LuaCore: 534 534 808c2ea49f7195c68d40844e073217da4fa0d1e3, {rep_avail}, {Prob_phishing_engines}, {Tracking_from_domain_doesnt_match_to}, FromAlignment: s, {Tracking_dmark_f}, ApMailHostAddress: XX_ANONYMIZED_IP_MAIN_A_XX
+X-MS-Exchange-Organization-SCL: -1
+X-KLMS-AntiVirus: Modern antivirus of Inbox, version 8.0.3.30, bases: 2023/09/25 09:29:00 #21977564
+X-KLMS-AntiVirus-Status: Clean, skipped
+X-Spam-Result: [14.04]; R_SPF_FAIL(6.00)[-all]; DMARC_POLICY_SOFTFAIL(4.00)[inboxlv.email-sender-4.example : No valid SPF,none]; BAYES_SPAM(3.97)[99.89%]; MIME_MA_MISSING_HTML(1.00)[]
+X-Spam-Flag: Yes
+
+--===============6957008246804177982==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Sed sed magnam dolore velit modi. Non voluptatem etincidunt quaerat etincidunt sit. Est velit aliquam adipisci dolore adipisci velit. Velit tempora est ipsum numquam. Est ipsum ut etincidunt sed magnam.
+
+Quisquam numquam numquam porro dolor ipsum quaerat quaerat. Voluptatem consectetur quaerat dolore etincidunt labore amet numquam. Quaerat tempora est porro tempora aliquam velit voluptatem. Adipisci amet voluptatem aliquam consectetur velit magnam etincidunt. Tempora porro eius voluptatem.
+
+Adipisci dolor neque quisquam. Magnam neque dolor amet. Sit eius amet neque etincidunt porro magnam. Dolorem aliquam aliquam neque modi voluptatem porro ipsum. Numquam quisquam voluptatem modi sit. Tempora dolor sed neque dolore. Est consectetur quisquam consectetur dolorem numquam.
+--===============6957008246804177982==--

@@ -1,0 +1,112 @@
+Return-Path: <badrua@protonmailcom.email-sender-2.example>
+X-Original-To: anonymized_user@protonmail.com
+Delivered-To: anonymized_user@protonmail.com
+Authentication-Results: mailin038.protonmail.ch; dkim=fail (Bad 0 bit
+    rsa-sha256 signature.) header.d=protonmailcom.email-sender-2.example
+    header.a=rsa-sha256
+Authentication-Results: mailin038.protonmail.ch; dmarc=fail (p=none dis=none)
+ header.from=protonmailcom.email-sender-2.example
+Authentication-Results: mailin038.protonmail.ch; spf=fail
+ smtp.mailfrom=protonmailcom.email-sender-2.example
+Authentication-Results: mailin038.protonmail.ch; arc=none smtp.remote-ip=XX_ANONYMIZED_IP_MAIN_A_XX
+Authentication-Results: mailin038.protonmail.ch; dkim=fail reason="key not found in DNS"
+ (0-bit key) header.d=protonmailcom.email-sender-2.example
+ header.i=@protonmailcom.email-sender-2.example header.b="hlMMwwUS"
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX]) (using TLSv1.3 with
+ cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+  key-exchange X25519 server-signature RSA-PSS (4096 bits) server-digest SHA256) (No
+ client certificate requested) by mailin038.protonmail.ch (Postfix) with ESMTPS id
+ 4RvQLn171jz7K for <anonymized_user@protonmail.com>; Mon, 25 Sep 2023 14:32:17 +0000 (UTC)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with
+ ESMTPSA id C53C3388443 for <anonymized_user@protonmail.com>; Mon, 25 Sep 2023 16:32:16
+ +0200 (CEST)
+Dkim-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=protonmailcom.email-sender-2.example; s=dkimfalse2; t=1695652336;
+ h=from:subject:date:message-id:to:mime-version:content-type;
+ bh=BjFDLMuzVMaVsnHzPXv3KCFm3K6ik79qD6DQ+S3ynhc=;
+ b=hlMMwwUSY2yvIpiqCSMCO780J1giHMhHnYuJVAjwHPyVT4KYUZJvFAqZDF+plHp4EGROD5
+ g6JPXRbSf+lbkDa+CB8d4GAmHDYVA4VpoM9KIPUToBz0U1TM7qsDfjII8EYkIdqMB7ay6D
+ QFCeiDmnKFQ3+JZs6183Coa15b/PSi0=
+Content-Type: multipart/mixed;boundary=---------------------5ff242abc4071fb8999fa211bb0f19f9
+Mime-Version: 1.0
+Subject: protonmailcom Email Research Testing Dmarc configuration - SPK NOK - DKIM NOK-
+ 16:32:16.404824
+From: badrua@protonmailcom.email-sender-2.example
+To: anonymized_user@protonmail.com
+Date: Mon, 25 Sep 2023 16:32:16 +0200
+Message-Id: <169565233640.19703.13593972771157506364@protonmailcom.email-sender-2.example>
+X-Last-Tls-Session-Version: TLSv1.3
+X-Pm-Spam: 0yezJI6cihyJeYR3pi42biOpJJvbmsCIeI1msjN3X3blJp7IjBlNIIojzsIjLlITJ
+ owIjyjALLJCQE9kUjItoQsMjSlBITR0fFJFUERDllPVE6iITMwCilR2XnYnVluX2im8ZOsniPJFU
+ CR6IJweyw3NXY0WiuAjODMwIQzMD5DcNMcj4zgjNjNyYJpLCnWFbZ9Vul1WYjIioN0aHrWNYX92i
+ yV2cmdkVIwXzwjMMOEDwiwiIncuV5hX2iWUbOJihtwGbmZhVVydHiXMZLJCtslWY2XhNVndG53Jb
+ X52hiUWbiOVJRBUETEVVIwiipFWbFbj9RlYXy29Ze9Vwi9mcjIwok2LjxjQNN1H9iwSf2Y0FdvZW
+ inkcOJiVBREUEVTVwiIip3JcZIC61YjITM5EYyOW3DIZOZDmyITMWY0QE1OT9CJNLJCz6ISYyepJ
+ 9zc1tGFcIojwzJCL2Yy9QiZWujMOMwiivN2cmciUMuOjiiwMcVmw0J3bjI7pJBIkTUVWXUzwbpjI
+ SMw4JzLCy29YZoTg04CMTO0k0sIlQlNIR9lIPxUR0XP5UiTkwlsOLBjdTJCLEUfZFJRk6CITWIzu
+ iwCM1UGBZhIGlWxaZoDglxGUXYlNNlIHoSBZdRHwvwlOCX39cud3l3BbbNnwv5iZmccddoL1zT9e
+ P1Wmt9mc2OklJhPW1HJZYUS0yBHM3bvR1hbmjWxab02uhBDNnbkNxhZWl2hYblWulR3bmcllZyLm
+ w2lOPET4x4SNDOuUIuOD7jgMc1jtslWYSaw590cmt25bYlWsoNmLlIs0RLIkfU1SUl0HEVkTjIbp
+ 4xMCiSwXRtEJJ9VTlTBZlETEbjpIM4Cx91XXCLyJI6cyzyJeY92y6ISZCMw4JyLCvXBZcQniisnO
+ kQZFNfRVNEFSIpjbuITLCMiwQuOTlTUOI0lsfJlI1UGBZBX0iUwSOslxsAjLiIh1wibGiSwXTlUN
+ N9VRVQN9NTSVHU5SXh0UiwUTlOxsBdLjNCJLS1UFPd0X0TiQstOlxC4MLJCt0xWdXahBRccns2FL
+ dVGy0FmbXalZRlLHcHReLB3sulWYlIs0RNIkDVJQXB1PDlETVWT9ZUT0JkFRTIC6uAzWSMiwJvcH
+ uG9dbFWpvNGbSb04FuMGl2RcbFGjtVGaWav5VydGuWUaZIngOBiOyb2BxpYWTCBZUYEsu9mbSZdJ
+ JSLCL0RXS1UfSVEUUTBZwiSUwlsOLAjsyBnI3bvR1hbmjWxab02uhBDNnbkNxhZWl2hYblWulR3b
+ mcllZyLm9nMOZtGphZWbHblNJdMiSCJLQZ1EPN0XUVU59OX06SIRWAzuiwCMSMdJJBLCi04UOslw
+ sAjLmIzFo1bj2TEMNwyguBXaXZ6Qg1MT4jELN4S4w4iMCXy8wgNC129YbRnyEpTeSRdJJGLCNk9U
+ XV0ROV0XkVSZ0iT0wlsOLBjdSJCL1QEZRMX1B19UTwEiwslOjLdBJNLCFU1SXR1SFNUQjIbp4wMC
+ wCILOsisroTMlIs05FIkBVJVT9FIi0UQlOts4wMCtCILM4C2iMDOSXiwtJREUV9TUFkD6ISRzWuA
+ wiMCvHJcd9GupFWbGbvN40bSuGFMcR2ljFGbGatV5vaWyGVdaUWu6InZifdJJNLCfURSUhkTB10X
+ EVINZSX0i00TOslwdBjLCLUJ9NT1DVRQS9FFSZlT1QUBFMX06CITWAzus0FMkISF9OQ16SIQWAzu
+ s0FMkISZ1fT0fk9TR4EiwslOjLdBJQLCWkVUS9UVZx0U0XFRlWTEFVJRRIC6uAzWCMiwVyaH1WFZ
+ b5ykyFWb0YwB90cmt25bYlWsvNmLSbdJJSLCU1BQXN0PU5UV0XO9I6RSuzAWMwCidJSMCLUJ9ET1
+ Ol9TT50FbpjICMw4wiXSWkNUR9FWfFUS0UU19BUFIVRVIpjbw4CMXX91fQ==
+X-Pm-Origin: external
+X-Pm-Transfer-Encryption: TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+X-Pm-Content-Encryption: on-delivery
+X-Pm-Spamscore: 101
+X-Pm-Spam-Action: inbox
+
+-----------------------5ff242abc4071fb8999fa211bb0f19f9
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;charset=utf-8
+
+Quaerat dolore voluptatem eius adipisci quisquam modi. Consectetur quaerat=
+ non amet consectetur quiquia. Sed quaerat quiquia quaerat sed sit. Labore=
+ ipsum tempora sit. Etincidunt non amet dolorem magnam. Tempora dolore vol=
+uptatem numquam. Sit aliquam tempora eius quaerat dolor. Sit tempora numqu=
+am quisquam aliquam voluptatem amet sed. Est sit quiquia dolor labore quis=
+quam. Numquam ut quiquia eius tempora quisquam.
+
+Porro ut velit sed etincidunt labore dolor. Aliquam labore magnam velit do=
+lor adipisci. Sit voluptatem eius dolorem. Numquam sed adipisci quaerat es=
+t voluptatem modi. Voluptatem quiquia numquam quaerat amet modi. Tempora c=
+onsectetur sit voluptatem. Dolor ipsum non labore dolorem aliquam ut. Cons=
+ectetur ipsum sit sit quisquam.
+
+Sit magnam quaerat labore. Numquam modi quiquia neque tempora velit sed. N=
+eque non porro modi dolorem quiquia. Dolor magnam voluptatem neque ipsum. =
+Velit porro magnam consectetur quiquia magnam sit. Sed ipsum magnam modi p=
+orro modi voluptatem. Consectetur ut sed ut voluptatem. Quisquam velit tem=
+pora est quiquia adipisci ut. Neque voluptatem quiquia ipsum est.
+
+Ipsum etincidunt quaerat ut labore neque ipsum. Ipsum dolorem magnam magna=
+m labore. Numquam voluptatem ut quaerat tempora. Ipsum voluptatem dolorem =
+aliquam quiquia ut labore voluptatem. Adipisci dolore porro magnam quisqua=
+m quiquia quiquia. Tempora est eius numquam. Consectetur quaerat porro qui=
+squam non etincidunt dolor labore. Tempora ipsum velit neque porro numquam=
+. Porro amet sit ipsum quaerat numquam. Non consectetur voluptatem dolor v=
+elit tempora.
+
+Ipsum quaerat dolor velit consectetur. Quisquam eius sit sed quaerat numqu=
+am. Dolorem ut eius dolore. Non magnam est adipisci ipsum sed dolorem labo=
+re. Labore est amet aliquam porro. Voluptatem labore non quiquia dolorem.
+
+Sed consectetur velit porro voluptatem modi. Eius sed ipsum porro quiquia.=
+ Labore ipsum sed porro aliquam magnam. Eius ut dolore neque. Est velit la=
+bore ipsum. Quiquia neque labore quisquam neque quisquam modi. Amet velit =
+non dolor aliquam. Tempora tempora quiquia tempora etincidunt dolore quaer=
+at magnam. Dolor non eius sed labore dolorem modi. Velit modi sit consecte=
+tur eius labore.
+-----------------------5ff242abc4071fb8999fa211bb0f19f9--

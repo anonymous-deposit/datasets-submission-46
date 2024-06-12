@@ -1,0 +1,32 @@
+Return-Path: <badrua@rediffcom.email-sender-1.example>
+Delivered-To: anonymized_user@f5.p28.mail.in.rediffmail.com
+Received: (qmail 3418 invoked from network); 25 Sep 2023 14:24:44 -0000
+Received: from unknown (HELO rediffmail.com) (XX_ANONYMIZED_IP4_b40b809c8d86bc_XX)
+	by 0 with SMTP; 25 Sep 2023 14:24:44 -0000
+X-DKIM-Verification: dkim domain=rediffcom.email-sender-1.example; verify=0; BodyHash=0; TestMode=-1; SAligned=1; RAligned=1;
+X-SPF-Verification: spf domain=rediffcom.email-sender-1.example; result=fail; clientip=XX_ANONYMIZED_IP_MAIN_A_XX; SAligned=1; RAligned=1;
+X-DMARC-Verification: dmarc=pass; dkim=pass; spf=fail; pct=100; domain=rediffcom.email-sender-1.example;
+Received: (qmail 3419 invoked from network); 25 Sep 2023 14:24:43 -0000
+X-IN-VDRT-SpamState: 0\LEGIT
+X-IN-VDRT-SpamScore: 51
+X-IN-VDRT-SpamCause: gggruggvucftvghtrhhoucdtuddrgedviedrudelgedgjeehucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecutffgfffkhffhnecuuegrihhlohhuthemuceftddtnecuqfhnlhihuchonhgvuchprghrthculdehuddmnecujfgurheptggguffhvfffkfesrgdtreertddtvdenucfhrhhomhepsggrughruhgrsehrvgguihhffhgtohhmrdhgvghtvdejrghnshdrfhhrnecuggftrfgrthhtvghrnhepgeeuffegffefieeivdeuleevudetkeeiiedttdffteeifefhvedvfffglefghfefnecukfhppedukeehrddukeehrdekvddrvdeknecuvehluhhsthgvrhfuihiivgeptd
+X-Remote-IP: XX_ANONYMIZED_IP_MAIN_A_XX
+X-REDIFF-SENDER-VERIFY: D=-2, DKIM=0, P=D
+Received: from mail.mail-server.example (XX_ANONYMIZED_IP_MAIN_A_XX)
+	by 0 with ESMTPS (DHE-RSA-AES256-GCM-SHA384 encrypted); 25 Sep 2023 14:24:43 -0000
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id AE88A3884C2
+	for <anonymized_user@rediff.com>; Mon, 25 Sep 2023 16:24:41 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=rediffcom.email-sender-1.example;
+	s=dkim; t=1695651881; h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=7PJNR9T4gwO5mz8SZUcfE0dg7oLLbgLKY9u52kyvqYE=;
+	b=OmMcJ7kfIbpBdU4/cEkr+tAot47x+v5uOZ/520xuahY/oh4ugBKU7pBSquDSYlA2AUSsnX
+	jn4rNCnxKw5Hdd0CtWXIfXC0WkmePWK9lo0pv5BHX6/3wUhJP2m/WwDKpvZG/WdjgBcVaE
+	PPr/803lMNNq8O+RYZ3iYkESK1ts9Y8=
+Content-Type: multipart/alternative; boundary="===============7589417822394109954=="
+MIME-Version: 1.0
+Subject: rediffcom Email Research Testing Dmarc configuration - SPK NOK - DKIM OK- 16:24:41.377228
+From: badrua@rediffcom.email-sender-1.example
+To: anonymized_user@rediff.com
+Date: Mon, 25 Sep 2023 16:24:41 +0200
+message-id: <169565188137.19703.2325303848716108672@rediffcom.email-sender-1.example>
+X-Last-TLS-Session-Version: TLSv1.3

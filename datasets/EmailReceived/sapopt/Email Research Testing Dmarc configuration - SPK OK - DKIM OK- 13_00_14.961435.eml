@@ -1,0 +1,37 @@
+Received: (qmail 18970 invoked from network); 25 Sep 2023 11:00:19 -0000
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+          (envelope-sender <goodrua@sapopt.email-sender-1.example>)
+          by ptmail-mta02 (qmail-ptmail-1.0.0) with ESMTPS
+          for <anonymized_user@sapo.pt>; 25 Sep 2023 11:00:19 -0000
+Received-SPF: pass (ptmail-mta02: SPF record at sapopt.email-sender-1.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender)
+X-PTMail-RemoteIP: XX_ANONYMIZED_IP_MAIN_A_XX
+X-PTMail-AllowedSender-Action: 
+X-PTMail-Service: default
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 8EFE4388564
+	for <anonymized_user@sapo.pt>; Mon, 25 Sep 2023 13:00:15 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sapopt.email-sender-1.example;
+	s=dkim; t=1695639615; h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=eveputvM1MsGxDkyA2uIzq8ME+5xpJGLU1mknoWvhZw=;
+	b=XF944Uo5/uyKT3siyjKTFY5UV7zrvJO64w2XXxXKRRqHMJHEqF1n6mntmtNI5W/R+lhj6C
+	6Oo3jQ0laE0uhgXKxgVk4ybxuRarj06REmFiSJXD/3gZv7PxpbhCl+Yx1CxvR560x5UH6I
+	rRSxM1e4mJJS+g85e2RVnAFF4RAcQew=
+Content-Type: multipart/alternative; boundary="===============0183873465730213544=="
+MIME-Version: 1.0
+Subject: Email Research Testing Dmarc configuration - SPK OK - DKIM OK- 13:00:14.961435
+From: goodrua@sapopt.email-sender-1.example
+To: anonymized_user@sapo.pt
+Date: Mon, 25 Sep 2023 13:00:14 +0200
+message-id: <169563961496.19703.15186499746533365656@sapopt.email-sender-1.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============0183873465730213544==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Dolor voluptatem est consectetur ipsum ipsum sit numquam. Est tempora modi porro sit dolore porro. Quisquam neque quisquam numquam modi. Dolorem aliquam ut eius etincidunt adipisci modi. Amet labore amet amet eius sit dolorem. Numquam modi aliquam tempora voluptatem. Quiquia amet numquam amet velit. Adipisci numquam neque quiquia eius. Consectetur est quiquia voluptatem amet quiquia consectetur quiquia. Dolor amet voluptatem dolore porro amet sed sed.
+
+Dolore consectetur tempora modi ipsum numquam amet. Velit dolorem ipsum quisquam ut quisquam dolorem. Tempora voluptatem modi numquam magnam dolorem ipsum. Quisquam quaerat sit porro etincidunt sed quaerat tempora. Voluptatem etincidunt voluptatem consectetur quaerat. Velit etincidunt dolore porro sed. Etincidunt labore quisquam aliquam ipsum. Porro labore aliquam sed tempora quiquia.
+
+Porro eius porro adipisci. Adipisci non tempora velit. Ut dolor magnam magnam aliquam est non. Quisquam ut quisquam porro quisquam. Dolorem porro voluptatem porro dolorem. Adipisci dolore dolorem sed etincidunt. Tempora etincidunt numquam voluptatem. Ipsum dolorem adipisci labore porro modi etincidunt. Labore est tempora ut est etincidunt voluptatem.
+--===============0183873465730213544==--

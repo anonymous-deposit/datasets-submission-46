@@ -1,0 +1,35 @@
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP6_195e9c9291e59b_XX])
+	by smtpd-mx-6b85658944-4xfvs (smtpd/2.0.12) with ESMTP
+	id 6dc21e86-07f9-4b85-b0bf-67d1e5b8e9fc;
+	Mon, 25 Sep 2023 13:40:49 +0200
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 1BB87388567
+	for <anonymized_user@seznam.cz>; Mon, 25 Sep 2023 13:40:47 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=seznamcz.email-sender-3.example; s=dkimfalse; t=1695642048;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=3T47kTpmIIw+n8tr0R3wXwjkqM1y0gMSF+3nPmAIqwg=;
+	b=F0XaeVYM/orFNyzTsm+hwot3Em/DOM9b8F2I/9UHd6FajVsOEREIQq1ENSSXIre4acWK+T
+	PbsdU/9d0fFeplJ4SSD7lLFJrp5Ga8iZorNuzpNAJ7iZ4h3g+bDlPhR0zD1oUAEEXpv4Al
+	36JbUqnSsTnXH/DEFx6PTvGfsQAujrMFHV8IxQTH1rUoQKcVyJEBnwr61urzsD8Di0oQJu
+	/HLnCVQDErvS/HskkpfTwzF4MX7mNUrsLJCNqzYi3PxJW7WehJbXQZAUSTOrpwiUq7Sls9
+	w7QnAcBCcY7nGMH/Lr1/kvMDMz45KWWJaG5ZP5pgKLpCRIcs3t97pXCs89m4IQ==
+Content-Type: multipart/alternative; boundary="===============2762535480444496474=="
+MIME-Version: 1.0
+Subject: seznamcz Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:40:47.693868
+From: goodrua@seznamcz.email-sender-3.example
+To: anonymized_user@seznam.cz
+Date: Mon, 25 Sep 2023 13:40:47 +0200
+message-id: <169564204769.19703.5735684453727291522@seznamcz.email-sender-3.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============2762535480444496474==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Labore sed ipsum dolore adipisci ipsum. Labore porro modi eius. Adipisci dolore magnam magnam dolorem labore. Tempora non adipisci quaerat numquam dolor sed. Amet numquam aliquam eius. Consectetur ut magnam etincidunt aliquam ut quiquia est. Voluptatem quisquam eius numquam sit tempora tempora tempora. Non non porro labore tempora dolorem dolore labore.
+
+Neque consectetur adipisci neque quiquia. Labore quaerat etincidunt aliquam modi adipisci voluptatem. Labore quisquam adipisci adipisci consectetur. Eius porro ut non aliquam sit est quisquam. Dolor ipsum porro dolor porro sit eius sit. Magnam dolore dolorem aliquam labore dolor eius magnam.
+
+Aliquam tempora velit est. Dolor magnam sed sed quaerat dolor dolor tempora. Quiquia amet quisquam labore voluptatem modi. Quaerat eius ut porro numquam voluptatem. Sed magnam dolor non. Quisquam aliquam modi aliquam. Voluptatem dolore quaerat velit dolore voluptatem est eius. Aliquam neque sit dolor magnam modi ipsum numquam. Consectetur aliquam tempora amet magnam sit. Etincidunt tempora dolore ut.
+--===============2762535480444496474==--

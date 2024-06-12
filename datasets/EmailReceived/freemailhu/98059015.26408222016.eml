@@ -1,0 +1,45 @@
+Return-Path: <goodrua@freemailhu.email-sender-2.example>
+Received: from mail.mail-server.example ([XX_ANONYMIZED_IP_MAIN_A_XX])
+    (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256 bits))
+    by fmx.freemail.hu with ESMTPS id 4RvLZG5Sh4z7Lt;
+    Mon, 25 Sep 2023 13:41:58 +0200
+X-fm-smtp-source: true
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 6EB8F388567
+	for <anonymized_user@freemail.hu>; Mon, 25 Sep 2023 13:41:52 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=freemailhu.email-sender-2.example; s=dkimfalse; t=1695642112;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=0a9iiARC6xIt271ilMLwClPntLbOLIYifSbAGxObCF0=;
+	b=iyK1JUn+JS8tbgZ4MgMK9741vukvlflEjxTM5dRZ13k2blv0C5S3T/JPMrxBgVLWynx5P5
+	ONuhUTqSxsbXebxifOygk3kHFIhUItCnDPRWC3uZJd7mng+KolyuMGMd7UnkFeQAkZN+49
+	Ek6y5WPzomGLC1jcc3XggGiq2A62wYEDa/4USzfFE/oXXACLxVAH1NA+PkRjNaYURm3lH3
+	IInfUlv2GnBRQ9p7TKa0W2BEzlY2Hebae4ugL0GoIOCJlLXXMel2CfJbmWSJbKdIPV73yH
+	nF+/u9+6yrTBn1ZMnxpiHf6PIkSgN/Be1KmgaLbWOy+7he0PuyPpiIhEfe7xGw==
+Content-Type: multipart/alternative; boundary="===============8465934042390632898=="
+MIME-Version: 1.0
+Subject: freemailhu Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:41:52.089761
+From: goodrua@freemailhu.email-sender-2.example
+To: anonymized_user@freemail.hu
+Date: Mon, 25 Sep 2023 13:41:52 +0200
+message-id: <169564211208.19703.9958443894945425261@freemailhu.email-sender-2.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-VR-SPAMSTATE: OK
+X-VR-SPAMSCORE: 51
+X-VR-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgedviedrudelgedggedvucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuggftfghnshhusghstghrihgsvgdpucfhtffggffotefknfenuceurghilhhouhhtmecufedttdenucfqnhhlhicuohhnvgcuphgrrhhtucdlhedumdenucfjughrpegtggfuhffvfffksegrtderredttddvnecuhfhrohhmpehgohhoughruhgrsehfrhgvvghmrghilhhhuhdrgedtrghnshguvghlrggthhgvmhhinhhothgvrhhivgdrfhhrnecuggftrfgrthhtvghrnhepueeugfduvedtgfeuiefhvdeuffefveduffejleelfedtvdefheethffgteejgeffnecukfhppedukeehrddukeehrdekvddrvdeknecuvehluhhsthgvrhfuihiivgeptdenucfrrghrrghmpehhvghlohepmhgrihhlrdiiohhrvghilhhlvgdrrhgvpdhinhgvthepudekhedrudekhedrkedvrddvkedpmhgrihhlfhhrohhmpehgohhoughruhgrsehfrhgvvghmrghilhhhuhdrgedtrghnshguvghlrggthhgvmhhinhhothgvrhhivgdrfhhrpdhnsggprhgtphhtthhopedupdhrtghpthhtohephhhurhgvrghuohesfhhrvggvmhgrihhlrdhhuh
+Delivered-To: anonymized_user@freemail.hu
+
+--===============8465934042390632898==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Ipsum porro dolore eius dolorem quaerat non. Labore dolor modi modi aliquam amet quaerat. Velit neque ipsum labore velit. Numquam voluptatem etincidunt velit consectetur labore amet aliquam. Consectetur tempora numquam quaerat non quaerat tempora. Velit ut quaerat etincidunt porro eius tempora sed. Neque consectetur etincidunt etincidunt quiquia ipsum. Adipisci ipsum modi eius porro amet porro. Quiquia amet consectetur quiquia velit quisquam.
+
+Numquam amet adipisci neque eius magnam amet consectetur. Dolore quisquam non eius. Ut est tempora dolor magnam velit etincidunt. Tempora consectetur sed quiquia sed. Labore modi quiquia dolorem. Dolor adipisci numquam etincidunt adipisci etincidunt. Quaerat aliquam dolor magnam neque consectetur sit. Magnam quiquia magnam adipisci numquam neque modi.
+
+Eius amet dolorem aliquam ut etincidunt amet. Magnam tempora tempora est dolore. Labore quisquam non dolorem ipsum velit quisquam dolore. Dolor dolor amet amet numquam dolorem dolor. Est numquam velit eius. Sed quisquam est sed consectetur amet quisquam amet. Est ut aliquam est consectetur tempora non dolorem.
+
+Non tempora sit est. Quiquia quiquia adipisci quisquam porro dolor. Ipsum adipisci tempora ipsum non. Ipsum numquam dolor sed etincidunt velit adipisci. Numquam non ut labore magnam consectetur. Velit quaerat velit dolore. Eius porro aliquam quaerat velit sit voluptatem aliquam. Consectetur neque aliquam labore neque sed.
+
+Tempora voluptatem magnam modi aliquam. Eius etincidunt magnam modi. Sed modi tempora dolorem est ipsum voluptatem amet. Velit consectetur ipsum quisquam ut ipsum adipisci. Voluptatem dolor ipsum amet sed porro numquam. Sit quiquia voluptatem dolore ut labore. Tempora labore quiquia dolor ipsum. Quisquam ut velit tempora ut. Non sed adipisci ipsum quiquia.
+--===============8465934042390632898==--

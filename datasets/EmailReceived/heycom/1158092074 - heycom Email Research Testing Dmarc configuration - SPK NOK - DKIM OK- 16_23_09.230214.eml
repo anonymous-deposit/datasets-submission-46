@@ -1,0 +1,61 @@
+Return-Path: <badrua@heycom.email-sender-3.example>
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+	by home-mx.app.hey.com (Postfix) with ESMTP id D2408849AC
+	for <anonymized_user@hey.com>; Mon, 25 Sep 2023 14:23:10 +0000 (UTC)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 94FB1388445
+	for <anonymized_user@hey.com>; Mon, 25 Sep 2023 16:23:09 +0200 (CEST)
+Date: Mon, 25 Sep 2023 16:23:09 +0200
+From: badrua@heycom.email-sender-3.example
+To: anonymized_user@hey.com
+Message-ID: <169565178923.19703.141691627319351672@heycom.email-sender-3.example>
+Subject: heycom Email Research Testing Dmarc configuration - SPK NOK - DKIM OK- 16:23:09.230214
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary="===============6293953871159025200=="
+Content-Transfer-Encoding: 7bit
+X-Original-To: anonymized_user@hey.com
+Delivered-To: anonymized_user@hey.com
+Authentication-Results: home-mx.app.hey.com;
+	dkim=pass header.d=heycom.email-sender-3.example header.s=dkim header.b=iqvhMisb;
+	spf=pass (home-mx.app.hey.com: domain of badrua@heycom.email-sender-3.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) smtp.mailfrom=badrua@heycom.email-sender-3.example;
+	dmarc=pass (policy=none) header.from=heycom.email-sender-3.example
+ARC-Seal: i=1; s=heymail; d=hey.com; t=1695651791; a=rsa-sha256; cv=none;
+	b=Dm8cbs0MFk0U6PEz8ELpN5UXQn/8L5qaoXyeI5SCGcv3pNekR0bZpQ7YLRkTqpGBHyGTvc
+	oK3fplux1/fgPfAvvbTxqWlHu8rr9w0YZx0aonVQgYFhgTMTFxpVDYJD5aZYE+9zVwN0cV
+	zI7QiZYAKCM3pxrYPMCxOzrkYUue7/V2IaR7JPLNA+qBVl3QTocd7u3j+aIpIWWF8nlfzb
+	VzqutfaPuhvShPMtiaMSNIbdF6HKOw+htEjqznFijlybsBbcW+Y+Gu5Ptx9Dg8Oa+0RbJW
+	Lem/cVWEgl20T/DB4Av2V088pnqEe51qNFAUHoXG5h3ZESFV1O9bp3nJvdWC9g==
+ARC-Authentication-Results: i=1;
+	home-mx.app.hey.com;
+	dkim=pass header.d=heycom.email-sender-3.example header.s=dkim header.b=iqvhMisb;
+	spf=pass (home-mx.app.hey.com: domain of badrua@heycom.email-sender-3.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender) smtp.mailfrom=badrua@heycom.email-sender-3.example;
+	dmarc=pass (policy=none) header.from=heycom.email-sender-3.example
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=hey.com;
+	s=heymail; t=1695651791;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type;
+	bh=sku8swV/QdsL2lK0ZhLd0KIXdkhnUlAkm3wRcYHFFw8=;
+	b=P9xhLK2eEklZyL1SBUy3JIaM8XrPTjbwcIjRegKkKyfrYuOc55I7mS7PiMVOpZR9qdj5FX
+	Td2nlsVZAsiIrwaQ65GApGHZ4+XP0prkyrG40qODBxzfV7DNbHSRh2+4FwAyIffdZoJXdd
+	B2iNpwr0g3so5gykDYD1Q0BT4aZkP3jRogw5extNT0D3cfaKPVW8TkkXK9F/PNSU/7bE73
+	YmXMjGVJEAmZ8yHqSWrE9OHY/VhCXthuiYvDj6fc/HsLjed+lpbbXsuDoP7ukkA+b4DAWi
+	6m0ZbqAaOkeJPfsu+PAs3x6Hh8LeXprW4norn/w3ZPVkLbfkhUSVrZ6dihIoUw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=heycom.email-sender-3.example; s=dkim; t=1695651789;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=sku8swV/QdsL2lK0ZhLd0KIXdkhnUlAkm3wRcYHFFw8=;
+	b=iqvhMisbVryMEPdTJP7GvoMDtTJP9E74SG2/W7cbPHFKa4H77qIyxyN2Qw+k1bVYmicdkP
+	u16iA9LlKztvevJzTqugDETwawvvaltl05XGTfXZV32mrNtAnks/WuA677dDU0yBqqSS74
+	6MGog/PrqjNmW/slFgnQ7iV6J54j7nQ=
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============6293953871159025200==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Neque est neque quaerat aliquam amet. Sed est etincidunt labore. Quaerat amet sed est magnam quiquia quiquia. Quiquia sed quaerat neque est. Aliquam labore consectetur aliquam quisquam est porro magnam. Magnam consectetur adipisci quisquam etincidunt sed. Voluptatem quiquia dolore dolor quaerat aliquam etincidunt.
+
+Tempora sit eius est. Labore dolore quisquam quaerat dolorem ut. Labore ut tempora voluptatem non. Dolor neque tempora magnam ut. Velit dolor porro est dolorem sed porro quiquia. Est tempora modi quisquam amet sit labore. Adipisci ipsum quiquia neque. Aliquam aliquam adipisci quiquia. Ipsum neque voluptatem ipsum est ut quiquia.
+
+Tempora adipisci ut eius. Non etincidunt est sit quaerat eius. Magnam eius amet dolor. Sed magnam etincidunt quaerat quisquam. Labore etincidunt sed consectetur dolor neque non. Eius sed ipsum porro.
+--===============6293953871159025200==--

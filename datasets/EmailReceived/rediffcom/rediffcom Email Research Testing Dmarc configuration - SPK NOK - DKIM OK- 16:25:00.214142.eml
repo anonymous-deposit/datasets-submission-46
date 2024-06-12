@@ -1,0 +1,32 @@
+Return-Path: <badrua@rediffcom.email-sender-4.example>
+Delivered-To: anonymized_user@f5.p28.mail.in.rediffmail.com
+Received: (qmail 17601 invoked from network); 25 Sep 2023 14:25:07 -0000
+Received: from unknown (HELO rediffmail.com) (XX_ANONYMIZED_IP4_706e6eeef34f84_XX)
+	by 0 with SMTP; 25 Sep 2023 14:25:07 -0000
+X-DKIM-Verification: dkim domain=rediffcom.email-sender-4.example; verify=0; BodyHash=0; TestMode=-1; SAligned=1; RAligned=1;
+X-SPF-Verification: spf domain=rediffcom.email-sender-4.example; result=fail; clientip=XX_ANONYMIZED_IP_MAIN_A_XX; SAligned=1; RAligned=1;
+X-DMARC-Verification: dmarc=pass; dkim=pass; spf=fail; pct=100; domain=rediffcom.email-sender-4.example;
+Received: (qmail 16517 invoked from network); 25 Sep 2023 14:25:03 -0000
+X-IN-VDRT-SpamState: TMOUT
+X-IN-VDRT-SpamScore:
+X-IN-VDRT-SpamCause:
+X-Remote-IP: XX_ANONYMIZED_IP_MAIN_A_XX
+X-REDIFF-SENDER-VERIFY: D=-2, DKIM=0, P=D
+Received: from mail.mail-server.example (XX_ANONYMIZED_IP_MAIN_A_XX)
+	by 0 with ESMTPS (DHE-RSA-AES256-GCM-SHA384 encrypted); 25 Sep 2023 14:25:02 -0000
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 82A0F38843B
+	for <anonymized_user@rediff.com>; Mon, 25 Sep 2023 16:25:00 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=rediffcom.email-sender-4.example;
+	s=dkim; t=1695651900; h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=iV8i4F7BxVBE9vBwlqLFMU7H1t4gMAibd7pJlhnCKy8=;
+	b=CjZH0dHKneotAooFpIVqv4jlwXi9v8ZVI0HJlzSdiXCKXolhkB4fOFmzr7eW3KuR61wWMr
+	bu2CskfjBasEnKz/4cJPr79k+l3u69EX28ixgsdD0X/L5MBeyj/YN5Qt//gYD9ZFzrHHUs
+	XFJ4XjelCof3/CGyM7oGL4WZUudpZJc=
+Content-Type: multipart/alternative; boundary="===============6810794166827664572=="
+MIME-Version: 1.0
+Subject: rediffcom Email Research Testing Dmarc configuration - SPK NOK - DKIM OK- 16:25:00.214142
+From: badrua@rediffcom.email-sender-4.example
+To: anonymized_user@rediff.com
+Date: Mon, 25 Sep 2023 16:25:00 +0200
+message-id: <169565190021.19703.4935581162626151478@rediffcom.email-sender-4.example>
+X-Last-TLS-Session-Version: TLSv1.3

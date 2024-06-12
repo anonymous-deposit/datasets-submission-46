@@ -1,0 +1,35 @@
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+	by smtpd-mx-595c77785b-ldcvk (smtpd/2.0.12) with ESMTP
+	id c8127e41-06a1-47e7-898b-f1076d958b59;
+	Mon, 25 Sep 2023 16:33:23 +0200
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 11CCC3885AF
+	for <anonymized_user@seznam.cz>; Mon, 25 Sep 2023 16:33:22 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=seznamcz.email-sender-3.example; s=dkimfalse2; t=1695652402;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=aG5Q7X+NmfPvuMcyfYhAkyraY7coaOHM4xeP9ei5P44=;
+	b=CpIqv6T85tGko40/oSCQXUY2KXfAu1ErleSeMr1RdsdWMxikrnVqJCIY7pQhp9PJOXjKRQ
+	9l8bfAmS2tAyonFqZUICd84F+nIlOmYbUMjyzPYAVgqvCPiZI5Zr0bWtTIM1FutLaZF3kl
+	D2hBRVdk3g8nk9aSTMS9s/DPjAJe9eE=
+Content-Type: multipart/alternative; boundary="===============2721348981504913424=="
+MIME-Version: 1.0
+Subject: seznamcz Email Research Testing Dmarc configuration - SPK NOK - DKIM NOK- 16:33:21.719182
+From: badrua@seznamcz.email-sender-3.example
+To: anonymized_user@seznam.cz
+Date: Mon, 25 Sep 2023 16:33:21 +0200
+message-id: <169565240171.19703.12718450990756192606@seznamcz.email-sender-3.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============2721348981504913424==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Labore adipisci velit sit consectetur adipisci amet. Sit neque etincidunt velit. Modi numquam voluptatem velit neque ut etincidunt. Non eius numquam dolorem porro aliquam. Sed labore dolore ipsum consectetur. Modi numquam non voluptatem neque numquam sed labore. Consectetur eius magnam est magnam consectetur.
+
+Dolorem modi numquam aliquam. Quaerat quisquam dolor labore consectetur aliquam sed. Magnam ut numquam sed quisquam non non quisquam. Etincidunt labore ut neque eius est. Sit numquam quisquam ipsum sed amet quisquam. Eius voluptatem magnam neque.
+
+Amet amet dolore ipsum etincidunt magnam sit. Tempora porro magnam dolore. Sed ipsum dolor ut ut non labore. Aliquam magnam numquam quiquia. Ipsum adipisci modi etincidunt. Voluptatem quaerat est sit eius labore. Aliquam ipsum sed sit modi tempora consectetur. Etincidunt neque consectetur sed dolorem etincidunt porro.
+
+Adipisci tempora non est. Ut labore quisquam tempora velit magnam sed numquam. Est quiquia adipisci consectetur ipsum dolorem. Quisquam quiquia tempora aliquam consectetur. Quiquia dolorem dolore tempora neque etincidunt. Amet dolor est numquam eius quiquia aliquam. Dolore magnam quisquam sit eius non. Non voluptatem consectetur dolore quaerat ipsum est. Quisquam ut consectetur dolore ipsum. Modi labore est velit quaerat eius tempora.
+--===============2721348981504913424==--

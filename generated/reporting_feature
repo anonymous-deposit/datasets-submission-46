@@ -1,0 +1,1 @@
+{"esp_sending_rua": ["outlook.com", "gmail.com", "seznam.cz", "fastmail.com", "mail.ru", "yahoo.com"], "esp_sending_ruf": [], "esp_sending_rua_edv_succeed": ["gmail.com", "yahoo.com", "fastmail.com", "seznam.cz", "mail.ru", "outlook.com"], "esp_sending_rua_edv_failed": ["seznam.cz", "gmail.com", "outlook.com", "yahoo.com"], "edv_rewritting_rua": ["fastmail.com"]}

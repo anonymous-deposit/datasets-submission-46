@@ -1,0 +1,53 @@
+Received: from mx.poczta.onet.pl (unresolved [XX_ANONYMIZED_IP4_9c504999de5d17_XX]:52590)
+	by ps31.m5r2.onet (Ota) with LMTP id 913501D
+	for <anonymized_user@op.pl>; Mon, 25 Sep 2023 13:23:32 +0200 (CEST)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=XX_ANONYMIZED_IP_MAIN_A_XX; helo=mail.mail-server.example; envelope-from=goodrua@oppl.email-sender-2.example; receiver=<UNKNOWN> 
+Authentication-Results: mx.poczta.onet.pl;
+    bimi=skipped (DMARC Policy is not at enforcement);
+    dkim=pass (1024-bit rsa key sha256) header.d=oppl.email-sender-2.example header.i=@oppl.email-sender-2.example header.b=gGvnR8Xt header.a=rsa-sha256 header.s=dkim;
+    dmarc=pass policy.published-domain-policy=none policy.applied-disposition=none policy.evaluated-disposition=none (p=none,d=none,d.eval=none) policy.policy-from=p header.from=oppl.email-sender-2.example;
+    iprev=pass smtp.remote-ip=XX_ANONYMIZED_IP_MAIN_A_XX (mail.mail-server.example);
+    spf=pass smtp.mailfrom=goodrua@oppl.email-sender-2.example smtp.helo=mail.mail-server.example;
+    x-ptr=pass smtp.helo=mail.mail-server.example policy.ptr=mail.mail-server.example;
+    x-tls=pass smtp.version=TLSv1.3 smtp.cipher=TLS_AES_256_GCM_SHA384 smtp.bits=256
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mx.poczta.onet.pl (Onet) with ESMTPS id 4RvL8z55phz17Tb
+	for <anonymized_user@op.pl>; Mon, 25 Sep 2023 13:23:31 +0200 (CEST)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 036DD388569
+	for <anonymized_user@op.pl>; Mon, 25 Sep 2023 13:23:29 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=oppl.email-sender-2.example; s=dkim; t=1695641010;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=2FZitKorFWtlKvn2trpndR1sswdvaLcp1pMNMYgDUqk=;
+	b=gGvnR8XtXb04BCWpkuvBRyOlHB8MBnLyb4M6PiQbect9H/aob8E8st6EP4uk+oQlRY4MSJ
+	N0cLUeYRBrwdEaTRCrUvwYVQWt0TFtS7nV4pK8H+NFMv6/hD5yQC0zs7uo0N2xnrGTKy4W
+	naK4eWjN3e+tScuucCVKGl8bfMdlu28=
+Content-Type: multipart/alternative; boundary="===============3089129602127095223=="
+MIME-Version: 1.0
+Subject: oppl Email Research Testing Dmarc configuration - SPK OK - DKIM OK- 13:23:29.657331
+From: goodrua@oppl.email-sender-2.example
+To: anonymized_user@op.pl
+Date: Mon, 25 Sep 2023 13:23:29 +0200
+message-id: <169564100965.19703.4606631287885086195@oppl.email-sender-2.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-Authentication-Milter: Header added by Authentication Milter
+X-ONET_PL-MDA-Version: 1.0.25
+X-ONET_PL-MDA-Info: 031 01585 913501D 0.000000
+X-ONET_PL-MDA-From: goodrua@oppl.email-sender-2.example
+X-ONET_PL-MDA-Spam: NO
+
+--===============3089129602127095223==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Labore velit ut eius quisquam magnam est. Est tempora aliquam etincidunt ut adipisci neque modi. Adipisci ipsum quaerat quiquia. Adipisci ut dolorem quisquam. Quaerat labore aliquam magnam quisquam dolorem etincidunt. Numquam consectetur consectetur labore. Quiquia quaerat dolorem quisquam eius quiquia. Adipisci tempora eius neque. Ut dolorem velit quisquam sed consectetur. Modi dolor sed amet.
+
+Amet adipisci etincidunt numquam est non. Labore est quaerat labore dolore ipsum consectetur sed. Magnam amet quaerat non voluptatem sed modi. Voluptatem est voluptatem quisquam tempora. Numquam numquam dolore porro dolore non modi est. Est magnam labore tempora est adipisci tempora porro.
+
+Magnam tempora porro quaerat dolorem. Voluptatem sit magnam tempora sit voluptatem dolorem ipsum. Tempora quaerat ut etincidunt neque aliquam. Amet etincidunt sed porro. Etincidunt magnam magnam dolorem sit voluptatem consectetur. Aliquam dolor consectetur sit. Velit neque ipsum est voluptatem est. Dolor consectetur est adipisci consectetur magnam ipsum dolorem.
+
+Porro neque labore porro sit magnam. Dolore eius etincidunt modi modi eius dolorem. Quaerat labore eius ut modi ipsum. Sed ut tempora sit aliquam sed modi. Est magnam quaerat aliquam est quiquia. Neque sit sit dolorem tempora neque. Ipsum quaerat numquam voluptatem amet.
+--===============3089129602127095223==--

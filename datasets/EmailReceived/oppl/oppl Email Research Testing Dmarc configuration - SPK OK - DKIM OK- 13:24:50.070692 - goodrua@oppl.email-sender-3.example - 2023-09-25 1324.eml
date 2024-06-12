@@ -1,0 +1,51 @@
+Received: from mx.poczta.onet.pl (unresolved [XX_ANONYMIZED_IP4_9c504999de5d17_XX]:52352)
+	by ps25 (Ota) with LMTP id 860DD17
+	for <anonymized_user@op.pl>; Mon, 25 Sep 2023 13:21:32 +0200 (CEST)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=XX_ANONYMIZED_IP_MAIN_A_XX; helo=mail.mail-server.example; envelope-from=goodrua@oppl.email-sender-3.example; receiver=<UNKNOWN> 
+Authentication-Results: mx.poczta.onet.pl;
+    arc=none (no signatures found);
+    bimi=skipped (DMARC Policy is not at enforcement);
+    dkim=pass (1024-bit rsa key sha256) header.d=oppl.email-sender-3.example header.i=@oppl.email-sender-3.example header.b=QCg4m109 header.a=rsa-sha256 header.s=dkim;
+    dmarc=pass policy.published-domain-policy=none policy.applied-disposition=none policy.evaluated-disposition=none (p=none,d=none,d.eval=none) policy.policy-from=p header.from=oppl.email-sender-3.example;
+    spf=pass smtp.mailfrom=goodrua@oppl.email-sender-3.example smtp.helo=mail.mail-server.example;
+    x-tls=pass smtp.version=TLSv1.3 smtp.cipher=TLS_AES_256_GCM_SHA384 smtp.bits=256
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mx.poczta.onet.pl (Onet) with ESMTPS id 4RvL6g4Wvzz6CjKc3
+	for <anonymized_user@op.pl>; Mon, 25 Sep 2023 13:21:31 +0200 (CEST)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 6B478388568
+	for <anonymized_user@op.pl>; Mon, 25 Sep 2023 13:24:50 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=oppl.email-sender-3.example;
+	s=dkim; t=1695641090; h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=ELNxUpR4F7L3AB9DEK8cEA6Xm4SKUpXWvMBPHXriC3k=;
+	b=QCg4m109zjjSk6zNFuAEulDak7ymwBF0spWOaTJUNRCPZhat+HRm0KExOWKdTXf9meBZl0
+	Bt79Psii7Pu4YZxqG+4Epys24Nn2YEl4gSCeaM2BFxWYlyuXQsN3upEYMfZQdZvKES3Tg/
+	BzLqC+CKoq+WppFYyrZUObkVypW8G0E=
+Content-Type: multipart/alternative; boundary="===============2304220180540478425=="
+MIME-Version: 1.0
+Subject: oppl Email Research Testing Dmarc configuration - SPK OK - DKIM OK- 13:24:50.070692
+From: goodrua@oppl.email-sender-3.example
+To: anonymized_user@op.pl
+Date: Mon, 25 Sep 2023 13:24:50 +0200
+message-id: <169564109007.19703.17247133550176117311@oppl.email-sender-3.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-Authentication-Milter: Header added by Authentication Milter
+X-ONET_PL-MDA-Version: 1.0.25
+X-ONET_PL-MDA-Info: 025 36660 860DD17 0.000000
+X-ONET_PL-MDA-From: goodrua@oppl.email-sender-3.example
+X-ONET_PL-MDA-Spam: NO
+
+--===============2304220180540478425==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Voluptatem modi magnam quaerat. Ipsum porro non voluptatem. Ipsum voluptatem modi numquam consectetur. Sed numquam labore ut neque tempora velit modi. Amet est labore neque porro. Consectetur non labore quisquam.
+
+Quiquia voluptatem aliquam porro consectetur etincidunt tempora. Etincidunt voluptatem adipisci amet quisquam dolore dolorem. Quaerat ut ipsum quiquia. Numquam porro ut adipisci sit. Ipsum eius porro quaerat porro. Neque quaerat velit velit ut. Consectetur est ut dolore. Sed consectetur modi velit neque. Quiquia dolorem magnam amet. Voluptatem dolorem voluptatem velit modi.
+
+Neque aliquam non dolorem etincidunt sed numquam. Est est dolor sit neque amet ipsum. Sed consectetur etincidunt ut consectetur ut sed. Ipsum amet dolore non. Magnam amet eius modi quisquam. Non amet tempora sit. Consectetur sit est numquam quiquia etincidunt. Velit sed quisquam tempora ipsum numquam eius.
+
+Quaerat est sit quiquia ipsum. Consectetur labore dolor ut porro. Modi eius non dolore modi. Porro etincidunt sed consectetur modi ipsum non sed. Sit adipisci non quisquam voluptatem aliquam dolore tempora. Tempora etincidunt numquam numquam non etincidunt labore labore.
+--===============2304220180540478425==--

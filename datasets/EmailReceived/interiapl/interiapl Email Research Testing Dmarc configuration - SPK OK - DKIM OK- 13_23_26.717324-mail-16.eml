@@ -1,0 +1,48 @@
+Received: from fmx1.pf.interia.pl (localhost [127.0.0.1])
+	by fmx1.pf.interia.pl (Postfix) with ESMTP id 2266B1403AC42
+	for <anonymized_user@interia.pl>; Mon, 25 Sep 2023 13:23:29 +0200 (CEST)
+X-Envelope-From: <goodrua@interiapl.email-sender-2.example>
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+	(using TLSv1.2 with cipher ECDHE-ECDSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by fmx1.pf.interia.pl (Postfix) with ESMTPS
+	for <anonymized_user@interia.pl>; Mon, 25 Sep 2023 13:23:27 +0200 (CEST)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 1462238856A
+	for <anonymized_user@interia.pl>; Mon, 25 Sep 2023 13:23:26 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=interiapl.email-sender-2.example; s=dkim; t=1695641007;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=HKJLaIeMKk8GNBLFcIbeSwm15jG5q6Sgy9Lws+C6cLo=;
+	b=dg/av7MUm+t6/FkJ4AQZQKQ1BmCqgGRW4WOxv3Fyc83hCPunDlA8eYq1nE6cW1/Vd6ESqi
+	Qhe15X65nD6L5aLLXj/BH6knjmGe2BpC3SMgrETtvRi9BikvMrvvtu5tMsjRe2LXsS5kTo
+	8lY5XkaKNB+qNVHOfCAg3APvRUin8Wc=
+Content-Type: multipart/alternative; boundary="===============5622729522259507657=="
+MIME-Version: 1.0
+Subject: interiapl Email Research Testing Dmarc configuration - SPK OK - DKIM OK- 13:23:26.717324
+From: goodrua@interiapl.email-sender-2.example
+To: anonymized_user@interia.pl
+Date: Mon, 25 Sep 2023 13:23:26 +0200
+message-id: <169564100671.19703.4809107152730946592@interiapl.email-sender-2.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-IPL-Priority-Group: 0-0
+X-IPL-VerifiedSender: goodrua@interiapl.email-sender-2.example
+X-IPL-SAS-SPAS2: 1.9991
+X-Interia-Antivirus: OK
+X-IPL-SAS-IP: XX_ANONYMIZED_IP_MAIN_A_XX
+X-IPL-SAS-ZERO: -0
+X-IPL-SAS-UREP: 0
+X-IPL-SAS-UREP-PRIV: 0
+X-IPL-SAS: -1.999
+X-IPL-Envelope-To: anonymized_user@interia.pl
+
+--===============5622729522259507657==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Quisquam magnam est quisquam quisquam. Numquam non modi non. Dolor adipisci quiquia ipsum. Est labore neque aliquam non quiquia velit velit. Non voluptatem dolorem porro quaerat dolore numquam magnam. Tempora modi dolor dolore dolor. Dolorem sit porro dolorem modi amet ipsum.
+
+Est amet non quiquia tempora. Porro labore quiquia adipisci modi quaerat porro. Non consectetur ipsum consectetur sed sit sed. Dolorem voluptatem numquam eius modi porro numquam est. Etincidunt velit adipisci sit voluptatem.
+
+Quisquam dolor labore tempora dolor quisquam quiquia. Adipisci ipsum quaerat voluptatem quisquam aliquam. Dolor est voluptatem tempora ipsum dolorem non. Adipisci eius sed est magnam labore dolorem adipisci. Aliquam consectetur labore sed. Voluptatem magnam tempora porro eius eius dolore dolor. Neque est quisquam eius. Eius ut dolorem numquam.
+--===============5622729522259507657==--

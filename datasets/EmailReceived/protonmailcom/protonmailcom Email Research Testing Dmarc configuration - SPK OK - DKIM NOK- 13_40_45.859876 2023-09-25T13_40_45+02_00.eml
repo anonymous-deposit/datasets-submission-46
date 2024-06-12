@@ -1,0 +1,97 @@
+Return-Path: <goodrua@protonmailcom.email-sender-3.example>
+X-Original-To: anonymized_user@protonmail.com
+Delivered-To: anonymized_user@protonmail.com
+Authentication-Results: mailin012.protonmail.ch; dkim=fail (Bad 0 bit
+    rsa-sha256 signature.) header.d=protonmailcom.email-sender-3.example
+    header.a=rsa-sha256
+Authentication-Results: mailin012.protonmail.ch; dmarc=pass (p=none dis=none)
+ header.from=protonmailcom.email-sender-3.example
+Authentication-Results: mailin012.protonmail.ch; spf=pass
+ smtp.mailfrom=protonmailcom.email-sender-3.example
+Authentication-Results: mailin012.protonmail.ch; arc=none smtp.remote-ip=XX_ANONYMIZED_IP_MAIN_A_XX
+Authentication-Results: mailin012.protonmail.ch; dkim=fail reason="key not found in DNS"
+ (0-bit key) header.d=protonmailcom.email-sender-3.example
+ header.i=@protonmailcom.email-sender-3.example header.b="g5HZG0ZL"
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX]) (using TLSv1.3 with
+ cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+  key-exchange X25519 server-signature RSA-PSS (4096 bits) server-digest SHA256) (No
+ client certificate requested) by mailin012.protonmail.ch (Postfix) with ESMTPS id
+ 4RvLY01JhDz9vNQ5 for <anonymized_user@protonmail.com>; Mon, 25 Sep 2023 11:40:52 +0000
+ (UTC)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with
+ ESMTPSA id 4761A388568 for <anonymized_user@protonmail.com>; Mon, 25 Sep 2023 13:40:46
+ +0200 (CEST)
+Dkim-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=protonmailcom.email-sender-3.example; s=dkimfalse; t=1695642046;
+ h=from:subject:date:message-id:to:mime-version:content-type;
+ bh=10c55RtIvYa70WnUsp4KXujsEm4sMLIg7gzI3eZuNK0=;
+ b=g5HZG0ZLYbiITRQVAREBtF9PXJReeqObqYrjKIe4CQMK7xneQBvQBFmizGq//6IBuK+QzH
+ sxQ7qpywO5AAyqb39G119Vzaz20R3+87tZB4RY7U4hZ7WwUB03RcsuvyNxO1n/Ph3x9wuy
+ 5HwFzMm2hxqPISUcKIlB5k7FWf4jCT9gE70nillRJ4eMEwIa9m1G3xv1rUCveSCzTRL9jQ
+ TXVjK5v3DeFqrK7apc5Ptvrj6asI2H4cs/rzMfgNuEyRqiOhKdWg9OLhacC/lh1RQfsNE2
+ 5TJ1GSmKKK+aDHDGPin4tZrn6VA8LoXpmFAoclv8HvdZFPIphgUdnP5L+OuYUQ==
+Content-Type: multipart/mixed;boundary=---------------------6666f61aa6fa852bec46df710fb9a7f9
+Mime-Version: 1.0
+Subject: protonmailcom Email Research Testing Dmarc configuration - SPK OK - DKIM NOK-
+ 13:40:45.859876
+From: goodrua@protonmailcom.email-sender-3.example
+To: anonymized_user@protonmail.com
+Date: Mon, 25 Sep 2023 13:40:45 +0200
+Message-Id: <169564204586.19703.13414826260606533573@protonmailcom.email-sender-3.example>
+X-Last-Tls-Session-Version: TLSv1.3
+X-Pm-Spam: 0yezJI6cihyJeYR3pi42biOpJJvbmsCIeI1msjN3X3blJp7IjBlNIIojxsIjLlITJ
+ otIj5C4MNwSiPJFUCR6II1LTQCJLU9kESB1XURJRRJQ1i04TOAjsk9lIWZ1J9pZ1vmZbIpj7SBlI
+ 0TiQsiOnzF9ccFGtwojIjLxAkxNT1DEOMQjwxgjNTMxcwiNChW1aZV2ftFmbSZ6IhzImjGFda91v
+ lNnYnclZ8yZFzDIMMgDxsICMnI1J9ubllW1YIojisxWYWLlZR1YXzmVcIwiipFWbFbj9RlYXy29Z
+ e9Vul1WYjIioBEVVFVRQUIysh1mIWafxF0Y2vWdZclnfvJHciY6I44MC2jgMMRT9s0XfmIhNVndG
+ 53JbIojiEBVVVQFRIsUyynNIaQWi2IiOTNxEFjNzyTQNYNWiiVDZDOiNZmNDiWMOfwSiiE2cnOis
+ NfaXh3BcbIS6iwCM2cvNVkcmxjoILIjsjNnI3blJoxIjsjILIJnly9GcCd6IJCeyFVlQU8116ICM
+ zWuEwiMCv2NccUm6uADIDN3cJdNCTCJLUZEfTFEUyU6I0wWydjBLLJCTfZEUESMV9OT1F05TIpjb
+ w4CMSXiwtJRETV9TSdUOiQURlOwsFdLjECJLSl0NOl0XkVMFQiSUwlsOLFjds0XfnIzJp7IjjnNI
+ bJ3ltojICM54JyLCvXBZcQniisnOkQZFNfRVNEFSIpjbuETLSMiwguODljkNI0lsJ1kIUTfVFfTU
+ TUlTUl0OI91REVM1pbIjwS4MXwSiB1ERkUfN9MUEZUNSXF0MX9ETjIbpAuLTiSwNcJHvu9GdWbpF
+ NvbG2S5baVWuil3c2bylVuZXu2FYb42usInZmbu9JdZSSCJLXN1QB9lRETPxI6Vywy0WLIjsltiI
+ GezlM6dHv29ZZJH1f5SY3cmBByLnv3Rbb1mhjxWa2bu0lldm5nNbY9mp1VmcmbhN9ubmymZLI0ls
+ J1kIUTfV9PR06CIRW0ywsEjLmI11RpbHyGFcdwFv0xWYXZuJRpYXsmUddVG4vwFdGchx4iaWiSwX
+ TlUNU9VRkUDFI6RSuzAWMwCiroDMDL6EJdKySCJLXR0Lf1USEUSVZBTUiUwSOslwsAjLnIyBRvb3
+ hm1baxWju02bmdllN5bnpm9YcVm1hNmbmbu9ZyLm9nMOZtGphZWbHblN0sIlDlJIVRkfV90QlTfR
+ 5FT0bjpIM4CwxICLlIs0ZSIkf01TRFVfW5URlRPJI6TSuzAWM0FsSZkI0Tf19fTkiE4ROslwdBjL
+ CLBJ4iU0wlsOLAjszFmIjb1oE2MTgywNaBXu6QXZTM1gE4Lj4S4NM4iwy8CXCNgw91Y2ynRbepTE
+ dJSRCLSJZEQ1J1ZXQ9VTQRVT0XVFgiVEwlsOLBjdOJCLVRSVxfQUB1BUTIS6uAzWCMiw45MCiTUO
+ XwSiWNkUFRU9NfTFMUxQIpjbw4CMSXiw9fVEUUFTQh0fW5URkUQN9BVFiEwTOslwdBjLCLBJNfUk
+ ikETOslwdBjLCLEJlNS0S1RXQNUFbpjICMw4JwLC0m9cb52tslWY2Yt9ZpLnzW5ZeJWvlJXaWdj5
+ 5vYWmi5bcpj+s0lIlISBZJRVT1VTTlFfMVERVSFZVEUkbjpIM4CwoJCLXdlJVvYXtmRLYJXjyBHQ
+ 3bvR1hbmuWwaY92ts0lIlIDJRfUFV09QTRlfF50TjIbp4wMCxCILI0lsPRlI0XOR5PX0ikUTOslw
+ dBjLCLNJRfSUTkhUX10BINEV0XSZ0iT0wlsOLBjd91Xf
+X-Pm-Origin: external
+X-Pm-Transfer-Encryption: TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+X-Pm-Content-Encryption: on-delivery
+X-Pm-Spamscore: 1
+X-Pm-Spam-Action: inbox
+
+-----------------------6666f61aa6fa852bec46df710fb9a7f9
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;charset=utf-8
+
+Tempora labore porro aliquam dolore. Etincidunt dolore quisquam adipisci e=
+tincidunt porro. Consectetur dolorem eius consectetur dolore labore. Sit v=
+elit quiquia porro quiquia etincidunt adipisci. Dolor consectetur quaerat =
+adipisci dolore amet sed.
+
+Neque tempora consectetur non est quaerat modi sed. Sed dolor quaerat ipsu=
+m eius etincidunt. Ipsum eius amet est numquam amet magnam. Est est volupt=
+atem porro ipsum. Non voluptatem amet velit numquam ut sed. Sit neque modi=
+ quiquia etincidunt sed neque non.
+
+Labore velit etincidunt voluptatem quiquia quiquia. Quisquam sit amet nequ=
+e non neque quisquam. Amet velit ipsum amet. Non voluptatem adipisci porro=
+ neque. Velit consectetur magnam dolor quisquam. Dolore tempora aliquam ve=
+lit. Neque sed adipisci neque dolorem. Consectetur dolor etincidunt amet i=
+psum modi. Dolore modi amet velit sed quiquia quisquam velit.
+
+Labore porro velit ut quisquam porro non numquam. Sit adipisci etincidunt =
+amet dolor. Dolore quiquia dolor quisquam est. Ipsum modi quiquia sit ipsu=
+m. Numquam sit labore ut quiquia adipisci dolore. Adipisci aliquam sed por=
+ro quaerat sit. Sed consectetur aliquam labore sed numquam non sit. Consec=
+tetur non ut etincidunt sed eius sed modi. Magnam quisquam dolore neque.
+-----------------------6666f61aa6fa852bec46df710fb9a7f9--

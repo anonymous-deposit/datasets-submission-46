@@ -1,0 +1,45 @@
+Received: from postback25b.mail.yandex.net (postback25b.mail.yandex.net [2a02:6b8:c02:900:1:45:d181:da25])
+	by oprjbz33l6w22dum.myt.yp-c.yandex.net (notsolitesrv/Yandex) with LMTP id 5WdukeqBX6-OoAJ2hY5
+	for <anonymized_user@yandex.com>; Mon, 25 Sep 2023 14:00:20 +0300
+Received: from mail-nwsmtp-mxfront-production-main-19.myt.yp-c.yandex.net (mail-nwsmtp-mxfront-production-main-19.myt.yp-c.yandex.net [IPvXX_ANONYMIZED_IP6_1d60194704b352_XX])
+	by postback25b.mail.yandex.net (Yandex) with ESMTP id C0FE35E50A
+	for <anonymized_user@yandex.com>; Mon, 25 Sep 2023 14:00:20 +0300 (MSK)
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP6_195e9c9291e59b_XX])
+	by mail-nwsmtp-mxfront-production-main-19.myt.yp-c.yandex.net (mxfront/Yandex) with ESMTPS id I0Mrcv0P9Cg0-xZ59kNcy;
+	Mon, 25 Sep 2023 14:00:19 +0300
+X-Yandex-Fwd: 1
+Authentication-Results: mail-nwsmtp-mxfront-production-main-19.myt.yp-c.yandex.net; spf=pass (mail-nwsmtp-mxfront-production-main-19.myt.yp-c.yandex.net: domain of yandexcom.email-sender-1.example designates XX_ANONYMIZED_IP6_195e9c9291e59b_XX as permitted sender, rule=[ipXX_ANONYMIZED_IP6_0eb94a32bd6826_XX/64]) smtp.mail=goodrua@yandexcom.email-sender-1.example; dkim=pass header.i=@yandexcom.email-sender-1.example
+X-Yandex-Spam: 4
+X-Yandex-Uid-Status: 4 1582606496
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 85FFC388562
+	for <anonymized_user@yandex.com>; Mon, 25 Sep 2023 13:00:18 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yandexcom.email-sender-1.example;
+	s=dkim; t=1695639618; h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=VjsSBhg4N4PNuRC3EgrK1aCAZgHV2JTCdMFPibyNm+k=;
+	b=ZLdtADAnDAvcaYsboJrPQYwAn4M/8s/al63Y3X/tbbDuVf0S+QQABj/Z0OGWmExKejkQWZ
+	lHYsN39UzXe2r11t8YxHNZytgvtFQgKPGTljLZQGps+pTt0LTx1dCTugIRqAj8OCXk7Qi5
+	5L/ZohUaLmJXeOU+fxDsKO+rCCdZur8=
+Content-Type: multipart/alternative; boundary="===============2703211740013687966=="
+MIME-Version: 1.0
+Subject: Email Research Testing Dmarc configuration - SPK OK - DKIM OK- 13:00:17.812045
+From: goodrua@yandexcom.email-sender-1.example
+To: anonymized_user@yandex.com
+Date: Mon, 25 Sep 2023 13:00:17 +0200
+message-id: <169563961781.19703.14196616442696492188@yandexcom.email-sender-1.example>
+X-Last-TLS-Session-Version: TLSv1.3
+Return-Path: goodrua@yandexcom.email-sender-1.example
+X-Yandex-Forward: 9a4466da8fa457927e1aa02ad5675333
+
+--===============2703211740013687966==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Dolor neque numquam numquam magnam voluptatem velit modi. Sit amet ut amet. Amet velit quaerat quaerat quiquia non voluptatem eius. Quiquia aliquam amet numquam ipsum neque numquam. Etincidunt amet est dolor sed dolorem. Velit dolorem quiquia eius neque dolor etincidunt quisquam. Est dolorem est numquam sit. Quaerat aliquam numquam quiquia quiquia. Etincidunt magnam voluptatem sit quisquam.
+
+Ut dolore numquam amet quiquia consectetur. Numquam modi non est dolorem sed quisquam. Etincidunt sed dolor quaerat dolor neque. Dolorem velit quisquam quisquam numquam voluptatem. Non magnam velit est magnam. Dolorem quaerat amet voluptatem sed labore. Eius sed labore porro consectetur quiquia tempora modi. Quisquam non velit dolorem adipisci.
+
+Voluptatem sit porro modi neque est tempora amet. Voluptatem ipsum numquam ut voluptatem magnam. Quaerat sit voluptatem aliquam voluptatem quisquam. Eius sit sed amet non ipsum quaerat velit. Quiquia modi aliquam ut etincidunt non. Magnam non tempora adipisci eius.
+
+Magnam sit ipsum neque adipisci porro consectetur. Quiquia sit aliquam est dolore. Quaerat dolorem neque labore est voluptatem dolor. Sed quaerat est consectetur tempora quiquia etincidunt velit. Dolor adipisci aliquam dolore consectetur dolore neque est. Voluptatem non voluptatem numquam labore dolorem aliquam dolorem. Etincidunt ipsum dolor est quisquam quisquam velit. Quaerat est sit voluptatem velit ut sit.
+--===============2703211740013687966==--

@@ -1,0 +1,100 @@
+Return-Path: <goodrua@control-domainexample.email-sender-1.example>
+Delivered-To: anonymized_user@control-domain.example
+Received: from mail.control-domain.example ([XX_ANONYMIZED_IP4_de18e617ae5936_XX])
+	by 2f2ac2470a58 with LMTP
+	id oA36BxRyEWXPYhMA1oC5Bg
+	(envelope-from <goodrua@control-domainexample.email-sender-1.example>)
+	for <anonymized_user@control-domain.example>; Mon, 25 Sep 2023 13:42:12 +0200
+Received: from mail.mail-server.example (mail.mail-server.example [IPvXX_ANONYMIZED_IP6_a46fa4663fe6b1_XX])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (4096 bits))
+	(No client certificate requested)
+	by mail.control-domain.example (Postcow) with ESMTPS id 70445520B30
+	for <testESP@control-domain.example>; Mon, 25 Sep 2023 13:42:11 +0200 (CEST)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 5705F388567
+	for <testESP@control-domain.example>; Mon, 25 Sep 2023 13:42:10 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=control-domainexample.email-sender-1.example;
+	s=dkimfalse; t=1695642130;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=lOXCo+c+/W5F3bFxVxMenC0DtCs+ISjJ/k6Un/C78zE=;
+	b=hvhxiCtvgwv2H7imptJZHvnVGamBO4aBwIa9mNlh0nY/WQZ6mKU1voG1NnUn9qQMxL2cFW
+	2tn2W4WKGpbozBqs6Zvs8HOq/hpEDRPfxH/PvXhzgAXFTNtR/1jdLDFwzXc3msUALXfxaH
+	QDh5frOzoocf6TbIWmsavsBDnt1coMhYxtsRRmi4X+oC0LX0xr2xSWxRkCY0XmmZqr4un1
+	UBByyZQe5SBtr8Fmuuj2MQHKBiX0VESXfhmLwL9ijIPoc2wuj+nHXwo5+kfz4ZAJ1e8K4f
+	1m4c58PdP76sSkeUw1k8PzqvE13VNv0v6QbtC536EUnAK4Bw4QekDYdcIP9KOA==
+Content-Type: multipart/alternative; boundary="===============8661780100316543993=="
+MIME-Version: 1.0
+Subject: control-domainexample Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:42:10.013118
+From: goodrua@control-domainexample.email-sender-1.example
+To: testESP@control-domain.example
+Date: Mon, 25 Sep 2023 13:42:10 +0200
+message-id: <169564213001.19703.3388147484789235311@control-domainexample.email-sender-1.example>
+X-Last-TLS-Session-Version: TLSv1.3
+ARC-Authentication-Results: i=1;
+	mail.control-domain.example;
+	dkim=none ("invalid DKIM record") header.d=control-domainexample.email-sender-1.example header.s=dkimfalse header.b=hvhxiCtv;
+	dmarc=pass (policy=none) header.from=control-domainexample.email-sender-1.example;
+	spf=pass (mail.control-domain.example: domain of goodrua@control-domainexample.email-sender-1.example designates XX_ANONYMIZED_IP6_195e9c9291e59b_XX as permitted sender) smtp.mailfrom=goodrua@control-domainexample.email-sender-1.example
+ARC-Seal: i=1; s=dkim; d=control-domain.example; t=1695642131; a=rsa-sha256; cv=none;
+	b=SwTCJG5pZy06+hfN4ogoSnQQ/35BvcFh9G5lBNRqWmYiQjAveQ98xwcKhZFYN1CgVHtldc
+	82rKDkPxsRQW6tyLj+933NXCOfPCC4yK6FKaUFAA1LEDlnlhqknIsoNuFB3iBuPteRm8bj
+	FjpJY+NJYOn+RROa7ex5w9mO3c4ldC/rMwLApsEWFFCIYEL8tmjK01M3zPNVJzIl0XWI4p
+	nl/luOX+B1V6/3td+NZ71/yTc+asbPaL5BECQL7vupSEpjFr8Y32AiyY8+VC3u42ZbrFI1
+	xYk2e8EObhO6PkKn/drldKWuY5JxrMew2ghGm81s74ZIaYhxJ9KREQ/lmkPZ3w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=control-domain.example;
+	s=dkim; t=1695642131;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 dkim-signature; bh=lOXCo+c+/W5F3bFxVxMenC0DtCs+ISjJ/k6Un/C78zE=;
+	b=lMgE7cEI0l59R8NqovleW4NDqBBrv5HOa5bkuO/f3f4ybRSr785NUgEOdKhX/Tknmn1ss6
+	RqTuDLu4OwUKyfy8fNccX5uf9AM9Rg+/W1C+mDJYfx8j1WDOfvidgEOizygIhItKqKauRK
+	T/hmm/XHfE3OWAk1FiziKbVjRzCnoAW3Gyvs9iIAtgrypoN+CvQ7OJlKHon4wzvjb913U1
+	5+B9AOR5IPEoBLpqr1AL3AqPZCY0cVetr1UM/JBtfB0EOWUmSiFgiXfoTM0wK17VnUr/lH
+	6oF6zVMrkg/iSw/ftu3E7je8B0NOXCDHz/enshVMzzqK97/via/Y35dQgaY8vQ==
+X-Last-TLS-Session-Version: TLSv1.3
+X-Rspamd-Queue-Id: 70445520B30
+Authentication-Results: mail.control-domain.example;
+	dkim=none ("invalid DKIM record") header.d=control-domainexample.email-sender-1.example header.s=dkimfalse header.b=hvhxiCtv;
+	dmarc=pass (policy=none) header.from=control-domainexample.email-sender-1.example;
+	spf=pass (mail.control-domain.example: domain of goodrua@control-domainexample.email-sender-1.example designates XX_ANONYMIZED_IP6_195e9c9291e59b_XX as permitted sender) smtp.mailfrom=goodrua@control-domainexample.email-sender-1.example
+X-Spamd-Result: default: False [-0.10 / 15.00];
+	MIME_MA_MISSING_HTML(1.00)[];
+	DMARC_POLICY_ALLOW(-0.50)[control-domainexample.email-sender-1.example,none];
+	IP_REPUTATION_HAM(-0.29)[asn: 51167(-0.28), country: DE(-0.01), ip: 2a02:c206:2080:3834::(0.00)];
+	R_SPF_ALLOW(-0.20)[+exists:goodrua._spf.control-domainexample.email-sender-1.example];
+	MIME_GOOD(-0.10)[multipart/alternative,text/plain];
+	MX_GOOD(-0.01)[];
+	MIME_TRACE(0.00)[0:+,1:+];
+	FROM_NO_DN(0.00)[];
+	DKIM_TRACE(0.00)[control-domainexample.email-sender-1.example:~];
+	FROM_EQ_ENVFROM(0.00)[];
+	R_DKIM_PERMFAIL(0.00)[control-domainexample.email-sender-1.example:s=dkimfalse];
+	ASN(0.00)[asn:51167, ipnet:2a02:c206::/32, country:DE];
+	RCVD_COUNT_TWO(0.00)[2];
+	RCVD_VIA_SMTP_AUTH(0.00)[];
+	ARC_SIGNED(0.00)[control-domain.example:s=dkim:i=1];
+	RCPT_COUNT_ONE(0.00)[1];
+	BCC(0.00)[];
+	ARC_NA(0.00)[];
+	RCVD_TLS_ALL(0.00)[];
+	MID_RHS_MATCH_FROM(0.00)[];
+	PREVIOUSLY_DELIVERED(0.00)[testesp@control-domain.example];
+	TO_MATCH_ENVRCPT_ALL(0.00)[];
+	TO_DN_NONE(0.00)[];
+	RCPT_MAILCOW_DOMAIN(0.00)[control-domain.example]
+
+--===============8661780100316543993==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Aliquam aliquam dolorem modi ut non. Non quisquam quiquia amet quisquam consectetur velit. Consectetur est neque quiquia. Est est ipsum dolor eius aliquam numquam ut. Quisquam ipsum etincidunt quaerat quisquam adipisci.
+
+Amet porro dolore aliquam eius quisquam porro. Dolorem modi neque quisquam ipsum. Dolorem neque quisquam eius sit quisquam. Non modi labore eius tempora eius. Labore sit modi numquam neque quaerat. Amet eius non sed amet. Modi quisquam voluptatem neque ut sed. Aliquam tempora dolor dolore sed dolorem. Velit magnam amet adipisci sit. Dolor modi voluptatem modi tempora magnam.
+
+Voluptatem aliquam dolore porro porro. Ipsum dolore consectetur labore. Neque adipisci amet eius neque voluptatem. Amet eius sed modi quaerat. Dolore magnam amet etincidunt. Porro sit dolorem dolorem etincidunt. Modi neque voluptatem etincidunt. Tempora amet ut quiquia est ipsum.
+
+Adipisci neque sed adipisci labore. Dolore voluptatem porro adipisci etincidunt sit amet modi. Adipisci eius neque etincidunt dolore neque. Numquam modi consectetur magnam amet numquam. Sed neque modi quisquam dolor ut consectetur dolor.
+
+Ut sed ipsum dolore sed dolore eius sit. Sit velit non quiquia magnam dolor dolorem. Consectetur labore voluptatem sit ut tempora numquam labore. Numquam dolor sed dolore ipsum quiquia tempora. Voluptatem dolore labore sit consectetur. Magnam est dolor aliquam neque. Quaerat aliquam dolore adipisci numquam magnam voluptatem. Neque modi dolorem ut.
+--===============8661780100316543993==--

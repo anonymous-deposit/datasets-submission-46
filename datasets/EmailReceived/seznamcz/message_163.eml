@@ -1,0 +1,38 @@
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+	by smtpd-mx-64cf9bfd5f-ct6pf (smtpd/2.0.12) with ESMTP
+	id 8c8f1ca6-e779-48d1-8a5f-3be7a1d95334;
+	Mon, 25 Sep 2023 13:00:18 +0200
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 62802388566
+	for <anonymized_user@seznam.cz>; Mon, 25 Sep 2023 13:00:16 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=seznamcz.email-sender-1.example;
+	s=dkim; t=1695639616; h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=Y5+vxfFYhnpql84wpu6hj9AH/lV2GGfw3CMgz0uRmMk=;
+	b=s3+LxZBexBatASlzI53Rx5RjuvTUDQ/D/4X1ZujTLYFyIpKP5dUiKYaghr/TKQ7i4RmX/T
+	x5Z2k6C54uIR23mE0BiEgbyJaJdc3Et4Ra8w1jIbyaY0ru0tWF8nq/dmKSiWm6UkrETuup
+	IXdKjNwVVyUtPSzV6nZZdGPCey55OQs=
+Content-Type: multipart/alternative; boundary="===============0630903873815976853=="
+MIME-Version: 1.0
+Subject: Email Research Testing Dmarc configuration - SPK OK - DKIM OK- 13:00:15.728395
+From: goodrua@seznamcz.email-sender-1.example
+To: anonymized_user@seznam.cz
+Date: Mon, 25 Sep 2023 13:00:15 +0200
+message-id: <169563961572.19703.16089021560527886106@seznamcz.email-sender-1.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============0630903873815976853==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Est quiquia ut magnam. Velit amet amet tempora dolore. Adipisci numquam voluptatem modi dolorem ipsum. Dolor dolore numquam ipsum amet neque velit etincidunt. Eius neque labore sit magnam ut. Numquam voluptatem eius tempora dolor quiquia modi. Aliquam dolore sit tempora voluptatem ipsum amet sed. Quiquia non velit quaerat.
+
+Velit velit ipsum labore. Neque porro dolorem voluptatem. Quiquia modi quiquia dolor dolore. Neque eius modi sed quisquam. Eius ipsum etincidunt consectetur magnam. Numquam voluptatem porro porro eius est modi dolorem. Tempora sit dolore porro consectetur magnam. Voluptatem consectetur modi numquam sit adipisci numquam est.
+
+Magnam est etincidunt etincidunt ipsum numquam dolore est. Non quisquam ut dolore voluptatem tempora est modi. Etincidunt quisquam quisquam etincidunt aliquam. Ipsum quiquia numquam eius quaerat modi sit. Quisquam adipisci quiquia quisquam porro numquam dolorem velit. Eius velit ipsum modi. Quiquia quaerat quaerat sit. Consectetur dolore quisquam modi etincidunt adipisci ipsum. Adipisci numquam numquam aliquam labore.
+
+Amet porro est non est eius dolorem. Quisquam dolorem ipsum ipsum. Modi etincidunt labore dolor labore quiquia non. Voluptatem quiquia voluptatem velit. Quaerat est quisquam sit. Porro dolor sit quisquam sed amet sed dolorem. Consectetur porro voluptatem tempora aliquam est numquam sit.
+
+Tempora modi tempora numquam est. Etincidunt amet dolore sit velit. Neque dolore voluptatem sit porro tempora quiquia. Porro labore velit aliquam tempora amet dolor. Eius etincidunt sed dolore. Dolorem labore consectetur sit porro aliquam dolorem.
+
+Neque dolorem quaerat dolor quisquam voluptatem. Sed magnam tempora aliquam est consectetur dolore aliquam. Magnam magnam amet quisquam. Dolore sed ipsum modi neque. Quaerat eius velit tempora. Numquam non numquam quaerat porro consectetur ut. Adipisci quiquia ipsum etincidunt etincidunt. Tempora ut ut etincidunt voluptatem. Porro eius voluptatem quiquia labore sit eius dolor.
+--===============0630903873815976853==--

@@ -1,0 +1,104 @@
+Return-Path: <goodrua@gmxnet.email-sender-4.example>
+Authentication-Results:  gmx.net; dkim=pass header.i=@gmxnet.email-sender-4.example
+Received: from mail.mail-server.example ([XX_ANONYMIZED_IP_MAIN_A_XX]) by mx-ha.gmx.net (mxgmx108
+ [XX_ANONYMIZED_IP4_4dc3b51cfb4f70_XX]) with ESMTPS (Nemesis) id 1MET3K-1qrrVC2tA2-0066Ar for
+ <anonymized_user@gmx.net>; Mon, 25 Sep 2023 13:24:16 +0200
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 36681388566
+	for <anonymized_user@gmx.net>; Mon, 25 Sep 2023 13:24:16 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmxnet.email-sender-4.example;
+	s=dkim; t=1695641056; h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=JFuSIisN3LjhE2GFXkT+/gXzR4EyhSeBZLl/Trc8FYI=;
+	b=jocyanADFwDnj5d72r1w/FlzK7IxVoWu73d+0+lFrKBWbbsOVD7+N/wztLSvsLoxmxgt7l
+	ZYivAGUCgqwkDk9vvYLZgUK2qNlNpuhGEXozp9UgdWyc/IClpuEjBGdRqVLCZm9XuXLOyU
+	g9r0Gw+AACSrAZHI34VbIw0Kb3N500A=
+Content-Type: multipart/alternative; boundary="===============9067722455013215546=="
+MIME-Version: 1.0
+Subject: gmxnet Email Research Testing Dmarc configuration - SPK OK - DKIM OK- 13:24:15.883848
+From: goodrua@gmxnet.email-sender-4.example
+To: anonymized_user@gmx.net
+Date: Mon, 25 Sep 2023 13:24:15 +0200
+message-id: <169564105588.19703.4156151270265835766@gmxnet.email-sender-4.example>
+X-Last-TLS-Session-Version: TLSv1.3
+Envelope-To: <anonymized_user@gmx.net>
+X-GMX-Antispam: 20 (nemesis spam protection); Detail=V3;
+X-Spam-Flag: YES
+UI-InboundReport: junk:10;M01:P0:g7Pe2dv0jRg=;Qr3n4okBrv3iC4fAgT2p3MDR21bP+x
+ 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
+ yA78XZK3jg==
+
+--===============9067722455013215546==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Etincidunt porro ipsum dolorem. Velit neque etincidunt adipisci. Dolore aliquam quiquia magnam quiquia magnam amet labore. Consectetur labore sit quiquia ipsum velit quiquia voluptatem. Ut dolor quisquam sed tempora.
+
+Quiquia sed dolore magnam magnam. Ipsum quiquia aliquam sed voluptatem labore. Ut tempora magnam velit aliquam. Sed voluptatem ut modi magnam. Adipisci labore tempora neque neque dolore quaerat ipsum. Etincidunt eius magnam numquam non. Est non magnam dolor modi. Dolor quisquam sit dolore sed.
+
+Etincidunt aliquam quisquam eius neque dolor. Magnam magnam ut magnam sed non. Numquam modi sit tempora tempora etincidunt non. Est ipsum ipsum ipsum consectetur amet consectetur. Etincidunt dolor numquam quisquam eius. Modi consectetur voluptatem labore eius aliquam. Tempora dolore aliquam magnam quaerat magnam neque.
+
+Magnam dolore amet ut eius magnam quiquia. Quisquam aliquam numquam quisquam non magnam tempora. Neque tempora quisquam neque numquam. Magnam amet dolore quaerat. Neque ipsum porro modi ipsum quiquia ipsum. Est dolorem labore non quiquia dolor eius aliquam. Quaerat quiquia amet neque.
+
+Modi ut sit non quisquam est. Quiquia tempora neque dolore amet dolorem eius. Quaerat dolor etincidunt voluptatem dolorem quiquia labore adipisci. Velit non tempora modi adipisci amet dolorem. Aliquam consectetur ipsum quisquam quisquam est. Aliquam quiquia velit velit adipisci. Adipisci dolorem etincidunt sed velit consectetur ipsum neque. Dolore labore neque amet amet neque numquam. Velit etincidunt adipisci eius magnam magnam eius.
+--===============9067722455013215546==--

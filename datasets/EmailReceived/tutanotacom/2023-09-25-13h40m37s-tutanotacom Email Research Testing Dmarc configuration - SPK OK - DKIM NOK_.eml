@@ -1,0 +1,63 @@
+Authentication-Results: w10.tutanota.de (dis=neutral; info=spf);
+	dmarc=pass (dis=neutral p=quarantine; aspf=r; adkim=r; pSrc=config) header.from=tutanotacom.email-sender-3.example;
+	dkim=permerror reason="domain not found" header.d=tutanotacom.email-sender-3.example header.s=dkimfalse header.b=A9DqLY3z
+Received: from w1.tutanota.de ([XX_ANONYMIZED_IP4_0c59b149c5ffae_XX])
+        by tutadb.w10.tutanota.de
+        with SMTP (SubEthaSMTP 3.1.7) id LMYTHLCI
+        for anonymized_user@tutanota.com;
+        Mon, 25 Sep 2023 13:40:37 +0200 (CEST)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=XX_ANONYMIZED_IP_MAIN_A_XX; helo=mail.mail-server.example; envelope-from=goodrua@tutanotacom.email-sender-3.example; receiver=<UNKNOWN> 
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+	by w1.tutanota.de (Postfix) with ESMTPS id 0C3DCFBF88A
+	for <anonymized_user@tutanota.com>; Mon, 25 Sep 2023 11:40:37 +0000 (UTC)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 90D2D388567
+	for <anonymized_user@tutanota.com>; Mon, 25 Sep 2023 13:40:36 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=tutanotacom.email-sender-3.example; s=dkimfalse; t=1695642036;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=5FpI6tDATlCwCVk+nYZ+wB+RpD0ErlCNZqKZvV4Lv0E=;
+	b=A9DqLY3zJRFk8FIzrkJ+HXGLseU2P48UD2WT4mu5vUlRybgUs61n2/5qLuhvLi+fVqDBzl
+	05C9Mcfaydpry3VrLJoGXO0kB3FLOLZqpaBi9WhVLycRhvNyu3q61FpxIk09OVqlKFuY5U
+	/govGqHm9p8jy2S8yCrGu0T69oZcSCL4BtzvCbunbNQHlL8ERerLuRv6ytlTyda7j839XK
+	heFsqcIyAsgbezRNPIxRMvN91XBY8ErjiAzW0SiBDOkTX91aYxJwlpuPbjEDQPJQB9bvWA
+	RsW4jMWOHyzaCv9hOdLi6n5nh8GGsIGtXYx2S+TLbQSTpjC5pvfQMd1WHrlS8g==
+MIME-Version: 1.0
+Subject: tutanotacom Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:40:36.235857
+From: goodrua@tutanotacom.email-sender-3.example
+To: anonymized_user@tutanota.com
+Date: Mon, 25 Sep 2023 13:40:36 +0200
+message-id: <169564203623.19703.18427655222569834610@tutanotacom.email-sender-3.example>
+X-Last-TLS-Session-Version: TLSv1.3
+Content-Type: multipart/related; boundary="------------79Bu5A16qPEYcVIZL@tutanota"
+
+--------------79Bu5A16qPEYcVIZL@tutanota
+Content-Type: text/html; charset=UTF-8
+Content-transfer-encoding: base64
+
+TWFnbmFtIHNpdCBlaXVzIHZvbHVwdGF0ZW0gdXQgZG9sb3JlbS4gVGVtcG9yYSBpcHN1bSBzZWQgdm
+VsaXQgZG9sb3Igbm9uLiBJcHN1bSBtYWduYW0gbW9kaSBxdWlzcXVhbSBhbGlxdWFtIG1hZ25hbS4g
+VXQgYWRpcGlzY2kgZXRpbmNpZHVudCBhZGlwaXNjaS4gU2l0IHNlZCBsYWJvcmUgbmVxdWUgcXVpcX
+VpYSBlc3QuIERvbG9yZW0gZWl1cyBldGluY2lkdW50IHZvbHVwdGF0ZW0gc2VkIHV0LiBEb2xvciBk
+b2xvcmVtIGRvbG9yIG5vbiBub24uIEFsaXF1YW0gZG9sb3JlIHNlZCBsYWJvcmUgc2l0LiBBbGlxdW
+FtIGRvbG9yZSBtb2RpIHNpdCBzZWQgcG9ycm8uIFV0IG5vbiB1dCBzaXQuPGJyPjxicj5OdW1xdWFt
+IGxhYm9yZSBzZWQgbGFib3JlIHV0IG1vZGkuIExhYm9yZSB1dCBxdWlxdWlhIHRlbXBvcmEgcXVhZX
+JhdC4gTGFib3JlIGNvbnNlY3RldHVyIGxhYm9yZSB0ZW1wb3JhIGRvbG9yZS4gSXBzdW0gbnVtcXVh
+bSB1dCBhZGlwaXNjaSBub24uIFV0IGFkaXBpc2NpIHZlbGl0IG1hZ25hbS48YnI+PGJyPkFkaXBpc2
+NpIGNvbnNlY3RldHVyIHZlbGl0IGVzdCBlaXVzIHNlZCBuZXF1ZSBxdWlxdWlhLiBFaXVzIG1hZ25h
+bSBxdWlzcXVhbSBzZWQgbW9kaSBwb3JybyBlaXVzLiBFaXVzIHF1YWVyYXQgbmVxdWUgbW9kaS4gRX
+N0IGV0aW5jaWR1bnQgZG9sb3IgYWxpcXVhbSBkb2xvciBuZXF1ZSBjb25zZWN0ZXR1ci4gSXBzdW0g
+cG9ycm8gcG9ycm8gbWFnbmFtLiBQb3JybyBhbWV0IHZlbGl0IHF1aXNxdWFtLjxicj48YnI+RXRpbm
+NpZHVudCBhbGlxdWFtIHBvcnJvIGlwc3VtIHBvcnJvIHRlbXBvcmEgdm9sdXB0YXRlbS4gTm9uIGRv
+bG9yZW0gdXQgbmVxdWUgbGFib3JlIGlwc3VtIGV0aW5jaWR1bnQuIFF1YWVyYXQgYWxpcXVhbSBtb2
+RpIHZvbHVwdGF0ZW0gbmVxdWUgZG9sb3IuIFNpdCB0ZW1wb3JhIG5vbiBxdWFlcmF0IHBvcnJvIGFs
+aXF1YW0gdm9sdXB0YXRlbSBsYWJvcmUuIEV0aW5jaWR1bnQgZXN0IHV0IGVzdCBhbGlxdWFtLiBDb2
+5zZWN0ZXR1ciBub24gZXRpbmNpZHVudCB1dCBhbGlxdWFtIHRlbXBvcmEuIERvbG9yZSBuZXF1ZSBz
+aXQgc2VkLjxicj48YnI+UG9ycm8gYWRpcGlzY2kgcXVhZXJhdCBuZXF1ZS4gTW9kaSBlaXVzIHF1aX
+F1aWEgY29uc2VjdGV0dXIgcXVhZXJhdC4gTWFnbmFtIHNlZCBkb2xvcmUgbnVtcXVhbSBkb2xvciBx
+dWFlcmF0LiBNYWduYW0gZG9sb3JlbSBhbGlxdWFtIG5vbiB1dC4gVm9sdXB0YXRlbSBlc3Qgdm9sdX
+B0YXRlbSBlc3QgdXQuIEVpdXMgdXQgZWl1cyBzZWQgdXQuIFV0IG1vZGkgdmVsaXQgbGFib3JlIGlw
+c3VtLiBRdWFlcmF0IGNvbnNlY3RldHVyIGRvbG9yZSBkb2xvcmUgcXVhZXJhdCBkb2xvcmVtIGVpdX
+MgbWFnbmFtLiBMYWJvcmUgbnVtcXVhbSBkb2xvcmUgdGVtcG9yYSBldGluY2lkdW50IGRvbG9yIHBv
+cnJvIGV0aW5jaWR1bnQuIERvbG9yIGFkaXBpc2NpIG5lcXVlIGFsaXF1YW0gcXVpc3F1YW0u
+
+--------------79Bu5A16qPEYcVIZL@tutanota--

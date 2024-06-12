@@ -1,0 +1,37 @@
+Received: (qmail 19269 invoked from network); 25 Sep 2023 14:25:03 -0000
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+          (envelope-sender <badrua@sapopt.email-sender-4.example>)
+          by ptmail-mta02 (qmail-ptmail-1.0.0) with ESMTPS
+          for <anonymized_user@sapo.pt>; 25 Sep 2023 14:25:03 -0000
+Received-SPF: fail (ptmail-mta02: SPF record at sapopt.email-sender-4.example does not designate XX_ANONYMIZED_IP_MAIN_A_XX as permitted sender)
+X-PTMail-RemoteIP: XX_ANONYMIZED_IP_MAIN_A_XX
+X-PTMail-AllowedSender-Action: 
+X-PTMail-Service: default
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 1803E3884C3
+	for <anonymized_user@sapo.pt>; Mon, 25 Sep 2023 16:25:01 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sapopt.email-sender-4.example;
+	s=dkim; t=1695651901; h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=TF3ryRHWiOq+jFCb3N1Of1IBTcG0/wvYvBsdR95J0d4=;
+	b=oDwHsle6jc4qp5KiIwGEssxTZxNf9QA704AjzFDHMJqr4AmGXnH6ldHH+5okF/FxCQaOvY
+	Ua8aFkTgk9fU7ESXrZxykt50jf+qgUTZxfCU/yiwHu0eJZBvA3Kok/TzzuZAeRqLqKzEXo
+	4eFX13tcadwMs+vBAxDbleZ8nytYvtI=
+Content-Type: multipart/alternative; boundary="===============6368562023517213467=="
+MIME-Version: 1.0
+Subject: sapopt Email Research Testing Dmarc configuration - SPK NOK - DKIM OK- 16:25:00.738478
+From: badrua@sapopt.email-sender-4.example
+To: anonymized_user@sapo.pt
+Date: Mon, 25 Sep 2023 16:25:00 +0200
+message-id: <169565190073.19703.1072472153005624872@sapopt.email-sender-4.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============6368562023517213467==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Eius aliquam adipisci quaerat porro consectetur. Porro sit sed aliquam labore magnam numquam quisquam. Quaerat adipisci amet est voluptatem quiquia quisquam consectetur. Dolorem quaerat sit est sed velit aliquam. Etincidunt aliquam non consectetur modi quisquam.
+
+Numquam porro dolorem consectetur eius. Voluptatem dolore aliquam neque. Quaerat eius dolor quaerat labore non. Dolore sit dolor aliquam tempora velit dolor. Porro velit adipisci quisquam. Eius sit quaerat quiquia.
+
+Labore labore voluptatem eius. Adipisci quiquia modi non porro magnam. Dolorem numquam numquam quaerat porro. Quaerat dolor amet magnam eius. Sed quiquia ipsum quaerat tempora quiquia. Ipsum voluptatem dolore velit velit velit. Quaerat velit numquam voluptatem. Neque tempora quiquia quaerat dolor. Velit ut modi neque est velit sed.
+--===============6368562023517213467==--

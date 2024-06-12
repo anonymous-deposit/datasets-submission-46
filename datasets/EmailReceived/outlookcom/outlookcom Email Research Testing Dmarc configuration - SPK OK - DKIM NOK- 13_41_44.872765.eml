@@ -1,0 +1,139 @@
+Received: from GV2PR09MB6014.eurprd09.prod.outlook.com (XX_ANONYMIZED_IP6_469c48420de2b3_XX)
+ by AM6PR09MB3539.eurprd09.prod.outlook.com with HTTPS; Mon, 25 Sep 2023
+ 11:41:51 +0000
+Received: from DS7PR03CA0068.namprd03.prod.outlook.com (XX_ANONYMIZED_IP6_9f13d9f7b67403_XX)
+ by GV2PR09MB6014.eurprd09.prod.outlook.com (XX_ANONYMIZED_IP6_469c48420de2b3_XX) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6813.20; Mon, 25 Sep
+ 2023 11:41:49 +0000
+Received: from DS3PEPF000099D9.namprd04.prod.outlook.com
+ (XX_ANONYMIZED_IP6_3e7a2993f50e1a_XX) by DS7PR03CA0068.outlook.office365.com
+ (XX_ANONYMIZED_IP6_9f13d9f7b67403_XX) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6792.35 via Frontend
+ Transport; Mon, 25 Sep 2023 11:41:48 +0000
+Authentication-Results: spf=pass (sender IP is XX_ANONYMIZED_IP_MAIN_A_XX)
+ smtp.mailfrom=outlookcom.email-sender-2.example; dkim=fail (no key for
+ signature) header.d=outlookcom.email-sender-2.example;dmarc=pass
+ action=none header.from=outlookcom.email-sender-2.example;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of
+ outlookcom.email-sender-2.example designates XX_ANONYMIZED_IP_MAIN_A_XX as permitted
+ sender) receiver=protection.outlook.com; client-ip=XX_ANONYMIZED_IP_MAIN_A_XX;
+ helo=mail.mail-server.example; pr=C
+Received: from mail.mail-server.example (XX_ANONYMIZED_IP_MAIN_A_XX) by
+ DS3PEPF000099D9.mail.protection.outlook.com (XX_ANONYMIZED_IP4_00cbac738cdf91_XX) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6838.14 via Frontend Transport; Mon, 25 Sep 2023 11:41:47 +0000
+X-IncomingTopHeaderMarker:
+ OriginalChecksum:7AAA4789D973ADE71F836E1AB51BAC17165DCE0C7D9EB4C2A33D704B6210412C;UpperCasedChecksum:BF1031951751C72DCEB5FCE25F02167E2D76D2491860BF2442E2679289F44C76;SizeAsReceived:1236;Count:10
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 102BD388567
+	for <anonymized_user@outlook.com>; Mon, 25 Sep 2023 13:41:45 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=outlookcom.email-sender-2.example; s=dkimfalse; t=1695642106;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=7OZewVQWinKG2dFu0Uz7sx9rfgqACVShIlxOwNBAhqw=;
+	b=zYtb4NYeD7EXRHE++MP2Kcl5eC0wl05j7eKKghoc2qbYYLjySRiEW2z3WojdYkILHB0qRq
+	9e6vN2X3iRzOS6bH3qTtjmIA0JWJS3JNohL/ENDbstkLIfoP7fpsX1BG4jsGQfjcvllpOu
+	sB/4ZxXMOaIUJPV6zSca/2MMjFCtJ3aLpxdDFKGFLHRciTSE9d3obp873ISkOrzrfxPyXT
+	5bYlyozfm/O9/AnnB4iZs9+1iNbaGt7bDl9ka2JKb8vmGf//oxgQFeT+EFZhkKw2SvNCTb
+	rGOaAlM/4Kp01SL3SnBRqxMJsz94FPLZUQgBnGdVCBfBHqYvTDb+ZNuCSE8dvw==
+Content-Type: multipart/alternative; boundary="===============1034007026438225883=="
+Subject: outlookcom Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:41:44.872765
+From: goodrua@outlookcom.email-sender-2.example
+To: anonymized_user@outlook.com
+Date: Mon, 25 Sep 2023 13:41:44 +0200
+message-id: <169564210487.19703.7108057318632248094@outlookcom.email-sender-2.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-IncomingHeaderCount: 10
+Return-Path: goodrua@outlookcom.email-sender-2.example
+X-MS-Exchange-Organization-ExpirationStartTime: 25 Sep 2023 11:41:47.7752
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 0eabe3ec-a16c-4836-daf2-08dbbdbc66b5
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DS3PEPF000099D9:EE_|GV2PR09MB6014:EE_|AM6PR09MB3539:EE_
+X-MS-Exchange-Organization-AuthSource:
+ DS3PEPF000099D9.namprd04.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 9/25/2023 11:22:03 AM
+X-MS-Office365-Filtering-Correlation-Id: 0eabe3ec-a16c-4836-daf2-08dbbdbc66b5
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: XX_ANONYMIZED_IP_MAIN_A_XX
+X-SID-PRA: GOODRUA@OUTLOOKCOM.email-sender-2.example
+X-SID-Result: PASS
+X-MS-Exchange-Organization-PCL: 2
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 25 Sep 2023 11:41:47.4627
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 0eabe3ec-a16c-4836-daf2-08dbbdbc66b5
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource:
+ DS3PEPF000099D9.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: GV2PR09MB6014
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.4551119
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6813.027
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:1;dest:J;OFR:SpamFilterAuthJ;ENG:(5062000305)(920221119095)(90000117)(920221120095)(90005022)(91005020)(91035115)(9050020)(9100341)(944500132)(2008001134)(2008121020)(4810010)(4910033)(9610028)(9560006)(10180021)(9320005)(9245025)(120001);RF:JunkEmail;
+X-Message-Info:
+	6hMotsjLow8tCacANDFIP3NuKJ619l7gfU5PSmsS7NlP8RlJCzIcTgjBQyTF7PvOShu5Bvgb99+2Kb6e8K8P7TpWzeYhsS6Fv7pQAR/xbxRpzr5mvxooiNbLk3K5foYcWLpg+6sT1FbEo7gILEcOlE/w77K+2YcMEjqTsBFWFBZdwm9mjsQYS+1QT7NYxxG8O9/y0n5bdT6jhxIIsJSRqg==
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0wO0Q9MjtHRD0yO1NDTD02
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?GY+UMsfGkLhDYotCcr/2SFXFIvD/0hx+28kNyrPl9J6v4crLjVbYxV8lAWNR?=
+ =?us-ascii?Q?bSZvMBEgkMtdlo8vxZHcEmk8OkN6mCFfcf24/FvHpvAgMLLwMPbF5aBR2uem?=
+ =?us-ascii?Q?ag3nvKr1tlT9Ef8h/mRxZL8j+FHv3ZItPyS3RF6AqqSNAX5dWjNn1FP4Hlcx?=
+ =?us-ascii?Q?M7FJsxPh9vZtOOv9U/MC1N6VoBA+WPGcHdEjVwmXgmQBlGBAeAxm0gnMxtT7?=
+ =?us-ascii?Q?nIEDByUKKsijUMY4Frfc/Xd8TmWNSBXC5vZXjduZslQFiPzoK6rLr/TuV/UV?=
+ =?us-ascii?Q?adu2b0hsXcBmjOeTwCry4+ai2Dq010aQxKzIKpvpmPXD/HetQOHbnXGZw2GO?=
+ =?us-ascii?Q?YD1KdjlOEZVQFPk/JqRjaCw44+LA0t7gNtjSsOlHYhHqai4eXpy5B2hIKpWR?=
+ =?us-ascii?Q?oFApc0BfWz/qg2OErCwUeA4gG5cnwN0Wn+buR87peGu/6MFxwzhRS+7XI9QB?=
+ =?us-ascii?Q?jqndyloazQUNax+eX5mYOlr7KAMhzqwu+aOQFn4hFwsdsRbnZmt1x26J08Pn?=
+ =?us-ascii?Q?Y+8ltWbbDQGxdHXQK6BeIjxqui5wXsJQNqZzAasdo2uVZi5dEYfzdHivZutO?=
+ =?us-ascii?Q?/Mn80E5+nv2hsOjM+XWp9Cx27P03GWbWZT/3Re1xk1ylGSC0S7/mDiBZY47E?=
+ =?us-ascii?Q?oIOtAu1DnJexxjD4m+r5jzuT7hboAxYsb3raFqWn3QKGbwjxSrKGgtFWH6yj?=
+ =?us-ascii?Q?zpPzoJIg2N6R1IotfxXv0nIMZjs3PA/dXV8j9bNi8AoZ+7rs87AfwH9zeSgf?=
+ =?us-ascii?Q?Yq6NEbxemMt2i0VRiS/ZRUR2sC+gbUNEnrXrA4wTvrDN5NtgS4NZTe3eTrt6?=
+ =?us-ascii?Q?xgpUPfD+1TQgpjALiHuzcK/OZoOAAb5Y8mUiY0BPuxkH/9i8hOdl1z5L+T+1?=
+ =?us-ascii?Q?yh5H32F70+cHFZMyUwRjG7llQOOTGXswgV1Ntwq1HMeeWs6RdZJfaASk4Xok?=
+ =?us-ascii?Q?x5O2fRpgaHCZUpIhBXV7NShmGhNRpQMwi0Z3zaOE9yi/b0Yej/Kz76nBq3xx?=
+ =?us-ascii?Q?Ah8Mp2nbvbqivsYE/MDR95g2wlMiT2Llp6uJXMqW/IewqLUYGwfnNWWRSudS?=
+ =?us-ascii?Q?EJMvKYjtd3+VnZFU/Zb8Zrld/sL4u4ARv8STnPsaPo5OVIvjlGh6E0zWeDso?=
+ =?us-ascii?Q?tvz0ycl8Def4ehXeSesD3lo3K7giykT53WjW4qS3p4ofb+chD4lsdXorqM6U?=
+ =?us-ascii?Q?vR9E/RjPVRV4ML9flPYFhZGNF8O9kJN/667AyMNMVV7g5Ks2P2ik8ImPPUDp?=
+ =?us-ascii?Q?V1AHWWbwJaYT1vyxPgSZKuZNFxApzPy2jkpDIz5KKoWuBTDobC7gLfKuEZio?=
+ =?us-ascii?Q?xx/GgGZBbwfclmmOYQOXsYV73OWmlmncpjCD6JDEISkeYW0+3xxBqqyrTNz1?=
+ =?us-ascii?Q?LidOurOiq3GBy3yWn/xA2UarAfnpOsdxA5IysfmrkZ4a704+Ct7y6ukW4kKd?=
+ =?us-ascii?Q?eMk3mTkpn8AZvayGyZhaS6B60xdJduS+fdJlRsH6FKrn6PAF0SFpccMiv3G4?=
+ =?us-ascii?Q?VDlk+nl/KYv0nLRTfK/tSIE0/QZcw7PmhYcXODO1ECgrjPXgT9gbHBVlXDNj?=
+ =?us-ascii?Q?/pZ6ou+UHoNXkKSea4k6e7j0AH2nIm9crNVdvQYxsdO41MRF0TlEgmKqPnKB?=
+ =?us-ascii?Q?Xq0er0mUKPEQJRS7V/R4v3p+EHow0GQZFuDnHTqacjkgnXcQWRK7A+TY5ZLl?=
+ =?us-ascii?Q?dyaoK6VDQ73UlhZ9/vhGwsoyIiKB56hBKuLIFYOrxhZKlj8LPvxFd13rwrD8?=
+ =?us-ascii?Q?mBBuoaO0sqQ+FJfXlfgLah88OKCjZspRYHVq+jVYiB8k+CMlt0DqPy56CXo7?=
+ =?us-ascii?Q?+/ZFbicE/7jRDyiqm0/2htGErR8sNlBkivCPLJTokuaH5S2Kd+Ql4CPlFjlq?=
+ =?us-ascii?Q?wZA/fzYTHFmyga2nm5WR/WWUmvITwjY64I1H8CIt96/5CvWWCTQ2eke/dfgR?=
+ =?us-ascii?Q?lf0G5Uk8JWvWokuqa6eHSQjgcce/wjtEKUxj5MSk+puBAbwV8B8z+TazwFfP?=
+ =?us-ascii?Q?diPA8RuDqtjX3SRK5yJq3UC9N05A2rOJ+s+a+qeK7CqeFS/yU89HWi3DjQTL?=
+ =?us-ascii?Q?s2Za9ouZ?=
+MIME-Version: 1.0
+
+--===============1034007026438225883==
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+Porro numquam dolorem sit quisquam. Dolor sed aliquam consectetur numquam amet. Voluptatem velit velit modi. Est etincidunt numquam quisquam dolore eius. Velit aliquam dolore ipsum voluptatem dolorem aliquam tempora. Labore ipsum labore quaerat ipsum velit dolore. Modi aliquam ut ipsum consectetur labore labore modi. Labore consectetur ut ut amet voluptatem. Tempora labore non voluptatem.
+
+Tempora dolor numquam quaerat numquam. Eius ut voluptatem sed voluptatem velit dolorem eius. Voluptatem velit sit tempora. Etincidunt aliquam adipisci amet sed ut modi ut. Etincidunt tempora quisquam aliquam dolorem consectetur ipsum sit. Ut modi ipsum tempora porro. Tempora voluptatem numquam dolorem. Velit tempora neque labore tempora quisquam. Sit non eius adipisci aliquam non. Porro sit magnam velit est.
+
+Ut etincidunt neque quiquia. Est porro amet neque quiquia dolorem ipsum. Modi sit eius est non eius aliquam. Consectetur voluptatem adipisci voluptatem modi numquam consectetur. Quaerat etincidunt velit dolore amet. Consectetur magnam labore dolor voluptatem quisquam eius.
+--===============1034007026438225883==--

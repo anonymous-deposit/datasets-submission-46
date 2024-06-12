@@ -1,0 +1,107 @@
+Return-Path: <noreply-dmarc-reporting@corp.mail.ru>
+Delivered-To: anonymized_user@control-domain.example
+Received: from mail.control-domain.example
+ ([XX_ANONYMIZED_IP6_f610825ba7068c_XX])	by 2f2ac2470a58 with LMTP	id
+ EBgLCVWSEmU8NxQA1oC5Bg	(envelope-from <noreply-dmarc-reporting@corp.mail.ru>)
+	for <anonymized_user@control-domain.example>; Tue, 26 Sep 2023 10:12:05 +0200
+Received: from relay3.m.smailru.net (relay3.m.smailru.net
+ [XX_ANONYMIZED_IP4_c17aa79f669bfa_XX])	(using TLSv1.2 with cipher
+ ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))	(No client certificate requested)
+	by mail.control-domain.example (Postcow) with ESMTPS id 107C15201DB	for
+ <rua@control-domain.example>; Tue, 26 Sep 2023 10:11:58 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=corp.mail.ru; s=mail4;	=?utf-8?q?h=3DDate=3AMessage-ID=3ATo=3AFrom=3ASubj?=
+ =?utf-8?q?ect=3AMIME-Version=3AContent-Type=3AFrom=3ASubject=3AContent-Type?=
+ =?utf-8?q?=3AContent-Transfer-Encoding=3ATo=3ACc=3B?=
+ bh=/Clyb+bJ70cOVBqtv9zOgTgmgVxhqftbXWlk8RLidQg=;	t=1695715919;x=1695805919; 	
+ =?utf-8?q?b=3DCscU9x+Y/C7v/sJUHOxTuZH3OWjSBtXm6+p47ZIvM2SpfTQTm7ziui4w+dExT?=
+ =?utf-8?q?tpy7YDDZx8UTkzsu+n6nj154qPTqMP2S4/RYpUtjlY+F7M/60kwO1L0MlrGVToeZ2?=
+ =?utf-8?q?xdwMUQ6UPssOGEYUdp9eCDXAPQfN2KtTeWCWpjVqWTxgtn88vVVItDFFRbZCfnGU7?=
+ =?utf-8?q?2NnHU+u6nGnsONixKyXMzt5gfmHA9N/dXYiexVAO+/mDC4PbFPNWFXO67PqWSZMbT?=
+ =?utf-8?q?Z2IKSkLSNqz+RdtvOImb7kACLM6jdOlzn2LrRrXwdAIm2r2xDbaNEsLYWhxlVy4tF?=
+ =?utf-8?q?8ZDfRHFNXz/k2LQ3PxqSw=3D=3D=3B?=
+Received: from [XX_ANONYMIZED_IP4_51813b22db2f3f_XX] (port=36020 helo=60)	by
+ relay3.m.smailru.net with esmtp (envelope-from
+ <noreply-dmarc-reporting@corp.mail.ru>)	id 1ql3Af-0005Ga-Bg	for
+ rua@control-domain.example; Tue, 26 Sep 2023 11:11:53 +0300
+Content-Type: multipart/mixed; boundary="===============5179742996658719785=="
+MIME-Version: 1.0
+From: dmarc_support@corp.mail.ru
+To: rua@control-domain.example
+Message-ID: <dmarc-1695715913@corp.mail.ru>
+Date: Tue, 26 Sep 2023 11:11:53 +0300
+Auto-Submitted: auto-generated
+ARC-Authentication-Results: i=1;	mail.control-domain.example;	dkim=pass
+ header.d=corp.mail.ru header.s=mail4 header.b=CscU9x+Y;	dmarc=pass
+ (policy=reject) header.from=corp.mail.ru;	spf=pass
+ (mail.control-domain.example: domain of noreply-dmarc-reporting@corp.mail.ru
+ designates XX_ANONYMIZED_IP4_c17aa79f669bfa_XX as permitted sender)
+ smtp.mailfrom=noreply-dmarc-reporting@corp.mail.ru
+ARC-Seal: i=1; s=dkim; d=control-domain.example; t=1695715920; a=rsa-sha256;
+ cv=none;
+	b=mVl/YcMZ0QXp0LB9S/Jt53hdiU37YfF4AOAkmE06pOwlOXXxdzMiGtwyMKxna7eEzZDrQL
+	Rli+lKp4Ddlnuz1H9dlpOVeW6xW/YNVpNvoq2SQiPB6z4sQd8CF3DTqoWPtWQGpHiUte15
+	9Fry1Lb9YY6fnDdtXnoh40kiFvu7g71GK5LIqaWem0ttMMDZ4a2EGZZ3Q8eyKzokCvATSL
+	dl3UKD78SlOC8H6ctj1mGZs1b1U89Qq01HYkaOv0MS/yMmgyO0kbnPFkx2kFOU0MLBjrht
+	e6pgOtnWKxeeEGiityTye9FjWEsJNhSiLnoU0jkYVdsvenYfJeZv0TOM2TUO/w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=control-domain.example;	s=dkim; t=1695715920;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:	
+ to:to:cc:mime-version:mime-version:content-type:content-type:	
+ dkim-signature; bh=/Clyb+bJ70cOVBqtv9zOgTgmgVxhqftbXWlk8RLidQg=;
+	b=kGiMoG3xXKSE7gQKXlo2LtxWIho0ai/4PdVHsU8JyA1EeBlbpXqoLilEt891zb5TsfVfMd
+	r+0lUsouN9d4iXEE3BJShp777ZHnfFwuBQN5nxiQvDnHxW5Ble8NlnZicyM8uL9SRobuu1
+	rPMkC4Bz+5xbl7sc2ABC5W+lY3fHfgtj4HNSNQbmIuYIGx2XX7MvXZy5mqnKK9Ml0Tyiqm
+	vTiYY8VesgGas47TLk13Ojrmfks4Mi9W/QHOobbgD+3Q9EItknWMFdWp88CFchGEvUBWJM
+	+BFvglNz/zxyLnYVqgTL7zSnUOze9EMROZS47ay1etRpVXWEZaHyxH+Sx4uGeA==
+X-Last-TLS-Session-Version: TLSv1.2
+X-Rspamd-Queue-Id: 107C15201DB
+Authentication-Results: mail.control-domain.example;	dkim=pass
+ header.d=corp.mail.ru header.s=mail4 header.b=CscU9x+Y;	dmarc=pass
+ (policy=reject) header.from=corp.mail.ru;	spf=pass
+ (mail.control-domain.example: domain of noreply-dmarc-reporting@corp.mail.ru
+ designates XX_ANONYMIZED_IP4_c17aa79f669bfa_XX as permitted sender)
+ smtp.mailfrom=noreply-dmarc-reporting@corp.mail.ru
+X-Spamd-Result: default: False [0.29 / 15.00];	MIME_BASE64_TEXT_BOGUS(1.00)[];
+	DMARC_POLICY_ALLOW(-0.50)[corp.mail.ru,reject];	=?utf-8?q?FORGED=5FSENDER?=
+ =?utf-8?q?=280=2E30=29=5Bdmarc=5Fsupport=40corp=2Email=2Eru=2Cnoreply-dmarc?=
+ =?utf-8?q?-reporting=40corp=2Email=2Eru=5D=3B?=
+	R_SPF_ALLOW(-0.20)[+ip4:XX_ANONYMIZED_IP4_2c9e8dc61dc8ec_XX/20];
+	R_DKIM_ALLOW(-0.20)[corp.mail.ru:s=mail4];
+	RWL_MAILSPIKE_GOOD(-0.10)[XX_ANONYMIZED_IP4_c17aa79f669bfa_XX:from];
+	MIME_GOOD(-0.10)[multipart/mixed,text/plain];	MIME_BASE64_TEXT(0.10)[];
+	MX_GOOD(-0.01)[];	FROM_NO_DN(0.00)[];	ARC_NA(0.00)[];
+	DWL_DNSWL_NONE(0.00)[mail.ru:dkim];	BCC(0.00)[];
+	BLOCKLISTDE_FAIL(0.00)[XX_ANONYMIZED_IP4_c17aa79f669bfa_XX:query timed out];
+	TO_MATCH_ENVRCPT_ALL(0.00)[];	RCPT_COUNT_ONE(0.00)[1];
+	MID_RHS_MATCH_FROM(0.00)[];	RCVD_TLS_LAST(0.00)[];	ASN(0.00)[asn:47764,
+ ipnet:XX_ANONYMIZED_IP4_2c9e8dc61dc8ec_XX/20, country:RU];
+	ARC_SIGNED(0.00)[control-domain.example:s=dkim:i=1];	TO_DN_NONE(0.00)[];
+	HAS_ATTACHMENT(0.00)[];	=?utf-8?q?FROM=5FNEQ=5FENVFROM=280=2E00=29=5Bdmarc?=
+ =?utf-8?q?=5Fsupport=40corp=2Email=2Eru=2Cnoreply-dmarc-reporting=40corp=2E?=
+ =?utf-8?q?mail=2Eru=5D=3B?=	DKIM_TRACE(0.00)[corp.mail.ru:+];
+	MIME_TRACE(0.00)[0:+,1:+,2:~];
+	RCPT_MAILCOW_DOMAIN(0.00)[control-domain.example];
+	RCVD_IN_DNSWL_NONE(0.00)[XX_ANONYMIZED_IP4_c17aa79f669bfa_XX:from];
+	RCVD_COUNT_TWO(0.00)[2]
+Subject: Report Domain: mailru.email-sender-2.example; Submitter: Mail.Ru;
+ Report-ID: 38065469610694679941695600000
+
+--===============5179742996658719785==
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+VGhpcyBpcyBhbiBhZ2dyZWdhdGUgcmVwb3J0IGZyb20gTWFpbC5SdS4=
+
+--===============5179742996658719785==
+Content-Type: application/gzip
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+ filename*0*=us-ascii''mail.ru%21mailru.email-sender-2.example%211695600000;
+ filename*1*=%211695686400.xml.gz
+
+H4sIAJ+raWYC/+1VTY/TMBD9K3vrqXFTuqFFs14qwaGHFsSpcLFcZ9JYm9iW7Szl3zNO2tJVQWgFBwT0UM88vfl4MyMF7g9tc/OIPmhr7kZ5NhndoFG21GZ/N+piNZ6P7jlUiOVOqgcOHp31UbQYZSmj5GD9XhjZIl9L3WQfOmBnBLAljJet9EqEzqXI18p6lyU888QdGICH6KVQ1kSpotCmsryO0b1irMbmTGfpHSeEAq8jTr3pkr+YT4rbWbEo8kmxmBUvF4tZXixui0n6AftGBBKBwkuzp3Z3uNeGXxIHBNCUAzwvZglOPrDLUHY1F2cbrb4I1+0aHWpMpSz1b3gS4busVz4OlAr9eJrhQbauQco6sECWD7rlHthggAyu6t30guPGGmI7DuFkkwFORZ6nFpNB/1dNeKQFpNd+plDbeYVCO77diuXm3ebjevXp7Ruxei/Wy9VGLMV2S3nPLFC2M5FPgQ3GSSQ+yqajaSSROjgbdKRzOrZ1iUCvxckQCO9lJTWD3+ti1xlZ36ou0URdabpUDjVKmpqovG1/Ns5LKrAnWWQXa+ExdE0Mx86euaOADapoPU/BpODkwpD1KOzoXCp+bh1lHfI2iaAqvfODEsMQnypj553/ht3nv7j7ipT+fbuvZBNw+p0LGOT+v4B/4wL+/ANg5y/5V67PjZX6BwAA
+
+--===============5179742996658719785==--

@@ -1,0 +1,41 @@
+Return-Path: <goodrua@freemailhu.email-sender-3.example>
+Received: from mail.mail-server.example ([XX_ANONYMIZED_IP_MAIN_A_XX])
+    (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256 bits))
+    by fmx.freemail.hu with ESMTPS id 4RvLXt6dmnzrqC;
+    Mon, 25 Sep 2023 13:40:47 +0200
+X-fm-smtp-source: true
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 8E470388566
+	for <anonymized_user@freemail.hu>; Mon, 25 Sep 2023 13:40:40 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=freemailhu.email-sender-3.example; s=dkimfalse; t=1695642040;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=1lVQhheqvW7FGt+ANp5dPGII6w6Q+stffVpMJ2ZJXmw=;
+	b=gRVDYCi9HlAzSnlOQ5eb9eBQd3AnWYRpT4gQ1zA85tSVnxd5f9GjVpQHOsQf0CQVzWwZ8V
+	zHCZIrYzr508htuga5WyKz12UwmcsFnzn7KuJLVv+oLiKHwMCjJ5RjsYPSyUuBgBuUvPqs
+	q13bQB854TIYeIQdM5/A8UWxCi8tm3v4gI6WM10zj7YSgXRq3yUuW2hMNPvLKwYAicvhfz
+	/NS4sKCfzRYLVQ7xRGcKzAZwjt0AryjhqhDGADgWBZVMS8G+CfAVNpmmnF4ExTB6RE5y3W
+	YNQgJOGxueLN/CBgSDVvFE21NyepPgllv4x0Jxae0xwFxsyK8P7TGXQGS5+6hw==
+Content-Type: multipart/alternative; boundary="===============8599178657576248262=="
+MIME-Version: 1.0
+Subject: freemailhu Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:40:40.201982
+From: goodrua@freemailhu.email-sender-3.example
+To: anonymized_user@freemail.hu
+Date: Mon, 25 Sep 2023 13:40:40 +0200
+message-id: <169564204020.19703.11052332311740007345@freemailhu.email-sender-3.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-VR-SPAMSTATE: OK
+X-VR-SPAMSCORE: 51
+X-VR-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgedviedrudelgedggedvucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuggftfghnshhusghstghrihgsvgdpucfhtffggffotefknfenuceurghilhhouhhtmecufedttdenucfqnhhlhicuohhnvgcuphgrrhhtucdlhedumdenucfjughrpegtggfuhffvfffksegrtderredttddvnecuhfhrohhmpehgohhoughruhgrsehfrhgvvghmrghilhhhuhdrvhhivghnshihsghoihhrvghunhgtrghnohhnrdhfrhenucggtffrrghtthgvrhhnpeejheehleeiheetgedvfefhudehjeetgedtfeettdelteeghfeggffhkeehueeuffenucfkphepudekhedrudekhedrkedvrddvkeenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhephhgvlhhopehmrghilhdriihorhgvihhllhgvrdhrvgdpihhnvghtpedukeehrddukeehrdekvddrvdekpdhmrghilhhfrhhomhepghhoohgurhhurgesfhhrvggvmhgrihhlhhhurdhvihgvnhhshigsohhirhgvuhhntggrnhhonhdrfhhrpdhnsggprhgtphhtthhopedupdhrtghpthhtohephhhurhgvrghuohesfhhrvggvmhgrihhlrdhhuh
+Delivered-To: anonymized_user@freemail.hu
+
+--===============8599178657576248262==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Adipisci est dolore sit tempora adipisci est tempora. Eius est voluptatem labore. Tempora sed quisquam velit adipisci. Amet numquam ut eius. Dolor etincidunt sed velit. Neque aliquam adipisci dolore quaerat amet.
+
+Porro modi labore est eius. Ut ut velit magnam. Non eius tempora neque sed dolore. Labore est etincidunt sit porro. Voluptatem velit consectetur dolor. Voluptatem quiquia modi numquam. Sit quiquia numquam dolore adipisci. Est sed quaerat ut quiquia. Sed sit sit sed velit sit eius. Porro quaerat quiquia sit dolorem adipisci.
+
+Non est adipisci est tempora quisquam dolorem. Dolorem tempora ipsum etincidunt voluptatem dolor neque dolore. Sit sit neque sit sit. Neque est numquam adipisci adipisci. Quaerat voluptatem consectetur dolorem adipisci modi.
+--===============8599178657576248262==--

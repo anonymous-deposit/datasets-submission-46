@@ -1,0 +1,35 @@
+Return-Path: <goodrua@rediffcom.email-sender-2.example>
+Delivered-To: anonymized_user@f5.p28.mail.in.rediffmail.com
+Received: (qmail 23415 invoked from network); 25 Sep 2023 11:41:59 -0000
+Received: from unknown (HELO rediffmail.com) (XX_ANONYMIZED_IP4_403543bcd3478d_XX)
+	by 0 with SMTP; 25 Sep 2023 11:41:59 -0000
+X-DKIM-Verification: dkim domain=rediffcom.email-sender-2.example; verify=3; BodyHash=-1; TestMode=-1; SAligned=1; RAligned=1;
+X-SPF-Verification: spf domain=rediffcom.email-sender-2.example; result=pass; clientip=XX_ANONYMIZED_IP_MAIN_A_XX; SAligned=1; RAligned=1;
+X-DMARC-Verification: dmarc=pass; dkim=fail; spf=pass; pct=100; domain=rediffcom.email-sender-2.example;
+Received: (qmail 18564 invoked from network); 25 Sep 2023 11:41:59 -0000
+X-IN-VDRT-SpamState: 0\LEGIT
+X-IN-VDRT-SpamScore: 51
+X-IN-VDRT-SpamCause: gggruggvucftvghtrhhoucdtuddrgedviedrudelgedggedvucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecutffgfffkhffhnecuuegrihhlohhuthemuceftddtnecuqfhnlhihuchonhgvuchprghrthculdehuddmnecujfgurheptggguffhvfffkfesrgdtreertddtvdenucfhrhhomhepghhoohgurhhurgesrhgvughifhhftghomhdrgedtrghnshguvghlrggthhgvmhhinhhothgvrhhivgdrfhhrnecuggftrfgrthhtvghrnhephfekjedvgeeiffffuefhfefhtdeugedvvdeugfehhedtleekleegteefjefgtdfgnecukfhppedukeehrddukeehrdekvddrvdeknecuvehluhhsthgvrhfuihiivgeptd
+X-Remote-IP: XX_ANONYMIZED_IP_MAIN_A_XX
+X-REDIFF-SENDER-VERIFY: D=-2, DKIM=0, P=D
+Received: from mail.mail-server.example (XX_ANONYMIZED_IP_MAIN_A_XX)
+	by 0 with ESMTPS (DHE-RSA-AES256-GCM-SHA384 encrypted); 25 Sep 2023 11:41:59 -0000
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 8C10738856B
+	for <anonymized_user@rediff.com>; Mon, 25 Sep 2023 13:41:58 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=rediffcom.email-sender-2.example; s=dkimfalse; t=1695642118;
+h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=jH5OSrSmO6TpGnpkSyFp00dbzKf1QvEeXo7hu/nC6Pk=;
+	b=avjiLKj1z3IkrkJm7gp9LN1UksHj/tCHxyzv//QBoLervW0nxORQjX5jw+iLlcKm1qDKfo
+	87WI5qfVVQlzB8z1livhqt2yn1G6TTIV7lHi6ol3Nk0ZOvyQMEuq0ByY3TaQukS8GdTaRz
+	oAKwTch0G/Za+G/dbBTs/HpPC7nMTqK7rLcybAkg0TKxR/JZcRkjbH7Ssfh4kSDi6HWulo
+	KG0cwmvFVX5SvS7IOw1egijYYvCqep4Y9PIi3dX2BBZCoeqAViguXePXs0+9btXsobq91s
+	AI6o1Gtj2xr/shwugPf41b8zn11IcObK8WZ2UL0XSdI2WRQJU+Q3+0eAx/nIMQ==
+Content-Type: multipart/alternative; boundary="===============3757510282770105265=="
+MIME-Version: 1.0
+Subject: rediffcom Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:41:58.209764
+From: goodrua@rediffcom.email-sender-2.example
+To: anonymized_user@rediff.com
+Date: Mon, 25 Sep 2023 13:41:58 +0200
+message-id: <169564211820.19703.4442937561459995307@rediffcom.email-sender-2.example>
+X-Last-TLS-Session-Version: TLSv1.3

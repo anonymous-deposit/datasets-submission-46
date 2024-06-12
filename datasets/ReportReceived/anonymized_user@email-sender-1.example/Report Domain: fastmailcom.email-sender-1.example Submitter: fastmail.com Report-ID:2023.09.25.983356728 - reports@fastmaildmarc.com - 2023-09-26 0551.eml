@@ -1,0 +1,148 @@
+Return-Path: <reports@fastmaildmarc.com>
+Delivered-To: anonymized_user@email-sender-1.example
+Received: from mail.mail-server.example
+ ([XX_ANONYMIZED_IP4_de18e617ae5936_XX])	by b85eae80de63 with LMTP	id
+ QH5XHE5VEmXrhQMAgXJbaQ	(envelope-from <reports@fastmaildmarc.com>)	for
+ <anonymized_user@email-sender-1.example>; Tue, 26 Sep 2023 05:51:42 +0200
+Received: from bulk1-smtp.messagingengine.com (bulk1-smtp.messagingengine.com
+ [XX_ANONYMIZED_IP4_fa9c6504cb1b0b_XX])	(using TLSv1.3 with cipher
+ TLS_AES_256_GCM_SHA384 (256/256 bits)	 key-exchange X25519 server-signature
+ RSA-PSS (4096 bits) server-digest SHA256)	(No client certificate requested)
+	by mail.mail-server.example (Postcow) with ESMTPS id B6AEC3884A1	for
+ <rua@fastmailcom.email-sender-1.example>; Tue, 26 Sep 2023 05:51:38 +0200
+ (CEST)
+Authentication-Results: mail.mail-server.example;	dkim=pass
+ header.d=fastmaildmarc.com header.s=fm1 header.b=NLkKQplu;	dkim=pass
+ header.d=messagingengine.com header.s=fm2 header.b=AIDJUxOq;	spf=pass
+ (mail.mail-server.example: domain of reports@fastmaildmarc.com designates
+ XX_ANONYMIZED_IP4_fa9c6504cb1b0b_XX as permitted sender)
+ smtp.mailfrom=reports@fastmaildmarc.com;	dmarc=pass (policy=reject)
+ header.from=fastmaildmarc.com
+ARC-Seal: i=1; s=dkimfalse2; d=fastmailcom.email-sender-1.example;
+ t=1695700299;	a=rsa-sha256; cv=none;
+	b=XCMLeZ8aulOVsUP3Vm8aR/cTkyLtBKa+QVZ0paieHSNXlDZeiUgumioilluNT/GO2frFR5
+	mOGuHbTfwYxIQSS9uA3g4oMuiaYul/JhqUNhKeWkxqBs1mol6jTBx+ecQBDyDTt61DmoG0
+	7cp4d5xAb023wrFJDbLBYXp8mdKW6IU=
+ARC-Authentication-Results: i=1;	mail.mail-server.example;	dkim=pass
+ header.d=fastmaildmarc.com header.s=fm1 header.b=NLkKQplu;	dkim=pass
+ header.d=messagingengine.com header.s=fm2 header.b=AIDJUxOq;	spf=pass
+ (mail.mail-server.example: domain of reports@fastmaildmarc.com designates
+ XX_ANONYMIZED_IP4_fa9c6504cb1b0b_XX as permitted sender)
+ smtp.mailfrom=reports@fastmaildmarc.com;	dmarc=pass (policy=reject)
+ header.from=fastmaildmarc.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=fastmailcom.email-sender-1.example; s=dkimfalse2; t=1695700299;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:dkim-signature;
+	bh=05cprTS6DP1RCibYeCHx1pDsb/0vkf1d+9UPJQbJjXY=;
+	b=sE5GWBroaL/yFZKO7Pl1kJ/W8DiwzUMoerxzRw//CuXg81JC2m9arMkKALBmAG+rZv1GGv
+	IQr5xUDzGl1B6L8+T6TxX+rgMsayelXyb0sWYSi9olTjz6/ZO1wx3pwNckcV7tAR4sprpy
+	7SXnu4H9cL8ubvLm9yieEeccPonG8Q4=
+Received: from compute3.internal (compute3.nyi.internal
+ [XX_ANONYMIZED_IP4_9fd78f6a6a4770_XX])	by mailbulk.nyi.internal (Postfix)
+ with ESMTP id B0382F002D9;	Mon, 25 Sep 2023 23:51:35 -0400 (EDT)
+Received: from root1 ([XX_ANONYMIZED_IP4_b52f7dbaacefa4_XX])
+  by compute3.internal (MEProxy); Mon, 25 Sep 2023 23:51:35 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=
+	fastmaildmarc.com; h=cc:content-transfer-encoding:content-type
+	:content-type:date:date:from:from:in-reply-to:message-id
+	:mime-version:reply-to:sender:subject:subject:to:to; s=fm1; t=
+	1695700295; x=1695786695; bh=05cprTS6DP1RCibYeCHx1pDsb/0vkf1d+9U
+	PJQbJjXY=; b=NLkKQplunaGUUCL8kzcnwI4oMTcV+kqPvB0wzE8FHtWh6Si5+EI
+	TvKD3tWxRGnH4KJv4DYnEXifakwbJeInkLv7NkazDFOTXgpAKkTVqT0OeVXTWy6p
+	zPUFheDndUgP1F0yL5DpVymW8WKVnSzwqKI2mEjEOZZ1to287KJGtAHObnAp46Fc
+	tRJWlQJ1IbCRYOdZZiV2Yu9E4Cxe6n/kgOuDyR5jGVAM24LLz24susZ5X5FljSZ4
+	SkpNBHQJs/crIT0KSuSjnB7ZpI0hEf/PKiMRM7NtnjW3Sc7Nua1x966KThMmoXyD
+	oXcxUrSqkaahRb0WmzA9RMnLLfCCIIdKiOQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=
+	messagingengine.com; h=cc:content-transfer-encoding:content-type
+	:content-type:date:date:feedback-id:feedback-id:from:from
+	:in-reply-to:message-id:mime-version:reply-to:sender:subject
+	:subject:to:to:x-me-proxy:x-me-proxy:x-me-sender:x-me-sender
+	:x-sasl-enc; s=fm2; t=1695700295; x=1695786695; bh=05cprTS6DP1RC
+	ibYeCHx1pDsb/0vkf1d+9UPJQbJjXY=; b=AIDJUxOqGKq6b66Y47uIi6LYMCr/j
+	j3K1Wat5H17e0zlExuXQ8iqLHWe6b0W2YCzNbZwuZEvmkMREjPDbfOubH0NaQwLY
+	3JjDlnUJRgYowv+OWZlS98LG4ej/VgeGgRIYLlciy9RpX8VQBVYR7GIL2AdyDlJZ
+	lVG4zRewFhfK4Kp2tFoF3MmqhbWgQdpB5n7lhjRUvCXtbbQy+lb/vFXxcEMOflfW
+	lixlLY8tpcqNX6N5n8C63BGMNSMHOYScaxDLzaLpOKP3BxE/Yty5Wp5zWw22EdlH
+	Z0VPR9U3CJoXgqMprfe6zykR5kBWJra+FjuDTZX2RNMvJlgaguIW6JW9A==
+X-ME-Sender: <xms:R1USZZPM7r1BNjmPnFegv7kjevODRm9bVCrybGYpQScNHGVOLN8J2A>
+    <xme:R1USZQMiIh3fEBzNsX_yJmWZczJk7PodA-YPMgB9KTbgrMdiXsRQHP10AguGQbgGy
+    UsTE8tzQTu9-Q>
+X-ME-Proxy-Cause:
+ gggruggvucftvghtrhhoucdtuddrgedviedrudelhedgjeegucetufdoteggodetrfdotf   
+ fvucfrrhhofhhilhgvmecuhfgrshhtofgrihhlpdfqfgfvpdfurfetoffkrfgpnffqhgen   
+ uceurghilhhouhhtmecufedttdenucenucfjughrpefhvfffufgggfgtsehmjedtredttd   
+ dvnecuhfhrohhmpehrvghpohhrthhssehfrghsthhmrghilhgumhgrrhgtrdgtohhmnecu   
+ ggftrfgrthhtvghrnhepuddtfefhuedtueelkeefgfduudehtedufffhvdekffekieffve   
+ eltdffteduieeknecuffhomhgrihhnpehgvghtvdejrghnshdrfhhrnecuvehluhhsthgv   
+ rhfuihiivgeptdenucfrrghrrghmpehmrghilhhfrhhomheprhgvphhorhhtshesfhgrsh   
+ htmhgrihhlughmrghrtgdrtghomh
+X-ME-Proxy: <xmx:R1USZTQahsjFMBfIeoc0YEFHV_6_fZgqzcZ3kJCv4Wnh10nZf0fEkQ>
+    <xmx:R1USZaDpkivAHefvAEs_WpMLfcc2H26gxfRpMoJZ28cqNPLZ7pn2Lw>
+    <xmx:R1USZajYhoOzuyV4StLmKcBHHS1sbyDKcpmpwPtMMiJ5umEa2AxnvQ>
+    <xmx:R1USZRCAWTXftyLzPJugaDcEFcFt13_LYod8nMAh_Ro15QffMG4Jrw>
+Feedback-ID: ifea94594:Fastmail
+Received: by mailuser.nyi.internal (Postfix, from userid 0)
+	id 3954840072; Mon, 25 Sep 2023 23:51:35 -0400 (EDT)
+From: reports@fastmaildmarc.com
+To: rua@fastmailcom.email-sender-1.example
+Date: Mon, 25 Sep 2023 23:51:35 -0400
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Type: multipart/mixed; boundary=169570029512.d9cf4.2729902
+Message-Id: <20230926035135.3954840072@mailuser.nyi.internal>
+X-Last-TLS-Session-Version: TLSv1.3
+X-Rspamd-Queue-Id: B6AEC3884A1
+X-Spamd-Result: default: False [-2.21 / 15.00];
+	DWL_DNSWL_LOW(-1.00)[messagingengine.com:dkim];
+	DMARC_POLICY_ALLOW(-0.50)[fastmaildmarc.com,reject];
+	R_SPF_ALLOW(-0.20)[+ip4:XX_ANONYMIZED_IP4_fa9c6504cb1b0b_XX];
+	R_DKIM_ALLOW(-0.20)[fastmaildmarc.com:s=fm1,messagingengine.com:s=fm2];
+	RCVD_IN_DNSWL_LOW(-0.10)[XX_ANONYMIZED_IP4_fa9c6504cb1b0b_XX:from];
+	MIME_GOOD(-0.10)[multipart/mixed,text/plain];
+	RWL_MAILSPIKE_GOOD(-0.10)[XX_ANONYMIZED_IP4_fa9c6504cb1b0b_XX:from];
+	MX_GOOD(-0.01)[];	FROM_NO_DN(0.00)[];	RCVD_TLS_LAST(0.00)[];	BCC(0.00)[];
+	FROM_EQ_ENVFROM(0.00)[];	MIME_TRACE(0.00)[0:+,1:+,2:~];	ARC_NA(0.00)[];
+	RCVD_COUNT_THREE(0.00)[4];	TO_DN_NONE(0.00)[];	TO_MATCH_ENVRCPT_ALL(0.00)[];
+	DKIM_TRACE(0.00)[fastmaildmarc.com:+,messagingengine.com:+];
+	ARC_SIGNED(0.00)[fastmailcom.email-sender-1.example:s=dkimfalse2:i=1];
+	ASN(0.00)[asn:19151, ipnet:XX_ANONYMIZED_IP4_cfa76f2a267b09_XX/24,
+ country:US];	RCPT_COUNT_ONE(0.00)[1];
+	RCPT_MAILCOW_DOMAIN(0.00)[fastmailcom.email-sender-1.example]
+Subject: Report Domain: fastmailcom.email-sender-1.example Submitter:
+ fastmail.com Report-ID:2023.09.25.983356728
+
+
+--169570029512.d9cf4.2729902
+Date: Mon, 25 Sep 2023 23:51:35 -0400
+MIME-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Disposition: inline
+
+
+This is a DMARC aggregate report for fastmailcom.email-sender-1.example
+
+4 records.
+3 passed.
+1 failed.
+
+Submitted by Fastmail Pty Ltd
+Generated with Mail::DMARC 1.20220928
+
+
+--169570029512.d9cf4.2729902
+Date: Mon, 25 Sep 2023 23:51:35 -0400
+MIME-Version: 1.0
+Content-Type: application/gzip;
+ name*0*=us-ascii''fastmail.com%21fastmailcom.email-sender-1.example%21169560;
+ name*1*=0000%211695686399%21983356728.xml.gz
+Content-Transfer-Encoding: base64
+Content-Disposition: inline;
+ filename*0*=us-ascii''fastmail.com%21fastmailcom.email-sender-1.example%2116;
+ filename*1*=95600000%211695686399%21983356728.xml.gz
+
+H4sIAJ2raWYC/+1XTW8TMRA9t79i1RMcmu2HGprKuEQCpEo09Bi4WI53trGya1u2N7T/nrG9G7JpQSUcQCE57Xx43pvnsXdDrh/qKluCdVKrt0eng5Oja3pISoBixsWCHh6QNkgxRvLOQL8Fo61nNXhecM/RdUC0vWeK10A/cudrLqvszj9mn3xB8lUo5EGI0VTBvSvb5KLmVgyErkmeEmLqg7ecCa08F55JVWo69964qzzv1oUlOa55mhkKtDxlQUeX5+cXwzdnlyT/4QwpyB+Y5eo+sjsgM7iX2PBwdDE8CT+SJ08MgipS6HJ4PhohrEpF8l6VFcSaPsToSopHZppZJd0cWnCNPSjaNYO9DGL3xw4rgz0+HcADr00FiJBSwypDlVboMtFynemSbYSnp4F3eAgO1AKtqAg6n9JAlYS2iZDV31KnTjdWAJOGTqdsPPk8+XJ78/XDe3Zzx27HNxM2ZtMpQq6y4iKhG4XgJE8P0dcCwpJXDYoUYULn0hntpA8Dleive9qchayp4c5hMDwmrzMlCiar0HCZMPLnQHAXUjNEFqC8LCXOb7eNS6i0AVZaXb9I/f6KWGQOHJNeXmI9P9LboEV44+fMgmsq3/Jc63qrSQlqQQXCa0tDLZSsM1M0obUat0aKzJuaK9aL91xJ9xVB0u3FHzAVqC+tgz7IMxo9kmnPe/AtKMk3pAtp7Uj/28OdetoY7qT2frh/c7hLXjn42YR7qA1Yq+2vxlwqlFgW2at4O4psAY9XmdI+40skw2cVvP7rp+DJUd3VU7C/4rc/BWc7fwx28WXw7JfO/mXw/33pbHXH4xf+6o/bd7/vj0PaDQAA
+
+--169570029512.d9cf4.2729902--

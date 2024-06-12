@@ -1,0 +1,55 @@
+Received: from mx.poczta.onet.pl (unresolved [XX_ANONYMIZED_IP4_9c504999de5d17_XX]:55742)
+	by ps19 (Ota) with LMTP id 621CD19
+	for <anonymized_user@op.pl>; Mon, 25 Sep 2023 13:36:30 +0200 (CEST)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=XX_ANONYMIZED_IP_MAIN_A_XX; helo=mail.mail-server.example; envelope-from=goodrua@oppl.email-sender-4.example; receiver=<UNKNOWN> 
+Authentication-Results: mx.poczta.onet.pl;
+    bimi=skipped (DMARC Policy is not at enforcement);
+    dkim=invalid (public key: not available, 0-bit  key sha256) header.d=oppl.email-sender-4.example header.i=@oppl.email-sender-4.example header.b=fHqn/wNx header.a=-sha256 header.s=dkimfalse;
+    dmarc=pass policy.published-domain-policy=none policy.applied-disposition=none policy.evaluated-disposition=none (p=none,d=none,d.eval=none) policy.policy-from=p header.from=oppl.email-sender-4.example;
+    iprev=pass smtp.remote-ip=XX_ANONYMIZED_IP_MAIN_A_XX (mail.mail-server.example);
+    spf=pass smtp.mailfrom=goodrua@oppl.email-sender-4.example smtp.helo=mail.mail-server.example;
+    x-ptr=pass smtp.helo=mail.mail-server.example policy.ptr=mail.mail-server.example;
+    x-tls=pass smtp.version=TLSv1.3 smtp.cipher=TLS_AES_256_GCM_SHA384 smtp.bits=256
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mx.poczta.onet.pl (Onet) with ESMTPS id 4RvLRx3xDdz6Cj5R8
+	for <anonymized_user@op.pl>; Mon, 25 Sep 2023 13:36:29 +0200 (CEST)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id D4ED238856A
+	for <anonymized_user@op.pl>; Mon, 25 Sep 2023 13:41:32 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=oppl.email-sender-4.example;
+	s=dkimfalse; t=1695642092;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=HN1kfFeNtxnqZ8m/zSElbFbBI861Q2hBInQW9leBTIs=;
+	b=fHqn/wNxv6GuZuRMRDT8m3kQvgAyApzxo8vcIAoQeTPzE9pB+qaz60Y3+bk3eed5ZjZ4Sb
+	U1W9braWCLxb0mLYRqq9NOgrkEMHI4dPNYaTmVpyeL4F9Ispf+d2w7cMgD+7SxUwtcF+oz
+	Zfo01r0l/AhAIfHriFwNHflXXkdaU4q9x3llfheIDkwRbQ/PqSmal49LqpUr3Qu4lKRMqG
+	o/sO6KeNKTMuYgRAjyn1vxvYfFRDKY3e8fgNrooJoM9iIXNG3UQlsk28lMcsa5O8Ob3NUg
+	DQagZ8aL38D8j1aSRZM54fcokxbyFKv2i7j7/QAexh7dTWLG0f4Y3Fq9DH6Ocw==
+Content-Type: multipart/alternative; boundary="===============5581001395319847839=="
+MIME-Version: 1.0
+Subject: oppl Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:41:32.442969
+From: goodrua@oppl.email-sender-4.example
+To: anonymized_user@op.pl
+Date: Mon, 25 Sep 2023 13:41:32 +0200
+message-id: <169564209244.19703.4462335887043917330@oppl.email-sender-4.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-Authentication-Milter: Header added by Authentication Milter
+X-ONET_PL-MDA-Version: 1.0.25
+X-ONET_PL-MDA-Info: 019 38317 621CD19 0.000000
+X-ONET_PL-MDA-From: goodrua@oppl.email-sender-4.example
+X-ONET_PL-MDA-Spam: NO
+
+--===============5581001395319847839==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Quaerat ipsum labore non neque. Dolore quisquam sit dolorem. Ipsum aliquam quaerat etincidunt dolore. Quiquia ipsum porro dolore numquam. Velit quaerat dolorem consectetur.
+
+Numquam aliquam velit velit quisquam dolor voluptatem quisquam. Consectetur magnam numquam consectetur sed quaerat. Modi labore non amet voluptatem. Non quisquam dolorem magnam velit sit eius quisquam. Ut est neque dolore dolorem non numquam. Dolore est numquam tempora amet est labore consectetur. Modi porro magnam numquam modi. Dolor amet sed sit.
+
+Quaerat est amet amet voluptatem. Sit voluptatem sit consectetur tempora dolorem. Eius neque numquam etincidunt porro. Velit neque porro labore sed non quiquia quaerat. Etincidunt sit amet velit labore. Eius porro adipisci consectetur quisquam. Dolorem adipisci numquam velit numquam numquam. Voluptatem ipsum numquam dolore velit velit tempora dolore. Velit quisquam adipisci dolor porro quaerat velit etincidunt. Porro porro dolor non.
+
+Tempora quaerat tempora quisquam est ut aliquam. Dolore magnam quaerat sed porro. Quaerat labore tempora labore neque dolorem. Porro non consectetur amet numquam. Ipsum non est quaerat modi voluptatem. Eius velit quisquam non ut eius voluptatem. Dolor adipisci sed est. Aliquam magnam quiquia tempora tempora porro dolorem numquam. Modi velit sed porro porro. Quaerat quisquam adipisci est est est sed.
+--===============5581001395319847839==--

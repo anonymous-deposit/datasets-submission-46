@@ -1,0 +1,65 @@
+Return-Path: <badrua@kolabnowcom.email-sender-3.example>
+Received: from lmtpproxyd ([XX_ANONYMIZED_IP4_03c43f50a42aef_XX])
+	 by imapb033.mykolab.com (Cyrus 3.6.1-11.1.el8.kolab_16 Fedora) with LMTPSA
+	 (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256/256 verify=YES);
+	 Mon, 25 Sep 2023 16:33:18 +0200
+X-Cyrus-Session-Id: cyrus-imapd-1695652398-400356-4-7315994075951779052
+X-Sieve: CMU Sieve 3.0
+Received: from int-mx011.mykolab.com ([XX_ANONYMIZED_IP4_60910d478f95b4_XX])
+	 by int-imapf016.mykolab.com (Cyrus 3.6.1-13.1.el9.kolab_16 Fedora) with LMTPA;
+	 Mon, 25 Sep 2023 16:33:18 +0200
+X-Cyrus-Session-Id: cyrus-imapd-1695652398-28580-1-11773594064167372077
+Received: from ext-mx-in010.mykolab.com (unknown [XX_ANONYMIZED_IP4_9b70f00e8d44c3_XX])
+	by int-mx011.mykolab.com (Postfix) with ESMTPS id AB472308193E
+	for <anonymized_user@kolabnow.com>; Mon, 25 Sep 2023 16:33:18 +0200 (CEST)
+Received: from localhost (localhost [127.0.0.1])
+	by ext-mx-in010.mykolab.com (Postfix) with ESMTP id 8A0F710114D9
+	for <anonymized_user@kolabnow.com>; Mon, 25 Sep 2023 16:33:18 +0200 (CEST)
+X-Virus-Scanned: amavis at mykolab.com
+X-Spam-Flag: NO
+X-Spam-Score: -1.7
+X-Spam-Level:
+X-Spam-Status: No, score=-1.7 tagged_above=-999 required=4.5
+ tests=[BAYES_00=-1.9, DKIM_INVALID=0.1, DKIM_SIGNED=0.1, SPF_HELO_NONE=0.001,
+ SPF_PASS=-0.001] autolearn=no autolearn_force=no
+Authentication-Results: ext-mx-in010.mykolab.com (amavis); dkim=neutral
+ reason="invalid (public key: not available)"
+ header.d=kolabnowcom.email-sender-3.example
+Received: from ext-mx-in010.mykolab.com ([127.0.0.1])
+ by localhost (ext-mx-in010.mykolab.com [127.0.0.1]) (amavis, port 10024)
+ with ESMTP id uzSjsAvcOSPC for <anonymized_user@kolabnow.com>;
+ Mon, 25 Sep 2023 16:33:17 +0200 (CEST)
+Received-SPF: Pass identity=mailfrom; client-ip=XX_ANONYMIZED_IP_MAIN_A_XX; helo=mail.mail-server.example; envelope-from=badrua@kolabnowcom.email-sender-3.example;
+Received-Greylist: greylisted from 2023-09-25 14:23:14 until 2023-09-25 14:33:17.
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+	by ext-mx-in010.mykolab.com (Postfix) with ESMTPS id D565C1000D8D
+	for <anonymized_user@kolabnow.com>; Mon, 25 Sep 2023 16:33:16 +0200 (CEST)
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 7F6BE388437
+	for <anonymized_user@kolabnow.com>; Mon, 25 Sep 2023 16:33:16 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=kolabnowcom.email-sender-3.example; s=dkimfalse2; t=1695652396;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=LYaXUMrKN58RiM03ynoIoE2DjcCgUSFLQr5Nzi3IpOs=;
+	b=OlU6Ny6sFtuJ5xRtaUrBopoflAZQmuwn9RdTti2Q0f03ZgbZdHNBtNcMAN34mkY89tpomI
+	/ksLkwd2bLC3xezhj7u3kB+eEh24z9RJPkwVlPIcbxzYeT/EWkbTkFa5LgOs570HDdP/Dx
+	BvzjNS8fFtoa0fNL/3KHbX5haj/Ya3g=
+Content-Type: multipart/alternative; boundary="===============8038493019094021756=="
+MIME-Version: 1.0
+Subject: kolabnowcom Email Research Testing Dmarc configuration - SPK NOK - DKIM NOK- 16:33:16.152121
+From: badrua@kolabnowcom.email-sender-3.example
+To: anonymized_user@kolabnow.com
+Date: Mon, 25 Sep 2023 16:33:16 +0200
+message-id: <169565239615.19703.10405189894916405135@kolabnowcom.email-sender-3.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============8038493019094021756==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Porro ipsum quiquia voluptatem est amet aliquam magnam. Dolore neque quisquam tempora. Sit dolor dolore neque ut consectetur. Ipsum numquam tempora quiquia. Modi dolor adipisci dolor quiquia dolorem. Dolorem non porro velit dolore adipisci. Voluptatem quaerat ipsum eius dolorem magnam consectetur. Neque sit consectetur est labore porro ipsum adipisci. Labore ipsum neque quiquia. Sed quaerat neque dolore est sit.
+
+Dolore aliquam sed porro amet. Sit labore amet quaerat sed quaerat aliquam. Ipsum modi modi eius amet. Eius numquam quiquia numquam amet eius. Tempora etincidunt voluptatem labore. Quisquam sed dolore adipisci magnam quiquia dolore.
+
+Ipsum modi aliquam velit dolore. Ut quiquia dolore non voluptatem numquam adipisci adipisci. Consectetur magnam dolore neque quisquam. Magnam ipsum tempora non. Eius adipisci quiquia aliquam non labore. Quisquam labore numquam etincidunt eius quaerat dolorem numquam. Dolor ut labore eius neque dolor. Voluptatem adipisci porro numquam dolor quisquam amet. Tempora adipisci ut est.
+--===============8038493019094021756==--

@@ -1,0 +1,38 @@
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP_MAIN_A_XX])
+          by smtp2.mailfence.com (envelope-from <goodrua@mailfencecom.email-sender-4.example>) with ESMTPS
+          for <anonymized_user@mailfence.com> ; Mon, 25 Sep 2023 13:41:32 +0200 (CEST)
+Return-Path: <goodrua@mailfencecom.email-sender-4.example>
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 3E645388568
+  for <anonymized_user@mailfence.com>; Mon, 25 Sep 2023 13:41:32 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mailfencecom.email-sender-4.example;
+  s=dkimfalse; t=1695642092;
+  h=from:subject:date:message-id:to:mime-version:content-type;
+  bh=OHg/U5cwoTK/AmzJh1ar2ZDZpElSUEt9U3wVC1//zFE=;
+  b=ip2K+W9hfwnWt/3Tws16bhEjD/+HVlkuJkWpJappKwcy7qoJKCdP8+OqlxomgXV6jqUELZ
+  BkXFLTnCS3er2V88HBVFQP8Fjb2TlVVhQ0omvuvw5QeNltn0gyOYGHgkMY/VSDvBeYpSy4
+  +9ZsVW+GhaA8fQXoZ9R2PDXp+4xKG6Nh4Dp68K40K+gYNv7OFTArFVwE4VSr0IzRfJQtxO
+  6VhAvOfEvXcw4WNH1ytgeMqyoLXa2P7WoboCb3PgcgL0zRltWpYq5uPGLgFY0ICuHpaiCN
+  zTWST2EWaaaTPeJowr32yBOOgcTMIB+ZWTDAmPOjazs8cWx8NWAOdp9lnE9txQ==
+Content-Type: multipart/alternative; boundary="===============7288988378868065069=="
+MIME-Version: 1.0
+Subject: mailfencecom Email Research Testing Dmarc configuration - SPK OK - DKIM NOK- 13:41:31.893380
+From: goodrua@mailfencecom.email-sender-4.example
+To: anonymized_user@mailfence.com
+Date: Mon, 25 Sep 2023 13:41:31 +0200
+message-id: <169564209189.19703.2911366514979893808@mailfencecom.email-sender-4.example>
+X-Last-TLS-Session-Version: TLSv1.3
+X-Spam-Flag: NO
+X-Spam-Status: No, hits=-0.7 required=4.7 symbols=BAYES_00,DKIM_INVALID,DKIM_SIGNED,FROM_FMBLA_NEWDOM,SPF_HELO_NONE,SPF_PASS device=10.2.0.20
+Delivered-To: anonymized_user@mailfence.com
+
+--===============7288988378868065069==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Consectetur quiquia modi quaerat magnam. Est adipisci consectetur velit adipisci dolorem tempora. Tempora labore etincidunt numquam quisquam amet. Eius quaerat sed dolor. Sit dolorem ipsum sit eius adipisci. Adipisci consectetur sit eius dolore eius non. Dolore modi voluptatem tempora labore sed. Sit ut ut etincidunt ipsum dolore consectetur.
+
+Modi eius non modi numquam velit amet. Quisquam amet quaerat quiquia tempora modi. Numquam voluptatem ut amet porro modi. Etincidunt velit adipisci quisquam dolor eius. Quaerat amet tempora aliquam. Magnam numquam quaerat est etincidunt dolor modi amet.
+
+Est adipisci etincidunt tempora adipisci tempora ipsum quaerat. Quiquia quiquia non eius aliquam. Sed tempora neque numquam. Amet dolorem dolor voluptatem eius etincidunt velit eius. Sit eius etincidunt adipisci tempora.
+--===============7288988378868065069==--

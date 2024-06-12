@@ -1,0 +1,33 @@
+Received: from mail.mail-server.example (mail.mail-server.example [XX_ANONYMIZED_IP6_195e9c9291e59b_XX])
+	by smtpd-mx-fb77f44f6-7hc5z (smtpd/2.0.12) with ESMTP
+	id 3125690c-18fa-4978-9e65-998ba579932d;
+	Mon, 25 Sep 2023 13:23:34 +0200
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA id 551FC388566
+	for <anonymized_user@seznam.cz>; Mon, 25 Sep 2023 13:23:33 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=seznamcz.email-sender-2.example; s=dkim; t=1695641013;
+	h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=AB4PDVLTLKZg8pU0HWOtmaE8pOTikV1FwID2x7D3tgo=;
+	b=gTZSjH+Ne5haMn/G7A6EYVlQMlZ+ZFeRs32R2zhpJLwa/mzXOkvIVwYBnzSMnraeS0lBKJ
+	fCs/8DPPm05GFnmxpMU8CMfnQnKn/uQ4aeWW9aPMWYG+P4/6sV9EOxnFXz+XnAPgj3jFwf
+	3Nn0JAXHgD2e+F7dLBlVateYBoQsrZQ=
+Content-Type: multipart/alternative; boundary="===============3978919460994352824=="
+MIME-Version: 1.0
+Subject: seznamcz Email Research Testing Dmarc configuration - SPK OK - DKIM OK- 13:23:32.913489
+From: goodrua@seznamcz.email-sender-2.example
+To: anonymized_user@seznam.cz
+Date: Mon, 25 Sep 2023 13:23:32 +0200
+message-id: <169564101291.19703.10633067253083632446@seznamcz.email-sender-2.example>
+X-Last-TLS-Session-Version: TLSv1.3
+
+--===============3978919460994352824==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Voluptatem aliquam amet dolore. Eius labore quaerat eius dolorem. Modi dolorem dolore dolorem quisquam consectetur. Velit quiquia quaerat adipisci tempora est quisquam. Sed labore amet quisquam adipisci aliquam magnam. Consectetur ut est modi adipisci neque ut. Consectetur est neque tempora aliquam amet. Modi neque numquam quiquia ut quaerat. Adipisci est adipisci adipisci.
+
+Magnam magnam ut modi modi neque labore. Tempora tempora eius quaerat ipsum non. Amet est tempora etincidunt. Ut non quisquam magnam labore eius velit quiquia. Labore dolore non sed sit.
+
+Aliquam quisquam numquam tempora magnam neque. Aliquam etincidunt non consectetur. Magnam sit dolor magnam. Sit velit ut voluptatem. Quisquam tempora quaerat velit consectetur dolor.
+--===============3978919460994352824==--
